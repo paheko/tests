@@ -7650,6 +7650,31 @@
       "value": "${date}"
     }]
   }, {
+    "id": "b468a6eb-1199-460a-95f8-820df1f2c2f9",
+    "name": "1-01 installation échec",
+    "commands": [{
+      "id": "fd5b9d86-7bfa-46ba-a15d-bce85f1441bb",
+      "comment": "Page installation",
+      "command": "open",
+      "target": "/admin/install.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f653a356-df0c-4ec6-86a4-0a67e290fa6c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e005004f-2832-422b-8e57-f3990ed3ec3b",
+      "comment": "Erreur ?",
+      "command": "assertElementPresent",
+      "target": "xpath=//p[contains(@class, \"error\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "9ce868ad-3dac-4107-af91-50101a81fec0",
     "name": "3-01b créer membre France mobile",
     "commands": [{
@@ -8098,7 +8123,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["b3fdeef5-2f6f-46e8-a9db-5995bbf94957", "d6791401-e683-4d44-9513-24c52f1c6517"]
+    "tests": ["b3fdeef5-2f6f-46e8-a9db-5995bbf94957", "b468a6eb-1199-460a-95f8-820df1f2c2f9", "d6791401-e683-4d44-9513-24c52f1c6517"]
   }, {
     "id": "7fc1abfa-640b-438d-8357-d16f42212a22",
     "name": "3 Créer membre",
