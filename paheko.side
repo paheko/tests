@@ -3009,6 +3009,4646 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "a10913d7-dd6d-4c13-9bda-6293705343f8",
+    "name": "3-02 créer membre Cuba",
+    "commands": [{
+      "id": "cd1b3adf-7dcd-4e70-9cfb-45c8911d39a2",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acdc5e0f-7d1b-46e7-8ee0-4abcbd25686a",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "011df170-505b-4649-a142-3eb62d7208ae",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18b1a3b7-db73-4791-96bb-f5dc2cee1f59",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "9e67fe3b-785f-443f-bfe7-dc422d640aa6",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "aeb9d1b4-68df-4424-a5ea-10bcd3525819",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99a70849-5f2f-4fd6-8826-0135df9c07ce",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1932dc5-5c00-4422-b820-9e1def70b333",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf968ce5-2a90-4b39-9a22-d71ed9e224c8",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "2fbaa703-6ddc-4036-b7da-95c565f3c153",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "0e59addb-c875-4ca0-be08-8db5c852a40a",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "d5ad8f2c-c892-4b1d-a44c-4e15fca13ac8",
+      "comment": "Pays",
+      "command": "store",
+      "target": "Cuba",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "6bfb7453-f253-4ed2-92c1-d16a5e072d4c",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "a4277129-8287-4d44-ac81-b8cdc4b5506c",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "738d1e26-d2c3-45ec-a98e-ecc0eccd7e05",
+      "comment": "Ville",
+      "command": "store",
+      "target": "La Havane",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "afd2f570-4d60-440c-98e1-3eff825247e5",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 10);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "0bd8c512-99bb-44b0-835c-394b58a35244",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "f40d1c92-c15a-4d34-a5d7-9a9d2cb862f4",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "34c8202c-c40a-46ec-a7e3-d4441c0f63b5",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a33b555-5920-4683-9f15-6347e954fc35",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "705bb55d-5756-4f18-ba8e-aae002e1d932",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df2c64e6-4a13-4116-a224-fffef3c5b77d",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "a3d02a94-e276-4fb4-95ce-7f760f8d7c41",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "21f60530-c4c9-4e23-816d-eec1df4fa006",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5783a98f-6ba4-44d6-8d80-ca885dcec67a",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80581213-bda0-4110-a45f-b3ffb69aa090",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "1fa3cb82-2537-422d-9f2a-76b691988882",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "eeb0e82d-0652-410b-abd9-08a7a0563bcc",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "4ceeb0ba-f95f-4f5d-8161-9ecfb92117a7",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "df224c52-3af7-4bf0-920b-779acf86504d",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eadcc5cf-767e-4507-9257-2dbb0be0aca7",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3672d94d-1ce2-47df-8915-86c97882086c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b4a7137-34ec-43fa-b8ee-e0922564c878",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "fee7637c-f245-42c7-8427-a73430ea72ce",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bced6da0-b1a7-4db1-9c18-ccfc30d2daf7",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "a169f017-2f5a-4dac-87e8-1681ad77bfb2",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "f1867735-60cd-40b6-abb0-cc7d3c7714b4",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "3cfad45e-2569-4e9e-afb9-89f4d5d26ed6",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "da8a9379-e38d-4599-bbff-8fee2c749f69",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "a6211476-e9f5-4686-9f67-b2ff22e74c24",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "3002b0de-954f-4ae5-ba99-af0c4905e1c0",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "c45277dd-3372-44cc-840c-f218e9fa0919",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "ae12ca29-3596-422d-99b6-042c091824a8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "85a3fcdb-2a68-4d83-bbea-a837c75e3542",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "2b049a8d-f876-4082-a7e5-3e8f2dddcff6",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84ca99ab-ab3c-4720-8c04-3427ad87cadf",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "318a5291-ad53-4193-a4f8-241139c21b98",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6f5dc83-d622-4837-9e6b-c837e0a87526",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "18d8ab4b-4ef8-4d49-8c48-4e2e95388d8b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1ea77ae-9f99-44c5-b44a-717065f050df",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
+  }, {
+    "id": "542187b1-45cd-4f09-bad6-b1220fbfc754",
+    "name": "3-03 créer membre catégorie ancien",
+    "commands": [{
+      "id": "a8bc6b39-fd0c-4bd0-ac5c-5c6de1e7973b",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a2b2d5f-8aa4-46f6-98af-11f060699459",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "5b205564-f777-4ad1-abfd-a8492d906f45",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a66e1002-12f4-4f65-a21a-1af67f0ce8f0",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "eb7cbe6a-128b-463f-a2e0-18d36fe1c0e2",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "21765375-4b9a-49ab-81f1-5dfa33434ceb",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ba9ea26-6ced-4595-831d-869e11ab2cf6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2016dc21-0e94-4464-a2aa-aa6fba171702",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3d96f44-f1b6-4cb0-b575-9a577ad3e0fc",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Anciens membres",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "70a188d0-500f-4e7f-b4cc-b729d8b14b49",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "a19c958f-5619-4721-b532-97af4b24ab96",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "014f1bc2-059b-4731-b9b8-959b3a046e7b",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "3d52af5d-6637-4424-8179-e7b1a10bf24b",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "93a82799-df8c-43db-8d27-a3b04662fc8c",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "7ce7e1eb-4892-4296-bc86-e71031b8b2a4",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "1056a2ee-4e5a-4bf4-a1c0-2155b00af5e4",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "9e76f500-d05e-4f67-93b6-a9064c7d1ff8",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "9e64999d-9bee-4b7d-aa2d-4da11d50817f",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "f0cef9ba-c0f3-46f1-8bff-0fa9674d0b40",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fc843d2-be98-4426-9433-3f3458f97e2a",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "c4e38f50-5403-4d2c-9b3e-ab40ef48f1f5",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c0e46de-b4d3-4bc0-91d2-673d0c5a623e",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "fd75ac9e-66a0-4413-b94e-0242112d8f57",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "a4aa9ecd-b849-4009-b6ee-c04007b17ad4",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8a2357e-a3b3-47d9-98dd-a2ab3034dbea",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba793090-3027-4217-875b-f3209ece7a9b",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "e718fcad-6dc4-42d4-a20d-34603e88fd5a",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "d5e3c0ba-3f4e-4b21-abc4-2268d2acc6cc",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "1ac5dc35-ca1c-4426-8569-ad17e4f0a7e3",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "0120e17a-437a-44b3-ba96-bef536372503",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca16f01a-365e-4c10-8036-257b209fe1ba",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20e796aa-55fc-40e1-91e5-d0843786b263",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cc12d6f-b5c9-4c6f-ae13-bfa420a0f54e",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "f45dec33-a4c2-4cdc-83fc-dcf48e22fd87",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec1dc916-aedb-4b23-8a61-fcbbe6d7fa65",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "0c720acd-08ac-4b80-9569-fcb1ff4f9687",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "897fcf68-a122-487c-a4bb-beea5bcb0a42",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "28a6cc2b-5d0b-4032-affd-38fe234e4b55",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "57d9e90b-4e62-44cb-88b6-240cc937cbb7",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "732b550b-713a-4d71-ac8e-b39cd8b5f7e3",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "0f769f80-11a5-4931-97f6-ee48ede02ac2",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "bed84971-ddff-4b27-af87-5c710f8df251",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "8d8f01b0-e669-47c4-8e45-2ee0e7d4910e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "c45e4383-5d3e-4173-9a3e-1ce04fd8f7fe",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "44961419-af5c-4064-96fa-e50f350a7429",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4804b34c-68b0-41aa-898b-98ae271b8ca8",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "2668188e-680f-4276-83b8-2a6294c4b310",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a6e1e0d-d5d5-4c4a-b56f-d9f0418b9e84",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "76f9bf91-fc1c-460c-8db7-a7ac0dc68858",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d760d487-3e61-4030-96f7-4c889d1e6df3",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
+  }, {
+    "id": "71fe09f0-51bb-4d2f-8c66-91ec5e235105",
+    "name": "3-05 créer membre date bizarre",
+    "commands": [{
+      "id": "32553fb9-6558-466f-90c0-31471c43187e",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a190edd-637a-4f52-94cc-25ae3f84b8b9",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "54e94108-5ead-496d-9607-c44adb4f272a",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "409faadb-00e7-4a63-bf4c-a215d21c66ed",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "874a6349-1535-4a98-9db2-bd7b31649af4",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "fc48899a-134c-4874-b53c-2e2dcce9d339",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9616679-abfb-4ea1-aa19-f91fb7d7aea9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "481d5dd0-ef2a-4329-85a4-b76412b01a98",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70c0c835-6920-4bdf-9eec-6a1dd1e90a6c",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "07b86442-7ea1-457a-b517-0dd4710f5743",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "4756e0f7-7435-4269-b2d9-4d0578a248bc",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "4d196958-b7f4-4f7e-bfd0-846e304767f1",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "5896a2ab-c2f0-4a1f-b6c8-2bfa024e835f",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "a7b6db66-a516-4744-b8ed-e6bca89fdf62",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "49db377e-0fad-4b10-8a6e-8cf4f087f98a",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "e739c2a5-d60f-4af7-b6e7-a4c24189eb49",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "c478a9ed-2317-4272-bb80-c6ebcdc6dffc",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "1f654505-cd0e-45cb-8e9e-74df1afb61cb",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "95/31/2020",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "78670de0-b279-4e37-ac87-f837ece72faa",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03b93d25-c1d3-43e8-b9ed-ac763565dd72",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "0d2a4755-db45-4773-8ed2-d8d57b9c4b75",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f00e4dd-d9d9-474f-b3b7-e9afd63b4680",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "1ddfe1a4-2c08-4562-9fd7-270d6ba33861",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "77d2378d-a83c-4076-9907-23d3aea1c0b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73871e9e-1857-49ff-a572-9c893ba1e6b3",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8521c5bd-a29a-4688-8217-bc2877757382",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "5a306c9d-f979-4c35-b2e9-1153664fb67d",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "65e39991-4968-40fe-ae84-a5c5e0a68e4a",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "c2bfc3e3-6ca8-424b-8dc8-4f1df61d00cf",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "7b61142a-69da-47f3-96cc-6eb7ad6b904f",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdbb47ab-7aeb-42e7-a9c1-875003eb071d",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2545c4e-8b48-4002-8f32-e49289285669",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5776a36d-28b7-45e5-a923-24f26a42631b",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "26000250-ebb2-422a-b0b2-49503bfdfa39",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f77af470-496f-43e2-bd30-539109685105",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "c9005e28-4d5c-401e-b299-18c916e4cd27",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "b4b51d1a-509b-4851-9529-3981dd3a8c8a",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "c6cb668d-47fd-411c-bb75-a26128af03ec",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "1d5966a8-b875-48fd-b56f-ee2c9ae23d8a",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "2cf267c8-49b4-4769-9830-485f5a241ecf",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "f78944db-fb67-4791-ab65-5d73faef62e2",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "1d279688-a9d5-4164-8e8a-fb31e354712f",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "1b131ce0-3f25-4962-af3b-ec5d92864bbf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "c6a16bc9-3393-4282-9a95-f08d155324f6",
+      "comment": "Vérif téléphone",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "1cf499d7-0026-4074-abb5-850efd958e04",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cfdeb15-0085-436d-ac26-b15577d40cf0",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "8af9eb6b-6972-480d-a199-e61664a01f0f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7373abb6-1b87-42ad-bc96-cc524230e224",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "d46f966f-dec0-4956-98ea-400660f9a947",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e383f517-b5ae-4cdf-83c6-66ab5d0b1ede",
+      "comment": "Vérif date inscription",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "date_affichee"
+    }, {
+      "id": "8734fa90-92e3-42ae-9a19-9b5f407f8eeb",
+      "comment": "Calcul date réelle",
+      "command": "executeScript",
+      "target": "function joursMois (annee, mois) { return new Date(annee, mois, 0).getDate(); } function getDate(chaine) { var ds = chaine.split('/'); var jour=ds[0]; var an = Math.floor(ds[1]/12); var annee = Number(ds[2]) + an; var mois = ds[1] - 12 * an; var dm = joursMois(annee, mois); while (jour > dm) { jour -= dm; ++mois; if (mois > 12) { mois = 1; ++annee; } dm = joursMois(annee, mois); } if (jour < 10) { jour = '0' + jour; } if (mois < 10) { mois = '0' + mois; } return(jour + '/' + mois + '/' + annee); } return getDate(${date});",
+      "targets": [],
+      "value": "date_calculee"
+    }, {
+      "id": "54ccfc65-eec8-492e-a6ed-5a085a493022",
+      "comment": "",
+      "command": "assert",
+      "target": "date_calculee",
+      "targets": [],
+      "value": "${date_affichee}"
+    }]
+  }, {
+    "id": "a6af2537-7860-43b2-92b6-1a93bb173a6c",
+    "name": "3-92a créer membre date erronée cas 1",
+    "commands": [{
+      "id": "828addae-4a29-465c-bc17-6f6aa011a333",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40413eb6-afdd-40fb-9081-f224a7563d19",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "1454b0b4-bf39-461e-8c34-444c7e81e143",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c04dc93-a051-4cf8-b13e-dc4e4f40f49d",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "8ac76b9d-cb28-4d38-92c5-38373f6e35e3",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "ec699551-382c-4405-9321-5f1cb3a877ca",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77f14997-3795-4b97-bc6d-a8e2c15c1068",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0553c671-79b6-4864-ba71-20d75c9adeda",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13fa53e4-8fb3-4c09-9698-cf15ef7fa7e2",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "d1639cda-f43d-4a46-8f31-a45845f18012",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "3aa81cc3-b73f-4cbd-83cc-21f995f7fb89",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "eff183bd-f7a1-4547-ba6a-88d9b5d4c906",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "229586b3-ab68-4d2c-9311-90e5ec230ec5",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "295a7bca-2ad5-4c17-9ea0-e785cb350fa5",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "688c9732-36ae-49da-a118-d3d51d9a8f1c",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "d46946e9-e633-454b-9c9a-ef1ecfc4b5a6",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "a25a9808-fbb6-4a95-b9b2-b950c683994f",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "4baa6042-575a-4e0d-b350-4f089d9bd8bc",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/1515",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "4222fb5e-02b8-4bc3-b75d-e7be88205d9f",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2836eb76-087c-43c9-978a-9ce995817dd1",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "31173028-aef1-4f73-9e60-6966b2b4c430",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96caaa3f-70a3-4504-93fd-1b615fee32f4",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "ee25159c-d537-42c8-84d2-c32b418c66b3",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "9829dda7-c7fa-4de7-a185-04031e266da2",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ccf9ace-4194-45cf-8581-b1a4a5fb07f3",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef3d0879-e451-4069-9baf-54b6cb5811cf",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "252d1735-6a43-464c-b446-c737858b3e49",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "480dbe17-a9be-4467-a42a-11b8198074c4",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "3a1153c6-9a18-4e12-9b7a-c0484929a5f4",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "37a52481-ef23-4cb6-9e89-4068a9a3a5d3",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e74176f-2d36-4351-96f1-bd33f0d0ff2f",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4e66ef5-12d1-47e9-866d-49b2c0450543",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a89cc104-19ba-46ae-b372-d72a88b54468",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "8f0bd285-4016-4179-a76b-a5fee22710c6",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9a7eab9-6c71-4dd0-a53c-9ee26d250975",
+      "comment": "Erreur ?",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(@class, \"error\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "155a53f2-766f-4748-b11f-722b520df2eb",
+    "name": "3-92b créer membre date erronée cas 2",
+    "commands": [{
+      "id": "bae01400-5545-48b2-a212-5d4cd5c50797",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebda2a39-b8ae-449c-9899-aea0296c87e2",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "5e29b334-2db5-4bb8-8e23-f0e2f532eceb",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d983797-f698-44f0-8946-f3986c665f6f",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "3ff4319b-7f86-4412-95d3-cd13fe6cff48",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "6b9c54a7-18ac-4c39-a343-f58abfd6ec1f",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c0a1f61-0f78-45be-b114-d5f8eafc5696",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7355136-612d-46ba-9635-bf1eb273e276",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "646291e6-03dd-41f7-8d6e-4afee8bfb522",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "262ee9b1-5c47-465c-9342-287c39838070",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "ff4352b0-fa9f-4d96-bab3-b306c1e974fe",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "977b4cb8-b190-41b2-be24-a3ab15880b90",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "3ff2f21f-b062-4265-bfb8-61d2255cd722",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "4334f5c1-f9e5-40ef-9526-f73043072ea0",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "cb59498a-7399-4952-8c12-96e5c51842d7",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "49667317-b1cc-4705-a4e0-7a8565065d67",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "bfb9295a-650c-4050-a630-74d9ff5471bc",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "ba55dd35-73fa-4db1-9c1a-d2dfdfdbb801",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2105",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "c3335bd0-4144-4978-a536-f06cd2a92135",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65c47b88-c005-43f7-83b5-96249f4f1b3d",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "b22b8275-a0ef-4e03-b82e-5dbf47b4e984",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e1ff47f-54ff-4f8b-965c-35631d6e3d52",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "def2b845-4e2d-4273-8f6d-c975aa21ad80",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "71e80643-1bd4-4f6f-901a-466e55034b11",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b11ec51-6d78-486d-8cb6-fbbe7525ccdb",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3e7886f-363f-49d8-9c4a-267dd8b4ca37",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "d68fcb4e-45d6-46eb-aa48-3f825ed3e120",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "2aef92de-5e3e-47e8-ae4f-0b49af16b143",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "6a542e83-7389-4b30-9710-e03cc080ca77",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "09c17bd0-afbf-4408-9e22-31f5b5990458",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8438637f-0b67-49be-9cc7-8d7cbb117d4a",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "054c3b19-44ff-4b69-9179-b27179048ec5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fac99186-dd38-41a7-9297-7933794151f5",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "8c0979ad-246a-4712-b51f-e505e5a3d059",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e1d0aa1-4975-42fd-bdc0-096c04f082ab",
+      "comment": "Erreur ?",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(@class, \"error\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c05cb267-660d-46ab-8fe9-a7e042aa9c8f",
+    "name": "3-91 créer membre échec numéro présent",
+    "commands": [{
+      "id": "0a919074-cafe-4f35-97d0-dff060157b5b",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3483834a-3c7e-4772-a30d-111072c1cafe",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "ec977d32-e903-44ff-9ee9-acbc1b7bcbd0",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "568faaec-d3f4-4bea-956e-63d35ff385b4",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "981d273d-be9b-4c6f-b8c6-d10f6d7eaa9d",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "af5c1fd7-4e8a-4aa6-a541-622d6f37a56a",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "685c60ca-ca5d-4b9e-b468-7f686ea3bff4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ef82a95-ee1f-4b71-9b1b-8cdca3f1b7db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb273f23-27f9-4f15-a21f-4854696648e3",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "0d7185be-af76-4b47-929f-fe990d527cfd",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "7b8ebf47-a369-474a-af53-7e78575dfc09",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "a04df44f-738c-4aaa-a8dd-3e8cca9eac78",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "cb650d21-a943-4f06-9d9a-9e9941e1efbe",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "41b16e1e-ab01-48c5-a301-409dbdc6ea7e",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "4f63c95e-f347-480b-ae1a-843f631b6726",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "c1eead33-8aed-4f05-8e72-98a3ef3427b4",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "d9f426d8-9daa-4890-b918-d1426a710a16",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "c0008cbb-b899-4ea3-92ae-cec64b66fc4d",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "5fe0f5a3-4faa-4b69-bc88-7add4a656c03",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b752fa3-3c65-4a62-909c-2cbf7150ba5a",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_numero",
+      "targets": [
+        ["id=f_numero", "id"],
+        ["name=numero", "name"],
+        ["css=#f_numero", "css:finder"],
+        ["xpath=//input[@id='f_numero']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "bb96ad08-62c8-4d72-9abc-406a6791ebbb",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4c24f08-a244-45ca-91e9-d8aa5f847bbc",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "12c99a6f-2efa-478d-9a0b-11ce7b4ea034",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "0b8e7a8f-ab4a-4e7d-9914-74c445741e30",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9b448cf-24a8-44f0-a054-5a58e5e15c11",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "120d346c-4569-4203-ab5d-7517eed5a90d",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "40e6a573-2ed3-48f8-9782-18d5d4281e3c",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "4a11369b-4907-4a48-995e-03f3e79f7d3f",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "406b55bb-8572-4401-983d-6aa7ae0be342",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "36af241b-c825-4f71-973e-15c462851326",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c713af6-54c5-4bca-8e50-4432fe0daefc",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a7ff05f-f637-46e3-b23c-821fb439d964",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40ec0740-36f7-47ad-bf48-1bf4aea22f8a",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "2abcc6d0-c97b-40aa-85c4-f073bc987c0d",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14e83449-b1bb-4ce2-969c-e2c88cc2cd79",
+      "comment": "Erreur ?",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(@class, \"error\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "895513b5-888a-4ea2-8036-5a97569cd6df",
+    "name": "3-06a créer membre rattaché choix unique",
+    "commands": [{
+      "id": "fadb5d39-1907-417b-9d02-79547c3dc04a",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cf5a905-7576-4cd1-97a5-a6d532691208",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "a30539dd-0977-463a-b842-cb10e7349fc0",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2def971c-6153-4e19-9c7e-f99232413cae",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "c8a19e64-7093-4477-ad3b-bf290d6faf72",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "7369fff8-a63c-4b59-aa2b-bc1e13782c5f",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccef399a-525f-4b3e-910c-a861db874cfd",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e239b08-1665-403a-bd19-4dc43eff8724",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4abd389-b84d-4765-ac92-e6b81f98aa9f",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "9c7bbbc2-230e-4801-977a-4c68176f49a6",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "27686919-327a-4850-9bf5-b846a2872f02",
+      "comment": "Nom du responsable",
+      "command": "store",
+      "target": "Lambert Paul",
+      "targets": [],
+      "value": "nom_responsable"
+    }, {
+      "id": "e211cc9b-6075-420b-b6e8-8ec5b01b52a0",
+      "comment": "Numéro du responsable",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "numero_responsable"
+    }, {
+      "id": "9a06fd19-ed46-460b-9a90-69f38435f6e9",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "acfc959b-04c2-415d-870a-a798c4b1d107",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "5e02f2f1-585f-40d1-8b31-3d8b725c1f45",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "597b48f1-3a27-450a-881a-4b6ff46b89f6",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "3c543bc9-4f56-4c5d-b43d-2b55b9c3018e",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "4e43bf74-a10b-42ac-b64e-436d89e5e51b",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "2b1b82a9-016a-4c6e-9c7d-8a92b5182888",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "f382f8d8-6a34-4c74-8952-1c225420bfc4",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "f4949ce4-37ae-4f1a-ad5b-43ef180a1f9c",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c8764cb-88c6-4bf0-b19a-a2c0e2e55691",
+      "comment": "Rattacher à un membre",
+      "command": "click",
+      "target": "xpath=//span[@id=\"f_id_parent_container\"]//button",
+      "targets": [
+        ["css=#f_id_parent_container > .icn-btn", "css:finder"],
+        ["xpath=//button[@value='http://testpaheko.local.bzh/admin/users/selector.php?no_children=1']", "xpath:attributes"],
+        ["xpath=//span[@id='f_id_parent_container']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sélectionner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aff4df02-ad45-45a9-9064-59f0d0fb86a4",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a5ca567-f988-43ec-a80d-1bb41bca727f",
+      "comment": "Nom du responsable",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${nom_responsable}"
+    }, {
+      "id": "63c14a33-a012-4d63-adb6-867c89d23e78",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@type=\"submit\"]",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93f0c6ec-4186-4c52-8949-35e0be359567",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5117f3c7-a2bb-48de-906e-8f4ae28551cc",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "0123bc0a-5762-4dbf-af01-a64ddcbfd06e",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87220dbd-595f-45c8-b25d-f26b12dd57f4",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "7179000d-31a9-4bda-a7f6-82c97a9f8816",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "207196a5-8de9-4883-881f-ec0ba8d496c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34ee90e0-b301-4d20-b988-b1820ce5566a",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2580aabe-3ebf-4fc3-a275-2013947b9c2f",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "89b70650-203a-4e4b-86c3-e49a42c57c4c",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "47a06ec2-25bf-4942-ad52-b68b5c4b75ac",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "116ddb48-4dc9-405a-ac47-dce8fd3e6f63",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "9b5410e2-24da-4620-89f9-714db8bbeccc",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d6fa971-0517-49c3-b342-e53e4093a2a5",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64bebdd9-e465-42ef-a40d-d04659803932",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71f41783-8a82-4a83-acfc-c6e2dace3d26",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "6c49dbc2-f385-4976-86ce-a2823c746281",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "574e8477-a4ed-46c7-a3ce-e019cda8f132",
+      "comment": "Vérifier Membre responsable",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(., \"Membre responsable\")]/following-sibling::dd//span",
+      "targets": [],
+      "value": "${nom_responsable}"
+    }, {
+      "id": "5c694f9f-2e9f-4367-9b7f-cf742b9c10c3",
+      "comment": "Afficher fiche du responsable",
+      "command": "click",
+      "target": "xpath=//dt[contains(., \"Membre responsable\")]/following-sibling::dd//span",
+      "targets": [
+        ["css=dd:nth-child(5) span", "css:finder"],
+        ["xpath=//dd[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Zhamberlain Luuc')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a798423d-11fd-4a30-afee-422d143ac052",
+      "comment": "Vérifier numéro responsable",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero_responsable}"
+    }, {
+      "id": "75a18d53-6a37-422d-b3c0-ee8214774ec9",
+      "comment": "Vérifier présence membre rattaché",
+      "command": "assertElementPresent",
+      "target": "xpath=//dt[contains(.,'Membres rattachés')]/following-sibling::dd//span[contains(., \"${nom}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b80eb8cd-4154-4216-a7f2-0f3ba28600ec",
+      "comment": "Retour fiche nouveau membre",
+      "command": "click",
+      "target": "xpath=//dt[contains(.,'Membres rattachés')]/following-sibling::dd//span[contains(., \"${nom}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6613c9f0-d47d-48a6-b396-68bc5e3c5721",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "d4a803d2-5b84-4cda-a7a3-c5b5142c6812",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "63619154-1f63-429c-9be0-7e014283ddd4",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "4c9e3aab-19df-4812-9702-6aa5fb68b051",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "c4a67d17-17ef-4af3-89ef-42dc59c5db55",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "547562da-703c-40d9-aa51-795ac6d63dfa",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "8a979c72-c25f-4140-809c-af964bc07efb",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "bfa25d47-d5d8-4544-a06b-0686f18c6e08",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "5a1d9eaa-772b-4e45-8667-3ad65ba557f6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "4b43fbd3-1da6-4eed-94d1-ec2af53980e0",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "16d27d73-b816-4cbf-b4e4-e83dcfd6c75a",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bffacb6-36e7-4eff-ae72-816231e3d7aa",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "270e237e-edeb-4cd0-821f-3aaae082002e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a5d7b3e-c066-4355-bf66-026861e775dd",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "83db0aa0-420f-4c52-9af4-4b9059825bb7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edf49f14-1b94-4bf7-b9de-f456035369a9",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
+  }, {
+    "id": "4369d68b-3e2c-470e-b2b1-5a0825c35aa0",
+    "name": "3-93a créer membre nom présent refusé",
+    "commands": [{
+      "id": "de0c9cad-cb05-4f20-ada8-fe2924b92d08",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "357dd2d2-0d7f-4f4e-9ab1-77ca73ee134b",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "9f6d9ec7-eab1-4eb8-9046-e15e479a918e",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a45246d5-44a2-4e0d-9675-23cda2db2f3f",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "a80535d7-5cb4-413b-b809-69d990ce5ffa",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "26ef5b09-1393-4579-9c78-bb55ed484463",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e57f89b-eb5c-406b-98f6-68f2d9ec0e21",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6303a2d-1fb8-404e-9639-99726e7507f2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc9a7604-8fb1-49fa-a6b2-ad079371e7c2",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "b2e217e2-def6-41a8-ab30-a1a6f454f51f",
+      "comment": "Nom en double",
+      "command": "store",
+      "target": "Lambert Paul",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "32184ddd-c7a1-4abb-bd02-8d31941f661d",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "a31eed35-08ed-4461-ba7f-3b2fe06f9575",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "0f647a3d-21f1-4831-a59f-d74bcd35d103",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "18f94418-d7a0-4f21-9d0d-a34b3ae1eb37",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "097ec1c5-8442-4d4e-aa65-128b105ca4bc",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "664cf575-3f94-4d24-adf2-5f0b9ef5307e",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "46b5f764-f3ef-45f0-9d8e-1cdaab6390af",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "a13ecf6e-0e0a-437f-9070-9e5e4ba7c28e",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "7a7ff05f-0cee-425d-adb9-d8d4fe9b5942",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5081e469-29a8-4f05-bf22-2a9d9f808a54",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "49e58e12-190b-4ce3-915c-74154106477c",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5824593-52cc-4934-ba19-deed04a17408",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "876b2509-459f-450b-9832-efd47612e3e1",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "73e4e90a-f8ef-4c30-b38a-81628e545dc0",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99c64321-6a7c-4725-9b81-a4e72d29a7de",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c11922d-ce4d-4b4f-a4fe-84bb6bcf98db",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "bb1b2f59-37ed-4822-8501-a45925d9d149",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "62673593-5315-41e9-a1a1-86e52a05b0ec",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "1d40a16d-0754-4cdf-a61e-f906f7721328",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "9f1bae31-b61e-4568-8bda-a07cbba34c75",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15348857-a8d9-45d4-9ffd-9f4a801beaf3",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7d57bc4-10b6-479d-9309-ed3f8fea3fb0",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca0add45-148a-4053-bffa-df6390a147b8",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "36f55bb7-97c0-4710-aa16-a36f5be40379",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa609cd7-aa9d-4752-960c-34717346ce1c",
+      "comment": "Déjà présent",
+      "command": "assertElementPresent",
+      "target": "xpath=//p[contains(@class, \"alert\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "077fea95-219b-4ab2-a10d-800ec7f39fb1",
+    "name": "3-93b créer membre nom présent accepté",
+    "commands": [{
+      "id": "d4554ace-88d7-4d2e-83d4-7cce4097aa75",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf1bfa0b-e029-4893-a2a5-7be8f1f65966",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "b93fb8f7-746b-4a39-b170-63bffa038554",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d18f281-9ed6-4d72-8408-cb237c41e733",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "2dc71349-30ab-4301-a143-d062efe8f95b",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "9bdb0cf1-8b9d-4b3c-beea-ec07e1fc40f8",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5ee3b2f-ef10-41f7-82f4-3f0a74312fd5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b703a81-35c9-4bbc-9025-39e05814a471",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be10eb6d-36b2-40c8-84eb-6580af51bf18",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "f32fd2e3-d4f6-4cc5-ba37-5af1352925ee",
+      "comment": "Nom en double",
+      "command": "store",
+      "target": "Lambert Paul",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "920c27e9-9949-4592-a8cf-87b4cd4ab021",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "ff484a1f-8f73-45a8-adba-c9e92984e4d5",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "3f6f2d20-719c-43da-bffc-da4a22deb2eb",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "d5e587e9-c742-49b4-a9f4-242c8241b1c4",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "93ef8988-e1ba-4852-9fcd-1248533bbc07",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "4a669a98-9fe4-4cbf-8016-43d5e0197f3e",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "6528d530-c349-4034-9176-2fa6ae5db9bc",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "605b1dc2-09d1-4532-ab37-f58ea2338d60",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "442cc883-b598-4fd1-b9db-d85d6c04bf57",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5330b5b0-7442-43c2-a517-1d6e7891aa46",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "aad56270-3032-42c7-b9a5-1f383ef2f20e",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45f75a2e-16c7-40ff-8751-0841957beaa4",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "3158b5d9-9f9f-4f71-88e8-0fed3c3dd631",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "771d68af-4baa-40ad-9b7f-a2a06ccc325c",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45d063ee-0ef3-47de-ad72-46c98b072b73",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d1afcff-1633-4ead-8af5-fe995229c22e",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "7c51d5f4-a9d3-4e83-bd05-574855dced14",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "b8623938-de5f-4a92-9761-1759986cacf4",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "8e8a1e7b-0865-4bf7-8177-a46482c6b727",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "0d94f36f-b5ca-4e8a-9f65-3c64c8964718",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98cf1afc-9562-43bb-8318-a0e1c18b85d3",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79d4eea8-aee4-4f32-a83b-a8965c13f38e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be81785a-7ad7-4ea4-a6d8-f673d1e4024c",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "bd7b5d55-6584-4837-b684-dcfec9255f71",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "745ff6f9-4890-4bf9-836c-f46f55ca5a37",
+      "comment": "Déjà présent",
+      "command": "assertElementPresent",
+      "target": "xpath=//p[contains(@class, \"alert\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7705060-457d-4854-8a3c-9f427fce7a01",
+      "comment": "Accepter le doublon",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.icn-btn:nth-child(5)", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "605865cd-94f6-4420-a15f-660a4e1975c0",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46343db0-3e17-47bb-bb70-dffd007d817d",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "75a52ac5-5286-409d-8591-efefa27c680b",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "505dbd0f-9d76-4042-8197-3ee5b54e0a65",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "b9f4f884-97d9-4f0d-9e21-86378f3b6afa",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "9101d731-d209-41a1-a280-307e54af0045",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "052708c2-eb37-4f7b-a11a-4dc615aa84e5",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "6d74cb87-be97-42b4-93f1-c6e9a7b41339",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "b48b7328-507f-4fc5-9cc0-72e2ec594aed",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "00f4e960-2c86-4f72-83fc-5a6c677ac986",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "1156bdd3-b6f7-4a2d-87b3-24a4724976f0",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "ae682a21-6c75-4dcd-8415-427394d244e2",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "109033e5-d2a9-4b96-acc8-1a8d57fd5ce8",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "00f3d6eb-5581-4a7a-bccc-9962760ad81b",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e16146d-d672-4b75-b446-134bbb77a17f",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "8fce980c-51c5-4dae-966c-6c72f35870b7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e4ebdf0-40eb-4f2e-9b40-e2795ff72953",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
+  }, {
+    "id": "20360774-e683-425b-a9b9-350dc0fb6ef3",
+    "name": "3-06b créer membre rattaché Plusieurs choix",
+    "commands": [{
+      "id": "f2ae936e-54ea-4773-82b2-581ded63ce85",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97b81218-28eb-46a8-905f-692459d24c28",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "babda5cf-a571-42b3-b3b5-7a668153cade",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d964a6e7-eaca-4008-879b-ae56fd2e8fe5",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "f8c8d715-ecd7-4417-a26e-181520963dec",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "60703fc4-811b-41de-90d5-3334475e50d1",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a21ed2e8-9e3f-4687-9d02-17bcb53a0a90",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55db0a06-ae98-44a3-9ba2-d24c5faad807",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48e88160-9e46-42c8-92b9-98ea1f10b772",
+      "comment": "Créer un responsable",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a82b78fc-30dd-4265-bfc7-e6ab8ce21efa",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2b3008-e73a-45d5-865a-1de7c9d64a71",
+      "comment": "Mémoriser numéro du responsable",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numresponsable"
+    }, {
+      "id": "d4da98a2-1f99-4b36-a056-2a9617c77f6c",
+      "comment": "Le responsable",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [],
+      "value": "Zhamberlain Luuc"
+    }, {
+      "id": "8a8ab9cc-8d39-4462-9acc-611144afaab0",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f94bd66-13fc-4a51-9d2b-92a73a8ff064",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c4d5fc5-0925-434d-928f-8696ad7e0f6e",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "08ab8378-1cf9-4309-9ad7-d08caf770986",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "9cda4c46-e4df-4959-9cd7-b06c69e958b3",
+      "comment": "",
+      "command": "store",
+      "target": "amber",
+      "targets": [],
+      "value": "responsable"
+    }, {
+      "id": "bfedc5a3-ede2-4b22-bd92-b41fc938aaa0",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "8afb2f34-46b3-410c-b733-20f45e1ff657",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "a660f928-50a3-4a6b-b546-987e13b853d1",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "d6004a7d-2ba3-402b-951d-28b88e2f8748",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "df681c95-e148-4183-90d2-9336eeb2c1f7",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "6132c6ba-d8e9-4071-b578-1b1ec23cad93",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "67eb1920-fca1-4e10-8f85-1f2e115b140d",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "2b93bfdf-8047-4db9-b8ae-ac7b72a83213",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "f0416e70-9d9d-4a3b-80c6-340b126a7cd6",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab243806-0d90-4a82-97e2-4042e5a4ffa4",
+      "comment": "Rattacher à un membre",
+      "command": "click",
+      "target": "xpath=//span[@id=\"f_id_parent_container\"]//button",
+      "targets": [
+        ["css=#f_id_parent_container > .icn-btn", "css:finder"],
+        ["xpath=//button[@value='http://testpaheko.local.bzh/admin/users/selector.php?no_children=1']", "xpath:attributes"],
+        ["xpath=//span[@id='f_id_parent_container']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sélectionner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33fc4b2d-332e-4939-b42c-a93f4534fa7f",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa5dcb95-9a58-4dd3-9e66-7cc921aeba50",
+      "comment": "Nom du « responsable »",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${responsable}"
+    }, {
+      "id": "9e314338-511d-47a3-8a78-8cc505c9cd90",
+      "comment": "Chercher",
+      "command": "click",
+      "target": "xpath=//input[@type=\"submit\"]",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b040013-c87b-4a7b-a4f9-2c62b25d9458",
+      "comment": "Nombre de résultats",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr[@class=\"clickable\"]",
+      "targets": [],
+      "value": "nbres"
+    }, {
+      "id": "e6597a7a-00f4-4e29-88ca-7b9620fb90be",
+      "comment": "Mémoriser le nom du responsable choisi",
+      "command": "storeText",
+      "target": "xpath=//tr[@class=\"clickable\"][${nbres}]/th",
+      "targets": [],
+      "value": "nom_responsable"
+    }, {
+      "id": "ab5fc475-a753-4794-a079-9e56aa934044",
+      "comment": "Mémoriser le numéro du responsable choisi",
+      "command": "storeText",
+      "target": "xpath=//tr[@class=\"clickable\"][${nbres}]/td[@class=\"num\"]",
+      "targets": [],
+      "value": "numero_responsable"
+    }, {
+      "id": "39259fec-6864-408e-a2cb-63de066be762",
+      "comment": "Choisir le dernier",
+      "command": "click",
+      "target": "xpath=//tr[@class=\"clickable\"][${nbres}]/th",
+      "targets": [
+        ["css=.clickable:nth-child(2) > th", "css:finder"],
+        ["xpath=//tr[2]/th", "xpath:position"],
+        ["xpath=//th[contains(.,'Lambert Paul')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b956a3ca-b6cc-4f2d-87eb-fe57569c5f14",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c204ecde-b1bd-4d13-8197-5ff66eac6e26",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "ef7bbdd6-6bd7-42fc-adf5-c5b7541ffd86",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7352d9a-e97d-4d65-ab0f-78de2d460c1b",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "c1d15edf-5f8a-41bb-af79-ac49c8f9947f",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "04adad26-3b22-413a-9d2a-86fef5d8ddbe",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79382d6c-5cf7-4ba2-b168-02d0b02ff62e",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91702519-b59f-4ed3-8074-fdbc639ece86",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "77b09efa-dd77-4722-8560-a1fca6f42aa3",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "7d7c8ff8-fe9e-4f64-a245-23314e6059a8",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "b4abda30-1256-435a-b3d1-43c9778003d7",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "6f82bfd4-4519-4413-ad9f-fb6e8ff936df",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbe9b2a5-b3dd-4400-a9a6-d04333460420",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "020cf20b-4554-4fc8-b7f5-ee73663838dc",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c7b5cef-20c9-467d-942e-6c720d384fcc",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "d24383f5-2919-4803-9cb5-1377a51c0d27",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b13a885d-232a-4678-a650-80d6bc68be78",
+      "comment": "Vérifier Membre responsable",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(., \"Membre responsable\")]/following-sibling::dd//span",
+      "targets": [],
+      "value": "${nom_responsable}"
+    }, {
+      "id": "c4a7e9b9-43dd-4b45-bf6a-358cd126a91f",
+      "comment": "Afficher fiche du responsable",
+      "command": "click",
+      "target": "xpath=//dt[contains(., \"Membre responsable\")]/following-sibling::dd//span",
+      "targets": [
+        ["css=dd:nth-child(5) span", "css:finder"],
+        ["xpath=//dd[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Zhamberlain Luuc')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63b99000-3d03-4c2a-a00e-bcbf14248841",
+      "comment": "Vérifier numéro responsable",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero_responsable}"
+    }, {
+      "id": "de2bad37-9847-4022-9021-319c58b14139",
+      "comment": "Vérifier présence membre rattaché",
+      "command": "assertElementPresent",
+      "target": "xpath=//dt[contains(.,'Membres rattachés')]/following-sibling::dd//span[contains(., \"${nom}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fc66279-d61c-4fa7-ba80-19dbc9ebd359",
+      "comment": "Retour fiche nouveau membre",
+      "command": "click",
+      "target": "xpath=//dt[contains(.,'Membres rattachés')]/following-sibling::dd//span[contains(., \"${nom}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8bb762d-76f0-4ae8-9725-d2bca0741b1b",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "001e8d83-d171-4503-ba2f-d6ffd72dd9db",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "f7765c6d-d42f-4af5-a939-87a0cd971447",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "ec1f5103-aeeb-4a1c-be84-26c93b7bbefc",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "2e5d7700-563d-4e05-a605-3314c332f2d7",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "b4833f59-a9ea-40cb-a316-3f270fb7173f",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "63cff9d3-1cdb-46a3-a670-76b0bc53a743",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "ae725152-288c-4c63-9646-267fbbaee64d",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "60ee30c9-c42f-4b07-820c-5c1c76eac0fd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "1bf4a8a0-7b6f-4db9-a28e-900fcd898944",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "c0550765-8b44-46f9-b642-895e54386c81",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e01cf96b-63e8-433c-b510-0e738e52078c",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "ed16361f-1057-476e-8ce9-df70ff70ed6e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13e8002-3893-465c-b756-9e64366868e4",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "76f4cd12-e93c-48d7-9afe-ebcc651ac749",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "137c3d09-9d21-407c-95dd-2fd5df6783ba",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
+  }, {
+    "id": "91ad3d23-dd66-4084-beeb-ea89ec4bfabc",
+    "name": "3-07 créer membre numéro choisi",
+    "commands": [{
+      "id": "a6972706-0c56-46c5-9a2f-5f9ca9e7a52b",
+      "comment": "",
+      "command": "open",
+      "target": "http://testpaheko.local.bzh/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "018973f7-b11d-484d-aa28-c6a4f285ae02",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "22dc193e-b428-4fbb-8b56-bd18df5953cf",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "febc4e85-ef86-4e24-a3dc-59d93a851213",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "6a85ce0e-3646-481f-bb6b-1289ea0263c9",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "b9ef151b-b129-4875-87cc-a1c5abe41daa",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ecc6344-fe94-4259-b248-66196528f5da",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcf673d5-479f-49ef-8d5b-52e0216ca13f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09066653-b8a8-4ec6-ba3f-b1defc04890a",
+      "comment": "Catégorie du membre",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "cat"
+    }, {
+      "id": "f97e3190-ae0f-4de0-bfbb-1e03852597b2",
+      "comment": "Nom & prénom",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "50e4310d-b75e-4990-8bd3-b8b385cc0b37",
+      "comment": "Adresse E-Mail",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@ici.fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "e71c0422-9471-4d62-a43e-7da5200052b1",
+      "comment": "Pays",
+      "command": "store",
+      "target": "France",
+      "targets": [],
+      "value": "pays"
+    }, {
+      "id": "0e7fc5d1-d5aa-4efc-b5e6-396ba22331c8",
+      "comment": "Adresse postale",
+      "command": "store",
+      "target": "2 rue des arbres",
+      "targets": [],
+      "value": "adresse"
+    }, {
+      "id": "8e11d770-9756-4f0f-a779-b90b730fc91b",
+      "comment": "Code postal",
+      "command": "executeScript",
+      "target": "return Math.random().toString(10).substring(2, 7);",
+      "targets": [],
+      "value": "cp"
+    }, {
+      "id": "299ec2d6-d8e7-43f5-ba7c-002612ea8bd9",
+      "comment": "Ville",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "57b91f4c-9c1c-4466-933e-8be7d3ddf839",
+      "comment": "Numéro de téléphone",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "32ba984a-1f16-44b3-bddf-5992ad65c69d",
+      "comment": "Inscription à la lettre d'information",
+      "command": "executeScript",
+      "target": "return false",
+      "targets": [],
+      "value": "lettre"
+    }, {
+      "id": "7db8cce3-6e38-4098-92b0-be0f3bccd28f",
+      "comment": "Date d'inscription",
+      "command": "store",
+      "target": "02/02/2022",
+      "targets": [],
+      "value": "date"
+    }, {
+      "id": "ff2f7191-51e1-4318-a9fa-1a37b3f201b8",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7ceb825-e0fe-414b-950c-10ec99ddceae",
+      "comment": "Numéro proposé",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "cf4d7e4d-dc1a-44e2-a396-f5fc9481f207",
+      "comment": "Choisir numéro de membre",
+      "command": "executeScript",
+      "target": "return Number(${numero}) + 100",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "20bbc394-9977-4ee8-b73f-982cf0ddcbc4",
+      "comment": "Imposer numéro calculé",
+      "command": "type",
+      "target": "id=f_numero",
+      "targets": [
+        ["id=f_numero", "id"],
+        ["name=numero", "name"],
+        ["css=#f_numero", "css:finder"],
+        ["xpath=//input[@id='f_numero']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${numero}"
+    }, {
+      "id": "efcd239c-6ffc-4192-9af0-870c6104e888",
+      "comment": "Catégorie de membre",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${cat}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0de6beb-a913-4891-b324-9ac0223721de",
+      "comment": "Nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "7126a123-f17b-4004-966d-98e86c56ae31",
+      "comment": "Courriel",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "63bf7072-1fde-4f84-b892-dd4cee1abcea",
+      "comment": "",
+      "command": "click",
+      "target": "id=f_pays",
+      "targets": [
+        ["id=f_pays", "id"],
+        ["name=pays", "name"],
+        ["css=#f_pays", "css:finder"],
+        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
+        ["xpath=//dd[6]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01040a1a-37be-4440-9270-10ab30450d39",
+      "comment": "Pays",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "targets": [
+        ["css=option:nth-child(69)", "css:finder"],
+        ["xpath=//option[@value='FR']", "xpath:attributes"],
+        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
+        ["xpath=//option[69]", "xpath:position"],
+        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22d15378-fe16-45ff-aec5-c4058e9a6f75",
+      "comment": "Adresse",
+      "command": "type",
+      "target": "id=f_adresse",
+      "targets": [
+        ["id=f_adresse", "id"],
+        ["name=adresse", "name"],
+        ["css=#f_adresse", "css:finder"],
+        ["xpath=//textarea[@id='f_adresse']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${adresse}"
+    }, {
+      "id": "ce92e5c8-dd7d-4bbc-9c44-f805198b1e04",
+      "comment": "Code postal",
+      "command": "type",
+      "target": "id=f_code_postal",
+      "targets": [
+        ["id=f_code_postal", "id"],
+        ["name=code_postal", "name"],
+        ["css=#f_code_postal", "css:finder"],
+        ["xpath=//input[@id='f_code_postal']", "xpath:attributes"],
+        ["xpath=//dd[9]/input", "xpath:position"]
+      ],
+      "value": "${cp}"
+    }, {
+      "id": "9fe5fc12-5736-46e0-8223-2eb77ed6f15f",
+      "comment": "Ville",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "725835ff-a614-4269-8547-6a324fdd2d31",
+      "comment": "Téléphone",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "b2f53dae-3338-4514-b7fd-2d51971ffd18",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19e8f3a7-f81a-4b37-9d4e-5d7a84b2808c",
+      "comment": "Inscription lettre info",
+      "command": "click",
+      "target": "id=f_lettre_infos_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "088478f0-dbef-4e9b-9ecf-373eab3191cf",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23c1e1e1-b5cd-45fd-ba68-6e74343d52ed",
+      "comment": "Date inscription",
+      "command": "type",
+      "target": "id=f_date_inscription",
+      "targets": [
+        ["id=f_date_inscription", "id"],
+        ["name=date_inscription", "name"],
+        ["css=#f_date_inscription", "css:finder"],
+        ["xpath=//input[@id='f_date_inscription']", "xpath:attributes"],
+        ["xpath=//dd[13]/input", "xpath:position"]
+      ],
+      "value": "${date}"
+    }, {
+      "id": "4ac05314-10df-4c87-8d6d-1a65bb4eb81f",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "270079c9-9f95-4185-bbec-22cc6df3c073",
+      "comment": "Vérif numéro membre",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "119b0281-b232-4ecf-b61b-05b21d4fc470",
+      "comment": "Vérif nom",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "0ef3c9dc-98fb-4b14-9828-b0c423cae1ea",
+      "comment": "Vérif courriel",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "86f2975c-c56e-4b59-86f9-9d3c4fe10bcb",
+      "comment": "Vérif pays",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
+      "targets": [],
+      "value": "${pays}"
+    }, {
+      "id": "ce79a6a6-5eed-4afe-9144-68b090310bfc",
+      "comment": "Vérif adresse",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse postale')]/following-sibling::dd",
+      "targets": [],
+      "value": "${adresse}"
+    }, {
+      "id": "7a61578f-d2dd-4a70-965b-1b758171579b",
+      "comment": "Vérif CP",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Code postal')]/following-sibling::dd",
+      "targets": [],
+      "value": "${cp}"
+    }, {
+      "id": "e5a2d5f7-625d-46a0-9de3-7505744a0cf5",
+      "comment": "Vérif ville",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Ville')]/following-sibling::dd",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "1a91161f-ae27-419a-a04c-c70a22fa74e8",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "c2d4331d-2881-4725-9ed2-cf6d37b18460",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "57244951-2db2-495c-90ad-5512f9190928",
+      "comment": "",
+      "command": "assert",
+      "target": "tel",
+      "targets": [],
+      "value": "${telephone}"
+    }, {
+      "id": "b846e886-d7a1-45a6-ae7b-152a77e60713",
+      "comment": "",
+      "command": "if",
+      "target": "${lettre}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "975edcd9-969a-430c-bc91-9ffc65061d1c",
+      "comment": "inscription lettre : oui",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Oui"
+    }, {
+      "id": "a6b351bb-d426-47aa-8437-fe7c482d2bd2",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d490bef-7264-4433-ac9e-159667490349",
+      "comment": "inscription lettre : non",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(text(), 'lettre')]/following-sibling::dd",
+      "targets": [],
+      "value": "Non"
+    }, {
+      "id": "2c89a233-08fd-43e8-85f1-b2ef7ed45fc8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4575eea8-fb0b-4933-a58c-4695d5e3b84e",
+      "comment": "Vérif date inscription",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"Date d'inscription\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${date}"
+    }]
   }],
   "suites": [{
     "id": "6bdd4e16-7197-4388-9a5f-350523eb6c98",
@@ -3023,7 +7663,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "efb8a434-ee82-48e0-a770-d4a668e28eec"]
+    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "a10913d7-dd6d-4c13-9bda-6293705343f8", "542187b1-45cd-4f09-bad6-b1220fbfc754", "efb8a434-ee82-48e0-a770-d4a668e28eec", "71fe09f0-51bb-4d2f-8c66-91ec5e235105", "895513b5-888a-4ea2-8036-5a97569cd6df", "20360774-e683-425b-a9b9-350dc0fb6ef3", "91ad3d23-dd66-4084-beeb-ea89ec4bfabc", "c05cb267-660d-46ab-8fe9-a7e042aa9c8f", "a6af2537-7860-43b2-92b6-1a93bb173a6c", "155a53f2-766f-4748-b11f-722b520df2eb", "4369d68b-3e2c-470e-b2b1-5a0825c35aa0", "077fea95-219b-4ab2-a10d-800ec7f39fb1"]
   }, {
     "id": "76296e16-66cd-4d62-b008-776e204271fe",
     "name": "xx Attente",
@@ -3045,6 +7685,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["0849fbc2-a4f9-48a5-8698-afec02eb558f", "87aa0ef5-bb8c-496d-a196-0f92278e98b1", "c36d64ef-b5db-4c15-90aa-204431553d05"]
+  }, {
+    "id": "3b9945ba-2eb9-4f38-82ec-9a225b926d5c",
+    "name": "4 Lister membres",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
   }],
   "urls": ["http://testpaheko.local.bzh/"],
   "plugins": []
