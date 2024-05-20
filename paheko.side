@@ -109,7 +109,7 @@
       "id": "61bab7ef-9d04-40de-8b87-98999729b832",
       "comment": "Page installation",
       "command": "open",
-      "target": "/admin/install.php",
+      "target": "/admin/install.php?__reset_test",
       "targets": [],
       "value": ""
     }, {
