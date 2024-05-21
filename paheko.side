@@ -6785,7 +6785,7 @@
       "id": "ee718f8d-03fe-464f-87fd-417db36dd34e",
       "comment": "passer à la page suivante",
       "command": "click",
-      "target": "xpath=//li[@class=\"next\"]",
+      "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
@@ -7431,7 +7431,7 @@
       "id": "52330878-a1f9-4a52-8038-34fd282b4c29",
       "comment": "passer à la page suivante",
       "command": "click",
-      "target": "xpath=//li[@class=\"next\"]",
+      "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
@@ -8080,7 +8080,7 @@
       "id": "32f4da15-2464-4827-8852-57e5e119b247",
       "comment": "passer à la page suivante",
       "command": "click",
-      "target": "xpath=//li[@class=\"next\"]",
+      "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
@@ -8543,7 +8543,7 @@
       "id": "09a257c1-da2e-4edb-9eb6-f316793a5cc4",
       "comment": "passer à la page suivante",
       "command": "click",
-      "target": "xpath=//li[@class=\"next\"]",
+      "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
@@ -9097,7 +9097,7 @@
       "id": "be58dd04-4119-468c-b4f0-631be0a68e51",
       "comment": "passer à la page suivante",
       "command": "click",
-      "target": "xpath=//li[@class=\"next\"]",
+      "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
