@@ -6813,12 +6813,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "0dfb30d4-f667-40b0-a30b-ac570fc27408",
+      "comment": "si pas assez de membres",
+      "command": "if",
+      "target": "${nb_total_membres} < 20",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "ddd854d8-2993-4be5-bc3e-afc5edf26a0f",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(12)); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
+    }, {
+      "id": "5f4e6a59-0099-4eab-9320-462fc11ee963",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "c454ccfc-0327-472c-b7cd-e67327a156fb",
       "comment": "",
@@ -7738,12 +7752,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "5ab90d68-84a5-4c23-924f-86e9b8ea6d4a",
+      "comment": "si pas assez de membres",
+      "command": "if",
+      "target": "${nb_total_membres} < 120",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "114dbda5-9986-48a1-b8fc-6cd93cbfa2e1",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
-      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 200 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(12)); } return ${lesnoms};",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 100 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(12)); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
+    }, {
+      "id": "9c71e5b5-1bd5-44a3-b402-42e278926389",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "508ba7a8-bff0-4f73-bb20-8bbac0c9f8ee",
       "comment": "",
@@ -8705,12 +8733,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "49841a76-f86c-40d2-9775-4dee82495130",
+      "comment": "si pas assez de membres",
+      "command": "if",
+      "target": "${nb_total_membres} < 20",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "9be59ed8-d69c-41e3-bd30-b98128307369",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(12)); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
+    }, {
+      "id": "ca1bbf28-07e8-4c08-951c-091e496a9038",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "4eae93aa-d7e1-4387-8fd1-5e35f25550c6",
       "comment": "",
@@ -9686,12 +9728,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "b5bc60a1-69f7-445d-ae9d-6401aee0cd90",
+      "comment": "si pas assez de membres",
+      "command": "if",
+      "target": "${nb_total_membres} < 20",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "6f79f713-83eb-4cd4-bf5d-c0176cffabae",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(12)); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
+    }, {
+      "id": "c1b83aaf-5ea1-42d6-9a1c-7c485df19be1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "d8ed8e81-a1ab-430c-9c96-4c0655e2e53b",
       "comment": "",
@@ -10240,7 +10296,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
