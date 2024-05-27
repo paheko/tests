@@ -1124,7 +1124,7 @@
     }]
   }, {
     "id": "a10913d7-dd6d-4c13-9bda-6293705343f8",
-    "name": "3-02 créer membre Cuba",
+    "name": "3-02 créer membre Pays hasard",
     "commands": [{
       "id": "cd1b3adf-7dcd-4e70-9cfb-45c8911d39a2",
       "comment": "",
@@ -1182,6 +1182,27 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "1419a875-6f79-48e6-aff9-bdcda72f3181",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b172d75d-be97-44b9-8e17-878777bc9185",
+      "comment": "Mémoriser les infos du membre",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "cf968ce5-2a90-4b39-9a22-d71ed9e224c8",
       "comment": "Catégorie du membre",
       "command": "store",
@@ -1203,10 +1224,24 @@
       "targets": [],
       "value": "courriel"
     }, {
+      "id": "31a2150a-4c79-484f-8818-d62c76a6f10c",
+      "comment": "Choisir un pays au hasard",
+      "command": "storeXpathCount",
+      "target": "xpath=//select[@id=\"f_pays\"]/option",
+      "targets": [],
+      "value": "nb_pays"
+    }, {
       "id": "d5ad8f2c-c892-4b1d-a44c-4e15fca13ac8",
-      "comment": "Pays",
-      "command": "store",
-      "target": "Cuba",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 2 + Math.floor(Math.random() * (${nb_pays} - 1))",
+      "targets": [],
+      "value": "num_pays"
+    }, {
+      "id": "3dac9d98-9da6-4953-a910-1067776cc723",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[${num_pays}]",
       "targets": [],
       "value": "pays"
     }, {
@@ -1252,26 +1287,19 @@
       "targets": [],
       "value": "date"
     }, {
-      "id": "34c8202c-c40a-46ec-a7e3-d4441c0f63b5",
-      "comment": "Membres/Ajouter",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "4a33b555-5920-4683-9f15-6347e954fc35",
       "comment": "Mémoriser numéro de membre",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
       "value": "numero"
+    }, {
+      "id": "de545a53-1272-4eee-b8fb-eddb0df35cbe",
+      "comment": "Remplir le formulaire",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "705bb55d-5756-4f18-ba8e-aae002e1d932",
       "comment": "Catégorie de membre",
@@ -1312,23 +1340,10 @@
       ],
       "value": "${courriel}"
     }, {
-      "id": "21f60530-c4c9-4e23-816d-eec1df4fa006",
-      "comment": "",
-      "command": "click",
-      "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "5783a98f-6ba4-44d6-8d80-ca885dcec67a",
       "comment": "Pays",
       "command": "click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
+      "target": "xpath=//select[@id=\"f_pays\"]/option[${num_pays}]",
       "targets": [
         ["css=option:nth-child(69)", "css:finder"],
         ["xpath=//option[@value='FR']", "xpath:attributes"],
