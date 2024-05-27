@@ -10336,118 +10336,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "48e1fc9c-142c-41b0-b103-d56a9b618bc7",
-      "comment": "Récupérer la liste des catégories",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "72201924-280d-4998-9ed4-68a6e8582be9",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=.current li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f82c5a4f-8bc2-47c5-9f6f-84018305b961",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "95f9936c-04c0-421e-9b7b-6b417a38cf62",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "1a86607c-82cc-4590-95b7-480dd2446332",
-      "comment": "Nombre de catégories",
-      "command": "storeXpathCount",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option",
-      "targets": [],
-      "value": "nb_categories"
-    }, {
-      "id": "b471569b-11bd-4fbf-88ef-0963bbaf0156",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "c7ef1e74-8285-4e15-b311-d10ac3f5aa7e",
-      "comment": "",
-      "command": "while",
-      "target": "${i} <= ${nb_categories}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e02d4ad4-13a1-4855-9d69-76bc7e05014a",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]",
-      "targets": [],
-      "value": "cat"
-    }, {
-      "id": "103cd192-5130-4e4f-a74b-15f0ff20310a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${categories_alpha}.concat(${cat})",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "be234fd9-e47f-435c-a160-ebda4e6b2fca",
-      "comment": "",
-      "command": "storeAttribute",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]@value",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "fb00406c-b0ae-4a01-b3ed-2e86b669a420",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${numeros_alpha}.concat(${num_cat})",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "3a44109d-4680-4123-b9d2-4578b01c728a",
-      "comment": "",
-      "command": "echo",
-      "target": "${num_cat} : ${cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aec0af43-1554-4e3a-9382-84f448f09ac4",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "ffe1bb20-6a36-45f8-83c3-f768591267cf",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a3751980-06ec-4f82-8325-aead4a1c02e1",
-      "comment": "Trier les catégories par numéro",
-      "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${numeros_alpha}.length; ++i) { let o = Object(); o.num=${numeros_alpha}[i]; o.cat=${categories_alpha}[i]; tab.push(o);} ; tab.sort((a, b) => { return a.num - b.num; }); let categs = []; tab.forEach((e) => { categs.push(e.cat); }); return categs;",
-      "targets": [],
-      "value": "categories_num"
-    }, {
       "id": "ef65ebfe-c096-48da-80c2-b803809b18c1",
       "comment": "Traiter les membres déjà présents",
       "command": "",
@@ -10468,13 +10356,6 @@
       "target": "return []",
       "targets": [],
       "value": "lesnoms"
-    }, {
-      "id": "d7fd6722-03e4-4f38-8de3-83dcda44f08c",
-      "comment": "Init liste des catégories",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "lescategories"
     }, {
       "id": "d143dc86-7f62-4318-b8bc-ed4088803953",
       "comment": "Menu Membres",
@@ -10686,45 +10567,10 @@
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "adb4309c-1bdd-43fe-96a6-4a9366d8fa43",
-      "comment": "afficher fiche membre",
-      "command": "click",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//a",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9f9bf8e7-6730-4eff-9895-8af3ce471d53",
-      "comment": "Catégorie du membre",
-      "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
-      "targets": [],
-      "value": "categorie"
-    }, {
-      "id": "bd6206b8-09a3-4d79-9fb3-99b097067840",
-      "comment": "Trouver le numéro de la catégorie",
-      "command": "executeScript",
-      "target": "function getNumero(cat_name, categories) { let i = 0; while (i < categories.length) { if (categories[i] == cat_name) { return i + 1; } i += 1; }}return getNumero(${categorie}, ${categories_num});",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "860162ba-cb90-4e6a-a225-d72f263d5cce",
-      "comment": "ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
       "id": "f6f9ec50-8ad1-4188-b923-615b143e4dc3",
       "comment": "",
       "command": "echo",
-      "target": "${numeroAffiche} : ${nomAffiche} - ${categorie} - ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2c5b6703-05c5-4d58-bd6b-558d3d1d4e65",
-      "comment": "Retour page précédente",
-      "command": "executeScript",
-      "target": "history.back()",
+      "target": "${numeroAffiche} : ${nomAffiche}",
       "targets": [],
       "value": ""
     }, {
@@ -10784,13 +10630,6 @@
       "targets": [],
       "value": "nb_noms"
     }, {
-      "id": "fe318142-41fd-41da-a1ec-f71ba8b22f8a",
-      "comment": "",
-      "command": "echo",
-      "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "b2655aa9-b4f0-476f-bca3-f99a9dc74c1a",
       "comment": "Parcourir liste noms pour ajout dans la base",
       "command": "while",
@@ -10826,27 +10665,6 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "970977cb-c8e6-4626-bdbe-c13541236a51",
-      "comment": "Générer numéro catégorie",
-      "command": "executeScript",
-      "target": "return 1 + Math.floor(Math.random() * ${nb_categories})",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "2e4d3c20-79d7-4a96-9f5c-aebb998e5d09",
-      "comment": "Ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
-      "id": "b5cbe70d-0299-4c33-a6ed-e3e1482c1ed8",
-      "comment": "Sélectionner catégorie",
-      "command": "click",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[@value=${num_cat}]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a4ac6c5a-0d98-42c7-87a1-91c5668ef4a2",
       "comment": "",
       "command": "executeScript",
@@ -10870,7 +10688,7 @@
       "id": "4c8e8aae-d457-4170-a566-cb8fa6525faa",
       "comment": "",
       "command": "echo",
-      "target": "Ajout de ${nom}, catégorie = ${num_cat}",
+      "target": "Ajout de ${nom}",
       "targets": [],
       "value": ""
     }, {
@@ -10935,8 +10753,15 @@
       "targets": [],
       "value": "lesnumeros_alpha"
     }, {
-      "id": "42e1a859-0743-4dcc-86b9-4132ece09bc0",
+      "id": "16da5cf7-423e-4c61-bdf7-858740d9c0db",
       "comment": "Afficher les noms triés",
+      "command": "echo",
+      "target": "Tableau des noms triés",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42e1a859-0743-4dcc-86b9-4132ece09bc0",
+      "comment": "",
       "command": "executeScript",
       "target": "return 0",
       "targets": [],
@@ -11033,6 +10858,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "12f52c5d-2788-4089-ada8-9536aa0eaba9",
+      "comment": "Nombre de membres sur la page",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
       "id": "7377c6d0-36e4-4017-96ab-29a975443631",
       "comment": "Trier par nom croissant",
       "command": "click",
@@ -11064,14 +10896,21 @@
       "id": "5098badc-0505-4cf0-9252-0b43e57f167d",
       "comment": "deuxième nom",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/th//span",
       "targets": [],
       "value": "nom2"
+    }, {
+      "id": "d01a9e87-44b1-4424-9776-56bcc062a2dc",
+      "comment": "",
+      "command": "echo",
+      "target": "premier = ${nom1}, deuxième = ${nom2}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "8d077606-6bfa-4957-96d0-d7e66b32b5e3",
       "comment": "",
       "command": "if",
-      "target": "${nom1} > ${nom2}",
+      "target": "${nom1}.localeCompare(${nom2}) > 0",
       "targets": [],
       "value": ""
     }, {
@@ -11095,13 +10934,6 @@
       "target": "",
       "targets": [],
       "value": ""
-    }, {
-      "id": "fbcbbdf9-8c24-4c34-bbb2-0fc626f4e731",
-      "comment": "Nombre de membres sur la page",
-      "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
-      "targets": [],
-      "value": "nb_membres_page"
     }, {
       "id": "d4f79eee-b23e-485b-8c72-82496276bdb6",
       "comment": "",
