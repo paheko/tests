@@ -6415,118 +6415,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ba76fe19-56ff-4b76-bf7b-5d60bee262a6",
-      "comment": "Récupérer la liste des catégories",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "49602f97-bdff-487c-b268-d014d3de8178",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=.current li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "380b0f3e-fed1-4799-a339-9a9680c3a511",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "6566abd1-a45d-4b4d-be04-c77e5a4232f7",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "aed2d227-29ff-48d7-a6b9-951d2057d992",
-      "comment": "Nombre de catégories",
-      "command": "storeXpathCount",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option",
-      "targets": [],
-      "value": "nb_categories"
-    }, {
-      "id": "d0cf800f-4ad5-4a79-9bff-c20ae976a6d8",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "afe938c7-fca3-4889-a825-27c55b318440",
-      "comment": "",
-      "command": "while",
-      "target": "${i} <= ${nb_categories}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f963d669-8577-40e0-8ff5-bf00c78a5b59",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]",
-      "targets": [],
-      "value": "cat"
-    }, {
-      "id": "a423823d-7962-41ba-a737-48d3c66beddd",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${categories_alpha}.concat(${cat})",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "2b84666f-fa32-4359-b65b-22a9caacd35e",
-      "comment": "",
-      "command": "storeAttribute",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]@value",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "9ff2480f-a30c-4287-98bc-5d4e0049b9bd",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${numeros_alpha}.concat(${num_cat})",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "3dbec75a-1588-4823-9a76-fadb707eb902",
-      "comment": "",
-      "command": "echo",
-      "target": "${num_cat} : ${cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ea94130f-539b-4d02-8015-193340a6abde",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "3dd79e09-b9ae-48cd-8abd-f8d9391d67ca",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "70a68897-ec9f-4fd3-a01d-548328ae1e75",
-      "comment": "Trier les catégories par numéro",
-      "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${numeros_alpha}.length; ++i) { let o = Object(); o.num=${numeros_alpha}[i]; o.cat=${categories_alpha}[i]; tab.push(o);} ; tab.sort((a, b) => { return a.num - b.num; }); let categs = []; tab.forEach((e) => { categs.push(e.cat); }); return categs;",
-      "targets": [],
-      "value": "categories_num"
-    }, {
       "id": "0dff1226-2127-497e-963d-dd7f1734bf58",
       "comment": "Traiter les membres déjà présents",
       "command": "",
@@ -6547,13 +6435,6 @@
       "target": "return []",
       "targets": [],
       "value": "lesnoms"
-    }, {
-      "id": "6e8f5b0a-05d4-444d-a6ef-f8a96a85fca1",
-      "comment": "Init liste des catégories",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "lescategories"
     }, {
       "id": "d2db43c2-e379-4a0e-b4d1-f35307988d1f",
       "comment": "Menu Membres",
@@ -6765,45 +6646,10 @@
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "2913b0e9-d934-41fa-b8dc-bd826800e19c",
-      "comment": "afficher fiche membre",
-      "command": "click",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//a",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bc347e5b-891d-4b07-b970-95957f8783e3",
-      "comment": "Catégorie du membre",
-      "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
-      "targets": [],
-      "value": "categorie"
-    }, {
-      "id": "073393c4-26d1-4ac4-a943-b7035781da27",
-      "comment": "Trouver le numéro de la catégorie",
-      "command": "executeScript",
-      "target": "function getNumero(cat_name, categories) { let i = 0; while (i < categories.length) { if (categories[i] == cat_name) { return i + 1; } i += 1; }}return getNumero(${categorie}, ${categories_num});",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "9a357204-3205-4dbf-bfd2-6f98a4d96564",
-      "comment": "ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
       "id": "a5a8dea5-7c7e-44bc-bbde-57bec1453df1",
       "comment": "",
       "command": "echo",
-      "target": "${numeroAffiche} : ${nomAffiche} - ${categorie} - ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2c87e770-7f2b-4119-aa11-02af4d6ff819",
-      "comment": "Retour page précédente",
-      "command": "executeScript",
-      "target": "history.back()",
+      "target": "${numeroAffiche} : ${nomAffiche}",
       "targets": [],
       "value": ""
     }, {
@@ -6905,27 +6751,6 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "97e14d1f-81cd-41d0-9e9a-f8df89c522cb",
-      "comment": "Générer numéro catégorie",
-      "command": "executeScript",
-      "target": "return 1 + Math.floor(Math.random() * ${nb_categories})",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "05b626b7-ef5e-4309-936e-837b17e3587b",
-      "comment": "Ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
-      "id": "cc012d70-0b06-4f46-8c28-9d7506dd2338",
-      "comment": "Sélectionner catégorie",
-      "command": "click",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[@value=${num_cat}]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "e4ee02a6-9079-4321-83b5-c09a9a7b12a8",
       "comment": "",
       "command": "executeScript",
@@ -6949,7 +6774,7 @@
       "id": "0e7fc40b-310c-4731-bfdc-fd77031f653c",
       "comment": "",
       "command": "echo",
-      "target": "Ajout de ${nom}, catégorie = ${num_cat}",
+      "target": "Ajout de ${nom}",
       "targets": [],
       "value": ""
     }, {
@@ -7224,13 +7049,6 @@
       "targets": [],
       "value": "nom"
     }, {
-      "id": "4ce0cc02-c622-4657-a584-a69c212b4db4",
-      "comment": "catégorie mémorisée",
-      "command": "executeScript",
-      "target": "return ${lescategories}.at(${i})",
-      "targets": [],
-      "value": "categorie"
-    }, {
       "id": "47a145be-cac7-4f16-a824-58929ee6d613",
       "comment": "",
       "command": "echo",
@@ -7241,7 +7059,7 @@
       "id": "dee281d1-e24f-4c2a-8c9b-844e180f6c7e",
       "comment": "",
       "command": "echo",
-      "target": "i=${i} ${numero} ${nom} cat=${categorie}",
+      "target": "i=${i} ${numero} ${nom}",
       "targets": [],
       "value": ""
     }, {
@@ -7347,118 +7165,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "db2fa63b-7ef1-4fd5-8717-8779a189355a",
-      "comment": "Récupérer la liste des catégories",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "05a27d05-d3f4-45c7-91f5-55ad386927f7",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=.current li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "e87fa67d-19e7-49b4-bb16-b88f0b51e991",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "16b24312-282e-47b9-8499-4a30e3fb90a0",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "af51a31f-e5f7-4c72-9484-e3c7350e655c",
-      "comment": "Nombre de catégories",
-      "command": "storeXpathCount",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option",
-      "targets": [],
-      "value": "nb_categories"
-    }, {
-      "id": "3dc0bad8-4459-4df2-9bfa-f3afcd2db927",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "88be8d31-706d-4bdd-8c1b-1c328d8db8c1",
-      "comment": "",
-      "command": "while",
-      "target": "${i} <= ${nb_categories}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5c4da75e-4754-4190-82d2-5abbb1cd38d1",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]",
-      "targets": [],
-      "value": "cat"
-    }, {
-      "id": "b4b6d496-8900-4abb-b464-b25fed2846d8",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${categories_alpha}.concat(${cat})",
-      "targets": [],
-      "value": "categories_alpha"
-    }, {
-      "id": "c17e10ba-d942-43c7-954c-4a2e0852db31",
-      "comment": "",
-      "command": "storeAttribute",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[${i}]@value",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "80b1036c-9b14-4faf-ad12-ec628dc74a70",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${numeros_alpha}.concat(${num_cat})",
-      "targets": [],
-      "value": "numeros_alpha"
-    }, {
-      "id": "2b6bfcba-d84e-4f56-b57b-da2bf57de568",
-      "comment": "",
-      "command": "echo",
-      "target": "${num_cat} : ${cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "602459cf-be74-4cf7-9b8d-d28b36efc75d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "854610f7-a1cf-4a96-b117-08a841fdddfc",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "93717242-ae25-4829-acd7-89de3a8121a7",
-      "comment": "Trier les catégories par numéro",
-      "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${numeros_alpha}.length; ++i) { let o = Object(); o.num=${numeros_alpha}[i]; o.cat=${categories_alpha}[i]; tab.push(o);} ; tab.sort((a, b) => { return a.num - b.num; }); let categs = []; tab.forEach((e) => { categs.push(e.cat); }); return categs;",
-      "targets": [],
-      "value": "categories_num"
-    }, {
       "id": "b4896366-a9ff-481d-9dcc-5b0e7f57d9e8",
       "comment": "Traiter les membres déjà présents",
       "command": "",
@@ -7479,13 +7185,6 @@
       "target": "return []",
       "targets": [],
       "value": "lesnoms"
-    }, {
-      "id": "7ed8a670-17d3-42c1-a9d7-0bd2bc7480c2",
-      "comment": "Init liste des catégories",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "lescategories"
     }, {
       "id": "7177e705-6fb4-4897-aa2c-97cd0d2e3c5f",
       "comment": "Menu Membres",
@@ -7697,45 +7396,10 @@
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "2383220d-756d-43af-9d4c-f87798e552fe",
-      "comment": "afficher fiche membre",
-      "command": "click",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//a",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fe06cb0c-8a1f-461a-9bf9-73c698a3b0ab",
-      "comment": "Catégorie du membre",
-      "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
-      "targets": [],
-      "value": "categorie"
-    }, {
-      "id": "a383bbaa-91db-42da-aaad-56c221470ac4",
-      "comment": "Trouver le numéro de la catégorie",
-      "command": "executeScript",
-      "target": "function getNumero(cat_name, categories) { let i = 0; while (i < categories.length) { if (categories[i] == cat_name) { return i + 1; } i += 1; }}return getNumero(${categorie}, ${categories_num});",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "4e48564f-68dd-41c8-a161-084bacbc8111",
-      "comment": "ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
       "id": "e908fdf3-47ba-4ba4-9ea7-61b5f1043adb",
       "comment": "",
       "command": "echo",
-      "target": "${numeroAffiche} : ${nomAffiche} - ${categorie} - ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2457ab44-59f3-47e5-b504-e9cde127dfb7",
-      "comment": "Retour page précédente",
-      "command": "executeScript",
-      "target": "history.back()",
+      "target": "${numeroAffiche} : ${nomAffiche}",
       "targets": [],
       "value": ""
     }, {
@@ -7837,27 +7501,6 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "7714f38b-f0d8-4a8f-8da8-8324765b1f46",
-      "comment": "Générer numéro catégorie",
-      "command": "executeScript",
-      "target": "return 1 + Math.floor(Math.random() * ${nb_categories})",
-      "targets": [],
-      "value": "num_cat"
-    }, {
-      "id": "6d1e059f-8af1-4cb2-835c-982007ba64d6",
-      "comment": "Ajouter numéro catégorie à la liste",
-      "command": "executeScript",
-      "target": "return ${lescategories}.concat(${num_cat})",
-      "targets": [],
-      "value": "lescategories"
-    }, {
-      "id": "fbd08b97-7529-4015-9422-60d7ec9ea1f9",
-      "comment": "Sélectionner catégorie",
-      "command": "click",
-      "target": "xpath=//select[@id=\"f_id_category\"]/option[@value=${num_cat}]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "f6f7f579-35db-4dc8-bebc-67be762902a9",
       "comment": "",
       "command": "executeScript",
@@ -7881,7 +7524,7 @@
       "id": "fc2f00be-7ae5-40c8-b9af-94ab48c73744",
       "comment": "",
       "command": "echo",
-      "target": "Ajout de ${nom}, catégorie = ${num_cat}",
+      "target": "Ajout de ${nom}",
       "targets": [],
       "value": ""
     }, {
@@ -8163,13 +7806,6 @@
       "targets": [],
       "value": "nom"
     }, {
-      "id": "a36e2b0c-0592-4986-b29b-f459f2bedeaf",
-      "comment": "catégorie mémorisée",
-      "command": "executeScript",
-      "target": "return ${lescategories}.at(${i})",
-      "targets": [],
-      "value": "categorie"
-    }, {
       "id": "ab8a0b81-b0ba-4a98-b2a6-21d1e0f0e1d6",
       "comment": "",
       "command": "echo",
@@ -8180,7 +7816,7 @@
       "id": "a9272408-2d37-48d1-8595-35aeeb43462a",
       "comment": "",
       "command": "echo",
-      "target": "i=${i} ${numero} ${nom} cat=${categorie}",
+      "target": "i=${i} ${numero} ${nom}",
       "targets": [],
       "value": ""
     }, {
