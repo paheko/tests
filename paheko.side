@@ -14147,19 +14147,19 @@
     "timeout": 300,
     "tests": ["b3fdeef5-2f6f-46e8-a9db-5995bbf94957", "b468a6eb-1199-460a-95f8-820df1f2c2f9", "d6791401-e683-4d44-9513-24c52f1c6517"]
   }, {
-    "id": "7fc1abfa-640b-438d-8357-d16f42212a22",
-    "name": "3 Créer membre",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "a10913d7-dd6d-4c13-9bda-6293705343f8", "542187b1-45cd-4f09-bad6-b1220fbfc754", "efb8a434-ee82-48e0-a770-d4a668e28eec", "71fe09f0-51bb-4d2f-8c66-91ec5e235105", "895513b5-888a-4ea2-8036-5a97569cd6df", "20360774-e683-425b-a9b9-350dc0fb6ef3", "91ad3d23-dd66-4084-beeb-ea89ec4bfabc", "c05cb267-660d-46ab-8fe9-a7e042aa9c8f", "a6af2537-7860-43b2-92b6-1a93bb173a6c", "155a53f2-766f-4748-b11f-722b520df2eb", "4369d68b-3e2c-470e-b2b1-5a0825c35aa0", "077fea95-219b-4ab2-a10d-800ec7f39fb1"]
-  }, {
     "id": "d35b71cd-b332-4210-ad59-1a0742386aac",
     "name": "2 Connexion",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
     "tests": ["0849fbc2-a4f9-48a5-8698-afec02eb558f", "87aa0ef5-bb8c-496d-a196-0f92278e98b1", "c36d64ef-b5db-4c15-90aa-204431553d05"]
+  }, {
+    "id": "7fc1abfa-640b-438d-8357-d16f42212a22",
+    "name": "3 Créer membre",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "a10913d7-dd6d-4c13-9bda-6293705343f8", "542187b1-45cd-4f09-bad6-b1220fbfc754", "efb8a434-ee82-48e0-a770-d4a668e28eec", "71fe09f0-51bb-4d2f-8c66-91ec5e235105", "895513b5-888a-4ea2-8036-5a97569cd6df", "20360774-e683-425b-a9b9-350dc0fb6ef3", "91ad3d23-dd66-4084-beeb-ea89ec4bfabc", "c05cb267-660d-46ab-8fe9-a7e042aa9c8f", "a6af2537-7860-43b2-92b6-1a93bb173a6c", "155a53f2-766f-4748-b11f-722b520df2eb", "4369d68b-3e2c-470e-b2b1-5a0825c35aa0", "077fea95-219b-4ab2-a10d-800ec7f39fb1"]
   }, {
     "id": "3b9945ba-2eb9-4f38-82ec-9a225b926d5c",
     "name": "4 Lister membres",
