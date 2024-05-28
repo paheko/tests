@@ -297,6 +297,20 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel_admin}"
+    }, {
+      "id": "4db2876d-616f-4c1b-b02a-98228dc23225",
+      "comment": "Catégorie du membre",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
+      "targets": [],
+      "value": "categorie"
+    }, {
+      "id": "b414fd1f-9102-4f9c-9466-3565b745d1a5",
+      "comment": "Vérifier catégorie",
+      "command": "assert",
+      "target": "categorie",
+      "targets": [],
+      "value": "Administrateurs"
     }]
   }, {
     "id": "b468a6eb-1199-460a-95f8-820df1f2c2f9",
@@ -417,6 +431,20 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "jckix@free.fr"
+    }, {
+      "id": "0d567127-5cb6-447a-89ae-fa31a513ff9d",
+      "comment": "Catégorie du membre",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
+      "targets": [],
+      "value": "categorie"
+    }, {
+      "id": "d3804084-f0dc-4a3a-aa5b-670dfdfefe6e",
+      "comment": "Vérifier catégorie",
+      "command": "assert",
+      "target": "categorie",
+      "targets": [],
+      "value": "Administrateurs"
     }]
   }, {
     "id": "0849fbc2-a4f9-48a5-8698-afec02eb558f",
