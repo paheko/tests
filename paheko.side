@@ -10404,7 +10404,7 @@
       "value": ""
     }, {
       "id": "e17bbbd2-5468-4aff-a35d-f50728b59718",
-      "comment": "Trier les membre par nom croissant",
+      "comment": "Trier les membres par nom croissant",
       "command": "executeScript",
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn a.nom.localeCompare(b.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
       "targets": [],
@@ -11217,7 +11217,7 @@
       "value": ""
     }, {
       "id": "60c29b14-e9d7-4c81-a7e3-ecfb2cb46cce",
-      "comment": "Trier les membre par nom décroissant",
+      "comment": "Trier les membres par nom décroissant",
       "command": "executeScript",
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn b.nom.localeCompare(a.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
       "targets": [],
@@ -12030,7 +12030,7 @@
       "value": ""
     }, {
       "id": "90e65336-d350-41f5-b750-a9c35048204e",
-      "comment": "Trier les membre par numéro décroissant",
+      "comment": "Trier les membres par numéro décroissant",
       "command": "executeScript",
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
       "targets": [],
@@ -12878,23 +12878,23 @@
       "value": ""
     }, {
       "id": "6af8e456-1b88-4187-96e7-de7efcc03ec9",
-      "comment": "Trier les membre par ville croissante",
+      "comment": "Trier les membres par ville croissante",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.ville.localeCompare(b.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
       "targets": [],
       "value": "lesnoms_ville_asc"
     }, {
       "id": "e03b7586-9eef-434c-aa84-cff0ec170a1b",
       "comment": "idem pour les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.ville.localeCompare(b.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
       "targets": [],
       "value": "lesnumeros_ville_asc"
     }, {
       "id": "45fffd33-4d6d-4654-8b2e-4eab0dc961b0",
       "comment": "idem pour les villes",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.ville.localeCompare(b.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
       "targets": [],
       "value": "lesvilles_asc"
     }, {
@@ -13754,23 +13754,23 @@
       "value": ""
     }, {
       "id": "deba6be3-826d-42b5-a64c-f3f168b31770",
-      "comment": "Trier les membre par ville décroissante",
+      "comment": "Trier les membres par ville décroissante",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.ville.localeCompare(a.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
       "targets": [],
       "value": "lesnoms_ville_desc"
     }, {
       "id": "e9978db7-38a5-4877-91a7-bfb40eecb683",
       "comment": "idem pour les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.ville.localeCompare(a.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
       "targets": [],
       "value": "lesnumeros_ville_desc"
     }, {
       "id": "2d509a1f-2cdf-424d-9a35-f1b2a78921e0",
       "comment": "idem pour les villes",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; o.ville=${lesvilles}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.ville.localeCompare(a.ville); }); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
+      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
       "targets": [],
       "value": "lesvilles_desc"
     }, {
