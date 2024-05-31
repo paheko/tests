@@ -14499,20 +14499,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ce60f7da-db7a-4636-95ff-90810592f9c0",
-      "comment": "",
-      "command": "//else",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2c210b0e-abea-4eab-8286-4f3d257f0a9b",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return \"\"",
-      "targets": [],
-      "value": "parentAffiche"
-    }, {
       "id": "cee2cca0-93a4-4edb-8bf9-b10184ac1e18",
       "comment": "",
       "command": "end",
@@ -15046,13 +15032,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e9e0931e-3098-44ae-8ccf-ec818036679e",
-      "comment": "premier parent",
-      "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]/following-sibling::td",
-      "targets": [],
-      "value": "parent1"
-    }, {
       "id": "5cbfd014-a78c-4107-a5e2-cb344a758db7",
       "comment": "chercher le dernier parent non vide",
       "command": "",
@@ -15122,13 +15101,6 @@
       "target": "",
       "targets": [],
       "value": ""
-    }, {
-      "id": "23a4c0d7-7e79-4461-af19-dd4b851219b5",
-      "comment": "deuxième parent",
-      "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/td[@class=\"num\"]/following-sibling::td",
-      "targets": [],
-      "value": "parent2"
     }, {
       "id": "b0ab6810-8cc3-481f-be33-75a76c4f7337",
       "comment": "",
@@ -15368,7 +15340,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "e6dc8eef-f38a-482b-8128-f46648bffe42"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
