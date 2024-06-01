@@ -2961,6 +2961,61 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "2e55f3c0-92f8-4a63-809d-09a50020293c",
+      "comment": "Créer un responsable",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7ea4b6b-3795-4b4c-bb31-9861eb8b5713",
+      "comment": "Membres/Ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0211dfaa-ccb5-4536-b195-8dc03b5eefee",
+      "comment": "Mémoriser numéro du responsable",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero_responsable"
+    }, {
+      "id": "bd826a05-76cb-4b8d-800a-13e7eca77baf",
+      "comment": "Nom du responsable",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom_responsable"
+    }, {
+      "id": "3e994625-eb50-484e-b032-364afba627f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [],
+      "value": "${nom_responsable}"
+    }, {
+      "id": "26b34df7-3a41-4b06-8c4f-d44332771388",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
       "id": "e4abd389-b84d-4765-ac92-e6b81f98aa9f",
       "comment": "Catégorie du membre",
       "command": "store",
@@ -2974,20 +3029,6 @@
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "27686919-327a-4850-9bf5-b846a2872f02",
-      "comment": "Nom du responsable",
-      "command": "store",
-      "target": "Lambert Paul",
-      "targets": [],
-      "value": "nom_responsable"
-    }, {
-      "id": "e211cc9b-6075-420b-b6e8-8ec5b01b52a0",
-      "comment": "Numéro du responsable",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "numero_responsable"
     }, {
       "id": "9a06fd19-ed46-460b-9a90-69f38435f6e9",
       "comment": "Adresse E-Mail",
@@ -3538,20 +3579,6 @@
         ["xpath=//button[@name='save']", "xpath:attributes"],
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "2f94bd66-13fc-4a51-9d2b-92a73a8ff064",
-      "comment": "Membres/Ajouter",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
