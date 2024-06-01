@@ -15341,7 +15341,7 @@
     }]
   }, {
     "id": "3d1fc496-8036-4948-af1e-607d5375e813",
-    "name": "4-10 lister membres tri rattaché DÉcroissant",
+    "name": "4-10 lister membres tri rattaché décroissant",
     "commands": [{
       "id": "d1468ab8-2d2c-4d46-9d9e-f2a7e6136fc3",
       "comment": "",
@@ -16541,7 +16541,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
