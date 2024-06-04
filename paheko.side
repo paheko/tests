@@ -16833,7 +16833,7 @@
       "id": "21ce798e-cb2b-49b3-9587-305fc9883941",
       "comment": "Nom du membre à chercher",
       "command": "executeScript",
-      "target": "const accent = 'àâäéèêëîïôöùûü'; const normal = 'aaaeeeeiioouuu'; function normaliser (chaine) { let resu = ''; for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (normaliser(e).localeCompare(elem) == 0) { nb += 1; }} return nb; } function getNom(tab) { while (true) { let nom = tab.at(Math.floor(Math.random() * tab.length)); let nb = nbocc(normaliser(nom), tab); if (nb == 1) { return nom; }}} return getNom(${lesnoms})",
+      "target": "const accent = 'àâäéèêëîïôöùûü'; const normal = 'aaaeeeeiioouuu'; function normaliser (chaine) { let resu = ''; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (normaliser(e).localeCompare(elem) == 0) { nb += 1; }} return nb; } function getNom(tab) { while (true) { let nom = tab.at(Math.floor(Math.random() * tab.length)); let nb = nbocc(normaliser(nom), tab); if (nb == 1) { return nom; }}} return getNom(${lesnoms})",
       "targets": [],
       "value": "nom_cherche"
     }, {
