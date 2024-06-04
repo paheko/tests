@@ -16755,13 +16755,6 @@
       "targets": [],
       "value": "nb_noms"
     }, {
-      "id": "c0bf24bb-78e6-4ad2-8e58-58b95b3a7d0b",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb total = ${nb_total_membres}, nb_noms = ${nb_noms}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "4b63d378-b81f-427b-beea-45c4638d8fe7",
       "comment": "",
       "command": "executeScript",
@@ -16837,13 +16830,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1cddf8e0-3dda-4b40-b766-3cfa7701cb67",
-      "comment": "Nom du membre à chercher",
-      "command": "//executeScript",
-      "target": "return ${lesnoms}.at(Math.floor(Math.random() * ${lesnoms}.length))",
-      "targets": [],
-      "value": "nom_cherche"
-    }, {
       "id": "21ce798e-cb2b-49b3-9587-305fc9883941",
       "comment": "Nom du membre à chercher",
       "command": "executeScript",
@@ -16857,13 +16843,6 @@
       "target": "nom à chercher = ${nom_cherche}",
       "targets": [],
       "value": ""
-    }, {
-      "id": "158fefe5-1249-48ea-aaf1-0ff7fdb916d5",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesnoms}.at(${i})",
-      "targets": [],
-      "value": "nom"
     }, {
       "id": "41fe6725-7be4-4b97-bd83-5e8b5980214b",
       "comment": "menu Membres",
@@ -16906,13 +16885,6 @@
       "targets": [],
       "value": "titre_page"
     }, {
-      "id": "afd5e4f1-ac8b-438e-9261-2dd30ccbcd64",
-      "comment": "",
-      "command": "echo",
-      "target": "titre = ${titre_page}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "cb959060-0042-45b1-9693-a8702c848516",
       "comment": "",
       "command": "if",
@@ -16937,7 +16909,7 @@
       "id": "7095d6a0-242a-40b1-b463-359855e74932",
       "comment": "",
       "command": "echo",
-      "target": "nb = ${nb_res}, nom trouvé = ${nom_trouve}",
+      "target": "nom trouvé = ${nom_trouve}",
       "targets": [],
       "value": ""
     }, {
@@ -17001,34 +16973,6 @@
       "comment": "",
       "command": "end",
       "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f697d709-163b-44e1-baf3-4cb596eab481",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (e.toLocaleLowerCase().localeCompare(elem) == 0) { nb += 1; } } return nb; } return nbocc(${nom_cherche}.toLocaleLowerCase(), ${lesnoms}) ",
-      "targets": [],
-      "value": "nb_occ"
-    }, {
-      "id": "d86b138d-10d9-4173-910f-cc4741f92a04",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb occ = ${nb_occ}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ca8a3846-20b4-43ad-9185-e9d8773c8a41",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (e.toLocaleLowerCase().localeCompare(elem) == 0) { nb += 1; } } return nb; } return nbocc(\"lambert paul\", ${lesnoms}) ",
-      "targets": [],
-      "value": "nb_occ"
-    }, {
-      "id": "b394f90a-642f-412a-ac71-7f240b0b8fee",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb occ = ${nb_occ}",
       "targets": [],
       "value": ""
     }]
