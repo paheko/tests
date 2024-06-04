@@ -8469,7 +8469,7 @@
     }, {
       "id": "45e4e37a-fdcf-4176-a987-bf3aee9a3dbb",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
       "targets": [],
       "value": ""
@@ -8641,7 +8641,7 @@
     }, {
       "id": "56ab778a-c590-4196-8168-533eaa8ab61e",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres non cachés = ${nb_membres_cat}",
       "targets": [],
       "value": ""
@@ -8739,7 +8739,7 @@
     }, {
       "id": "779f1ee1-cf59-40c2-818b-f971069bd983",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -9464,7 +9464,7 @@
     }, {
       "id": "2cd909e4-29ea-4980-9234-fec73248cb3f",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
       "targets": [],
       "value": ""
@@ -9696,7 +9696,7 @@
     }, {
       "id": "9e450853-15c1-47f8-bb5a-8fbccf03daa5",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres dans la catégorie ${num_categorie} = ${nb_membres_cat}",
       "targets": [],
       "value": ""
@@ -9794,7 +9794,7 @@
     }, {
       "id": "e6c1a7a6-af4e-4c5a-b552-cc1c567574d0",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -10628,7 +10628,7 @@
     }, {
       "id": "d4f79eee-b23e-485b-8c72-82496276bdb6",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -11441,7 +11441,7 @@
     }, {
       "id": "b5cf4357-61d9-4199-bbaf-81b981daba92",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -12261,7 +12261,7 @@
     }, {
       "id": "88389155-d956-451e-a6f5-e1b69b68308a",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -13116,7 +13116,7 @@
     }, {
       "id": "294506f1-4713-48f4-bc5a-4c27113cd427",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
@@ -13992,7 +13992,7 @@
     }, {
       "id": "1c422349-5d8a-4b74-8a8e-a66af3641c97",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nombre de membres sur la page = ${nb_membres_page}",
       "targets": [],
       "value": ""
