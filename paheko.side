@@ -16934,6 +16934,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "32ca0a92-3f06-4fcc-b949-4299b906e61a",
+      "comment": "Init liste des numéros",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
       "id": "9e6ffe90-f12a-446f-b662-8295dcdf4c74",
       "comment": "Init liste des noms",
       "command": "executeScript",
@@ -17017,6 +17024,20 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "23a4e6f9-fd13-4df6-aa25-effdc8e8a542",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "40a3f66d-1622-42bb-909d-f907f296d7da",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
+      "targets": [],
+      "value": "lesnumeros"
     }, {
       "id": "bc3c917a-bc8b-4595-bf8e-e6626d9253a7",
       "comment": "",
@@ -17109,6 +17130,20 @@
       ],
       "value": ""
     }, {
+      "id": "fe3a2e57-7ee2-40e7-9170-f545ccdf1b42",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "345a15c2-f53e-4352-874a-ffbfccf8b111",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
       "id": "915bfd92-3b74-4c86-9762-64aaed0c8c9f",
       "comment": "",
       "command": "executeScript",
@@ -17163,6 +17198,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "3c4f91db-e94f-42a8-9c86-9ff24410c126",
+      "comment": "Nom du membre à chercher",
+      "command": "executeScript",
+      "target": "return \"amber\"",
+      "targets": [],
+      "value": "nom_cherche"
+    }, {
+      "id": "d865d12a-ad0e-4a1d-b998-191df78fe0c5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1); }; function homonyme(chaine, lg) { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < lg; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, lg/2)); let fin = upper(str.slice(lg/2)); return debut + chaine + fin; } return homonyme(${nom_cherche}, 10);",
+      "targets": [],
+      "value": "nom"
+    }, {
       "id": "c02d645c-d453-4d4d-99e5-12e2f9bd65b0",
       "comment": "Menu ajouter",
       "command": "click",
@@ -17177,6 +17226,27 @@
       ],
       "value": ""
     }, {
+      "id": "02357ee2-cd43-49f0-b915-e0ecf8fc6634",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "80e8744a-ffd7-491f-9949-fa1505067718",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "d9aeaaaf-7a63-46ba-b203-11a9a15a6b97",
+      "comment": "Ajouter nom à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.concat(${nom})",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
       "id": "24e8c864-7e47-4a7a-adae-0c959a5b2b10",
       "comment": "Saisir le nom",
       "command": "type",
@@ -17188,7 +17258,7 @@
         ["xpath=//input[@id='f_nom']", "xpath:attributes"],
         ["xpath=//dd[3]/input", "xpath:position"]
       ],
-      "value": "Fourme Dambêr"
+      "value": "${nom}"
     }, {
       "id": "91b6be2d-7963-49a8-aadb-f7505b62236f",
       "comment": "Enregistrer",
@@ -17203,19 +17273,54 @@
       ],
       "value": ""
     }, {
-      "id": "3c4f91db-e94f-42a8-9c86-9ff24410c126",
-      "comment": "Nom du membre à chercher",
-      "command": "executeScript",
-      "target": "return \"amber\"",
-      "targets": [],
-      "value": "nom_cherche"
-    }, {
       "id": "8bd81746-a2ee-4b12-9d9c-2c45551bd4c2",
       "comment": "",
       "command": "echo",
       "target": "nom à chercher = ${nom_cherche}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "7fadf647-a5d3-42ce-8665-3d0b8b652f90",
+      "comment": "Trier les tableaux par nom",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70bb7748-4061-4971-83d1-5ff6862f170f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "function trier(tnoms, tnumeros) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.num=tnumeros[i]; o.nom=tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.nom.localeCompare(b.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms; } return trier(${lesnoms}, ${lesnumeros});",
+      "targets": [],
+      "value": "noms_tries"
+    }, {
+      "id": "f26cc622-8d47-4ba3-9ee2-b9ed3952f24b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "function trier(tnoms, tnumeros) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.num=tnumeros[i]; o.nom=tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.nom.localeCompare(b.nom); }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums; } return trier(${lesnoms}, ${lesnumeros});",
+      "targets": [],
+      "value": "numeros_tries"
+    }, {
+      "id": "c23cd8df-5720-47f0-b2f4-83c745abf9c8",
+      "comment": "Faire la liste des homonymes",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2dc16d09-f423-475c-931e-c29e268da8e9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const accent = \"àâäéèêëîïôöùûü\"; const normal = \"aaaeeeeiioouuu\"; function normaliser (chaine) { let resu = \"\"; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function indonymes(chaine, tab) { let homos = []; for (let i = 0 ; i < tab.length; ++i) { if (normaliser(tab[i]).includes(chaine)) { homos.push(i); }} return homos; }; return indonymes(${nom_cherche}, ${noms_tries});",
+      "targets": [],
+      "value": "tab_pos"
+    }, {
+      "id": "61fee7a5-cd7c-4fcb-9986-1da9d84e1289",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tab_pos}.length",
+      "targets": [],
+      "value": "nb_homonymes"
     }, {
       "id": "ec54ff83-2297-44cf-9a06-9380f2d3f1e5",
       "comment": "menu Membres",
@@ -17272,6 +17377,13 @@
       "targets": [],
       "value": "nb_res"
     }, {
+      "id": "082c3974-dbd5-4113-8fdc-632d17a464fa",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_res",
+      "targets": [],
+      "value": "${nb_homonymes}"
+    }, {
       "id": "29c9b49f-f28c-460e-892b-d81e50ecf869",
       "comment": "",
       "command": "executeScript",
@@ -17286,6 +17398,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "67caf8c6-bb48-40ed-b515-a86d036515cb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tab_pos}.at(${i}-1)",
+      "targets": [],
+      "value": "num"
+    }, {
       "id": "aaff611c-5053-452d-87f3-e1e0349f98e0",
       "comment": "",
       "command": "storeText",
@@ -17293,10 +17412,31 @@
       "targets": [],
       "value": "nom_trouve"
     }, {
+      "id": "43075562-08ea-40c4-87f9-ddbe328383b5",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//tbody/tr[${i}]/td[3]",
+      "targets": [],
+      "value": "numero_trouve"
+    }, {
+      "id": "2bac713b-e68b-449d-9c83-e74943ad714d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${noms_tries}.at(${num})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "373eaf44-e53e-40c2-9431-f9027dc2cc04",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${numeros_tries}.at(${num})",
+      "targets": [],
+      "value": "numero"
+    }, {
       "id": "262c11e7-3305-4061-b8ec-a9491d5bca5c",
       "comment": "",
       "command": "echo",
-      "target": "nom trouvé = ${nom_trouve}",
+      "target": "${numero_trouve} ${nom_trouve} = ${nom} (${numero})",
       "targets": [],
       "value": ""
     }, {
@@ -17313,6 +17453,20 @@
       "target": "ok",
       "targets": [],
       "value": "true"
+    }, {
+      "id": "c30438d9-2326-4d04-8410-5de9ba29da76",
+      "comment": "",
+      "command": "assert",
+      "target": "nom_trouve",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "56d05609-bbe4-4fda-b42e-a63eb795ad4f",
+      "comment": "",
+      "command": "assert",
+      "target": "numero_trouve",
+      "targets": [],
+      "value": "${numero}"
     }, {
       "id": "a31e9670-1e13-4e76-9084-ce2ec119e59d",
       "comment": "",
