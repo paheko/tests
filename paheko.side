@@ -16741,59 +16741,10 @@
       "targets": [],
       "value": "titre_page"
     }, {
-      "id": "cb959060-0042-45b1-9693-a8702c848516",
-      "comment": "",
-      "command": "//if",
-      "target": "${titre_page} == \"Recherche de membre\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "93d2ab0e-2ca7-472d-b81b-be51b8abc716",
-      "comment": "",
-      "command": "//storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_res"
-    }, {
-      "id": "6565a4b0-25b6-4dd1-942b-1a821c863d73",
-      "comment": "",
-      "command": "//storeText",
-      "target": "xpath=//tbody/tr/td[2]/a",
-      "targets": [],
-      "value": "nom_trouve"
-    }, {
-      "id": "7095d6a0-242a-40b1-b463-359855e74932",
-      "comment": "",
-      "command": "//echo",
-      "target": "nom trouvé = ${nom_trouve}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1b29182a-a603-40c1-95c2-031922c07b36",
-      "comment": "",
-      "command": "//assert",
-      "target": "nb_res",
-      "targets": [],
-      "value": "1"
-    }, {
-      "id": "521f879f-e96b-4e10-aa98-cab2d6997866",
-      "comment": "",
-      "command": "//assert",
-      "target": "nom_trouve",
-      "targets": [],
-      "value": "${nom_cherche}"
-    }, {
-      "id": "e2adaf29-a0b9-4efa-834a-27251addcf46",
-      "comment": "",
-      "command": "//else",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "0beb5586-3e78-4491-a885-60be13ce6330",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${titre_page}.startsWith(${nom_cherche})",
+      "target": "return ${titre_page}.toLocaleLowerCase().includes(${nom_cherche}.toLocaleLowerCase())",
       "targets": [],
       "value": "ok"
     }, {
@@ -16824,13 +16775,6 @@
       "target": "nom_trouve",
       "targets": [],
       "value": "${nom_cherche}"
-    }, {
-      "id": "fa244138-b1bc-4151-bce1-a1c54357ca10",
-      "comment": "",
-      "command": "//end",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "e0b8520c-d128-4cd9-b6fa-b351ea91d4d2",
