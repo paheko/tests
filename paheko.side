@@ -921,28 +921,16 @@
     }, {
       "id": "9ca7bf72-7213-4edf-9d20-13589ec9d8d3",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "c84e6073-7d7e-4116-b825-83f0a245141b",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "84552c91-deed-4d0f-aae1-8933597eec1d",
@@ -1061,7 +1049,7 @@
     }, {
       "id": "c414ed84-69e1-4069-8d89-76cc7d94d985",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -1784,28 +1772,16 @@
     }, {
       "id": "a4aa9ecd-b849-4009-b6ee-c04007b17ad4",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "c8a2357e-a3b3-47d9-98dd-a2ab3034dbea",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "ba793090-3027-4217-875b-f3209ece7a9b",
@@ -1930,7 +1906,7 @@
     }, {
       "id": "28a6cc2b-5d0b-4032-affd-38fe234e4b55",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -2225,28 +2201,16 @@
     }, {
       "id": "469a96d1-5a00-42c0-ad2e-ebf5bfea2ad4",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "9a463acc-7950-4a04-806c-04669a0fb84b",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "1376637c-6418-4a61-80e3-3bc88e08ed89",
@@ -2371,7 +2335,7 @@
     }, {
       "id": "2429c4fd-8a60-4731-943f-9f4364d4b515",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -2652,28 +2616,16 @@
     }, {
       "id": "77d2378d-a83c-4076-9907-23d3aea1c0b4",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "73871e9e-1857-49ff-a572-9c893ba1e6b3",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "8521c5bd-a29a-4688-8217-bc2877757382",
@@ -2798,7 +2750,7 @@
     }, {
       "id": "c6cb668d-47fd-411c-bb75-a26128af03ec",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -3200,28 +3152,16 @@
     }, {
       "id": "207196a5-8de9-4883-881f-ec0ba8d496c5",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "34ee90e0-b301-4d20-b988-b1820ce5566a",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "2580aabe-3ebf-4fc3-a275-2013947b9c2f",
@@ -3385,7 +3325,7 @@
     }, {
       "id": "4c9e3aab-19df-4812-9702-6aa5fb68b051",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -3805,28 +3745,16 @@
     }, {
       "id": "04adad26-3b22-413a-9d2a-86fef5d8ddbe",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "79382d6c-5cf7-4ba2-b168-02d0b02ff62e",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "91702519-b59f-4ed3-8074-fdbc639ece86",
@@ -3990,7 +3918,7 @@
     }, {
       "id": "ec1f5103-aeeb-4a1c-be84-26c93b7bbefc",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -4291,28 +4219,16 @@
     }, {
       "id": "63bf7072-1fde-4f84-b892-dd4cee1abcea",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "01040a1a-37be-4440-9270-10ab30450d39",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "22d15378-fe16-45ff-aec5-c4058e9a6f75",
@@ -4437,7 +4353,7 @@
     }, {
       "id": "86f2975c-c56e-4b59-86f9-9d3c4fe10bcb",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -4724,28 +4640,16 @@
     }, {
       "id": "0b8e7a8f-ab4a-4e7d-9914-74c445741e30",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "e9b448cf-24a8-44f0-a054-5a58e5e15c11",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "120d346c-4569-4203-ab5d-7517eed5a90d",
@@ -5046,28 +4950,16 @@
     }, {
       "id": "9829dda7-c7fa-4de7-a185-04031e266da2",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "7ccf9ace-4194-45cf-8581-b1a4a5fb07f3",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "ef3d0879-e451-4069-9baf-54b6cb5811cf",
@@ -5368,28 +5260,16 @@
     }, {
       "id": "71e80643-1bd4-4f6f-901a-466e55034b11",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "3b11ec51-6d78-486d-8cb6-fbbe7525ccdb",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "d3e7886f-363f-49d8-9c4a-267dd8b4ca37",
@@ -5690,28 +5570,16 @@
     }, {
       "id": "73e4e90a-f8ef-4c30-b38a-81628e545dc0",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "99c64321-6a7c-4725-9b81-a4e72d29a7de",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "9c11922d-ce4d-4b4f-a4fe-84bb6bcf98db",
@@ -6012,28 +5880,16 @@
     }, {
       "id": "771d68af-4baa-40ad-9b7f-a2a06ccc325c",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "id=f_pays",
-      "targets": [
-        ["id=f_pays", "id"],
-        ["name=pays", "name"],
-        ["css=#f_pays", "css:finder"],
-        ["xpath=//select[@id='f_pays']", "xpath:attributes"],
-        ["xpath=//dd[6]/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "45d063ee-0ef3-47de-ad72-46c98b072b73",
       "comment": "Pays",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [
-        ["css=option:nth-child(69)", "css:finder"],
-        ["xpath=//option[@value='FR']", "xpath:attributes"],
-        ["xpath=//select[@id='f_pays']/option[69]", "xpath:idRelative"],
-        ["xpath=//option[69]", "xpath:position"],
-        ["xpath=//option[contains(.,'France')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "3d1afcff-1633-4ead-8af5-fe995229c22e",
@@ -6184,7 +6040,7 @@
     }, {
       "id": "b9f4f884-97d9-4f0d-9e21-86378f3b6afa",
       "comment": "Vérif pays",
-      "command": "assertText",
+      "command": "//assertText",
       "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
       "targets": [],
       "value": "${pays}"
@@ -16887,49 +16743,49 @@
     }, {
       "id": "cb959060-0042-45b1-9693-a8702c848516",
       "comment": "",
-      "command": "if",
+      "command": "//if",
       "target": "${titre_page} == \"Recherche de membre\"",
       "targets": [],
       "value": ""
     }, {
       "id": "93d2ab0e-2ca7-472d-b81b-be51b8abc716",
       "comment": "",
-      "command": "storeXpathCount",
+      "command": "//storeXpathCount",
       "target": "xpath=//tbody/tr",
       "targets": [],
       "value": "nb_res"
     }, {
       "id": "6565a4b0-25b6-4dd1-942b-1a821c863d73",
       "comment": "",
-      "command": "storeText",
+      "command": "//storeText",
       "target": "xpath=//tbody/tr/td[2]/a",
       "targets": [],
       "value": "nom_trouve"
     }, {
       "id": "7095d6a0-242a-40b1-b463-359855e74932",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "nom trouvé = ${nom_trouve}",
       "targets": [],
       "value": ""
     }, {
       "id": "1b29182a-a603-40c1-95c2-031922c07b36",
       "comment": "",
-      "command": "assert",
+      "command": "//assert",
       "target": "nb_res",
       "targets": [],
       "value": "1"
     }, {
       "id": "521f879f-e96b-4e10-aa98-cab2d6997866",
       "comment": "",
-      "command": "assert",
+      "command": "//assert",
       "target": "nom_trouve",
       "targets": [],
       "value": "${nom_cherche}"
     }, {
       "id": "e2adaf29-a0b9-4efa-834a-27251addcf46",
       "comment": "",
-      "command": "else",
+      "command": "//else",
       "target": "",
       "targets": [],
       "value": ""
@@ -16971,7 +16827,7 @@
     }, {
       "id": "fa244138-b1bc-4151-bce1-a1c54357ca10",
       "comment": "",
-      "command": "end",
+      "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
@@ -17486,7 +17342,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "a10913d7-dd6d-4c13-9bda-6293705343f8", "542187b1-45cd-4f09-bad6-b1220fbfc754", "efb8a434-ee82-48e0-a770-d4a668e28eec", "71fe09f0-51bb-4d2f-8c66-91ec5e235105", "895513b5-888a-4ea2-8036-5a97569cd6df", "20360774-e683-425b-a9b9-350dc0fb6ef3", "91ad3d23-dd66-4084-beeb-ea89ec4bfabc", "c05cb267-660d-46ab-8fe9-a7e042aa9c8f", "a6af2537-7860-43b2-92b6-1a93bb173a6c", "155a53f2-766f-4748-b11f-722b520df2eb", "4369d68b-3e2c-470e-b2b1-5a0825c35aa0", "077fea95-219b-4ab2-a10d-800ec7f39fb1"]
+    "tests": ["efad291c-7700-4c1d-a0c7-393264364aa1", "542187b1-45cd-4f09-bad6-b1220fbfc754", "efb8a434-ee82-48e0-a770-d4a668e28eec", "71fe09f0-51bb-4d2f-8c66-91ec5e235105", "895513b5-888a-4ea2-8036-5a97569cd6df", "20360774-e683-425b-a9b9-350dc0fb6ef3", "91ad3d23-dd66-4084-beeb-ea89ec4bfabc", "c05cb267-660d-46ab-8fe9-a7e042aa9c8f", "a6af2537-7860-43b2-92b6-1a93bb173a6c", "155a53f2-766f-4748-b11f-722b520df2eb", "4369d68b-3e2c-470e-b2b1-5a0825c35aa0", "077fea95-219b-4ab2-a10d-800ec7f39fb1"]
   }, {
     "id": "3b9945ba-2eb9-4f38-82ec-9a225b926d5c",
     "name": "4 Lister membres",
