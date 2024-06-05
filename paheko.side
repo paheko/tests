@@ -16464,6 +16464,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e6257e1f-0f32-4c07-ab4c-313b7d98defc",
+      "comment": "Init liste des numéros",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
       "id": "98898ac1-c363-4dcc-b836-9b00307ece00",
       "comment": "Init liste des noms",
       "command": "executeScript",
@@ -16547,6 +16554,20 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "974282f4-acf2-489c-aea7-62c94c7910ac",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "9b6e6a7b-28bb-4300-b909-8f2b7c590542",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
+      "targets": [],
+      "value": "lesnumeros"
     }, {
       "id": "21abdaca-a8c7-40ae-83f7-4d9a34078951",
       "comment": "",
@@ -16639,6 +16660,20 @@
       ],
       "value": ""
     }, {
+      "id": "d35db3a7-42fb-4290-9139-adbf20131218",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "68813087-2486-4aa6-841e-c62ec1dcf080",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
       "id": "d06e62be-a82f-4068-bd36-d405fffe9dfe",
       "comment": "",
       "command": "executeScript",
@@ -16687,16 +16722,30 @@
       "value": ""
     }, {
       "id": "21ce798e-cb2b-49b3-9587-305fc9883941",
-      "comment": "Nom du membre à chercher",
+      "comment": "",
       "command": "executeScript",
-      "target": "const accent = 'àâäéèêëîïôöùûü'; const normal = 'aaaeeeeiioouuu'; function normaliser (chaine) { let resu = ''; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (normaliser(e).localeCompare(elem) == 0) { nb += 1; }} return nb; } function getNom(tab) { while (true) { let nom = tab.at(Math.floor(Math.random() * tab.length)); let nb = nbocc(normaliser(nom), tab); if (nb == 1) { return nom; }}} return getNom(${lesnoms})",
+      "target": "const accent = 'àâäéèêëîïôöùûü'; const normal = 'aaaeeeeiioouuu'; function normaliser (chaine) { let resu = ''; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (normaliser(e).localeCompare(elem) == 0) { nb += 1; }} return nb; } function getNom(tab) { while (true) { let pos = Math.floor(Math.random() * tab.length); let nom = tab.at(pos); let nb = nbocc(normaliser(nom), tab); if (nb == 1) { return pos; }}} return getNom(${lesnoms})",
+      "targets": [],
+      "value": "pos_cherche"
+    }, {
+      "id": "f41a44a3-89cf-4aae-9ba6-f3aaa6a8d0a0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.at(${pos_cherche})",
       "targets": [],
       "value": "nom_cherche"
+    }, {
+      "id": "46850638-5f11-4be0-944d-8b08884a3d48",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.at(${pos_cherche})",
+      "targets": [],
+      "value": "numero_cherche"
     }, {
       "id": "d889c91a-9415-4a01-acd0-714782a9c12c",
       "comment": "",
       "command": "echo",
-      "target": "nom à chercher = ${nom_cherche}",
+      "target": "cherché : ${numero_cherche} ${nom_cherche}",
       "targets": [],
       "value": ""
     }, {
@@ -16755,6 +16804,13 @@
       "targets": [],
       "value": "true"
     }, {
+      "id": "da0f9574-1f5b-4b99-87d3-2ffc73bbaf2b",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(., \"Numéro de membre\")]/following-sibling::dd[1]",
+      "targets": [],
+      "value": "numero_trouve"
+    }, {
       "id": "2f81fc81-26dc-4ded-9b30-4b829d0f68a7",
       "comment": "",
       "command": "storeText",
@@ -16765,9 +16821,16 @@
       "id": "6f875321-ed40-4625-becd-22405d92fbad",
       "comment": "",
       "command": "echo",
-      "target": "nom trouvé = ${nom_trouve}",
+      "target": "trouvé  : ${numero_trouve} ${nom_trouve}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "4da11a59-5b1b-4877-b476-6f861fd8f536",
+      "comment": "",
+      "command": "assert",
+      "target": "numero_trouve",
+      "targets": [],
+      "value": "${numero_cherche}"
     }, {
       "id": "57b3b072-0825-4bd6-a54a-04b7d2c7d245",
       "comment": "",
