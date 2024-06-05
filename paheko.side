@@ -17367,13 +17367,6 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "6631c239-e986-4a85-beb5-1558091b3950",
-      "comment": "Init liste des noms",
-      "command": "executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "lesnoms"
-    }, {
       "id": "7322c27d-3612-436c-9478-cd83fafceb90",
       "comment": "Traiter les membres déjà présents",
       "command": "",
@@ -17465,20 +17458,6 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "2227e52e-9710-4f26-b84d-6981c661d899",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
-      "targets": [],
-      "value": "nomAffiche"
-    }, {
-      "id": "0972c6b8-6d64-41e5-a551-ee055531a166",
-      "comment": "Ajouter nom à la liste",
-      "command": "executeScript",
-      "target": "return ${lesnoms}.concat(${nomAffiche})",
-      "targets": [],
-      "value": "lesnoms"
-    }, {
       "id": "6ae6a522-e747-41ca-acea-520c9e9d84a0",
       "comment": "",
       "command": "executeScript",
@@ -17500,6 +17479,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "dd043580-1950-47f2-8415-78a3c39a0fe7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "nb_nouveaux"
+    }, {
       "id": "ae42c58b-d945-4c13-9530-c9f70d63a739",
       "comment": "si pas assez de membres",
       "command": "if",
@@ -17507,12 +17493,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "fdbcef06-6a8e-447e-9291-8640d0272368",
-      "comment": "Ajouter nouveaux noms à la liste",
+      "id": "3516fa79-8fda-4829-b4ca-1bb91595e417",
+      "comment": "",
       "command": "executeScript",
-      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
+      "target": "return 7 + Math.floor(Math.random() * 15)",
       "targets": [],
-      "value": "lesnoms"
+      "value": "nb_nouveaux"
     }, {
       "id": "425f9c40-95aa-4c80-a8af-33349366e559",
       "comment": "",
@@ -17521,24 +17507,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5227c802-2b9f-4da5-b1c4-475a167399a3",
+      "id": "86f580d7-97fe-495c-aac7-4f877302a6c4",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${lesnoms}.length",
-      "targets": [],
-      "value": "nb_noms"
-    }, {
-      "id": "8f9fc07f-3ea7-4add-80fd-d1a392ca39ad",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${nb_total_membres}",
+      "target": "return 0",
       "targets": [],
       "value": "i"
     }, {
       "id": "ff441e40-3316-4546-8f7f-5ee713ba7140",
       "comment": "Enregistrer les nouveaux noms",
       "command": "while",
-      "target": "${i} < ${nb_noms}",
+      "target": "${i} < ${nb_nouveaux}",
       "targets": [],
       "value": ""
     }, {
@@ -17570,15 +17549,15 @@
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "b5d58232-fea3-451b-b11c-261d34f2fb15",
-      "comment": "",
+      "id": "680e0cd0-875c-4a7a-b51b-ee5be68c2365",
+      "comment": "nouveau nom",
       "command": "executeScript",
-      "target": "return ${lesnoms}.at(${i})",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; return chaine(11 + Math.floor(Math.random() * 5)); ",
       "targets": [],
       "value": "nom"
     }, {
       "id": "76056b89-9da9-451c-bde5-fb13d20724d7",
-      "comment": "Saisir le nom",
+      "comment": "Saisir le nouveau nom",
       "command": "type",
       "target": "id=f_nom",
       "targets": [
