@@ -45,8 +45,7 @@ function afficher(msg, tab)
 function trierVilles(tvilles, tnumeros, croissant = true)
 {
 	let tab = [];
-	for (let i = 0; i < tvilles.length; ++i)
-	{
+	for (let i = 0; i < tvilles.length; ++i) {
 		let o = Object();
 		o.ville = tvilles[i];
 		o.numero = tnumeros[i];
@@ -57,9 +56,9 @@ function trierVilles(tvilles, tnumeros, croissant = true)
 		if (! croissant) { [a, b] = [b, a]; }
 
 		// une ville au moins vide ?
-		if (a.ville == "" && b.ville == "") { return a.numero - b.numero; }
-		if (a.ville == "") { return 1; }
-		if (b.ville == "") { return -1;}
+		if (a.ville == '' && b.ville == '') { return a.numero - b.numero; }
+		if (a.ville == '') { return 1; }
+		if (b.ville == '') { return -1; }
 
 		// deux villes non vides
 		let comp = a.ville.localeCompare(b.ville);
@@ -73,9 +72,7 @@ function trierVilles(tvilles, tnumeros, croissant = true)
 function extraireVilles(tab)
 {
 	let villes = [];
-	tab.forEach((e) => {
-		villes.push(e.ville);
-	});
+	tab.forEach((e) => { villes.push(e.ville); });
 	return villes;
 }
 
@@ -96,13 +93,13 @@ function trierParents(tparents, tnoms, tnumeros, croissant = true)
 		ordre = croissant ? 1 : -1;
 
 		// un parent au moins est vide ?
-		if (a.parent == "" && b.parent == "") {
+		if (a.parent == '' && b.parent == '') {
 			let comp = a.nom.localeCompare(b.nom);
 			if (comp == 0) { comp = a.numero - b.numero; }
 			return comp * ordre;
 		}
-		if (a.parent == "") { return 1; }
-		if (b.parent == "") { return -1; }
+		if (a.parent == '') { return 1; }
+		if (b.parent == '') { return -1; }
 
 		// deux parents non vides
 		let comp = a.parent.localeCompare(b.parent);
@@ -131,13 +128,13 @@ function trierResp(tresp, tnoms, tnumeros, croissant = true)
 		ordre = croissant ? 1 : -1;
 
 		// un resp au moins est vide ?
-		if (a.resp == "" && b.resp == "") {
+		if (a.resp == '' && b.resp == '') {
 			let comp = a.nom.localeCompare(b.nom);
 			if (comp == 0) { comp = a.numero - b.numero; }
 			return comp * ordre;
 		}
-		if (a.resp == "") { return 1; }
-		if (b.resp == "") { return -1; }
+		if (a.resp == '') { return 1; }
+		if (b.resp == '') { return -1; }
 
 		// deux resp non vides
 		let comp = a.resp.localeCompare(b.resp);
