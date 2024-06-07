@@ -10287,16 +10287,16 @@
       "value": ""
     }, {
       "id": "e17bbbd2-5468-4aff-a35d-f50728b59718",
-      "comment": "Trier les membres par nom croissant",
+      "comment": "Trier les membres par nom croissant ; récupérer les noms",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn a.nom.localeCompare(b.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnoms_alpha"
     }, {
       "id": "ddbe0044-8e6e-4188-90fa-53893ed54ea8",
-      "comment": "idem pour les numéros",
+      "comment": "Trier les membres par nom croissant ; récupérer les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn a.nom.localeCompare(b.nom); }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnumeros_alpha"
     }, {
@@ -11100,16 +11100,16 @@
       "value": ""
     }, {
       "id": "60c29b14-e9d7-4c81-a7e3-ecfb2cb46cce",
-      "comment": "Trier les membres par nom décroissant",
+      "comment": "Trier les membres par nom décroissant ; récupérer les noms",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn b.nom.localeCompare(a.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnoms_alpha"
     }, {
       "id": "ac18e750-cf13-4168-8d4c-8cbedd6e2abc",
-      "comment": "idem pour les numéros",
+      "comment": "Trier les membres par nom décroissant ; récupérer les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => {\treturn b.nom.localeCompare(a.nom); }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnumeros_alpha"
     }, {
@@ -11913,14 +11913,14 @@
       "value": ""
     }, {
       "id": "90e65336-d350-41f5-b750-a9c35048204e",
-      "comment": "Trier les membres par numéro décroissant",
+      "comment": "Trier les membres par numéro décroissant ; récupérer les noms",
       "command": "executeScript",
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
       "targets": [],
       "value": "lesnoms_dec"
     }, {
       "id": "87b363c9-1675-46e2-a46e-f818e5d27182",
-      "comment": "idem pour les numéros",
+      "comment": "Trier les membres par numéro décroissant ; récupérer les numéros",
       "command": "executeScript",
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
       "targets": [],
@@ -12762,22 +12762,22 @@
     }, {
       "id": "6af8e456-1b88-4187-96e7-de7efcc03ec9",
       "comment": "Trier les membres par ville croissante",
-      "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "command": "//executeScript",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.noms); }); return noms; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnoms_ville_asc"
     }, {
       "id": "e03b7586-9eef-434c-aa84-cff0ec170a1b",
-      "comment": "idem pour les numéros",
+      "comment": "Trier les membres par ville croissante ; récupérer les numéros",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnumeros_ville_asc"
     }, {
       "id": "45fffd33-4d6d-4654-8b2e-4eab0dc961b0",
-      "comment": "idem pour les villes",
+      "comment": "Trier les membres par ville croissante ; récupérer les villes",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.ind - b.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let villes = []; tab.forEach((e) => { villes.push(e.ville); }); return villes; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
       "targets": [],
       "value": "lesvilles_asc"
     }, {
@@ -12921,31 +12921,157 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a375d5de-37de-476b-8a58-207f9d7ba6ff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "041bfd1f-e4be-4362-b9af-b5d30adaae34",
+      "comment": "chercher la première ville non vide",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81ffe281-fe26-4991-8d21-d90f8a3afea9",
+      "comment": "",
+      "command": "while",
+      "target": "${num} <= ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3a85f8a3-21ef-4556-b018-3aed13e28a3e",
       "comment": "première ville",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]/following-sibling::td",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[1]",
       "targets": [],
-      "value": "ville1"
+      "value": "premier"
+    }, {
+      "id": "0d607d42-a92d-436a-ae58-c3883e9f6ce3",
+      "comment": "",
+      "command": "if",
+      "target": "${premier} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93a56df1-3cf9-4970-aaa3-deb53e52f538",
+      "comment": "trouvé",
+      "command": "executeScript",
+      "target": "return ${nb_membres_page} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "7c822307-f61b-4628-8a80-e682eca7f14e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1484cd-0739-4de4-aa8d-f9bc1274c535",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "f2ffae2a-c63f-4dc0-a6d5-90b4f5b3529c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaabb00c-3030-4ea3-8c33-8be5c0f2be5f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02f631b5-a226-4329-91b9-8d511f2f282a",
+      "comment": "chercher la dernière ville non vide",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "827cc5f5-5450-4019-ba6b-8928e86c034c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres_page}",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "a8e4fbdc-b879-4918-8906-54ac14664afb",
+      "comment": "",
+      "command": "while",
+      "target": "${num} > 1",
+      "targets": [],
+      "value": ""
     }, {
       "id": "d04d4a09-edb1-4ec6-bd9c-2602e8e7561d",
-      "comment": "deuxième ville",
+      "comment": "dernière ville",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/td[@class=\"num\"]/following-sibling::td",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[1]",
       "targets": [],
-      "value": "ville2"
+      "value": "dernier"
+    }, {
+      "id": "c10b06a9-9837-4ef5-990b-828a61c9123c",
+      "comment": "",
+      "command": "if",
+      "target": "${dernier} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c401be4a-2971-4ec5-a176-78d813e66aa6",
+      "comment": "trouvé",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "9d5dc862-ff33-4ed9-9571-f9237a3a38aa",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8264db0-0433-41ed-a36b-809e151bdf8c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} - 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "e21f1be2-82f5-4a54-bcd5-0abe75f5e562",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea868df3-8aae-47e2-a7c6-a6dc3b244759",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "1224d9ef-423c-492c-8ff8-6e4024ad4183",
       "comment": "",
       "command": "//echo",
-      "target": "premier = ${ville1}, deuxième = ${ville2}",
+      "target": "premier = ${premier}, dernier = ${dernier}",
       "targets": [],
       "value": ""
     }, {
       "id": "422aded1-ac45-4b2a-b697-e0905f912176",
       "comment": "",
       "command": "if",
-      "target": "${ville1}.localeCompare(${ville2}) > 0",
+      "target": "${premier}.localeCompare(${dernier}) > 0",
       "targets": [],
       "value": ""
     }, {
@@ -13049,7 +13175,7 @@
     }, {
       "id": "f2561586-d9d3-4b7c-92d0-cac77e09912e",
       "comment": "nom affiché",
-      "command": "storeText",
+      "command": "//storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
       "targets": [],
       "value": "nomAffiche"
@@ -13070,7 +13196,7 @@
     }, {
       "id": "f9d94748-2954-40e9-b7b3-ffa1f846ac65",
       "comment": "nom mémorisé",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return ${lesnoms_ville_asc}.at(${i})",
       "targets": [],
       "value": "nom"
@@ -13112,7 +13238,7 @@
     }, {
       "id": "5dc9b5fb-b77f-4bef-b86c-e04380092b2b",
       "comment": "",
-      "command": "assert",
+      "command": "//assert",
       "target": "nomAffiche",
       "targets": [],
       "value": "${nom}"
@@ -13146,388 +13272,388 @@
       "value": ""
     }]
   }, {
-    "id": "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed",
+    "id": "b4dbdd44-85f5-4582-92ab-b1c5cddc98f0",
     "name": "4-08 lister membres tri ville décroissant",
     "commands": [{
-      "id": "c74859b4-03a7-43f0-b65e-902fd0cb8ec0",
+      "id": "f18bbfc0-b209-491b-960b-9ce82ef4631f",
       "comment": "",
       "command": "open",
       "target": "http://test.paheko.localhost/admin/",
       "targets": [],
       "value": ""
     }, {
-      "id": "55359ea7-b7cc-43c4-826b-9da0434d7695",
+      "id": "10a8f3f2-23d8-4400-a8f6-43fd4cc29a23",
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
       "targets": [],
       "value": ""
     }, {
-      "id": "4c23c37d-5295-4100-aa6e-2fe90c2cc9ea",
+      "id": "4df0c7ad-36f9-4dba-bcd6-b01c3d6ca54e",
       "comment": "Vérifier si déjà connecté",
       "command": "storeXpathCount",
       "target": "xpath=//button[@name='login']",
       "targets": [],
       "value": "connecte"
     }, {
-      "id": "bc047273-671f-4d9d-b285-258bdafcbb06",
+      "id": "f795821e-345d-4710-9a1b-189db808ee86",
       "comment": "",
       "command": "if",
       "target": "${connecte} > 0",
       "targets": [],
       "value": ""
     }, {
-      "id": "d1c65456-4a48-4d04-bd98-d73ee0af2af6",
+      "id": "846c8361-7c1b-4ef8-93a7-606f0a7408ca",
       "comment": "identifiant",
       "command": "type",
       "target": "id=f_id",
       "targets": [],
       "value": "jckix@free.fr"
     }, {
-      "id": "be32ae09-0e2c-4d9a-816e-149c2116dcfb",
+      "id": "26c5eac2-c569-4b6c-8507-8c46a1adabd9",
       "comment": "mot de passe",
       "command": "type",
       "target": "id=f_password",
       "targets": [],
       "value": "interpeller noircir colis allumer"
     }, {
-      "id": "23df222e-9647-49b9-8ccf-6ab8c24c819f",
+      "id": "8355fda6-8e0d-4570-b4f0-825c6ef99c50",
       "comment": "Connexion",
       "command": "click",
       "target": "name=login",
       "targets": [],
       "value": ""
     }, {
-      "id": "869b5b32-7367-4dff-a218-f95436373014",
+      "id": "ab836405-b492-43cf-94f1-6b706db7995a",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "41c87622-d3ec-49bf-aa6c-9a1ea07e6eea",
+      "id": "43977eb3-2f4f-4b82-9a46-77476189278d",
       "comment": "Traiter les membres déjà présents",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "368d8a4a-0914-4345-a566-acfd21e01316",
+      "id": "cbea625c-28c9-47fb-826c-ec2a2825992c",
       "comment": "Init liste des numéros",
       "command": "executeScript",
       "target": "return []",
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "2de9a006-330f-4dc5-90f2-5aebff17f0c6",
+      "id": "957c6ceb-7222-443b-bb54-9400c7df66d6",
       "comment": "Init liste des noms",
       "command": "executeScript",
       "target": "return []",
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "9236c338-0218-432b-a9d7-52d1e6cf9752",
+      "id": "5c54cac1-8ca5-44bf-a606-197d39057f6c",
       "comment": "Init liste des villes",
       "command": "executeScript",
       "target": "return []",
       "targets": [],
       "value": "lesvilles"
     }, {
-      "id": "18748cd3-11d1-49b7-b170-641d6ff69af5",
+      "id": "65524a72-3eea-487e-bb16-e7c7244b3320",
       "comment": "Menu Membres",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users')]",
       "targets": [],
       "value": ""
     }, {
-      "id": "12fcb5c9-4f2d-490c-a24c-b8097caef146",
+      "id": "cad647db-20c6-4833-b22b-8c13f59cc353",
       "comment": "Rendre visibles les options du menu Filtrer",
       "command": "executeScript",
       "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
       "targets": [],
       "value": ""
     }, {
-      "id": "87174278-1359-4b08-9d45-f3913ed00326",
+      "id": "2259d20d-7f36-4d00-9654-087390b41c07",
       "comment": "",
       "command": "storeText",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
       "targets": [],
       "value": "membres"
     }, {
-      "id": "bb11ab20-83cb-4560-9532-be6cb363fb7b",
+      "id": "08b2e2df-6731-44b6-b258-3a3d6f7e5c49",
       "comment": "Nombre de membres",
       "command": "executeScript",
       "target": "return Number(${membres}.split(/ /)[0])",
       "targets": [],
       "value": "nb_total_membres"
     }, {
-      "id": "65ffebec-0006-42b4-ab99-f3f283786d75",
+      "id": "e78ada31-2f14-49a1-9c3d-897aee1c4deb",
       "comment": "Filtrer : toutes même cachées",
       "command": "click",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "95d5a352-ac6f-4da1-bc2c-079f66d79221",
+      "id": "31f987ea-f8b8-4d21-a478-f230f0906a6c",
       "comment": "Trier par numéro",
       "command": "click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "795deee7-f339-43f4-80ef-2c86b71f7e10",
+      "id": "108dcbd0-3f56-4725-813f-226eb71059b5",
       "comment": "inverser le tri s'il est en ordre décroissant",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "24cbd39e-be92-4bcc-9fb5-95929e81f879",
+      "id": "79246044-28d0-4ee0-8bc0-6d61fac771bc",
       "comment": "au moins 2 membres",
       "command": "if",
       "target": "${nb_total_membres} >= 2",
       "targets": [],
       "value": ""
     }, {
-      "id": "e29d87b0-c7f5-4afe-aded-6073192a06fa",
+      "id": "891bde95-1a4a-4a8b-8974-884974d71c22",
       "comment": "premier numéro",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numaff1"
     }, {
-      "id": "43aa5ebe-7ad4-4a8c-9864-e0081c949de5",
+      "id": "a147eefa-5717-4857-9944-60144f37bf9d",
       "comment": "",
       "command": "executeScript",
       "target": "return Number(${numaff1})",
       "targets": [],
       "value": "numero1"
     }, {
-      "id": "7dd1a40d-cbcc-40cf-add6-f70c246996dc",
+      "id": "82caf5a4-2078-451b-9111-e7ffb867bf65",
       "comment": "deuxième numéro",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numaff2"
     }, {
-      "id": "5ddf0911-a62e-427f-b06f-8cf92c5eff4f",
+      "id": "716fb090-9b09-42c4-a5d3-7902f9705a8d",
       "comment": "",
       "command": "executeScript",
       "target": "return Number(${numaff2})",
       "targets": [],
       "value": "numero2"
     }, {
-      "id": "08da3bfb-9cd6-44be-a2ec-81489d2d4ccd",
+      "id": "9166f4d6-77c5-4a6c-8213-26157c0ed272",
       "comment": "",
       "command": "if",
       "target": "${numero1} > ${numero2}",
       "targets": [],
       "value": ""
     }, {
-      "id": "dbebbd5c-c696-40c2-b17a-f19cb3eb420a",
+      "id": "3449e417-23a4-47db-a2ce-588f6cce12b2",
       "comment": "Inverser le sens de tri",
       "command": "click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "48d9bba9-d5ec-4c47-9912-2922389e7ea6",
+      "id": "93d6c4aa-0293-4cd4-97f6-840525f0ccce",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "8b3922af-a680-4d41-b263-62ac75e4440e",
+      "id": "1fd217de-b74b-4fd0-a605-f85a314894f5",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "36055cb6-bc00-424d-b23c-039ae5ce0096",
+      "id": "4a75e960-8055-437d-be3e-2c5d4c9b1639",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
     }, {
-      "id": "345466d1-60e2-4c48-810f-4ab46cdde9b9",
+      "id": "e998d233-90a5-472a-9d64-bc4f0e42bd8f",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "num"
     }, {
-      "id": "ee3c052f-0a08-4b3b-b0c4-7377a9004d88",
+      "id": "98ffe456-98d9-4eaf-89b9-55576d228e68",
       "comment": "",
       "command": "executeScript",
       "target": "return ${nb_total_membres}",
       "targets": [],
       "value": "nb_membres"
     }, {
-      "id": "91acc058-cca6-44ee-81f8-78a9020aaaae",
+      "id": "4eb88574-0302-481b-b270-e5f021c48238",
       "comment": "Parcourir les membres enregistrés",
       "command": "while",
       "target": "${num} <= ${nb_membres}",
       "targets": [],
       "value": ""
     }, {
-      "id": "a81536d8-523c-44d6-810f-87d2532674ff",
+      "id": "61d3c023-d677-497e-a745-b622a5476442",
       "comment": "fin de page ?",
       "command": "if",
       "target": "${num} > ${nb_membres_page}",
       "targets": [],
       "value": ""
     }, {
-      "id": "894fef7a-edf9-490e-a8e0-775a60a47391",
+      "id": "fb574a22-5f52-48c3-a74d-8d46bc6a1556",
       "comment": "passer à la page suivante",
       "command": "click",
       "target": "xpath=//li[@class=\"next\"]//a",
       "targets": [],
       "value": ""
     }, {
-      "id": "3c6317d2-d305-4210-bbf8-17aa12fcdf35",
+      "id": "440e11b4-bfa0-49c4-a7b2-40a09fc8e9f9",
       "comment": "",
       "command": "executeScript",
       "target": "return ${nb_membres} - ${nb_membres_page}",
       "targets": [],
       "value": "nb_membres"
     }, {
-      "id": "cb4e6271-c3d5-4569-a71d-6aaf23b1df01",
+      "id": "c368091f-3b4e-4fdd-b91e-64907cd54c2f",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "num"
     }, {
-      "id": "09a6e523-e996-447d-8ce7-9d247851674f",
+      "id": "78862996-e629-4bc1-ac22-a1ee475ce0f9",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
     }, {
-      "id": "5450f509-7d0a-40aa-a701-4a21ee07ca67",
+      "id": "17daf49e-788a-4b99-a48e-3a1007ca74bc",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "92a7bd37-09d1-4f48-8452-f05797595e17",
+      "id": "207e0ee7-d71b-4b88-8c27-ba25dfaefdb4",
       "comment": "numéro affiché",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numeroAffiche"
     }, {
-      "id": "72bc49a5-4f5d-4221-80b9-d3cae9fe55b3",
+      "id": "a469fa11-01c9-477b-aef4-b45a1862660b",
       "comment": "Ajouter numéro à la liste",
       "command": "executeScript",
       "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "3b32f700-d52c-42e0-bfdc-19de69434915",
+      "id": "60883057-f653-4a90-965d-61a6c354ed1f",
       "comment": "nom affiché",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
       "targets": [],
       "value": "nomAffiche"
     }, {
-      "id": "a0f34afc-c94d-4208-af62-18542d2886dc",
+      "id": "ca0623b7-fc61-4c5b-b055-71c8fe7a263c",
       "comment": "Ajouter nom à la liste",
       "command": "executeScript",
       "target": "return ${lesnoms}.concat(${nomAffiche})",
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "ca462e51-ec20-4de6-bf3f-66f94b180230",
+      "id": "08860466-3451-4346-bda7-59a4704a9ef8",
       "comment": "ville affichée",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td",
       "targets": [],
       "value": "villeAffichee"
     }, {
-      "id": "624717a7-03b5-4dc5-8e60-f2909daeba27",
+      "id": "f9518b69-c9e0-4905-9bb8-20f62f8d9b19",
       "comment": "Ajouter ville à la liste",
       "command": "executeScript",
       "target": "return ${lesvilles}.concat(${villeAffichee})",
       "targets": [],
       "value": "lesvilles"
     }, {
-      "id": "a1b7d710-af37-4f46-b493-bf02ec6057b3",
+      "id": "a0e4ddd1-bc0a-4548-a03a-6c959f7972b7",
       "comment": "",
       "command": "//echo",
       "target": "${numeroAffiche} : ${nomAffiche}, ${villeAffichee}",
       "targets": [],
       "value": ""
     }, {
-      "id": "d4343df9-89a9-4ae1-80ca-096cb351a2c5",
+      "id": "2aef3ab7-64d2-4841-b13c-bcdfdf4a7692",
       "comment": "",
       "command": "executeScript",
       "target": "return ${num} + 1",
       "targets": [],
       "value": "num"
     }, {
-      "id": "da9825b1-72c2-4787-84c2-3269bf434d1b",
+      "id": "ac835e27-6736-434c-ac2c-98e6b0fe223d",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "774fa9bd-116a-4288-8ca4-b8b41dc69570",
+      "id": "19a813db-0d93-4dc1-933f-13eec6986e23",
       "comment": "Générer de nouveaux membres",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "e95ebe66-bdd6-49fb-95a9-d9b8adf0f470",
+      "id": "4dae7f9a-5caf-4fa9-bf63-7a80d0e322a8",
       "comment": "si pas assez de membres",
       "command": "if",
       "target": "${nb_total_membres} < 20",
       "targets": [],
       "value": ""
     }, {
-      "id": "bd58abf0-380b-4cbe-be3c-8764df8ffb28",
+      "id": "ced91aaf-ed2a-4212-9732-2f7e8f3ee556",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "2617beb1-6eb9-4fb8-8f8a-9d18931f4680",
+      "id": "991b6f81-a9f6-4f7b-b2b1-21e99a2cf684",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "8c0c3c8e-2b86-4b69-b1e6-21e714141637",
+      "id": "e8da6de4-d196-4359-b91a-8eb283542eb7",
       "comment": "",
       "command": "executeScript",
       "target": "return ${nb_total_membres}",
       "targets": [],
       "value": "i"
     }, {
-      "id": "d1d4f194-1b1a-4269-a82b-82b9a237cf99",
+      "id": "522e071b-c405-482f-bbaf-323fd52921cf",
       "comment": "",
       "command": "executeScript",
       "target": "return ${lesnoms}.length",
       "targets": [],
       "value": "nb_noms"
     }, {
-      "id": "e643bdcd-278a-4176-bc28-af10aec45a9b",
+      "id": "fa903e0c-e0dc-43fd-b8c5-233214966d33",
       "comment": "Parcourir liste noms pour ajout dans la base",
       "command": "while",
       "target": "${i} < ${nb_noms}",
       "targets": [],
       "value": ""
     }, {
-      "id": "0e47dc5f-1827-449d-8352-8cff7e10457e",
+      "id": "d4ad55f7-ff04-4996-b76e-4139abbfa038",
       "comment": "Menu ajouter",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
@@ -13541,28 +13667,28 @@
       ],
       "value": ""
     }, {
-      "id": "522d1305-bb67-4dcb-975e-028da038c5eb",
+      "id": "abf3dd25-d287-4e2c-acc7-b004afd18346",
       "comment": "Mémoriser numéro de membre",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
       "value": "numero"
     }, {
-      "id": "5cc10a7d-045e-49b0-89ed-f9e3aa675fe0",
+      "id": "1261e041-148b-4cbc-ba09-e3d7f3780458",
       "comment": "Ajouter numéro à la liste",
       "command": "executeScript",
       "target": "return ${lesnumeros}.concat(${numero})",
       "targets": [],
       "value": "lesnumeros"
     }, {
-      "id": "de5d7506-b9cd-4c2b-bf54-1e3170c1d6d9",
+      "id": "acac7ac2-05b5-4348-a3f7-a036f233484b",
       "comment": "",
       "command": "executeScript",
       "target": "return ${lesnoms}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
-      "id": "097189b5-6091-4343-bcbe-6ee8878e4a02",
+      "id": "566b3622-6c8f-4dd0-a2d9-86fb5a3f738f",
       "comment": "Saisir le nom",
       "command": "type",
       "target": "id=f_nom",
@@ -13575,28 +13701,28 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "9a49a86b-0f36-4215-a631-0e2a0981ffaf",
+      "id": "ad6ec131-9a47-4dd1-9752-ec0b21fa844e",
       "comment": "",
       "command": "//echo",
       "target": "Ajout de ${nom}",
       "targets": [],
       "value": ""
     }, {
-      "id": "0bcb2804-105e-4f90-a671-9d791cb1f79f",
+      "id": "05cad3f0-1c19-4b50-801f-eeca4ece55a3",
       "comment": "Générer ville",
       "command": "executeScript",
       "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
       "targets": [],
       "value": "ville"
     }, {
-      "id": "c1d1a107-1a76-43fc-b831-081e5661a688",
+      "id": "5b60919a-3387-4a64-935a-68205164307b",
       "comment": "Ajouter ville à la liste",
       "command": "executeScript",
       "target": "return ${lesvilles}.concat(${ville})",
       "targets": [],
       "value": "lesvilles"
     }, {
-      "id": "bd1c639f-81f8-4350-99be-f75ce991180d",
+      "id": "acca238a-287e-4159-85a4-fe530e89b96c",
       "comment": "Saisir ville",
       "command": "type",
       "target": "id=f_ville",
@@ -13609,7 +13735,7 @@
       ],
       "value": "${ville}"
     }, {
-      "id": "4a5f809b-d2ae-4fd4-ac53-350612c35efe",
+      "id": "b4120de2-f478-4110-8947-487a507fa242",
       "comment": "Enregistrer les infos",
       "command": "click",
       "target": "name=save",
@@ -13622,399 +13748,525 @@
       ],
       "value": ""
     }, {
-      "id": "d4c72cef-77a1-4f4d-9d02-a17119af7112",
+      "id": "872eb96c-70ba-4729-9d93-6ed988942590",
       "comment": "",
       "command": "executeScript",
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
     }, {
-      "id": "54be1872-c450-46f3-8c30-4c8d0d1a678b",
+      "id": "c641af11-7f55-4b59-b57d-bb7bb9bf7ba5",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "deba6be3-826d-42b5-a64c-f3f168b31770",
+      "id": "03f3d3a3-4396-47ba-8fba-5a1306573f8e",
       "comment": "Trier les membres par ville décroissante",
-      "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "command": "//executeScript",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.noms); }); return noms; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnoms_ville_desc"
     }, {
-      "id": "e9978db7-38a5-4877-91a7-bfb40eecb683",
-      "comment": "idem pour les numéros",
+      "id": "0023503d-e543-485f-b862-45a8f0d7dc73",
+      "comment": "Trier les membres par ville décroissante ; récupérer les numéros",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnumeros_ville_desc"
     }, {
-      "id": "2d509a1f-2cdf-424d-9a35-f1b2a78921e0",
-      "comment": "idem pour les villes",
+      "id": "bc83f76b-6880-4b8c-b216-00aad378010b",
+      "comment": "Trier les membres par ville décroissante ; récupérer les villes",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, villes) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.ville=villes[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { let comp = b.ville.localeCompare(a.ville); if (comp == 0) { comp = b.ind - a.ind; } return comp; }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesvilles}); let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let villes = []; tab.forEach((e) => { villes.push(e.ville); }); return villes; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesvilles_desc"
     }, {
-      "id": "6b3b9f81-af04-4338-a388-4f495ee299ea",
+      "id": "06782579-ed24-440e-b7db-beaff5f964cf",
       "comment": "Afficher les infos triées par ville décroissante",
       "command": "//echo",
       "target": "Tableau des noms triés",
       "targets": [],
       "value": ""
     }, {
-      "id": "24c346bf-393a-422e-8808-649653092ba3",
+      "id": "19c2b688-d6ff-43eb-85e0-c223e887b97b",
       "comment": "",
       "command": "//executeScript",
       "target": "return 0",
       "targets": [],
       "value": "i"
     }, {
-      "id": "4a0eff5f-38c6-4303-aa17-1d7f5a3f46bc",
+      "id": "758287a1-c882-46f1-8e74-edbda645df4c",
       "comment": "",
       "command": "//while",
       "target": "${i} < ${lesnumeros_ville_desc}.length",
       "targets": [],
       "value": ""
     }, {
-      "id": "4ed95a82-84ae-4e96-a23c-8a500a3f15a8",
+      "id": "a1035d84-2c9f-4b38-9972-1c7aeb444089",
       "comment": "",
       "command": "//executeScript",
       "target": "return ${lesnumeros_ville_desc}.at(${i})",
       "targets": [],
       "value": "num"
     }, {
-      "id": "ca1108f6-6870-4a11-8d79-2c26ab0a55c3",
+      "id": "62fea885-7e95-4873-a3eb-80afe72ce37f",
       "comment": "",
       "command": "//executeScript",
       "target": "return ${lesnoms_ville_desc}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
-      "id": "f15f9f8e-1a21-47d5-b829-ca814b330ba0",
+      "id": "ddca3b07-262c-43cb-8502-d64d2ba7380a",
       "comment": "",
       "command": "//executeScript",
       "target": "return ${lesvilles_desc}.at(${i})",
       "targets": [],
       "value": "ville"
     }, {
-      "id": "e39f7683-be7a-4105-b2d4-75a73aef4116",
+      "id": "2ca59398-a73d-4bdb-a6e1-40f55c499445",
       "comment": "",
       "command": "//echo",
-      "target": "${num} : ${nom}, ${ville}",
+      "target": "${num} : ${ville}",
       "targets": [],
       "value": ""
     }, {
-      "id": "8f3596ed-2f6b-44d8-be8b-ded899270c2c",
+      "id": "ecde69db-c8d8-45f1-9af2-7c3a12b29b56",
       "comment": "",
       "command": "//executeScript",
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
     }, {
-      "id": "5ea1113e-6016-439f-a55b-a3d9405af564",
+      "id": "4532ff23-a8e6-4125-9ca3-72d83fca1ee0",
       "comment": "",
       "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "4fa05704-cc95-449b-8bd5-123c8b11861c",
+      "id": "fa3327cf-b38c-4c9a-b396-4ecf8808aedd",
       "comment": "Vérifier les membres",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "594d0128-8567-498b-9ab8-22ea40433cb1",
+      "id": "563829c6-8bd3-4c85-9fee-c91dfa120ef3",
       "comment": "Menu membres",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users')]",
       "targets": [],
       "value": ""
     }, {
-      "id": "3ea2fffa-e025-41ae-a660-c9e2bd0b739d",
+      "id": "88595fef-a914-4750-85e5-d0d686dd06d5",
       "comment": "Rendre visibles les options du menu Filtrer",
       "command": "executeScript",
       "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
       "targets": [],
       "value": ""
     }, {
-      "id": "41b22746-8cda-494f-9343-baae602026ad",
+      "id": "720fa71a-37b6-4b86-bd46-c4d55d131621",
       "comment": "nombre de membres dans ces catégories",
       "command": "storeText",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
       "targets": [],
       "value": "membres"
     }, {
-      "id": "b6e8ed5f-a446-4228-9184-ce112a89c768",
+      "id": "89cc3732-484f-4038-a9eb-8d09277f1b10",
       "comment": "idem",
       "command": "executeScript",
       "target": "return Number(${membres}.split(/ /)[0])",
       "targets": [],
       "value": "nb_membres_cat"
     }, {
-      "id": "1eba8154-7184-4b34-b0b7-83735b62b4d1",
+      "id": "330bea1a-90dd-4025-91b8-e727ae097296",
       "comment": "Vérifier nombre de membres",
       "command": "assert",
       "target": "nb_noms",
       "targets": [],
       "value": "${nb_membres_cat}"
     }, {
-      "id": "882b911c-8e86-44bf-9927-08e8222119ac",
+      "id": "6031c07d-0363-4d65-913a-109238808da6",
       "comment": "Filtrer : toutes catégories même cachées",
       "command": "click",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "4ecb0a76-cdad-4539-8cb1-37f0081ab07e",
+      "id": "6576bec2-0b4c-41f2-9463-21b44cbc44d2",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
     }, {
-      "id": "40d33cc2-920f-4aed-97c2-f83f47b75d2d",
-      "comment": "Trier par ville décroissante",
+      "id": "3cc0162d-a284-4ab4-9aa6-6765737e32ea",
+      "comment": "Trier par ville décroissant",
       "command": "click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "bb6681b5-7f00-498a-a8eb-11896fae42e8",
+      "id": "388130a3-38cc-4a2c-99be-8e6fca72e618",
       "comment": "inverser le tri s'il est en ordre croissant",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "01c9d98e-dce0-4a1c-bda1-9d8c9342487a",
+      "id": "abedae76-c870-4648-8bfc-aaccad4bed75",
       "comment": "au moins 2 membres",
       "command": "if",
       "target": "${nb_membres_cat} >= 2",
       "targets": [],
       "value": ""
     }, {
-      "id": "ef54a619-1a00-4af2-b4dc-ac5ff326c194",
+      "id": "160d1fcb-0d69-4bbc-aa04-6091e6177795",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "7fa9142b-5676-40e2-a6a5-71c30f49ff72",
+      "comment": "chercher la première ville non vide",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "114dd279-0fd2-410a-abd4-0d7279b3f8ca",
+      "comment": "",
+      "command": "while",
+      "target": "${num} <= ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "529170e6-82e0-4f28-a415-18d655fd0c1d",
       "comment": "première ville",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]/following-sibling::td",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[1]",
       "targets": [],
-      "value": "ville1"
+      "value": "premier"
     }, {
-      "id": "55f97e2c-6274-4377-ad00-541d025ebea3",
-      "comment": "deuxième ville",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/td[@class=\"num\"]/following-sibling::td",
-      "targets": [],
-      "value": "ville2"
-    }, {
-      "id": "b4bce972-ed64-40f9-8577-a9cc3a402170",
-      "comment": "",
-      "command": "//echo",
-      "target": "premier = ${ville1}, deuxième = ${ville2}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d11b156e-d433-4ed6-8080-90248d2b4746",
+      "id": "e9c0382f-042d-48c8-8ec4-ad6fce232b41",
       "comment": "",
       "command": "if",
-      "target": "${ville1}.localeCompare(${ville2}) < 0",
+      "target": "${premier} != \"\"",
       "targets": [],
       "value": ""
     }, {
-      "id": "79a71de7-4be3-4caa-972c-cba6ec64eaf0",
-      "comment": "Inverser le sens de tri",
-      "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c449e31a-7da1-454f-9777-886cba9048e7",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e55fcc2c-ecc5-4633-a477-75aa2602af11",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1c422349-5d8a-4b74-8a8e-a66af3641c97",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres sur la page = ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "18eeade6-66d7-4096-9149-4554a910039a",
-      "comment": "",
+      "id": "86b7d6f7-39e4-48e2-921b-8d2863a5e743",
+      "comment": "trouvé",
       "command": "executeScript",
-      "target": "return 1",
+      "target": "return ${nb_membres_page} + 1",
       "targets": [],
       "value": "num"
     }, {
-      "id": "b29a4a48-de9c-4a5e-a8ac-445d9d230daf",
+      "id": "1fe4924b-e542-4936-b34d-35bb18a51772",
       "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "7e8819dd-7576-4fc4-8257-9ba1ee47968e",
-      "comment": "Parcourir les membres enregistrés",
-      "command": "while",
-      "target": "${num} <= ${nb_membres_cat}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "99c3fdba-3b8b-4680-8f79-146445a4da08",
-      "comment": "fin de page ?",
-      "command": "if",
-      "target": "${num} > ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "02287fb9-82f3-474d-9828-0f6c4f657d05",
-      "comment": "passer à la page suivante",
-      "command": "click",
-      "target": "xpath=//li[@class=\"next\"]//a",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ca7f3b0c-99ed-493f-bb2b-11e12f863488",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${nb_membres_cat} - ${nb_membres_page}",
-      "targets": [],
-      "value": "nb_membres_cat"
-    }, {
-      "id": "60b55352-9e01-4933-9150-8cefb44d81b0",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "b7cd1dde-fae6-46bf-af78-fd420741fbff",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
-      "targets": [],
-      "value": "nb_membres_page"
-    }, {
-      "id": "36a224be-c85c-4f5d-9fb4-9b81dc0540c3",
-      "comment": "",
-      "command": "end",
+      "command": "else",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "7a713782-006c-45e2-a601-91142e252892",
-      "comment": "numéro affiché",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numeroAffiche"
-    }, {
-      "id": "01733646-45d4-4f02-baf7-4f4fc549fa14",
-      "comment": "nom affiché",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
-      "targets": [],
-      "value": "nomAffiche"
-    }, {
-      "id": "a2a01090-a484-45a0-8360-73b667b2ba0b",
-      "comment": "ville affichée",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td",
-      "targets": [],
-      "value": "villeAffichee"
-    }, {
-      "id": "dfb11902-ff76-4471-9fcf-f506fc4d5aae",
-      "comment": "numéro mémorisé",
-      "command": "executeScript",
-      "target": "return ${lesnumeros_ville_desc}.at(${i})",
-      "targets": [],
-      "value": "numero"
-    }, {
-      "id": "c2427d70-27ec-49d4-9de0-b5faa875381c",
-      "comment": "nom mémorisé",
-      "command": "executeScript",
-      "target": "return ${lesnoms_ville_desc}.at(${i})",
-      "targets": [],
-      "value": "nom"
-    }, {
-      "id": "986a16f0-12f0-4732-9d63-0addb8c1fdd0",
-      "comment": "ville mémorisée",
-      "command": "executeScript",
-      "target": "return ${lesvilles_desc}.at(${i})",
-      "targets": [],
-      "value": "ville"
-    }, {
-      "id": "14ba3e1e-223a-48a8-8699-e3326acdeb96",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche} ${villeAffichee}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9b3d9421-3df5-4732-9b6d-c3c932478f0a",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom} ${ville}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "32cd0b87-001b-4dd6-b4e9-dc8ab5292c38",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Number(${numeroAffiche})",
-      "targets": [],
-      "value": "numaff"
-    }, {
-      "id": "c7eff5ea-977a-4ded-b74f-482cf2e4c1f0",
-      "comment": "",
-      "command": "assert",
-      "target": "numeroAffiche",
-      "targets": [],
-      "value": "${numero}"
-    }, {
-      "id": "237fa77f-faae-47db-bc72-15ddbf43aa9f",
-      "comment": "",
-      "command": "assert",
-      "target": "nomAffiche",
-      "targets": [],
-      "value": "${nom}"
-    }, {
-      "id": "92c48722-36ef-4ab6-99e9-e8e7ccd9cb18",
-      "comment": "",
-      "command": "assert",
-      "target": "villeAffichee",
-      "targets": [],
-      "value": "${ville}"
-    }, {
-      "id": "ea043b5d-be78-4adc-924e-f1e891fc6657",
+      "id": "17832c29-498e-4101-a47c-f43e1e7b9b6f",
       "comment": "",
       "command": "executeScript",
       "target": "return ${num} + 1",
       "targets": [],
       "value": "num"
     }, {
-      "id": "3078058f-79ce-4151-bc03-dd2990b87a74",
+      "id": "f320b91f-b525-4f0f-9e8c-14294eab9816",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27cfce8f-9250-4158-97f1-346f9b681685",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f826487-00b1-4382-922f-2c8113101415",
+      "comment": "chercher la dernière ville non vide",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "306f8ecb-8be2-49c3-a116-194fd09d272a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres_page}",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "73536ecf-6e06-47be-9d15-a05a7ceb5097",
+      "comment": "",
+      "command": "while",
+      "target": "${num} > 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0e913b6-6227-4928-98b5-46af10e7f101",
+      "comment": "dernière ville",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[1]",
+      "targets": [],
+      "value": "dernier"
+    }, {
+      "id": "4f0baad0-5d12-4d0a-b4b6-ff5bea15e671",
+      "comment": "",
+      "command": "if",
+      "target": "${dernier} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76844ccc-5841-4341-b110-263fdf7ef745",
+      "comment": "trouvé",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "1cec39ad-3990-4b04-ac80-af51633358c3",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3106be79-2e97-46b2-a669-ee7325860cda",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} - 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "316e24a6-6d61-4228-bd95-9190bcda78b6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "394cfbd7-cfcb-4e36-aad9-4f3bdf790fc9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36d5ec45-e610-4b48-bcc7-1297895d2ef3",
+      "comment": "",
+      "command": "//echo",
+      "target": "premier = ${premier}, dernier = ${dernier}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1c29e13-c127-4522-94ad-2b6dfeb62804",
+      "comment": "",
+      "command": "if",
+      "target": "${premier}.localeCompare(${dernier}) < 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aabcb85a-015e-496e-811a-2426b1dfa94b",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2369825-8e86-44cc-90fd-4178347f8759",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fb1f57b-078a-45e7-8df7-2d7fdfe2836c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85d52d26-6a82-457e-ba96-e9a0dec35fba",
+      "comment": "",
+      "command": "//echo",
+      "target": "nombre de membres sur la page = ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19a6c7e9-267c-40f8-9de1-358be594c1f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "b98a684d-0991-4cc9-9c89-e3d0362c7649",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "f7d4aad1-1f57-4bef-8012-583903e3d918",
+      "comment": "Parcourir les membres enregistrés",
+      "command": "while",
+      "target": "${num} <= ${nb_membres_cat}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b981d233-8893-40e6-b0bb-fddb77e3ef01",
+      "comment": "fin de page ?",
+      "command": "if",
+      "target": "${num} > ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "309615fd-cad7-410c-af95-67a91f52ae2d",
+      "comment": "passer à la page suivante",
+      "command": "click",
+      "target": "xpath=//li[@class=\"next\"]//a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d61680e-6f80-4cfa-aec9-7613aecdfba2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres_cat} - ${nb_membres_page}",
+      "targets": [],
+      "value": "nb_membres_cat"
+    }, {
+      "id": "fb19ed66-7852-4a88-b2fe-7276d4f77d78",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "9f423237-405f-425b-a79e-b21aeeb86732",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "3e108282-eec6-44e6-9a20-d2377411db82",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e42a9e63-2137-47bb-a458-82f7ec55de7d",
+      "comment": "numéro affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "bc11f3af-32c6-4085-914a-0dad618f31ba",
+      "comment": "nom affiché",
+      "command": "//storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "targets": [],
+      "value": "nomAffiche"
+    }, {
+      "id": "fb99c176-daf6-4b81-818e-033fa4d1c130",
+      "comment": "ville affichée",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td",
+      "targets": [],
+      "value": "villeAffichee"
+    }, {
+      "id": "75ef4af4-4bc9-478c-bc83-19cdf2b083ff",
+      "comment": "numéro mémorisé",
+      "command": "executeScript",
+      "target": "return ${lesnumeros_ville_desc}.at(${i})",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "ccb1946b-381c-462a-bbda-66654df138b8",
+      "comment": "nom mémorisé",
+      "command": "//executeScript",
+      "target": "return ${lesnoms_ville_desc}.at(${i})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "e9791f06-74ba-4637-9893-488065316988",
+      "comment": "ville mémorisée",
+      "command": "executeScript",
+      "target": "return ${lesvilles_desc}.at(${i})",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "d8996196-0481-471d-a728-ba122b8ef79f",
+      "comment": "",
+      "command": "//echo",
+      "target": "n=${num} ${numeroAffiche} ${nomAffiche} ${villeAffichee}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69cecc15-686f-4c54-907a-c73297d999a8",
+      "comment": "",
+      "command": "//echo",
+      "target": "i=${i} ${numero} ${nom} ${ville}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5128825a-c561-49ba-913f-91cf9f9c7dbb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numeroAffiche})",
+      "targets": [],
+      "value": "numaff"
+    }, {
+      "id": "cb4f26bf-3f59-4934-901a-59e5cbdf6ca4",
+      "comment": "",
+      "command": "assert",
+      "target": "numeroAffiche",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "ad3f27d9-7c7b-408e-b095-c60e0608acd6",
+      "comment": "",
+      "command": "//assert",
+      "target": "nomAffiche",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "a6e33c59-a6a0-4794-8012-9b1795ff5c8f",
+      "comment": "",
+      "command": "assert",
+      "target": "villeAffichee",
+      "targets": [],
+      "value": "${ville}"
+    }, {
+      "id": "23128815-d4b3-41da-8769-aa136aa8205d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "e2d1370e-7b24-4b9e-a7fc-f60704d0d884",
       "comment": "",
       "command": "executeScript",
       "target": "return ${i} +1",
       "targets": [],
       "value": "i"
     }, {
-      "id": "43519f65-114e-425f-be8f-53304306c577",
+      "id": "507951a3-e3a2-49b5-8056-cbadf174a3ab",
       "comment": "",
       "command": "end",
       "target": "",
@@ -18331,7 +18583,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "c02cfc77-64e2-4ff6-a000-c3ec0eb233ed", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "b4dbdd44-85f5-4582-92ab-b1c5cddc98f0", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
