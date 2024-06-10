@@ -6563,14 +6563,7 @@
       "target": "return ${lesnoms}.concat(${nomAffiche})",
       "targets": [],
       "value": "lesnoms"
-    }, {
-      "id": "a5a8dea5-7c7e-44bc-bbde-57bec1453df1",
-      "comment": "",
-      "command": "//echo",
-      "target": "${numeroAffiche} : ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
+    },  {
       "id": "81f68bac-7994-4a5c-a833-65e3872a9a04",
       "comment": "",
       "command": "executeScript",
@@ -6626,13 +6619,6 @@
       "target": "return ${lesnoms}.length",
       "targets": [],
       "value": "nb_noms"
-    }, {
-      "id": "19762a03-fb00-41db-8802-9ea918454b3a",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "f3a183e6-7872-4f75-88ca-479fc209f2be",
       "comment": "Enregistrer les nouveaux noms",
@@ -6792,83 +6778,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5d8e2c81-7260-4f05-8e1e-b11246faa61b",
-      "comment": "Trier par numéro",
-      "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4cf6dc83-4b20-4acf-b72c-3c53cb10dba6",
-      "comment": "inverser le tri s'il est en ordre décroissant",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9378071d-d8e5-462b-b66d-ec5feaef05d1",
-      "comment": "au moins 2 membres",
-      "command": "if",
-      "target": "${nb_membres_cat} >= 2",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e6b6655d-ad92-48c6-9620-83bb881029eb",
-      "comment": "premier numéro",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numaff1"
-    }, {
-      "id": "e00094aa-c349-4797-9882-d5294c04b7ef",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Number(${numaff1})",
-      "targets": [],
-      "value": "numero1"
-    }, {
-      "id": "65e9ac84-966a-4c49-8b20-d9e42dc8fad2",
-      "comment": "deuxième numéro",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numaff2"
-    }, {
-      "id": "31cbb4ee-2e40-45ae-bd14-ea0c99de7928",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Number(${numaff2})",
-      "targets": [],
-      "value": "numero2"
-    }, {
-      "id": "9090989b-ebb1-4b13-9c0b-3f1b38065390",
-      "comment": "",
-      "command": "if",
-      "target": "${numero1} > ${numero2}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d785aea8-bdda-426e-ab41-2eaee8abe7aa",
-      "comment": "Inverser le sens de tri",
-      "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "614cbd41-9342-4cde-a9f1-9fbe590ace11",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f6a9acea-f89f-4f7c-9482-4f535bc2841b",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "67105636-1763-4157-a571-a321eb2c01af",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
@@ -6966,20 +6875,6 @@
       "target": "return ${lesnoms}.at(${i})",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "47a145be-cac7-4f16-a824-58929ee6d613",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dee281d1-e24f-4c2a-8c9b-844e180f6c7e",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "7baf6514-7c7a-4c19-9860-2ff69f919b35",
       "comment": "",
