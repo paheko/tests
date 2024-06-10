@@ -348,6 +348,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a61e7b27-e911-44a7-9c0a-abc030b9a4e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "ab795561-bb95-49b5-8f1d-349fc94639fe",
       "comment": "Vérifier si déjà connecté",
       "command": "storeXpathCount",
