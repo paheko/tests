@@ -158,7 +158,7 @@ function selParent(lesnoms, lesparents, nb)
 		if (lesparents[num].length == 0) { return lesnoms[num]; }
 	}
 }
-return selParent(${lesnoms}, ${lesparents}, ${i})
+return selParent(${lesnoms}, ${lesparents}, ${nb_total_membres})
 
 // trier les membres selon le parent
 // critères :
