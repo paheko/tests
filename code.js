@@ -160,64 +160,6 @@ function selParent(lesnoms, lesparents, nb)
 }
 return selParent(${lesnoms}, ${lesparents}, ${nb_total_membres})
 
-// trier les membres selon le parent
-// critères :
-// - id_parent IS NULL
-// - nom_parent
-// - nom_membre
-// - numero
-function trierParents(tparents, tnoms, tnumeros, croissant = true)
-{
-	let tab = [];
-	for (let i = 0; i < tnumeros.length;  ++i) {
-		let o = Object();
-		o.numero = tnumeros[i];
-		o.nom = tnoms[i];
-		o.parent = tparents[i];
-		tab.push(o);
-	}
-	tab.sort((a, b) => {
-		if (! croissant) { [a, b] = [b, a]; }
-		let comp = a.parent.localeCompare(b.parent);
-		if (comp == 0) { comp = a.nom.localeCompare(b.nom); }
-		if (comp == 0) { comp = a.numero - b.numero; }
-		return comp;
-	});
-	/*
-	  if (a.parent === "") {
-	  if (b.parent === "") {
-	  // deux parents vides => comparer les noms
-	  return a.nom.localeCompare(b.nom);
-	  }
-	  else {
-	  return 1;
-	  }
-	  }
-	  else {
-	  if (b.parent === "") {
-	  return -1;
-	  }
-	  else {
-	  // deux parents non vides => comparer les noms
-	  let comp = a.parent.localeCompare(b.parent);
-	  if (comp == 0) {
-	  comp = a.nom.localeCompare(b.nom);
-	  }
-	  return comp;
-	  }
-	  }
-	  });
-	*/
-
-	return tab;
-}
-let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents});
-let resu = [];
-tab.forEach((e) => {
-	resu.push(e.nom);
-});
-return resu;
-
 // ------------------------------------------------------------------------
 // normaliser une chaîne :
 // - mettre en minuscules
