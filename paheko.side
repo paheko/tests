@@ -13983,14 +13983,14 @@
       "value": ""
     }, {
       "id": "a6d6d344-f6ed-41fa-a2aa-f8a25ad5cfa7",
-      "comment": "Générer de nouveaux membres",
+      "comment": "Générer de nouveaux membres si nécessaire",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
       "id": "47e65036-df09-4d0b-8929-db373a9fb890",
-      "comment": "si pas assez de membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_total_membres} < 20 || ${nb_parents} < 10",
       "targets": [],
@@ -14025,7 +14025,7 @@
       "value": "nb_noms"
     }, {
       "id": "88b7aa01-4748-4d99-bae0-954885d838de",
-      "comment": "Parcourir liste noms pour ajout dans la base",
+      "comment": "Parcourir nouveaux noms pour ajout dans la base",
       "command": "while",
       "target": "${i} < ${nb_noms}",
       "targets": [],
@@ -14087,9 +14087,9 @@
       "value": ""
     }, {
       "id": "429e6281-b176-42ae-9899-76eec2b44936",
-      "comment": "Générer parent",
+      "comment": "sélectionner un parent parmi les membres présents",
       "command": "executeScript",
-      "target": "function selParent(lesnoms, lesparents, nb) { while(true) { let num = Math.floor(Math.random() * nb); console.log(\"num=\" + num); if (lesparents[num].length == 0) { return lesnoms[num];}}} return selParent(${lesnoms}, ${lesparents}, ${i})",
+      "target": "function selParent(lesnoms, lesparents, nb) { while(true) { let num = Math.floor(Math.random() * nb); console.log(\"num=\" + num); if (lesparents[num].length == 0) { return lesnoms[num];}}} return selParent(${lesnoms}, ${lesparents}, ${nb_total_membres})",
       "targets": [],
       "value": "parent"
     }, {
@@ -14108,7 +14108,7 @@
       "value": "lesparents"
     }, {
       "id": "a6b6cf6d-d6bd-41bf-8a0e-b3ca42e1802a",
-      "comment": "Rattacher au parent",
+      "comment": "Rattacher membre au parent",
       "command": "click",
       "target": "xpath=//span[@id=\"f_id_parent_container\"]//button",
       "targets": [
@@ -14130,7 +14130,7 @@
       "value": ""
     }, {
       "id": "3b637a23-9ab6-4f2b-a6c7-789994243a01",
-      "comment": "Nom du parent",
+      "comment": "",
       "command": "type",
       "target": "name=q",
       "targets": [
@@ -14150,6 +14150,45 @@
         ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
         ["xpath=//input[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "4b5ec012-8287-42c0-b00d-5f2d84e244c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "choix_parent"
+    }, {
+      "id": "21f097da-9421-4e8b-be39-c20c4af12fc1",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr[@class=\"clickable\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "3c502b9d-5d04-46ce-a07c-69bf655c85cc",
+      "comment": "",
+      "command": "if",
+      "target": "${nb} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17b704fb-fc42-42ab-b627-4fb6e5413e2c",
+      "comment": "et le sélectionner",
+      "command": "click",
+      "target": "xpath=//tr[@class=\"clickable\"]/th[normalize-space(text())=\"${parent}\"]",
+      "targets": [
+        ["css=.clickable:nth-child(2) > th", "css:finder"],
+        ["xpath=//tr[2]/th", "xpath:position"],
+        ["xpath=//th[contains(.,'Lambert Paul')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10c46d48-42d3-4afd-bc13-8fb753d6a328",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "eff6d272-f8b0-4761-ac35-1867fa841f7b",
