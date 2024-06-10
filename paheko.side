@@ -6563,7 +6563,7 @@
       "target": "return ${lesnoms}.concat(${nomAffiche})",
       "targets": [],
       "value": "lesnoms"
-    },  {
+    }, {
       "id": "81f68bac-7994-4a5c-a833-65e3872a9a04",
       "comment": "",
       "command": "executeScript",
@@ -13585,13 +13585,6 @@
       ],
       "value": ""
     }, {
-      "id": "4b5ec012-8287-42c0-b00d-5f2d84e244c9",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "choix_parent"
-    }, {
       "id": "21f097da-9421-4e8b-be39-c20c4af12fc1",
       "comment": "",
       "command": "storeXpathCount",
@@ -14308,7 +14301,7 @@
     }, {
       "id": "f32a2e06-78e9-4d51-adae-a78d538d0ab3",
       "comment": "Trier par numéro",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
       "targets": [],
       "value": ""
@@ -14322,63 +14315,63 @@
     }, {
       "id": "d3c14894-d80b-443a-9cdb-609159bd7c52",
       "comment": "au moins 2 membres",
-      "command": "if",
+      "command": "//if",
       "target": "${nb_total_membres} >= 2",
       "targets": [],
       "value": ""
     }, {
       "id": "24f6184e-3922-4848-af9d-8eeec7a4de99",
       "comment": "premier numéro",
-      "command": "storeText",
+      "command": "//storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numaff1"
     }, {
       "id": "c96eb05b-9b1f-405e-975c-f3bb3fceeedc",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return Number(${numaff1})",
       "targets": [],
       "value": "numero1"
     }, {
       "id": "dea68a4a-33ed-4289-9bad-5a10e0a56af2",
       "comment": "deuxième numéro",
-      "command": "storeText",
+      "command": "//storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numaff2"
     }, {
       "id": "89bbf0c3-531c-460f-b579-a34f6a9691ce",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return Number(${numaff2})",
       "targets": [],
       "value": "numero2"
     }, {
       "id": "3f0386bb-8077-4f9d-a6fa-ba7b26f8c57e",
       "comment": "",
-      "command": "if",
+      "command": "//if",
       "target": "${numero1} > ${numero2}",
       "targets": [],
       "value": ""
     }, {
       "id": "7df4580f-cae8-483b-a250-4f87f84f28ff",
       "comment": "Inverser le sens de tri",
-      "command": "click",
+      "command": "//click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "bbb37ef7-a4b6-47f4-a4e2-23c0a006b702",
       "comment": "",
-      "command": "end",
+      "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
       "id": "0f4870c9-380d-48b3-b8a0-7ecc87af9560",
       "comment": "",
-      "command": "end",
+      "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
@@ -14629,14 +14622,14 @@
       "value": ""
     }, {
       "id": "f8a6d4c3-f92a-46b6-997e-6e00eda3cb93",
-      "comment": "Générer de nouveaux membres",
+      "comment": "Générer de nouveaux membres si nécessaire",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
       "id": "62b2cf2e-01c0-478d-a976-cba1c9d4747d",
-      "comment": "si pas assez de membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_total_membres} < 20 || ${nb_parents} < 10",
       "targets": [],
@@ -14671,7 +14664,7 @@
       "value": "nb_noms"
     }, {
       "id": "e34645e3-6b24-44f1-9e40-70999affccd3",
-      "comment": "Parcourir liste noms pour ajout dans la base",
+      "comment": "Parcourir nouveaux noms pour ajout dans la base",
       "command": "while",
       "target": "${i} < ${nb_noms}",
       "targets": [],
@@ -14733,9 +14726,9 @@
       "value": ""
     }, {
       "id": "7cccf611-8a4b-4e31-982f-6546be582881",
-      "comment": "Générer parent",
+      "comment": "sélectionner un parent parmi les membres présents",
       "command": "executeScript",
-      "target": "function selParent(lesnoms, lesparents, nb) { while(true) { let num = Math.floor(Math.random() * nb); console.log(\"num=\" + num); if (lesparents[num].length == 0) { return lesnoms[num];}}} return selParent(${lesnoms}, ${lesparents}, ${i})",
+      "target": "function selParent(lesnoms, lesparents, nb) { while(true) { let num = Math.floor(Math.random() * nb); console.log(\"num=\" + num); if (lesparents[num].length == 0) { return lesnoms[num];}}} return selParent(${lesnoms}, ${lesparents}, ${nb_total_membres})",
       "targets": [],
       "value": "parent"
     }, {
@@ -14754,7 +14747,7 @@
       "value": "lesparents"
     }, {
       "id": "2e82efb4-69c3-4100-903b-1e9cc074905f",
-      "comment": "Rattacher au parent",
+      "comment": "Rattacher membre au parent",
       "command": "click",
       "target": "xpath=//span[@id=\"f_id_parent_container\"]//button",
       "targets": [
@@ -14776,7 +14769,7 @@
       "value": ""
     }, {
       "id": "3935d128-ed62-4235-9390-e577e975a587",
-      "comment": "Nom du parent",
+      "comment": "",
       "command": "type",
       "target": "name=q",
       "targets": [
@@ -14796,6 +14789,38 @@
         ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
         ["xpath=//input[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "3b637d77-7348-47e7-b7a7-43019f49e51b",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr[@class=\"clickable\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "c3f88691-5fec-447d-a147-989815fdea51",
+      "comment": "",
+      "command": "if",
+      "target": "${nb} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a5ba85a-09f1-4761-b8c2-a8b2b5612815",
+      "comment": "et le sélectionner",
+      "command": "click",
+      "target": "xpath=//tr[@class=\"clickable\"]/th[normalize-space(text())=\"${parent}\"]",
+      "targets": [
+        ["css=.clickable:nth-child(2) > th", "css:finder"],
+        ["xpath=//tr[2]/th", "xpath:position"],
+        ["xpath=//th[contains(.,'Lambert Paul')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12f5a119-e6ac-40ed-a3f2-863658f03599",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "a8c7a2f5-b483-4043-9275-b2e5dfc4e70d",
@@ -14833,30 +14858,30 @@
       "value": ""
     }, {
       "id": "437bf3c8-52ce-4bbe-9742-0c3854091551",
-      "comment": "Trier les noms par parent croissant",
+      "comment": "Trier les noms par parent décroissant",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return b.nom.localeCompare(a.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = b.parent.localeCompare(a.parent); if (comp == 0) { comp = b.nom.localeCompare(a.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnoms_parent_asc"
     }, {
       "id": "1ef096f6-ea12-4416-bdb3-35dfd80940d4",
       "comment": "idem pour les numéros",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return b.nom.localeCompare(a.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = b.parent.localeCompare(a.parent); if (comp == 0) { comp = b.nom.localeCompare(a.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesnumeros_parent_asc"
     }, {
       "id": "9dfbc97f-e514-410b-bb83-6a5e6d9e4f13",
       "comment": "idem pour les parents",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return b.nom.localeCompare(a.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = b.parent.localeCompare(a.parent); if (comp == 0) { comp = b.nom.localeCompare(a.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.parent); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let parents = []; tab.forEach((e) => { parents.push(e.parent); }); return parents;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
       "targets": [],
       "value": "lesparents_asc"
     }, {
       "id": "1a71ab3e-6333-40f4-b79d-d5972216f3a3",
-      "comment": "Afficher les infos triées par parent croissant",
+      "comment": "Afficher les infos triées par parent décroissant",
       "command": "//echo",
-      "target": "Afficher les infos triées par parent croissant",
+      "target": "Afficher les infos triées par parent décroissant",
       "targets": [],
       "value": ""
     }, {
@@ -14973,14 +14998,14 @@
       "value": "nb_membres_page"
     }, {
       "id": "efc0d938-c6a2-4339-90f1-ef9827b6bbf0",
-      "comment": "Trier par parent croissant",
+      "comment": "Trier par parent décroissant",
       "command": "click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"parent\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "563e6c61-4ae2-4322-8740-52016a8112f0",
-      "comment": "inverser le tri s'il est en ordre décroissant",
+      "comment": "inverser le tri s'il est en ordre croissant",
       "command": "",
       "target": "",
       "targets": [],
