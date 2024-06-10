@@ -14228,83 +14228,83 @@
       "id": "5bfc0a04-b9fd-42b5-89df-450a7b65bbd1",
       "comment": "Trier les noms par parent croissant",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return a.nom.localeCompare(b.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnoms_parent_asc"
     }, {
       "id": "a8c047d4-89fc-4731-a6f7-a033a22793b4",
       "comment": "idem pour les numéros",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return a.nom.localeCompare(b.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.num); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
       "targets": [],
       "value": "lesnumeros_parent_asc"
     }, {
       "id": "ff717459-25ec-4d3b-b35f-e40f9ec7a6f4",
       "comment": "idem pour les parents",
       "command": "executeScript",
-      "target": "function trier(numeros, noms, parents) { let tab = []; for (let i = 0; i < numeros.length; ++i) { let o = Object(); o.num=numeros[i]; o.nom=noms[i]; o.parent=parents[i]; o.ind = i; tab.push(o); } tab.sort((a, b) => { if (a.parent === \"\") { if (b.parent === \"\") { return a.nom.localeCompare(b.nom); } else { return 1; } } else { if (b.parent === \"\") { return -1; } else { let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } return comp; } } }); return tab; } let tab = trier(${lesnumeros}, ${lesnoms}, ${lesparents}); let resu = []; tab.forEach((e) => { resu.push(e.parent); }); return resu;",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let parents = []; tab.forEach((e) => { parents.push(e.parent); }); return parents;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
       "targets": [],
       "value": "lesparents_asc"
     }, {
       "id": "9da881aa-2177-44bc-ab5f-f89b53ca31e5",
       "comment": "Afficher les infos triées par parent croissant",
-      "command": "//echo",
+      "command": "echo",
       "target": "Afficher les infos triées par parent croissant",
       "targets": [],
       "value": ""
     }, {
       "id": "72c255da-0e11-4604-96f8-425079e7bc61",
       "comment": "",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "return 0",
       "targets": [],
       "value": "i"
     }, {
       "id": "fa0cf471-e20c-4572-8963-9fed96bac06f",
       "comment": "",
-      "command": "//while",
+      "command": "while",
       "target": "${i} < ${lesnumeros_parent_asc}.length",
       "targets": [],
       "value": ""
     }, {
       "id": "eec088e5-f1dd-4eab-b062-6ea4ec582099",
       "comment": "",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "return ${lesnumeros_parent_asc}.at(${i})",
       "targets": [],
       "value": "num"
     }, {
       "id": "4eda4c63-bd3f-4fae-a474-6fe92ccb3eb7",
       "comment": "",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "return ${lesnoms_parent_asc}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "b6b08f51-57ab-40ab-9758-f104a8481754",
       "comment": "",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "return ${lesparents_asc}.at(${i})",
       "targets": [],
       "value": "parent"
     }, {
       "id": "0a842c8d-df0b-4f70-97d2-4690b2384f56",
       "comment": "",
-      "command": "//echo",
+      "command": "echo",
       "target": "${num} : ${nom}, ${parent}",
       "targets": [],
       "value": ""
     }, {
       "id": "07951d01-ae4c-4e11-b192-5968fa2ae5e6",
       "comment": "",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
     }, {
       "id": "d7d8e83e-9b16-4562-8546-c44a7afb3de7",
       "comment": "",
-      "command": "//end",
+      "command": "end",
       "target": "",
       "targets": [],
       "value": ""
