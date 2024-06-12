@@ -13822,7 +13822,7 @@
       "id": "95852992-a3a5-4153-b35c-385b237da571",
       "comment": "Trier par parent croissant",
       "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"parent\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"id_parent\")]",
       "targets": [],
       "value": ""
     }, {
@@ -14039,7 +14039,7 @@
       "id": "316e0656-f265-4e9a-af31-932f3016c781",
       "comment": "Inverser le sens de tri",
       "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"parent\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"id_parent\")]",
       "targets": [],
       "value": ""
     }, {
@@ -15014,7 +15014,7 @@
       "id": "efc0d938-c6a2-4339-90f1-ef9827b6bbf0",
       "comment": "Trier par parent décroissant",
       "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"parent\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"id_parent\")]",
       "targets": [],
       "value": ""
     }, {
@@ -15252,7 +15252,7 @@
       "id": "dc512674-c733-4cc5-b99d-130aa1d87bd8",
       "comment": "Inverser le sens de tri",
       "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"parent\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"id_parent\")]",
       "targets": [],
       "value": ""
     }, {
