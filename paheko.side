@@ -14523,19 +14523,33 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "09dcdccb-569e-4ea1-b00e-cab82b5b7d95",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "afcd4aa4-fc1a-494c-a2bb-7747cb88ab3f",
       "comment": "Ajouter parent à la liste",
       "command": "executeScript",
       "target": "return ${lesparents}.concat(${parentAffiche})",
       "targets": [],
       "value": "lesparents"
+    }, {
+      "id": "18d17f1f-b932-45ec-b06f-aaf2f64a936b",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0717a430-fe26-46f3-ae84-39a682f2d532",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesparents}.concat(\"\")",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "09dcdccb-569e-4ea1-b00e-cab82b5b7d95",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "b2371862-340a-4589-baaf-e1b77bf36468",
       "comment": "",
@@ -14791,6 +14805,13 @@
       ],
       "value": ""
     }, {
+      "id": "8962a236-6bfc-42e0-a4b5-a467dddc6665",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "nb"
+    }, {
       "id": "3b637d77-7348-47e7-b7a7-43019f49e51b",
       "comment": "",
       "command": "storeXpathCount",
@@ -14806,7 +14827,7 @@
       "value": ""
     }, {
       "id": "6a5ba85a-09f1-4761-b8c2-a8b2b5612815",
-      "comment": "et le sélectionner",
+      "comment": "sélectionner le parent",
       "command": "click",
       "target": "xpath=//tr[@class=\"clickable\"]/th[normalize-space(text())=\"${parent}\"]",
       "targets": [
@@ -14970,14 +14991,14 @@
       "value": "membres"
     }, {
       "id": "dc922d29-dcf3-4792-80d0-0793ff45b90f",
-      "comment": "idem",
+      "comment": "",
       "command": "executeScript",
       "target": "return Number(${membres}.split(/ /)[0])",
       "targets": [],
       "value": "nb_membres_cat"
     }, {
       "id": "05603ef2-bf1b-4f18-8662-83f9cd936f60",
-      "comment": "Vérifier nombre de membres",
+      "comment": "",
       "command": "assert",
       "target": "nb_noms",
       "targets": [],
@@ -15012,7 +15033,7 @@
       "value": ""
     }, {
       "id": "3f1dc67d-b1cd-4ddc-a147-03f22c37ddfc",
-      "comment": "au moins 2 membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_membres_cat} >= 2",
       "targets": [],
@@ -15040,18 +15061,46 @@
       "value": ""
     }, {
       "id": "1fb96c41-b92e-487d-9685-7c74bea9c0f0",
-      "comment": "premier parent",
+      "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[2]",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//td[4]",
       "targets": [],
-      "value": "premier"
+      "value": "premier_parent"
     }, {
       "id": "cbb32994-df16-439f-acd6-5a8fc9bc0736",
       "comment": "",
       "command": "if",
-      "target": "${premier} != \"\"",
+      "target": "${premier_parent} != \"\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "81a230d1-447c-4aa6-a712-1bc23347c169",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//th//span",
+      "targets": [],
+      "value": "nom_premier"
+    }, {
+      "id": "89f1d5aa-3ff6-4597-8a22-7791a3cb8ba1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero1"
+    }, {
+      "id": "482eaa39-7c14-4845-8a6d-66bd9e2512b3",
+      "comment": "",
+      "command": "//echo",
+      "target": "${num} : ${numero1} ${nom_premier} ${premier_parent}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92d51377-cded-4281-a8df-bb5a9b0c1dfd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numero1})",
+      "targets": [],
+      "value": "numero_premier"
     }, {
       "id": "86151da7-6342-48e4-b0b6-4aeef3a93498",
       "comment": "trouvé",
@@ -15110,18 +15159,39 @@
       "value": ""
     }, {
       "id": "d3ed351b-f067-486d-bf7c-5f67d4727443",
-      "comment": "dernier parent",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[2]",
       "targets": [],
-      "value": "dernier"
+      "value": "dernier_parent"
     }, {
       "id": "79432e88-daf9-426d-855b-b86f64c6c430",
       "comment": "",
       "command": "if",
-      "target": "${dernier} != \"\"",
+      "target": "${dernier_parent} != \"\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "2e5c1bdc-08e9-4050-af49-3b80925f298c",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::th",
+      "targets": [],
+      "value": "nom_dernier"
+    }, {
+      "id": "09a4173a-6aac-4dd2-a552-2b86db70b4a2",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "3ac9f5bd-e7e0-43eb-9f3a-7d8699aecdc9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numero2})",
+      "targets": [],
+      "value": "numero_dernier"
     }, {
       "id": "55cfd10b-64c5-4cc2-a02f-01e8fd3235e3",
       "comment": "trouvé",
@@ -15161,14 +15231,28 @@
       "id": "78e8f1a5-e3ea-4cb6-b0dd-82401e6f4be8",
       "comment": "",
       "command": "//echo",
-      "target": "premier = ${premier}, deuxième = ${dernier}",
+      "target": "premier : ${premier_parent} - ${nom_premier} - ${numero_premier}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a21c39b4-0acf-4eb5-88b5-0927159794c1",
+      "comment": "",
+      "command": "//echo",
+      "target": "dernier : ${dernier_parent} - ${nom_dernier} - ${numero_dernier}",
       "targets": [],
       "value": ""
     }, {
       "id": "e0c1ac35-215a-4820-8830-7e7a89ce10ff",
       "comment": "",
       "command": "if",
-      "target": "${premier}.localeCompare(${dernier}) < 0",
+      "target": "${premier_parent}.localeCompare(${dernier_parent}) < 0 || (${premier_parent}.localeCompare(${dernier_parent}) == 0 && ${nom_premier}.localeCompare(${nom_dernier}) < 0) || (${premier_parent}.localeCompare(${dernier_parent}) == 0 && ${nom_premier}.localeCompare(${nom_dernier}) == 0 && ${numero_premier} < ${numero_dernier})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9a46634-81e5-4ee1-ac87-77e1a435ecbe",
+      "comment": "",
+      "command": "//echo",
+      "target": "Inverser sens tri",
       "targets": [],
       "value": ""
     }, {
