@@ -13614,7 +13614,7 @@
       "value": ""
     }, {
       "id": "17b704fb-fc42-42ab-b627-4fb6e5413e2c",
-      "comment": "et le sélectionner",
+      "comment": "sélectionner le parent",
       "command": "click",
       "target": "xpath=//tr[@class=\"clickable\"]/th[normalize-space(text())=\"${parent}\"]",
       "targets": [
@@ -13688,63 +13688,63 @@
     }, {
       "id": "9da881aa-2177-44bc-ab5f-f89b53ca31e5",
       "comment": "Afficher les infos triées par parent croissant",
-      "command": "echo",
+      "command": "//echo",
       "target": "Afficher les infos triées par parent croissant",
       "targets": [],
       "value": ""
     }, {
       "id": "72c255da-0e11-4604-96f8-425079e7bc61",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return 0",
       "targets": [],
       "value": "i"
     }, {
       "id": "fa0cf471-e20c-4572-8963-9fed96bac06f",
       "comment": "",
-      "command": "while",
+      "command": "//while",
       "target": "${i} < ${lesnumeros_parent_asc}.length",
       "targets": [],
       "value": ""
     }, {
       "id": "eec088e5-f1dd-4eab-b062-6ea4ec582099",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return ${lesnumeros_parent_asc}.at(${i})",
       "targets": [],
       "value": "num"
     }, {
       "id": "4eda4c63-bd3f-4fae-a474-6fe92ccb3eb7",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return ${lesnoms_parent_asc}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "b6b08f51-57ab-40ab-9758-f104a8481754",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return ${lesparents_asc}.at(${i})",
       "targets": [],
       "value": "parent"
     }, {
       "id": "0a842c8d-df0b-4f70-97d2-4690b2384f56",
       "comment": "",
-      "command": "echo",
+      "command": "//echo",
       "target": "${num} : ${nom}, ${parent}",
       "targets": [],
       "value": ""
     }, {
       "id": "07951d01-ae4c-4e11-b192-5968fa2ae5e6",
       "comment": "",
-      "command": "executeScript",
+      "command": "//executeScript",
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
     }, {
       "id": "d7d8e83e-9b16-4562-8546-c44a7afb3de7",
       "comment": "",
-      "command": "end",
+      "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
@@ -13785,7 +13785,7 @@
       "value": "nb_membres_cat"
     }, {
       "id": "a31f76d4-26bb-4d25-afa6-ff804e795f44",
-      "comment": "Vérifier nombre de membres",
+      "comment": "",
       "command": "assert",
       "target": "nb_noms",
       "targets": [],
@@ -13820,7 +13820,7 @@
       "value": ""
     }, {
       "id": "d2b1eec6-f76e-411d-bf2a-245499ff8589",
-      "comment": "au moins 2 membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_membres_cat} >= 2",
       "targets": [],
@@ -13848,18 +13848,39 @@
       "value": ""
     }, {
       "id": "c725c982-1e45-4768-8b0b-04ef0dc4a525",
-      "comment": "premier parent",
+      "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[2]",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//td[4]",
       "targets": [],
-      "value": "premier"
+      "value": "premier_parent"
     }, {
       "id": "68ef9b49-6413-4da8-9532-d92cb8e7d32e",
       "comment": "",
       "command": "if",
-      "target": "${premier} != \"\"",
+      "target": "${premier_parent} != \"\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "9473ae96-2a7f-4555-aa81-5627b4d821d4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//th//span",
+      "targets": [],
+      "value": "nom_premier"
+    }, {
+      "id": "539d8f10-6e95-4f91-9e67-57c8e1bf5647",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero1"
+    }, {
+      "id": "b9a4b1c3-55c6-45ca-8cc6-9addc0e5c52b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numero1})",
+      "targets": [],
+      "value": "numero_premier"
     }, {
       "id": "7887e3f2-b52e-4c0a-b793-246e9b15a00b",
       "comment": "trouvé",
@@ -13917,19 +13938,40 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e6d4f77a-baa0-41d6-9387-b615dee8bfe0",
-      "comment": "dernier parent",
+      "id": "f8991fa9-f588-4a37-bd5c-a3ad1e1b757c",
+      "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[2]",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//td[4]",
       "targets": [],
-      "value": "dernier"
+      "value": "dernier_parent"
     }, {
       "id": "d769de03-c678-4f0a-a261-c1ad7009c890",
       "comment": "",
       "command": "if",
-      "target": "${dernier} != \"\"",
+      "target": "${dernier_parent} != \"\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "20a8bada-4099-4f0b-bba8-59bf4f3337b6",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::th",
+      "targets": [],
+      "value": "nom_dernier"
+    }, {
+      "id": "1b8c7bd8-5e60-48cc-b4d6-ad69d7007d3b",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "eeff9c30-04a0-4b82-824b-2f63cdaec0f6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numero2})",
+      "targets": [],
+      "value": "numero_dernier"
     }, {
       "id": "951a994e-9aaa-4805-9044-15083e1500b6",
       "comment": "trouvé",
@@ -13976,7 +14018,7 @@
       "id": "48dc8b1b-dd82-46e0-97ef-831866c8ddcb",
       "comment": "",
       "command": "if",
-      "target": "${premier}.localeCompare(${dernier}) > 0",
+      "target": "${premier_parent}.localeCompare(${dernier_parent}) > 0 || (${premier_parent}.localeCompare(${dernier_parent}) == 0 && ${nom_premier}.localeCompare(${nom_dernier}) > 0) || (${premier_parent}.localeCompare(${dernier_parent}) == 0 && ${nom_premier}.localeCompare(${nom_dernier}) == 0 && ${numero_premier} > ${numero_dernier})",
       "targets": [],
       "value": ""
     }, {
@@ -15098,7 +15140,7 @@
       "id": "d3ed351b-f067-486d-bf7c-5f67d4727443",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]/following-sibling::td[2]",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//td[4]",
       "targets": [],
       "value": "dernier_parent"
     }, {
