@@ -6389,83 +6389,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ca6ee8f1-e083-4c60-8b96-a49464c8e197",
-      "comment": "Trier par numéro",
-      "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5b19a75f-b016-499c-8db8-e907b276b093",
-      "comment": "inverser le tri s'il est en ordre décroissant",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b407e63f-0a39-4e30-bdc9-43aebecc38c7",
-      "comment": "au moins 2 membres",
-      "command": "if",
-      "target": "${nb_total_membres} >= 2",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "00256540-4d40-4fca-ab05-a10d91a1397a",
-      "comment": "premier numéro",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numaff1"
-    }, {
-      "id": "59a07c46-205d-4cc3-b334-8a3153e9477b",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Number(${numaff1})",
-      "targets": [],
-      "value": "numero1"
-    }, {
-      "id": "961d3be4-bb54-48f7-abd4-d35c417b7248",
-      "comment": "deuxième numéro",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numaff2"
-    }, {
-      "id": "56b70964-b497-48aa-b3ff-eb54ff124aca",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Number(${numaff2})",
-      "targets": [],
-      "value": "numero2"
-    }, {
-      "id": "77f481d8-633b-44fe-8cb0-d941ca20556d",
-      "comment": "",
-      "command": "if",
-      "target": "${numero1} > ${numero2}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "50e7fb6a-c8ab-4b1b-a765-8715d1e68996",
-      "comment": "Inverser le sens de tri",
-      "command": "click",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "42e53770-17f2-4c0f-8c78-610fc872d594",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c52202fe-83ee-4822-b1a9-b698089f794c",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "552a98c5-fb5a-4f84-af5d-0dab0f48c417",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
@@ -6729,6 +6652,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "3c36d9b8-eba6-4284-b928-e4a36c7b12ce",
+      "comment": "Trier les membres par numéro croissant ; récupérer les noms",
+      "command": "executeScript",
+      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.num - b.num; }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
+      "targets": [],
+      "value": "lesnoms_asc"
+    }, {
+      "id": "ef6db12a-88aa-45c1-b22d-4a3315d876f9",
+      "comment": "Trier les membres par numéro croissant ; récupérer les numéros",
+      "command": "executeScript",
+      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.num - b.num; }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
+      "targets": [],
+      "value": "lesnumeros_asc"
+    }, {
       "id": "e84077f6-9802-4529-b6bb-dd0cbe1aeb4a",
       "comment": "Vérifier les membres",
       "command": "",
@@ -6784,6 +6721,83 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
+    }, {
+      "id": "ca6ee8f1-e083-4c60-8b96-a49464c8e197",
+      "comment": "Trier par numéro croissant",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b19a75f-b016-499c-8db8-e907b276b093",
+      "comment": "inverser le tri s'il est en ordre décroissant",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b407e63f-0a39-4e30-bdc9-43aebecc38c7",
+      "comment": "au moins 2 membres",
+      "command": "if",
+      "target": "${nb_membres_cat} >= 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00256540-4d40-4fca-ab05-a10d91a1397a",
+      "comment": "premier numéro",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numaff1"
+    }, {
+      "id": "59a07c46-205d-4cc3-b334-8a3153e9477b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numaff1})",
+      "targets": [],
+      "value": "numero1"
+    }, {
+      "id": "961d3be4-bb54-48f7-abd4-d35c417b7248",
+      "comment": "deuxième numéro",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numaff2"
+    }, {
+      "id": "56b70964-b497-48aa-b3ff-eb54ff124aca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numaff2})",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "77f481d8-633b-44fe-8cb0-d941ca20556d",
+      "comment": "",
+      "command": "if",
+      "target": "${numero1} > ${numero2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50e7fb6a-c8ab-4b1b-a765-8715d1e68996",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"number\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42e53770-17f2-4c0f-8c78-610fc872d594",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c52202fe-83ee-4822-b1a9-b698089f794c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "5830c22e-3ad6-4bd1-b721-fa927b18a6b0",
       "comment": "",
@@ -6865,14 +6879,14 @@
       "id": "d058737f-0fed-4d12-a472-120c811851f5",
       "comment": "numéro mémorisé",
       "command": "executeScript",
-      "target": "return ${lesnumeros}.at(${i})",
+      "target": "return ${lesnumeros_asc}.at(${i})",
       "targets": [],
       "value": "numero"
     }, {
       "id": "7018c3d9-7f40-460d-9905-856e25ba15ce",
       "comment": "nom mémorisé",
       "command": "executeScript",
-      "target": "return ${lesnoms}.at(${i})",
+      "target": "return ${lesnoms_asc}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
