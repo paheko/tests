@@ -11859,7 +11859,7 @@
       "id": "a8e4fbdc-b879-4918-8906-54ac14664afb",
       "comment": "",
       "command": "while",
-      "target": "${num} > 1",
+      "target": "${num} > 0",
       "targets": [],
       "value": ""
     }, {
@@ -11880,7 +11880,7 @@
       "id": "c401be4a-2971-4ec5-a176-78d813e66aa6",
       "comment": "trouvé",
       "command": "executeScript",
-      "target": "return 1",
+      "target": "return 0",
       "targets": [],
       "value": "num"
     }, {
@@ -12784,7 +12784,7 @@
       "id": "73536ecf-6e06-47be-9d15-a05a7ceb5097",
       "comment": "",
       "command": "while",
-      "target": "${num} > 1",
+      "target": "${num} > 0",
       "targets": [],
       "value": ""
     }, {
@@ -12805,7 +12805,7 @@
       "id": "76844ccc-5841-4341-b110-263fdf7ef745",
       "comment": "trouvé",
       "command": "executeScript",
-      "target": "return 1",
+      "target": "return 0",
       "targets": [],
       "value": "num"
     }, {
@@ -13948,7 +13948,7 @@
       "id": "254b76f8-66a3-4bee-ba1d-cdb0c753bc2e",
       "comment": "",
       "command": "while",
-      "target": "${num} > 1",
+      "target": "${num} > 0",
       "targets": [],
       "value": ""
     }, {
@@ -13990,7 +13990,7 @@
       "id": "951a994e-9aaa-4805-9044-15083e1500b6",
       "comment": "trouvé",
       "command": "executeScript",
-      "target": "return 1",
+      "target": "return 0",
       "targets": [],
       "value": "num"
     }, {
@@ -15147,7 +15147,7 @@
       "id": "5f33b5e8-b9fe-42aa-82d9-609fe54dc3d9",
       "comment": "",
       "command": "while",
-      "target": "${num} > 1",
+      "target": "${num} > 0",
       "targets": [],
       "value": ""
     }, {
@@ -15189,7 +15189,7 @@
       "id": "55cfd10b-64c5-4cc2-a02f-01e8fd3235e3",
       "comment": "trouvé",
       "command": "executeScript",
-      "target": "return 1",
+      "target": "return 0",
       "targets": [],
       "value": "num"
     }, {
