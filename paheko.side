@@ -6598,13 +6598,6 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "0e7fc40b-310c-4731-bfdc-fd77031f653c",
-      "comment": "",
-      "command": "//echo",
-      "target": "Ajout de ${nom}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3e327c55-10da-4cdd-9662-35b296c93645",
       "comment": "Générer ville",
       "command": "executeScript",
@@ -10472,13 +10465,6 @@
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "a78f4dbb-1539-4288-8c6a-02f015004dbc",
-      "comment": "",
-      "command": "//echo",
-      "target": "${numeroAffiche} : ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a8aeb79e-772a-438a-828b-abd18b555694",
       "comment": "",
       "command": "executeScript",
@@ -10590,13 +10576,6 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "5d391987-d8a1-4559-a462-8310f0c91562",
-      "comment": "",
-      "command": "//echo",
-      "target": "Ajout de ${nom}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "f336170b-17a3-4f01-b255-58c5ac520b47",
       "comment": "Générer ville",
       "command": "executeScript",
@@ -10657,62 +10636,6 @@
       "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
       "targets": [],
       "value": "lesnumeros_dec"
-    }, {
-      "id": "2a70cfc3-5ce3-4e97-965b-f4c33a6eda51",
-      "comment": "Afficher les noms triés par numéro décroissant",
-      "command": "//echo",
-      "target": "Tableau des noms triés",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "38e2d870-2dfb-45f8-b288-300769e530f8",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "1d1703f2-2e81-440c-a996-fdc11c3cdeba",
-      "comment": "",
-      "command": "//while",
-      "target": "${i} < ${lesnumeros_dec}.length",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "97426a72-d837-4779-93bf-e7746c4a1da7",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesnumeros_dec}.at(${i})",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "0528e791-d215-4833-8970-da781bc587c7",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesnoms_dec}.at(${i})",
-      "targets": [],
-      "value": "nom"
-    }, {
-      "id": "d2229565-bba9-45d7-b9c7-3b4694144bec",
-      "comment": "",
-      "command": "//echo",
-      "target": "${num} : ${nom}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f6d86b4e-ce2d-4d59-aefd-4052b0a36d00",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "75af9198-db61-4cfa-9c7c-a652e22936ac",
-      "comment": "",
-      "command": "//end",
-      "target": "",
-      "targets": [],
-      "value": ""
     }, {
       "id": "ed0753f7-c502-4c4a-bc5d-11d95d15c178",
       "comment": "Vérifier les membres",
@@ -10847,13 +10770,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "88389155-d956-451e-a6f5-e1b69b68308a",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres sur la page = ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "4ee93b41-d231-4ca3-9146-7c62a5dc045a",
       "comment": "",
       "command": "executeScript",
@@ -10944,20 +10860,6 @@
       "target": "return ${lesnoms_dec}.at(${i})",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "798aaf35-ea66-48b9-8b81-e0b836001ff6",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4ffa03fb-7d86-4615-ae38-1edf69d083a9",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "cdae6e12-29e2-4c00-b804-9790870ee4a2",
       "comment": "",
