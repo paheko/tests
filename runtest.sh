@@ -52,9 +52,6 @@ options=(
 	[--jest-options]=${JESTOPTIONS}
 )
 
-# S'assurer que le script de test est à jour
-make ${TESTFILE}
-
 # la commande
 COMMANDE=selenium-side-runner
 for elem in ${!options[@]}
@@ -63,27 +60,54 @@ do
 done
 
 # Traiter les arguments
-if [[ $# -ne 0 ]]
+while [[ $# -gt 0 ]]
+do
+	case "$1" in
+		"-t")
+			shift
+			TESTFILE="$1"
+			if
+				! echo "$TESTFILE" | grep -q -e "_v4"
+			then
+				TESTFILE=$(basename "$TESTFILE" ".side")_v4.side
+			fi
+			shift
+			;;
+		"-a")
+			# exécuter tous les tests
+			tests="tous"
+			break
+			;;
+		*)
+			# exécuter les tests fournis en argument
+			break
+			;;
+	esac
+done
+
+# S'assurer que le script de test est à jour
+make ${TESTFILE}
+
+if [[ "$tests" == "tous" ]]
 then
-   if [[ "$1" == "-a" ]]
-   then
-	   # exécuter tous les tests
-	   COMMANDE="${COMMANDE} ${TESTFILE}"
-	   eval ${COMMANDE}  2>&1 | traiter_test
-   else
-	   for test in "$@"
-	   do
-		   echo "Tester « $test »"
-		   COMMANDE="${COMMANDE} -f \"$test\" ${TESTFILE}"
-		   eval ${COMMANDE}  2>&1 | traiter_test
-	   done
-   fi
+	# exécuter tous les tests
+	COMMEXEC="${COMMANDE} ${TESTFILE}"
+	eval ${COMMEXEC} 2>&1 | traiter_test
+elif [[ $# -gt 0 ]]
+	 # exécuter les tests passés en arguments
+then
+	for test in "$@"
+	do
+		echo "Tester « $test »"
+		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
+		eval ${COMMEXEC} 2>&1 | traiter_test
+	done
 else
 	# Afficher les noms des suites de tests
 	lesTests=$(awk \
 				'/"suites"/ { suite=1 } ; \
 				$1 ~ /"name":/ && suite { print gensub(/^.*: "(.+)",$/, "\\1", "g")}' \
-				paheko.side | \
+				${TESTFILE} | \
 				sort | \
 				zenity \
 					--width=440 --height=500 \
@@ -98,10 +122,10 @@ else
 	IFS="\|"
 	for test in $lesTests
 	do
-		COMMANDE="${COMMANDE} -f \"$test\" ${TESTFILE}"
+		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
 		CURIFS=$IFS
 		IFS=$OLDIFS
-		eval ${COMMANDE}  2>&1 | traiter_test
+		eval ${COMMEXEC} 2>&1 | traiter_test
 		IFS=$CURIFS
 	done
 	IFS=$OLDIFS
