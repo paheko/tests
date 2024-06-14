@@ -6648,7 +6648,7 @@
       "id": "6152acac-1ffb-4d42-8c60-3d49c68288ed",
       "comment": "Trier les membres par numéro croissant",
       "command": "executeScript",
-      "target": "function trier(tnumeros, tnoms, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.numero - b.numero; }); return tab;} return trier(${lesnumeros}, ${lesnoms})",
+      "target": "function trier(tnumeros, tnoms, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; tab.push(o); } ordre = croissant ? 1 : -1; tab.sort((a, b) => { return ordre * (a.numero - b.numero); }); return tab;} return trier(${lesnumeros}, ${lesnoms})",
       "targets": [],
       "value": "membres_asc"
     }, {
