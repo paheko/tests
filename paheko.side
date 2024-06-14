@@ -14262,26 +14262,33 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "437bf3c8-52ce-4bbe-9742-0c3854091551",
+      "id": "c85e496c-a004-48c5-886a-b14dcca1c06f",
       "comment": "Trier les noms par parent décroissant",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;} return trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false);",
       "targets": [],
-      "value": "lesnoms_parent_asc"
+      "value": "membres_parent_dec"
+    }, {
+      "id": "437bf3c8-52ce-4bbe-9742-0c3854091551",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_parent_dec})",
+      "targets": [],
+      "value": "lesnoms_parent_dec"
     }, {
       "id": "1ef096f6-ea12-4416-bdb3-35dfd80940d4",
-      "comment": "idem pour les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_parent_dec})",
       "targets": [],
-      "value": "lesnumeros_parent_asc"
+      "value": "lesnumeros_parent_dec"
     }, {
       "id": "9dfbc97f-e514-410b-bb83-6a5e6d9e4f13",
-      "comment": "idem pour les parents",
+      "comment": "Récupérer les parents",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let parents = []; tab.forEach((e) => { parents.push(e.parent); }); return parents;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}, false));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.parent); }); return resu;} return extraire(${membres_parent_dec})",
       "targets": [],
-      "value": "lesparents_asc"
+      "value": "lesparents_dec"
     }, {
       "id": "1a71ab3e-6333-40f4-b79d-d5972216f3a3",
       "comment": "Afficher les infos triées par parent décroissant",
@@ -14300,28 +14307,28 @@
       "id": "ff9c92e0-a649-460c-a99c-94234c7120d2",
       "comment": "",
       "command": "//while",
-      "target": "${i} < ${lesnumeros_parent_asc}.length",
+      "target": "${i} < ${lesnumeros_parent_dec}.length",
       "targets": [],
       "value": ""
     }, {
       "id": "31dbf1e7-1a74-4fe8-94f0-eb4b1cac341c",
       "comment": "",
       "command": "//executeScript",
-      "target": "return ${lesnumeros_parent_asc}.at(${i})",
+      "target": "return ${lesnumeros_parent_dec}.at(${i})",
       "targets": [],
       "value": "num"
     }, {
       "id": "7b0420aa-2032-459e-9597-816208574c1c",
       "comment": "",
       "command": "//executeScript",
-      "target": "return ${lesnoms_parent_asc}.at(${i})",
+      "target": "return ${lesnoms_parent_dec}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "265c7b2d-abdc-46d5-a15b-90c6543f0018",
       "comment": "",
       "command": "//executeScript",
-      "target": "return ${lesparents_asc}.at(${i})",
+      "target": "return ${lesparents_dec}.at(${i})",
       "targets": [],
       "value": "parent"
     }, {
@@ -14755,21 +14762,21 @@
       "id": "26cbdb1a-c2b1-4762-96a8-bde6e33fef1d",
       "comment": "numéro mémorisé",
       "command": "executeScript",
-      "target": "return ${lesnumeros_parent_asc}.at(${i})",
+      "target": "return ${lesnumeros_parent_dec}.at(${i})",
       "targets": [],
       "value": "numero"
     }, {
       "id": "75028fcb-ab4e-45c9-83d5-3ebf04aa8d37",
       "comment": "nom mémorisé",
       "command": "executeScript",
-      "target": "return ${lesnoms_parent_asc}.at(${i})",
+      "target": "return ${lesnoms_parent_dec}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "ec8a8094-ae99-46e7-88bd-9ba2e80ce843",
       "comment": "parent mémorisée",
       "command": "executeScript",
-      "target": "return ${lesparents_asc}.at(${i})",
+      "target": "return ${lesparents_dec}.at(${i})",
       "targets": [],
       "value": "parent"
     }, {
