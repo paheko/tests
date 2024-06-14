@@ -241,3 +241,84 @@ function indonymes(chaine, tab) {
 	}
 	return homos;
 }
+
+// ------------------------------------------------------------------------
+// contrôler si les membres sont triés par ordre décroissant du nom du parent
+// il faut inverser l'ordre de tri si
+// premier < dernier ou
+// premier = dernier et nom_premier < nom_dernier ou
+// premier = dernier et nom_premier = nom_dernier et numero_premier < numero_dernier
+// ------------------------------------------------------------------------
+
+${premier_parent}.localeCompare(${dernier_parent}) < 0
+	||
+	(${premier_parent}.localeCompare(${dernier_parent}) == 0 &&
+	 ${nom_premier}.localeCompare(${nom_dernier}) < 0)
+	 ||
+	(${premier_parent}.localeCompare(${dernier_parent}) == 0 &&
+	 ${nom_premier}.localeCompare(${nom_dernier}) == 0 &&
+	 ${numero_premier} < ${numero_dernier})
+
+
+let numeros = [ 8, 5, 9, 2,	3, 6, 7, 4, 1 ];
+
+let noms = [ "Yopduu Cxùbvnn", "Xeosnm Rixwxé", "Vonôdjz Jcpùuèf", "Tnczgèb Ùttypmt",
+			 "Sdcrdi Vzùmbim", "Kgazmà Éurbdv", "Izgzwùz Evjsqjeù","Hmupazn Chrédki",
+			 "Lambert Paul" ];
+
+let parents = [	"Lambert Paul",	"Lambert Paul",	"Lambert Paul",	"Lambert Paul",
+				"Lambert Paul",	"Lambert Paul",	"Lambert Paul",	"Lambert Paul", "" ];
+
+function inverser(numeros, noms, parents)
+{
+	for (let i = 0; i < numeros.length; ++i) {
+		if (parents[i] != "") {
+			premier = i;
+			break;
+		}
+	}
+	for (let i = numeros.length - 1; i >= 0; --i) {
+		if (parents[i] != "") {
+			dernier = i;
+			break;
+		}
+	}
+	console.log("premier : ", numeros[premier], noms[premier], parents[premier]);
+	console.log("dernier : ", numeros[dernier], noms[dernier], parents[dernier]);
+
+	if (parents[premier].localeCompare(parents[dernier]) < 0)
+	{
+		console.log(parents[premier], "<", parents[dernier]);
+	}
+	if (parents[premier].localeCompare(parents[dernier]) == 0 &&
+		noms[premier].localeCompare(noms[dernier]) < 0)
+	{
+		console.log(parents[premier], "=", parents[dernier]);
+		console.log(noms[premier], "<", noms[dernier]);
+	}
+	if (parents[premier].localeCompare(parents[dernier]) == 0 &&
+		noms[premier].localeCompare(noms[dernier]) == 0 &&
+		numeros[premier] < numeros[dernier])
+	{
+		console.log(parents[premier], "=", parents[dernier]);
+		console.log(noms[premier], "=", noms[dernier]);
+		console.log(numeros[premier], "<", numeros[dernier]);
+	}
+
+	if (parents[premier].localeCompare(parents[dernier]) < 0
+		||
+		(parents[premier].localeCompare(parents[dernier]) == 0 &&
+		 noms[premier].localeCompare(noms[dernier]) < 0)
+		||
+		(parents[premier].localeCompare(parents[dernier]) == 0 &&
+		 noms[premier].localeCompare(noms[dernier]) == 0 &&
+		 numeros[premier] < numeros[dernier]))
+	{
+		console.log("Inverser le tri");
+	}
+	else {
+		console.log("Tri ok");
+	}
+}
+inverser(numeros, noms, parents);
+
