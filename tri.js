@@ -1,3 +1,18 @@
+// trier par numéro
+function trierNumeros(tnumeros, tnoms, croissant = true)
+{
+	let tab = [];
+	for (let i = 0; i < tnumeros.length; ++i)
+	{
+		let o = Object();
+		o.numero = tnumeros[i];
+		o.nom = tnoms[i];
+		tab.push(o);
+	}
+	tab.sort((a, b) => { return a.numero - b.numero; });
+	return tab;
+}
+
 // trier par nom puis par numéro
 function trierNoms(tnoms, tnumeros, croissant = true)
 {
