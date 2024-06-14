@@ -10644,17 +10644,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "90e65336-d350-41f5-b750-a9c35048204e",
-      "comment": "Trier les membres par numéro décroissant ; récupérer les noms",
+      "id": "9b0a12f1-714e-420d-bab8-da4cfe02e867",
+      "comment": "Trier les membres par numéro décroissant",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
+      "target": "function trier(tnumeros, tnoms, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; tab.push(o); } ordre = croissant ? 1 : -1; tab.sort((a, b) => { return ordre * (a.numero - b.numero); }); return tab;} return trier(${lesnumeros}, ${lesnoms}, false)",
+      "targets": [],
+      "value": "membres_dec"
+    }, {
+      "id": "90e65336-d350-41f5-b750-a9c35048204e",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_dec})",
       "targets": [],
       "value": "lesnoms_dec"
     }, {
       "id": "87b363c9-1675-46e2-a46e-f818e5d27182",
-      "comment": "Trier les membres par numéro décroissant ; récupérer les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return b.num - a.num; }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_dec})",
       "targets": [],
       "value": "lesnumeros_dec"
     }, {
