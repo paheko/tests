@@ -9999,17 +9999,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "60c29b14-e9d7-4c81-a7e3-ecfb2cb46cce",
-      "comment": "Trier les membres par nom décroissant ; récupérer les noms",
+      "id": "9d5dcd80-054b-4823-9d89-774f32997fb2",
+      "comment": "Trier les membres par nom décroissant",
       "command": "executeScript",
-      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}, false));",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } return trierNoms(${lesnoms}, ${lesnumeros}, false);",
+      "targets": [],
+      "value": "membres_alpha"
+    }, {
+      "id": "60c29b14-e9d7-4c81-a7e3-ecfb2cb46cce",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_alpha})",
       "targets": [],
       "value": "lesnoms_alpha"
     }, {
       "id": "ac18e750-cf13-4168-8d4c-8cbedd6e2abc",
-      "comment": "Trier les membres par nom décroissant ; récupérer les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros; } return extraire(trierNoms(${lesnoms}, ${lesnumeros}, false));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_alpha})",
       "targets": [],
       "value": "lesnumeros_alpha"
     }, {
