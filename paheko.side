@@ -13063,24 +13063,31 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5bfc0a04-b9fd-42b5-89df-450a7b65bbd1",
+      "id": "a418fa16-f127-4bef-bb5c-fd5bfe7b2916",
       "comment": "Trier les noms par parent croissant",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
+      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;} return trierParents(${lesparents}, ${lesnoms}, ${lesnumeros});",
+      "targets": [],
+      "value": "membres_parent_asc"
+    }, {
+      "id": "5bfc0a04-b9fd-42b5-89df-450a7b65bbd1",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_parent_asc})",
       "targets": [],
       "value": "lesnoms_parent_asc"
     }, {
       "id": "a8c047d4-89fc-4731-a6f7-a033a22793b4",
-      "comment": "idem pour les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let numeros = []; tab.forEach((e) => { numeros.push(e.numero); }); return numeros;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_parent_asc})",
       "targets": [],
       "value": "lesnumeros_parent_asc"
     }, {
       "id": "ff717459-25ec-4d3b-b35f-e40f9ec7a6f4",
-      "comment": "idem pour les parents",
+      "comment": "Récupérer les parents",
       "command": "executeScript",
-      "target": "function trierParents(tparents, tnoms, tnumeros, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.parent = tparents[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.parent == '' && b.parent == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.parent == '') { return 1; } if (b.parent == '') { return -1; } let comp = a.parent.localeCompare(b.parent); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab;}function extraire(tab){ let parents = []; tab.forEach((e) => { parents.push(e.parent); }); return parents;} return extraire(trierParents(${lesparents}, ${lesnoms}, ${lesnumeros}));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.parent); }); return resu;} return extraire(${membres_parent_asc})",
       "targets": [],
       "value": "lesparents_asc"
     }, {
