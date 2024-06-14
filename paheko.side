@@ -11331,24 +11331,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6af8e456-1b88-4187-96e7-de7efcc03ec9",
+      "id": "0c02bae8-171d-429f-8ff7-f8d04a3d0c6f",
       "comment": "Trier les membres par ville croissante",
-      "command": "//executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.noms); }); return noms; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
+      "command": "executeScript",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu; }; return trierVilles(${lesvilles}, ${lesnumeros});",
       "targets": [],
-      "value": "lesnoms_ville_asc"
+      "value": "membres_ville_asc"
     }, {
       "id": "e03b7586-9eef-434c-aa84-cff0ec170a1b",
-      "comment": "Trier les membres par ville croissante ; récupérer les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_ville_asc})",
       "targets": [],
       "value": "lesnumeros_ville_asc"
     }, {
       "id": "45fffd33-4d6d-4654-8b2e-4eab0dc961b0",
-      "comment": "Trier les membres par ville croissante ; récupérer les villes",
+      "comment": "Récupérer les villes",
       "command": "executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;} return extraire(${membres_ville_asc})",
       "targets": [],
       "value": "lesvilles_asc"
     }, {
