@@ -9,7 +9,8 @@ function trierNumeros(tnumeros, tnoms, croissant = true)
 		o.nom = tnoms[i];
 		tab.push(o);
 	}
-	tab.sort((a, b) => { return a.numero - b.numero; });
+	ordre = croissant ? 1 : -1;
+	tab.sort((a, b) => { return ordre * (a.numero - b.numero); });
 	return tab;
 }
 
