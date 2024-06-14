@@ -6645,17 +6645,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "3c36d9b8-eba6-4284-b928-e4a36c7b12ce",
-      "comment": "Trier les membres par numéro croissant ; récupérer les noms",
+      "id": "6152acac-1ffb-4d42-8c60-3d49c68288ed",
+      "comment": "Trier les membres par numéro croissant",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.num - b.num; }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms;",
+      "target": "function trier(tnumeros, tnoms, croissant = true){ let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.numero - b.numero; }); return tab;} return trier(${lesnumeros}, ${lesnoms})",
+      "targets": [],
+      "value": "membres_asc"
+    }, {
+      "id": "3c36d9b8-eba6-4284-b928-e4a36c7b12ce",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_asc})",
       "targets": [],
       "value": "lesnoms_asc"
     }, {
       "id": "ef6db12a-88aa-45c1-b22d-4a3315d876f9",
-      "comment": "Trier les membres par numéro croissant ; récupérer les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "let tab = []; for (let i = 0; i < ${lesnumeros}.length; ++i) { let o = Object(); o.num=${lesnumeros}[i]; o.nom=${lesnoms}[i]; tab.push(o); } ; tab.sort((a, b) => { return a.num - b.num; }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums;",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_asc})",
       "targets": [],
       "value": "lesnumeros_asc"
     }, {
