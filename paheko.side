@@ -17172,24 +17172,24 @@
     }, {
       "id": "4d827f8c-fc20-4586-ada5-81b6a208f1fb",
       "comment": "Trier les membres par ville décroissante",
-      "command": "//executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let noms = []; tab.forEach((e) => { noms.push(e.noms); }); return noms; }; return extraire(trierVille(${lesvilles}, ${lesnumeros}, false));",
+      "command": "executeScript",
+      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu; }; return trierVilles(${lesvilles}, ${lesnumeros}, false);",
       "targets": [],
-      "value": "lesnoms_ville_asc"
+      "value": "membres_ville_dec"
     }, {
       "id": "9a2f24a7-8a02-49d6-a76d-9d952f2bd72f",
-      "comment": "Trier les membres par ville décroissante ; récupérer les numéros",
+      "comment": "Récupérer les numéros",
       "command": "executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}, false));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_ville_dec})",
       "targets": [],
-      "value": "lesnumeros_ville_asc"
+      "value": "lesnumeros_ville_dec"
     }, {
       "id": "1d207ec8-a772-4b5f-abe4-d5d752b59faf",
-      "comment": "Trier les membres par ville décroissante ; récupérer les villes",
+      "comment": "Récupérer les villes",
       "command": "executeScript",
-      "target": "function trierVilles(tvilles, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tvilles.length; ++i) { let o = Object(); o.ville = tvilles[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } if (a.ville == '' && b.ville == '') { return a.numero - b.numero; } if (a.ville == '') { return 1; } if (b.ville == '') { return -1;} let comp = a.ville.localeCompare(b.ville); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu; }; return extraire(trierVilles(${lesvilles}, ${lesnumeros}, false));",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.ville); }); return resu;} return extraire(${membres_ville_dec})",
       "targets": [],
-      "value": "lesvilles_asc"
+      "value": "lesvilles_dec"
     }, {
       "id": "50cea963-0984-4735-aeb7-7327ce169087",
       "comment": "Vérifier les membres",
@@ -17453,21 +17453,21 @@
       "id": "0eecd8a3-4dda-4938-901a-19f1eb497add",
       "comment": "numéro mémorisé",
       "command": "executeScript",
-      "target": "return ${lesnumeros_ville_asc}.at(${i})",
+      "target": "return ${lesnumeros_ville_dec}.at(${i})",
       "targets": [],
       "value": "numero"
     }, {
       "id": "bd0d55b3-06fa-4a27-968c-951e1487aedc",
       "comment": "nom mémorisé",
       "command": "//executeScript",
-      "target": "return ${lesnoms_ville_asc}.at(${i})",
+      "target": "return ${lesnoms_ville_dec}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "7ede4f3f-814c-4ba0-a421-575b26e183c1",
       "comment": "ville mémorisée",
       "command": "executeScript",
-      "target": "return ${lesvilles_asc}.at(${i})",
+      "target": "return ${lesvilles_dec}.at(${i})",
       "targets": [],
       "value": "ville"
     }, {
