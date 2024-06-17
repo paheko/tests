@@ -11443,13 +11443,6 @@
       "targets": [],
       "value": "derniere_ville"
     }, {
-      "id": "d4ae6c0a-bd01-4703-8d0e-64626ed5ccac",
-      "comment": "",
-      "command": "if",
-      "target": "(${premiere_ville} == \"\" && ${derniere_ville} == \"\") || (${premiere_ville} != \"\" && ${derniere_ville} != \"\")",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "9ea04b6b-2905-4824-b183-d4f2e1c6599f",
       "comment": "",
       "command": "storeText",
@@ -11478,10 +11471,10 @@
       "targets": [],
       "value": "numero_dernier"
     }, {
-      "id": "263bb137-3128-4abb-813a-9c1bf6c8ed8c",
+      "id": "d4ae6c0a-bd01-4703-8d0e-64626ed5ccac",
       "comment": "",
       "command": "if",
-      "target": "${numero_premier} > ${numero_dernier}",
+      "target": "(${premiere_ville} == \"\" && ${derniere_ville} == \"\") && (${numero_premier} > ${numero_dernier})",
       "targets": [],
       "value": ""
     }, {
@@ -11492,17 +11485,38 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1b80ed11-dda8-4425-81ba-85df1d556d8f",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a4016767-bfe3-47b3-b278-4c9ab993391b",
       "comment": "",
       "command": "elseIf",
       "target": "${premiere_ville} == \"\" && ${derniere_ville} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95722694-c01a-4fc8-8997-a25fbe4a7457",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be817e02-2047-4867-88f7-26a557d75704",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${premiere_ville} != \"\" && ${derniere_ville} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95461674-5300-4c05-a932-d4f1ec8a7e2f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${premiere_ville}.localeCompare(${derniere_ville})",
+      "targets": [],
+      "value": "comp"
+    }, {
+      "id": "adae6520-11cd-466d-83dc-7ef67648e7b9",
+      "comment": "",
+      "command": "if",
+      "target": "${comp} > 0 || (${comp} == 0 && ${numero_premier} > ${numero_dernier})",
       "targets": [],
       "value": ""
     }, {
@@ -11521,6 +11535,13 @@
       "value": ""
     }, {
       "id": "e603ae64-a67d-4796-b1c0-7d2368361f7f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b78a7078-47e9-4111-b840-f55a2ba46a07",
       "comment": "",
       "command": "end",
       "target": "",
@@ -12575,6 +12596,13 @@
       "targets": [],
       "value": "nb_membres_page"
     }, {
+      "id": "66440cbf-d1b7-4622-b656-44a45f90efbb",
+      "comment": "",
+      "command": "echo",
+      "target": "total = ${nb_total_membres}, page= ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "07cf520c-6978-4759-a1d7-6ecd2d787e4b",
       "comment": "",
       "command": "executeScript",
@@ -12766,7 +12794,7 @@
     }, {
       "id": "553c925d-049c-4b70-baa0-17356f5e96b7",
       "comment": "",
-      "command": "//echo",
+      "command": "echo",
       "target": "total = ${nb_total_membres}, parents = ${nb_parents}",
       "targets": [],
       "value": ""
@@ -13322,6 +13350,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "25756246-5b9b-4c6d-a316-ace260739d97",
+      "comment": "",
+      "command": "echo",
+      "target": "premier =  ${numero_premier}, ${nom_premier}, ${premier_parent}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5cbfd014-a78c-4107-a5e2-cb344a758db7",
       "comment": "chercher le dernier parent non vide",
       "command": "",
@@ -13413,10 +13448,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "b0ab6810-8cc3-481f-be33-75a76c4f7337",
+      "id": "7b0d6174-0b76-4e7b-b6bd-ad1293a01724",
       "comment": "",
-      "command": "//echo",
-      "target": "premier = ${premier}, deuxième = ${dernier}",
+      "command": "echo",
+      "target": "dernier =  ${numero_dernier}, ${nom_dernier}, ${dernier_parent}",
       "targets": [],
       "value": ""
     }, {
@@ -17562,7 +17597,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
