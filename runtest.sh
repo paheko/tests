@@ -16,6 +16,20 @@
 # `--detectOpenHandles` to troubleshoot this issue.
 # voir aussi https://github.com/SeleniumHQ/selenium-ide/issues/1819
 # ------------------------------------------------------------------------
+
+aide()
+{
+	cat <<EOF
+Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
+Appel : $(basename $0) [-f fichier] [-a] [-h] [test ..]
+
+-f fichier : fichier de test (défaut : paheko.side)
+-h		   : afficher cette aide
+-a		   : exécuter tous les tests du fichier
+test	   : nom (partiel ou complet) d'un test ou d'une suite à exécuter
+EOF
+}
+
 traiter_test()
 {
 	motif="^Ran all test suites.*"
@@ -63,7 +77,7 @@ done
 while [[ $# -gt 0 ]]
 do
 	case "$1" in
-		"-t")
+		-f )
 			shift
 			TESTFILE="$1"
 			if
@@ -73,12 +87,16 @@ do
 			fi
 			shift
 			;;
-		"-a")
+		-a )
 			# exécuter tous les tests
 			tests="tous"
 			break
 			;;
-		*)
+		"-h" | -? )
+			aide
+			exit
+			;;
+		* )
 			# exécuter les tests fournis en argument
 			break
 			;;
