@@ -11190,14 +11190,14 @@
       "id": "70625fee-1a14-4dac-a4d1-c1805fcb177e",
       "comment": "si pas assez de membres",
       "command": "if",
-      "target": "${nb_total_membres} < 10",
+      "target": "${nb_total_membres} < 20",
       "targets": [],
       "value": ""
     }, {
       "id": "788b8e34-a5cd-4809-b247-87f9f6b6bafd",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
-      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(5 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
     }, {
@@ -11423,7 +11423,7 @@
       "value": ""
     }, {
       "id": "01d7602d-9019-4eab-bd55-695d4634344b",
-      "comment": "au moins 2 membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_membres_cat} >= 2",
       "targets": [],
@@ -11961,14 +11961,14 @@
       "id": "033c0f01-eb55-413e-8447-0b3363537f72",
       "comment": "si pas assez de membres",
       "command": "if",
-      "target": "${nb_total_membres} < 10",
+      "target": "${nb_total_membres} < 20",
       "targets": [],
       "value": ""
     }, {
       "id": "3075ce2b-597e-44bc-8f1b-572333fb08a0",
       "comment": "Ajouter nouveaux noms à la liste",
       "command": "executeScript",
-      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(5 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
       "targets": [],
       "value": "lesnoms"
     }, {
@@ -12194,7 +12194,7 @@
       "value": ""
     }, {
       "id": "65d23448-4184-48e6-b69f-91bfdc1e80ea",
-      "comment": "au moins 2 membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_membres_cat} >= 2",
       "targets": [],
@@ -12213,13 +12213,6 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/td[3]",
       "targets": [],
       "value": "derniere_ville"
-    }, {
-      "id": "6cb020d5-e62e-4f07-8498-eabf33fa6b10",
-      "comment": "",
-      "command": "if",
-      "target": "(${premiere_ville} == \"\" && ${derniere_ville} == \"\") || (${premiere_ville} != \"\" && ${derniere_ville} != \"\")",
-      "targets": [],
-      "value": ""
     }, {
       "id": "e3b1badf-b520-4752-9978-b4f2da6732cf",
       "comment": "",
@@ -12249,10 +12242,10 @@
       "targets": [],
       "value": "numero_dernier"
     }, {
-      "id": "7c42a817-ae56-4347-b351-918423053ae5",
+      "id": "6cb020d5-e62e-4f07-8498-eabf33fa6b10",
       "comment": "",
       "command": "if",
-      "target": "${numero_premier} < ${numero_dernier}",
+      "target": "(${premiere_ville} == \"\" && ${derniere_ville} == \"\") && (${numero_premier} < ${numero_dernier})",
       "targets": [],
       "value": ""
     }, {
@@ -12263,21 +12256,42 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "eab0fcca-6e87-4bbd-9fb4-70a3d29fd9be",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5446b42d-0628-4a7f-bf6b-dd2108b0c891",
+      "id": "7c42a817-ae56-4347-b351-918423053ae5",
       "comment": "",
       "command": "elseIf",
       "target": "${premiere_ville} != \"\" && ${derniere_ville} == \"\"",
       "targets": [],
       "value": ""
     }, {
-      "id": "df2b1e99-7589-4a52-aefa-b472fcd9982d",
+      "id": "2c119af7-6ab6-4cbf-a29a-c395d807a9d3",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "445b6e45-8eb0-49e9-8083-81c17a556e11",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${premiere_ville} != \"\" && ${derniere_ville} != \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "637d86de-03f6-476d-ab50-98d883690e0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${premiere_ville}.localeCompare(${derniere_ville})",
+      "targets": [],
+      "value": "comp"
+    }, {
+      "id": "5b967309-fa60-4cc4-bb84-798d6c6e0b6a",
+      "comment": "",
+      "command": "if",
+      "target": "${comp} < 0 || (${comp} == 0 && ${numero_premier} < ${numero_dernier})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34f72ca7-2e37-40cf-9503-e3e677345790",
       "comment": "Inverser le sens de tri",
       "command": "click",
       "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"ville\")]",
@@ -12292,6 +12306,13 @@
       "value": ""
     }, {
       "id": "5ba2d9af-aea6-49dd-9671-d66b0080bde1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "837e9c9a-7470-494d-8d01-fed18d58242d",
       "comment": "",
       "command": "end",
       "target": "",
