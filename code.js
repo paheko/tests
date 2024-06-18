@@ -243,6 +243,103 @@ function indonymes(chaine, tab) {
 }
 
 // ------------------------------------------------------------------------
+// 1. première ville vide et dernière ville vide
+//	  ==> comparer numéro premier et numéro dernier, inverser si besoin
+// 2. première ville vide et dernière ville non vide
+//	  décroissant : inverser si besoin
+// 3. première ville non vide et dernière ville vide
+//	  croissant : inverser si besoin
+// 4. première ville non vide et dernière ville non vide
+//	  4.1 première ville < dernière ville : croissant, inverser si besoin
+//	  4.2 première ville > dernière ville : décroissant, inverser si besoin
+//	  4.3 première ville = dernière ville
+//	  ==> comparer numéro premier et numéro dernier, inverser si besoin
+// ------------------------------------------------------------------------
+
+if (${premiere_ville} == "" && ${derniere_ville} == "")
+{
+	if (${numero_premier} > ${numero_dernier})
+	{
+		// décroissant : inverser si besoin
+	} else {
+		// croissant : inverser si besoin
+	}
+}
+else if (${premiere_ville} == "" && ${derniere_ville} != "")
+{
+	// décroissant : inverser si besoin
+}
+else if (${premiere_ville} != "" && ${derniere_ville} == "")
+{
+	// croissant : inverser si besoin
+}
+else if (${premiere_ville} != "" && && ${derniere_ville} != "")
+{
+	if (${premiere_ville}.localeCompare(${derniere_ville}) < 0)
+	{
+		// croissant : inverser si besoin
+	} else if (${premiere_ville}.localeCompare(${derniere_ville}) > 0)
+	{
+		// décroissant : inverser si besoin
+	} else {
+		if (${numero_premier} > ${numero_dernier})
+		{
+			// décroissant : inverser si besoin
+		} else {
+			// croissant : inverser si besoin
+		}
+	}
+}
+
+// simplification ordre croissant
+if (${premiere_ville} == "" && ${derniere_ville} == ""
+	&&
+	${numero_premier} > ${numero_dernier})
+{
+	// décroissant : inverser
+}
+else if (${premiere_ville} == "" && ${derniere_ville} != "")
+{
+	// décroissant : inverser
+}
+else if (${premiere_ville} != "" && && ${derniere_ville} != "")
+{
+	if (${premiere_ville}.localeCompare(${derniere_ville}) > 0
+		||
+		(${premiere_ville}.localeCompare(${derniere_ville}) == 0
+		 &&
+		 ${numero_premier} > ${numero_dernier}))
+	{
+		// décroissant : inverser
+	}
+}
+
+
+// simplification ordre décroissant
+if (${premiere_ville} == "" && ${derniere_ville} == ""
+	&&
+	${numero_premier} < ${numero_dernier})
+{
+	// croissant : inverser
+}
+else if (${premiere_ville} != "" && ${derniere_ville} == "")
+{
+	// croissant : inverser
+}
+else if (${premiere_ville} != "" && && ${derniere_ville} != "")
+{
+	if (${premiere_ville}.localeCompare(${derniere_ville}) < 0
+		||
+		(${premiere_ville}.localeCompare(${derniere_ville}) == 0
+		 &&
+		 ${numero_premier} < ${numero_dernier}))
+	{
+		// croissant : inverser
+	}
+}
+
+
+// ------------------------------------------------------------------------
 // contrôler si les membres sont triés par ordre décroissant du nom du parent
 // il faut inverser l'ordre de tri si
 // premier < dernier ou
