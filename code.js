@@ -340,22 +340,125 @@ else if (${premiere_ville} != "" && && ${derniere_ville} != "")
 
 
 // ------------------------------------------------------------------------
-// contrôler si les membres sont triés par ordre décroissant du nom du parent
-// il faut inverser l'ordre de tri si
-// premier < dernier ou
-// premier = dernier et nom_premier < nom_dernier ou
-// premier = dernier et nom_premier = nom_dernier et numero_premier < numero_dernier
-// ------------------------------------------------------------------------
+// contrôler si les membres sont triés par ordre (dé)croissant du nom du parent
+//
+// 1) au moins 2 parents non vides (donc forcément les deux premiers)
+//	- parent1 < parent2 => croissant
+//	- parent1 > parent2 => décroissant
+//	- parent1 = parent2
+//		- membre1 < membre2   => croissant
+//		- membre1 > membre2   => décroissant
+//		- membre1 = membre2
+//			- numéro1 < numéro 2 => croissant
+//			- numéro1 > numéro 2 => décroissant
+// 2) un seul parent non vide (donc le premier)
+//	- membre2 < membre3   => croissant
+//	- membre2 > membre3   => décroissant
+//	- membre2 = membre3
+//		- numéro2 < numéro 3 => croissant
+//		- numéro2 > numéro 3 => décroissant
 
-${premier_parent}.localeCompare(${dernier_parent}) < 0
-	||
-	(${premier_parent}.localeCompare(${dernier_parent}) == 0 &&
-	 ${nom_premier}.localeCompare(${nom_dernier}) < 0)
-	 ||
-	(${premier_parent}.localeCompare(${dernier_parent}) == 0 &&
-	 ${nom_premier}.localeCompare(${nom_dernier}) == 0 &&
-	 ${numero_premier} < ${numero_dernier})
+if (${nb_parents} >= 2)
+{
+	if (${parent1}.localeCompare(${parent2}) < 0)
+	{
+		// croissant
+	}
+	else if (${parent1}.localeCompare(${parent2}) > 0)
+	{
+		// décroissant
+	}
+	else if (${membre1}.localeCompare(${membre2}) < 0)
+	{
+		// croissant
+	}
+	else if (${membre1}.localeCompare(${membre2}) > 0)
+	{
+		// décroissant
+	}
+	else if (${numero1} < ${numero2})
+	{
+		// croissant
+	}
+	else //if (${numero1} > ${numero2})
+	{
+		// décroissant
+	}
+}
+// un seul parent
+else if (${nb_total_membres} > 2)
+{
+	if (${membre2}.localeCompare(${membre3}) < 0)
+	{
+		// croissant
+	}
+	else if (${membre2}.localeCompare(${membre3}) > 0)
+	{
+		// décroissant
+	}
+	else if (${numero2} < ${numero3})
+	{
+		// croissant
+	}
+	else //if (${numero2} > ${numero3})
+	{
+		// décroissant
+	}
+}
 
+// simplification ordre croissant
+if (${nb_parents}) >= 2)
+{
+	if ((${parent1}.localeCompare(${parent2}) > 0)
+		||
+		(${parent1}.localeCompare(${parent2}) == 0
+		 && ${membre1}.localeCompare(${membre2}) > 0)
+		||
+		(${parent1}.localeCompare(${parent2}) == 0
+		 && ${membre1}.localeCompare(${membre2}) == 0
+		 && ${numero1} > ${numero2}))
+	{
+		// décroissant => inverser
+	}
+}
+// un seul parent
+else if (${nb_total_membres} > 2)
+{
+	if ((${membre2}.localeCompare(${membre3}) > 0)
+		||
+		(${membre2}.localeCompare(${membre3}) == 0
+		 && ${numero2} > ${numero3}))
+	{
+		// décroissant => inverser
+	}
+}
+
+// simplification ordre décroissant
+if (${nb_parents}) >= 2)
+{
+	if ((${parent1}.localeCompare(${parent2}) < 0)
+		||
+		(${parent1}.localeCompare(${parent2}) == 0
+		 && ${membre1}.localeCompare(${membre2}) < 0)
+		||
+		(${parent1}.localeCompare(${parent2}) == 0
+		 && ${membre1}.localeCompare(${membre2}) == 0
+		 && ${numero1} < ${numero2}))
+	{
+		// croissant => inverser
+	}
+}
+// un seul parent
+else if (${nb_total_membres} > 2)
+{
+	if ((${membre2}.localeCompare(${membre3}) < 0)
+		||
+		(${membre2}.localeCompare(${membre3}) == 0
+		 && ${numero2} < ${numero3}))
+	{
+		// croissant => inverser
+	}
+}
 
 let numeros = [ 8, 5, 9, 2,	3, 6, 7, 4, 1 ];
 
