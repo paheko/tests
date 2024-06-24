@@ -152,9 +152,8 @@ function trierResp(tresp, tnoms, tnumeros, croissant = true)
 		if (a.resp == '') { return 1; }
 		if (b.resp == '') { return -1; }
 
-		// deux resp non vides
-		let comp = a.resp.localeCompare(b.resp);
-		if (comp == 0) { comp = a.nom.localeCompare(b.nom); }
+		// deux resp non vides (forcément = "Oui")
+		let comp = a.nom.localeCompare(b.nom);
 		if (comp == 0) { comp = a.numero - b.numero; }
 		return comp * ordre;
 	});
