@@ -13732,6 +13732,76 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "f445d142-d2fc-4517-8a8b-4c20379fbf7c",
+      "comment": "Afficher les données mémorisées",
+      "command": "//echo",
+      "target": "Afficher les données mémorisées",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75831550-cdc5-457e-8bbe-eba97bfadd94",
+      "comment": "",
+      "command": "//echo",
+      "target": "total = ${nb_total_membres}, parents = ${nb_parents}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48c86452-a294-4d81-9367-91390b3e4f20",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "24554338-1517-4f5f-80ee-f30f14bfdc9c",
+      "comment": "",
+      "command": "//while",
+      "target": "${i} < ${nb_total_membres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "388949a1-7b3f-4588-93cd-196e1513e163",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesnumeros}.at(${i}) ",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "5f8395fa-44b1-46d9-9822-4f4133649e2f",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesnoms}.at(${i})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "04ab44dc-7cc2-4d1f-b715-5a141e8d3664",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesparents}.at(${i})",
+      "targets": [],
+      "value": "parent"
+    }, {
+      "id": "0c9f913a-43e7-4601-a4df-fa8449033722",
+      "comment": "",
+      "command": "//echo",
+      "target": "${num} : ${nom}, «${parent}»",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "031ae8a2-17e7-4bd7-96d1-dafe71d99a0c",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "84eb4754-3dcd-4950-b105-0196019ca59f",
+      "comment": "",
+      "command": "//end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "f8a6d4c3-f92a-46b6-997e-6e00eda3cb93",
       "comment": "Générer de nouveaux membres si nécessaire",
       "command": "",
@@ -13981,6 +14051,69 @@
       "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.parent); }); return resu;} return extraire(${membres_parent_dec})",
       "targets": [],
       "value": "lesparents_dec"
+    }, {
+      "id": "1a71ab3e-6333-40f4-b79d-d5972216f3a3",
+      "comment": "Afficher les infos triées par parent décroissant",
+      "command": "//echo",
+      "target": "Afficher les infos triées par parent décroissant",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d82c92cc-5562-4689-91ab-56b5261428cf",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "ff9c92e0-a649-460c-a99c-94234c7120d2",
+      "comment": "",
+      "command": "//while",
+      "target": "${i} < ${lesnumeros_parent_dec}.length",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31dbf1e7-1a74-4fe8-94f0-eb4b1cac341c",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesnumeros_parent_dec}.at(${i})",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "7b0420aa-2032-459e-9597-816208574c1c",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesnoms_parent_dec}.at(${i})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "265c7b2d-abdc-46d5-a15b-90c6543f0018",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${lesparents_dec}.at(${i})",
+      "targets": [],
+      "value": "parent"
+    }, {
+      "id": "3a1b4c92-61ee-437e-bab9-16a72589c5b7",
+      "comment": "",
+      "command": "//echo",
+      "target": "${num} : ${nom}, ${parent}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3436643-53b3-4379-9014-541b307c0ecf",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "33360869-ba17-4ac8-a478-857af48d4bbc",
+      "comment": "",
+      "command": "//end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "5cf11199-9c60-4e5f-a94c-f1ed064420d4",
       "comment": "Vérifier les membres",
@@ -14303,6 +14436,20 @@
       "target": "return ${lesparents_dec}.at(${i})",
       "targets": [],
       "value": "parent"
+    }, {
+      "id": "2172a3c2-2926-45e0-bbc1-3d1cae2565a6",
+      "comment": "",
+      "command": "//echo",
+      "target": "n=${num} ${numeroAffiche} ${nomAffiche} ${parentAffiche}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "570fda81-5863-4247-8064-7af915c8a067",
+      "comment": "",
+      "command": "//echo",
+      "target": "i=${i} ${numero} ${nom} ${parent}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "5409fdaf-c3b1-4972-9ecf-ac47d0fba6b3",
       "comment": "",
@@ -14728,13 +14875,6 @@
       "targets": [],
       "value": "num"
     }, {
-      "id": "33327dc4-cbe2-4d71-a56d-4fb5881b1b7e",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${numeroAffiche}, m=${nomAffiche}, p=${parentAffiche}, r=${respAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "e9570f2f-f347-4b56-a707-751255e6b52d",
       "comment": "",
       "command": "end",
@@ -14825,13 +14965,6 @@
       "target": "return ${lesnoms}.at(${i})",
       "targets": [],
       "value": "nomParent"
-    }, {
-      "id": "78fdf789-9a98-4293-8a96-7e9b42f8e912",
-      "comment": "",
-      "command": "//echo",
-      "target": "np=${nomParent}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "64fa1451-f16c-4eb7-adbf-ab5d6c87b12f",
       "comment": "Ajouter resp à la liste",
@@ -14934,13 +15067,6 @@
         ["xpath=//dd[3]/input", "xpath:position"]
       ],
       "value": "${nomEnfant}"
-    }, {
-      "id": "2578a9b2-1c10-4863-82bb-ba90eec89fad",
-      "comment": "sélectionner un parent parmi les membres présents",
-      "command": "//executeScript",
-      "target": "function selParent(lesnoms, lesparents, nb) { while(true) { let num = Math.floor(Math.random() * nb); console.log(\"num=\" + num); if (lesparents[num].length == 0) { return lesnoms[num];}}} return selParent(${lesnoms}, ${lesparents}, ${nb_total_membres})",
-      "targets": [],
-      "value": "parent"
     }, {
       "id": "61f772df-cabd-4a0a-86c6-14a9ca6db9fa",
       "comment": "Rattacher membre au parent",
@@ -15053,27 +15179,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "864b64b5-54ba-4b4f-8abc-71c8411cfbac",
-      "comment": "",
-      "command": "//echo",
-      "target": "num=${lesnumeros}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3452c65d-053b-42b3-a3f7-6c12ccfd15c8",
-      "comment": "",
-      "command": "//echo",
-      "target": "membres=${lesnoms}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4595f471-18af-4379-9733-7a74459fa243",
-      "comment": "",
-      "command": "//echo",
-      "target": "reps=${lesresponsables}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "2d1f0fc7-53d4-4da4-8979-90f0f691acdc",
       "comment": "Trier les noms par responsable croissant",
       "command": "executeScript",
@@ -15105,55 +15210,6 @@
       "id": "40a67fad-f745-4cc5-bc36-d215008028f7",
       "comment": "Afficher le résultat du tri",
       "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bbda314a-d79b-4354-8900-cc88b7eb45d5",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "607ae94f-7bff-4e8e-9256-573156bae068",
-      "comment": "",
-      "command": "//while",
-      "target": "${i} < ${lesnumeros}.length",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e464f6a6-a416-45c2-85e2-9e577babf23f",
-      "comment": "",
-      "command": "//echo",
-      "target": "resp=${lesresponsables_asc}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "58e867e1-e856-4f59-9b7e-12f41f130084",
-      "comment": "",
-      "command": "//echo",
-      "target": "noms=${lesnoms_resp_asc}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c5249f6f-009e-48cb-aa0c-9a592a160008",
-      "comment": "",
-      "command": "//echo",
-      "target": "numéros=${lesnumeros_resp_asc}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "16d5cc8c-9fbb-42fb-96eb-c792fcb006e2",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "4f38b4a6-6037-4583-a753-e4bc01d32df6",
-      "comment": "",
-      "command": "//end",
       "target": "",
       "targets": [],
       "value": ""
@@ -15241,20 +15297,6 @@
       "target": "${nb_responsables} >= 2",
       "targets": [],
       "value": ""
-    }, {
-      "id": "735f817f-9d79-46a1-a851-68ab6533cd1e",
-      "comment": "",
-      "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//td[4]",
-      "targets": [],
-      "value": "parent1"
-    }, {
-      "id": "e7d78edf-bdba-4245-a682-80b62c9706ef",
-      "comment": "",
-      "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//td[4]",
-      "targets": [],
-      "value": "parent2"
     }, {
       "id": "6658e51a-5800-4495-9f57-8d2670f6e350",
       "comment": "",
@@ -15480,20 +15522,6 @@
       "targets": [],
       "value": "responsable"
     }, {
-      "id": "16bb184e-da05-4bae-8bb2-2b5b2d1bdf45",
-      "comment": "",
-      "command": "//echo",
-      "target": "mém=${numero}, ${nom}, ${responsable}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c93c070a-4256-4b2f-80b0-d53323ac388b",
-      "comment": "",
-      "command": "//echo",
-      "target": "aff=${numeroAffiche}, ${nomAffiche}, ${respAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "2c859ebf-4dd1-45ed-b2d1-5ab882abfff3",
       "comment": "",
       "command": "executeScript",
@@ -15537,6 +15565,1077 @@
       "value": "i"
     }, {
       "id": "6c90acce-df5e-4adf-a020-36d5dacb90ee",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "06e32c55-bd03-4164-8dc4-c3f36e39575d",
+    "name": "4-12 lister membres responsable décroissant",
+    "commands": [{
+      "id": "095dec70-5f5d-4aa4-9346-814b70e632da",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "535162ff-9892-499d-b190-ad02851346a4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e9640bc-7a61-49f1-ae0b-8fb117c81a5c",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "c7049858-0a74-46be-937b-22ac2de0aa2d",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f903bae-5cef-40ef-8e38-0c2c7ef90d62",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "ed1cac99-e8f9-406e-9d85-425768b4afda",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "3491f37b-557c-40bb-b7c2-94f7e682a13b",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15287fcc-d24d-47c7-a3a0-c36c1bfadf48",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f51b969e-8fd5-4702-a56e-7f46c42f8843",
+      "comment": "Traiter les membres déjà présents",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9480f251-94f1-42fc-ae9f-c8b01d40b7d3",
+      "comment": "Init liste des numéros",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "09a258db-f411-4e6a-8f3e-fb6a634fd184",
+      "comment": "Init liste des noms",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "c165cfec-7edc-4247-8a33-e1c2fefd9d6d",
+      "comment": "Init liste des parents",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "ac32bfd0-f3f5-4fba-9cc9-f3cb7b5ec50d",
+      "comment": "Init liste des responsables",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesresponsables"
+    }, {
+      "id": "0f02fe19-66df-41b1-82cc-7166e2817ddb",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc99581f-ed53-478b-b325-86effeaa2f6a",
+      "comment": "Rendre visibles les options du menu Filtrer",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fbde4df-7354-49f9-8ee9-049135cf6ab1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "2a8d6ae8-be87-4ec2-abb7-2775aa90c2d1",
+      "comment": "Nombre de membres",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_total_membres"
+    }, {
+      "id": "b235adc9-c4fe-463c-bb57-5235168e930a",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fc0481d-9238-4958-a2c1-47b0f6793261",
+      "comment": "Déterminer le présence de membres attachés",
+      "command": "storeXpathCount",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"is_parent\")]",
+      "targets": [],
+      "value": "existe_rattache"
+    }, {
+      "id": "cb838759-1453-497f-a0c2-ec08617f0900",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "nb_parents"
+    }, {
+      "id": "1a6f034f-63c1-4ce4-8de5-9bed94b52596",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "nb_responsables"
+    }, {
+      "id": "4a4c564d-5221-4233-a992-dad66e8485bb",
+      "comment": "Nombre de membres sur la page",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "2ef90c57-934f-4175-87c5-e5a8401522c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "9dac13f6-c9d5-4416-99ac-7ce29c381ac4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_total_membres}",
+      "targets": [],
+      "value": "nb_membres"
+    }, {
+      "id": "cc07942f-5ab1-491b-b5ba-367a530e4ffd",
+      "comment": "Parcourir les membres enregistrés",
+      "command": "while",
+      "target": "${num} <= ${nb_membres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83dc03a2-8e7d-41b3-b0fc-cca62d44cb02",
+      "comment": "fin de page ?",
+      "command": "if",
+      "target": "${num} > ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19538b11-375c-43e1-ab9e-fa1136e6e1ad",
+      "comment": "passer à la page suivante",
+      "command": "click",
+      "target": "xpath=//li[@class=\"next\"]//a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "572f821d-9e9c-4577-b579-18b6579d663a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres} - ${nb_membres_page}",
+      "targets": [],
+      "value": "nb_membres"
+    }, {
+      "id": "298d66e4-073b-4826-af8f-c5947c6372d9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "bf0ff72e-086a-4f48-9272-d5ac0d7afa96",
+      "comment": "Nombre de membres sur la page",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "bdfcbc5d-34d2-4fc6-874c-b73f73659a92",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3bbdf34-a69e-4d9b-849d-c30a8e379e07",
+      "comment": "numéro affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "5be3a912-a4c5-40ec-8bcf-4f43ab7e9b52",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "7371bae6-9c03-4233-bf33-fe19bb4a76b2",
+      "comment": "nom affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "targets": [],
+      "value": "nomAffiche"
+    }, {
+      "id": "02bcc758-8a79-4b73-bc0f-ac59eb6edac0",
+      "comment": "Ajouter nom à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.concat(${nomAffiche})",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "131682a8-05d8-41dc-9fd0-57d2a0d46163",
+      "comment": "",
+      "command": "if",
+      "target": "${existe_rattache} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a93dc10-9657-42f5-97ee-943a57a29dd0",
+      "comment": "parent affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[4]",
+      "targets": [],
+      "value": "parentAffiche"
+    }, {
+      "id": "dc495578-06d2-4ba1-83cf-24414c92f75c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${parentAffiche}.length",
+      "targets": [],
+      "value": "lg"
+    }, {
+      "id": "5f52bc2d-eea7-4d68-8213-34e9c6b76c30",
+      "comment": "",
+      "command": "if",
+      "target": "${lg} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86d7a1ed-e4ff-4dff-8b28-566ffbe918ea",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_parents} + 1",
+      "targets": [],
+      "value": "nb_parents"
+    }, {
+      "id": "c5e60141-c4bd-4c51-9b28-7f7ae3b613d1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7c4334f-90ff-441f-b030-c1e4a4675d1e",
+      "comment": "Ajouter parent à la liste",
+      "command": "executeScript",
+      "target": "return ${lesparents}.concat(${parentAffiche})",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "79c82f98-ee38-4c46-8814-3369c8ca199d",
+      "comment": "responsable affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[5]",
+      "targets": [],
+      "value": "respAffiche"
+    }, {
+      "id": "3b6cc21b-7785-4b11-98f5-7388f4b2a0c1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${respAffiche}.length",
+      "targets": [],
+      "value": "lg"
+    }, {
+      "id": "cf737983-c5e8-42a2-aa7d-12c453640e93",
+      "comment": "",
+      "command": "if",
+      "target": "${lg} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cc14b79-10c6-4d2b-ab7b-7048f05e9694",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_responsables} + 1",
+      "targets": [],
+      "value": "nb_responsables"
+    }, {
+      "id": "a553e069-261c-490a-9caa-c24670761805",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b631607b-5049-41f8-9c4c-50dc3a2009c3",
+      "comment": "Ajouter responsable à la liste",
+      "command": "executeScript",
+      "target": "return ${lesresponsables}.concat(${respAffiche})",
+      "targets": [],
+      "value": "lesresponsables"
+    }, {
+      "id": "896e0a6c-e396-4ae7-afac-3359f4b321c6",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "915c9a5e-97f4-43ac-a40b-353129b18cc0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesparents}.concat(\"\")",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "08edf336-b0e5-4dbf-92b9-186dce8946db",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesresponsables}.concat(\"\")",
+      "targets": [],
+      "value": "lesresponsables"
+    }, {
+      "id": "520423ab-5292-483b-a819-c0b0a1b1f7c4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7602fb03-3f99-4efa-ba0a-5ba35b9801bf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "466edb78-3153-4708-8a9c-849fb5ba85c4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7b3b0bb-3abc-4bb6-a134-7ac827ff9282",
+      "comment": "Générer de nouveaux membres si nécessaire",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2571717f-e9e6-4783-b46c-cde453b67156",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_total_membres} < 10 || ${nb_responsables} < 5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20f6e0f4-41a5-4a59-9de9-c8cbb831866b",
+      "comment": "Ajouter nouveaux noms à la liste",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; const nb = 2 * (3 + Math.floor(Math.random() * 8)); for (let i = 0; i < nb; ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "267790fd-e665-4e43-abcc-9f0023f2ddac",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21374e41-6ee2-433f-9b06-efaecf0f0f7c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_total_membres}",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "d5e48a67-f619-40e0-8359-e79238a14505",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.length",
+      "targets": [],
+      "value": "nb_noms"
+    }, {
+      "id": "6618c3de-604c-4664-99e2-115c69a4fd56",
+      "comment": "Parcourir nouveaux noms pour ajout dans la base",
+      "command": "while",
+      "target": "${i} < ${nb_noms}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5ad472c-7beb-42c0-9194-393e2c0f8685",
+      "comment": "Ajouter un parent",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56be0186-f115-47c9-9a22-30d16c0fcda3",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "5db5948c-c428-4d60-a52f-ff342695a679",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "fe291c22-8164-4c39-ab11-16add7f259f4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.at(${i})",
+      "targets": [],
+      "value": "nomParent"
+    }, {
+      "id": "6abdcb5d-f160-40b6-a1d9-3aad1e7c02af",
+      "comment": "Ajouter resp à la liste",
+      "command": "executeScript",
+      "target": "return ${lesresponsables}.concat(\"Oui\")",
+      "targets": [],
+      "value": "lesresponsables"
+    }, {
+      "id": "e5d2ba00-1190-4965-b383-3a6e45a6de6d",
+      "comment": "Ajouter parent à la liste",
+      "command": "executeScript",
+      "target": "return ${lesparents}.concat(${nomParent})",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "0357ab5a-4592-4d1d-b0d4-039408be04a9",
+      "comment": "Saisir le nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nomParent}"
+    }, {
+      "id": "4367746c-10d0-4cf8-8cce-d004844a6f25",
+      "comment": "Enregistrer les infos du parent",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4384ca1-7a41-467b-bd6e-61baee537c25",
+      "comment": "Ajouter un enfant",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b6bac15-0597-4189-9ae6-adc014a79f14",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "7592facc-4da1-434a-8f32-e8d7263558d6",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "5ddfcc49-0398-4dd9-909f-dd099d699cf7",
+      "comment": "Ajouter resp à la liste",
+      "command": "executeScript",
+      "target": "return ${lesresponsables}.concat(\"\")",
+      "targets": [],
+      "value": "lesresponsables"
+    }, {
+      "id": "1588f7d5-f493-415c-8906-e4b52736bd75",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.at(${i} + 1)",
+      "targets": [],
+      "value": "nomEnfant"
+    }, {
+      "id": "b164d33d-c20e-4cc4-a3a9-f53ed695f51f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesparents}.concat(\"\")",
+      "targets": [],
+      "value": "lesparents"
+    }, {
+      "id": "785a486d-71da-4337-821c-1e84e7247a54",
+      "comment": "Saisir le nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nomEnfant}"
+    }, {
+      "id": "4cc2f48f-9afd-4437-a92e-5a4117afcd31",
+      "comment": "Rattacher membre au parent",
+      "command": "click",
+      "target": "xpath=//span[@id=\"f_id_parent_container\"]//button",
+      "targets": [
+        ["css=#f_id_parent_container > .icn-btn", "css:finder"],
+        ["xpath=//button[@value='http://test.paheko.localhost/admin/users/selector.php?no_children=1']", "xpath:attributes"],
+        ["xpath=//span[@id='f_id_parent_container']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sélectionner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb3d2ce2-f753-407e-bf78-48ffafa084fb",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "922021ef-e8a4-4d8d-ba1b-e7bab815cb72",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${nomParent}"
+    }, {
+      "id": "33e63e5c-e199-48c0-8960-bbd7946ed274",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@type=\"submit\"]",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a25b543a-6cdc-4748-9fa9-7bd244dbbc2b",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr[@class=\"clickable\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "ad404cbf-f68a-40f1-a562-5de1c1b165d1",
+      "comment": "",
+      "command": "if",
+      "target": "${nb} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a50180-66ad-4ab5-9d9b-c66d14c85d2b",
+      "comment": "sélectionner le parent",
+      "command": "click",
+      "target": "xpath=//tr[@class=\"clickable\"]/th[normalize-space(text())=\"${nomParent}\"]",
+      "targets": [
+        ["css=.clickable:nth-child(2) > th", "css:finder"],
+        ["xpath=//tr[2]/th", "xpath:position"],
+        ["xpath=//th[contains(.,'Lambert Paul')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fb11d84-b3c9-4fcd-8684-98cf69fd117c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5b25c33-c802-4ab3-ad52-afffda80888f",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfc43c01-3653-4039-923d-efe621963979",
+      "comment": "Enregistrer les infos",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fa0047c-7b8c-4a26-9145-577d927dec4e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 2",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "add11203-0b9e-40de-ba8d-157afd9fa1ea",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0074acbe-37ee-4e6e-a356-861b73ef14ec",
+      "comment": "Trier les noms par responsable décroissant",
+      "command": "executeScript",
+      "target": "function trierResp(tresp, tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnumeros.length; ++i) { let o = Object(); o.numero = tnumeros[i]; o.nom = tnoms[i]; o.resp = tresp[i]; tab.push(o); } tab.sort((a, b) => { ordre = croissant ? 1 : -1; if (a.resp == '' && b.resp == '') { let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; } if (a.resp == '') { return 1; } if (b.resp == '') { return -1; } let comp = a.resp.localeCompare(b.resp); if (comp == 0) { comp = a.nom.localeCompare(b.nom); } if (comp == 0) { comp = a.numero - b.numero; } return comp * ordre; }); return tab; } return trierResp(${lesresponsables}, ${lesnoms}, ${lesnumeros}, false)",
+      "targets": [],
+      "value": "membres_resp_dec"
+    }, {
+      "id": "8738885b-4a5a-44fd-94bb-07d11fc23220",
+      "comment": "Récupérer les noms",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu;} return extraire(${membres_resp_dec})",
+      "targets": [],
+      "value": "lesnoms_resp_dec"
+    }, {
+      "id": "6d243324-bdb0-433d-9a7b-0e42f0585598",
+      "comment": "Récupérer les numéros",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_resp_dec})",
+      "targets": [],
+      "value": "lesnumeros_resp_dec"
+    }, {
+      "id": "676fd0c2-7058-435b-897d-401230928130",
+      "comment": "Récupérer les responsables",
+      "command": "executeScript",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.resp); }); return resu;} return extraire(${membres_resp_dec})",
+      "targets": [],
+      "value": "lesresponsables_dec"
+    }, {
+      "id": "ac586b0a-21e9-4465-9824-f01a40a51344",
+      "comment": "Afficher le résultat du tri",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb6c560e-ce60-48d8-8f1f-a42c56b35ef8",
+      "comment": "Vérifier les membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc25dc9a-c665-4282-89fb-372bcf9f3ff2",
+      "comment": "Menu membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd3e69d1-397d-4df4-9fb4-72156bba23c2",
+      "comment": "Rendre visibles les options du menu Filtrer",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08af8389-7cbb-4093-824a-cd7cbed14bbd",
+      "comment": "nombre de membres dans ces catégories",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "4adf5734-dd36-45da-b4f9-fcbdf40f05f0",
+      "comment": "idem",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_total_membres"
+    }, {
+      "id": "c9fa3d8f-9f92-469a-bf02-1cec244d203c",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_noms",
+      "targets": [],
+      "value": "${nb_total_membres}"
+    }, {
+      "id": "b078447c-ed3e-4d65-83ff-57ab2eef4cb7",
+      "comment": "Filtrer : toutes catégories même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7e36893-4a8f-4f38-902a-f8f2886f9236",
+      "comment": "Nombre de membres sur la page",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "6aa814c5-af89-4915-9665-503e5ad2f113",
+      "comment": "Trier par responsable décroissant",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"is_parent\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01591c12-17ad-4508-8cc9-6ff99597c047",
+      "comment": "inverser le tri s'il est en ordre croissant",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a11a0a3-5a91-46fc-99fb-f3deb2564176",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_total_membres} >= 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8f41cc6-7008-4830-a560-c89c2e842e18",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_responsables} >= 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9570a400-a8df-42c8-beda-4016dd249ac8",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th//span",
+      "targets": [],
+      "value": "membre1"
+    }, {
+      "id": "39bcbeea-dd55-4e8a-8eda-b03a65c46c03",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "targets": [],
+      "value": "membre2"
+    }, {
+      "id": "387a4fff-8d60-46f9-8da5-69b99928f1be",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero1"
+    }, {
+      "id": "e8459a41-d636-4c2f-a82c-0b2160ba5e26",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "06c48f80-369d-43d9-b16e-8e92aa672c66",
+      "comment": "",
+      "command": "if",
+      "target": "${membre1}.localeCompare(${membre2}) < 0 || (${membre1}.localeCompare(${membre2}) == 0 && Number(${numero1}) < Number(${numero2}))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0de34b7d-5661-4d20-8a8a-d0e2f855824e",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"is_parent\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41593c3e-a2dd-4570-9b38-f216126d5514",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0110e241-1e1e-413e-b19f-c5cf7a1c1679",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${nb_responsables} < 2 && ${nb_total_membres} > 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fabd8c1-3d45-4631-b2e4-4442e6cb7818",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "targets": [],
+      "value": "membre2"
+    }, {
+      "id": "8142d289-8479-4b3d-ba84-31de7a9be8b9",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th//span",
+      "targets": [],
+      "value": "membre3"
+    }, {
+      "id": "3db786c9-5a4e-4dbd-8326-ed1192e1192d",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "7e8c6878-a63d-4f63-b35c-2ad7c6f64e0e",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numero3"
+    }, {
+      "id": "195b10ff-8d67-4db8-b474-76657e0e88a0",
+      "comment": "",
+      "command": "if",
+      "target": "${membre2}.localeCompare(${membre3}) < 0 || (${membre2}.localeCompare(${membre3}) == 0 && Number(${numero2}) < Number(${numero3}))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed183b5a-ed9b-4796-9266-8e83e2c115cb",
+      "comment": "Inverser le sens de tri",
+      "command": "click",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href, \"is_parent\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2dcacbd7-5799-40bd-8229-204bafe3b829",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e66c7cdb-dce7-47e9-8ab3-c2cc04b972a6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a3a833b-f9f9-471c-b2cf-bbad1ffb1a33",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0410320e-b9fb-452a-81a5-a6250f09ea5e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "166116f0-2c3a-49eb-b024-68028823b21b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "f593366d-7069-4c0f-8aeb-2162af14ba9b",
+      "comment": "Parcourir les membres enregistrés",
+      "command": "while",
+      "target": "${num} <= ${nb_total_membres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "680057b1-06d2-4359-9fb0-4678c402af2b",
+      "comment": "fin de page ?",
+      "command": "if",
+      "target": "${num} > ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed2e9bfc-30e6-4242-8c30-54022b9551d5",
+      "comment": "passer à la page suivante",
+      "command": "click",
+      "target": "xpath=//li[@class=\"next\"]//a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1b2e3e5-4528-4b49-87ca-c04a59f465ca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_total_membres} - ${nb_membres_page}",
+      "targets": [],
+      "value": "nb_total_membres"
+    }, {
+      "id": "8a61633f-b853-4e94-8909-ecdfd59f9741",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "45391cf7-38b8-4f76-ae70-b5aedf2902b3",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "138bb8d9-166c-40a3-8730-1f0265ecd70f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b399c736-e4be-40ed-96b0-d4d4833c523e",
+      "comment": "numéro affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "0fcae787-adc3-4b05-b845-789dcee4330c",
+      "comment": "nom affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "targets": [],
+      "value": "nomAffiche"
+    }, {
+      "id": "85b02934-4d7c-437d-a213-a370f9f230aa",
+      "comment": "responsable affiché",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[5]",
+      "targets": [],
+      "value": "respAffiche"
+    }, {
+      "id": "60a159b9-589e-4496-bce6-682a91de513d",
+      "comment": "numéro mémorisé",
+      "command": "executeScript",
+      "target": "return ${lesnumeros_resp_dec}.at(${i})",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "3b0256c8-6389-4a19-9880-c30e272b31c3",
+      "comment": "nom mémorisé",
+      "command": "executeScript",
+      "target": "return ${lesnoms_resp_dec}.at(${i})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "21a37f0e-766b-4b23-a339-b91e9467833a",
+      "comment": "responsable mémorisé",
+      "command": "executeScript",
+      "target": "return ${lesresponsables_dec}.at(${i})",
+      "targets": [],
+      "value": "responsable"
+    }, {
+      "id": "15516578-035f-4815-960f-9040c1de3c4c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${numeroAffiche})",
+      "targets": [],
+      "value": "numaff"
+    }, {
+      "id": "c9d195ee-26ce-41fb-9c11-25e3adf1b70b",
+      "comment": "",
+      "command": "assert",
+      "target": "numeroAffiche",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "49690eb2-be67-49d9-a880-b4f3fa34a41a",
+      "comment": "",
+      "command": "assert",
+      "target": "nomAffiche",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "f66a6a08-1590-4625-aa67-20154d08e9ea",
+      "comment": "",
+      "command": "assert",
+      "target": "respAffiche",
+      "targets": [],
+      "value": "${responsable}"
+    }, {
+      "id": "6837df25-9240-4682-92a4-9e375aa2416e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "3eb11db2-4812-4c3f-a3a7-8478f240f192",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} +1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "736c1636-6661-49c3-a45f-5f62a359e62e",
       "comment": "",
       "command": "end",
       "target": "",
@@ -18262,7 +19361,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "2d33e4b1-0a99-4c1f-a6b8-154362a00c66"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "2d33e4b1-0a99-4c1f-a6b8-154362a00c66", "06e32c55-bd03-4164-8dc4-c3f36e39575d"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
