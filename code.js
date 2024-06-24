@@ -150,7 +150,8 @@ return getNumero(${categorie}, ${categories_num});
 // ------------------------------------------------------------------------
 
 // sélectionner un parent parmi les nb premiers éléments du tableau
-// lesnoms
+// lesnoms ; le choix se fait uniquement sur des personnes qui ne sont
+// pas rattachées, donc qui n'ont pas de parent
 function selParent(lesnoms, lesparents, nb)
 {
 	while(true) {
@@ -452,6 +453,106 @@ if (${nb_parents}) >= 2)
 else if (${nb_total_membres} > 2)
 {
 	if ((${membre2}.localeCompare(${membre3}) < 0)
+		||
+		(${membre2}.localeCompare(${membre3}) == 0
+		 && ${numero2} < ${numero3}))
+	{
+		// croissant => inverser
+	}
+}
+
+// ------------------------------------------------------------------------
+// contrôler si les membres sont triés par ordre (dé)croissant de la colonne responsable
+// colonne responsable non vide en tête
+//
+// 1) au moins 2 oui dans la colonne responsable (donc forcément les deux premiers)
+//	- membre1 < membre2   => croissant
+//	- membre1 > membre2   => décroissant
+//	- membre1 = membre2
+//		- numéro1 < numéro 2 => croissant
+//		- numéro1 > numéro 2 => décroissant
+// 2) un seul oui dans la colonne responsable (donc le premier)
+//	- numéro2 < numéro 3 => croissant
+//	- numéro2 > numéro 3 => décroissant
+
+if (${nb_resp} >= 2)
+{
+	if (${membre1}.localeCompare(${membre2}) < 0)
+	{
+		// croissant
+	}
+	else if (${membre1}.localeCompare(${membre2}) > 0)
+	{
+		// décroissant
+	}
+	else if (${numero1} < ${numero2})
+	{
+		// croissant
+	}
+	else //if (${numero1} > ${numero2})
+	{
+		// décroissant
+	}
+}
+// un seul responsable
+else if (${nb_total_membres} > 2)
+{
+	if (${membre2}.localeCompare(${membre3}) < 0)
+	{
+		// croissant
+	}
+	else if (${membre2}.localeCompare(${membre3}) > 0)
+	{
+		// décroissant
+	}
+	else if (${numero2} < ${numero3})
+	{
+		// croissant
+	}
+	else //if (${numero2} > ${numero3})
+	{
+		// décroissant
+	}
+}
+
+// simplification ordre croissant
+if (${nb_resp}) >= 2)
+{
+	if (${membre1}.localeCompare(${membre2}) > 0
+		||
+		(${membre1}.localeCompare(${membre2}) == 0
+		 && ${numero1} > ${numero2}))
+	{
+		// décroissant => inverser
+	}
+}
+// un seul responsable
+else if (${nb_total_membres} > 2)
+{
+	if (${membre2}.localeCompare(${membre3}) > 0
+		||
+		(${membre2}.localeCompare(${membre3}) == 0
+		 && ${numero2} > ${numero3}))
+	{
+		// décroissant => inverser
+	}
+}
+
+// simplification ordre décroissant
+if (${nb_resp}) >= 2)
+{
+	if (${membre1}.localeCompare(${membre2}) < 0
+		||
+		(${membre1}.localeCompare(${membre2}) == 0
+		 && ${numero1} < ${numero2}))
+	{
+		// croissant => inverser
+	}
+}
+// un seul responsable
+else if (${nb_total_membres} > 2)
+{
+	if (${membre2}.localeCompare(${membre3}) < 0
 		||
 		(${membre2}.localeCompare(${membre3}) == 0
 		 && ${numero2} < ${numero3}))
