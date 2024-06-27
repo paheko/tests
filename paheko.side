@@ -6224,13 +6224,6 @@
       "targets": [],
       "value": "nb_elem"
     }, {
-      "id": "0b3f6c7c-14ab-4ede-ae49-4b659d093fbe",
-      "comment": "",
-      "command": "echo",
-      "target": "${nb_elem}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "234819b7-c75f-4f15-acb8-ab293e8837e0",
       "comment": "",
       "command": "executeScript",
@@ -6251,13 +6244,6 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "24c2ff2f-ad77-4f52-b3ea-46747afdefc1",
-      "comment": "",
-      "command": "echo",
-      "target": "${nom}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "b25a3810-d452-4df3-81c5-67322e8b56a5",
       "comment": "",
@@ -16996,13 +16982,6 @@
       "targets": [],
       "value": "nb_noms"
     }, {
-      "id": "479ad9dd-09d8-41c6-aaf2-3c569916e1c0",
-      "comment": "",
-      "command": "echo",
-      "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3b4a56ae-7165-4b82-827e-93623ef83a7c",
       "comment": "Parcourir liste noms pour ajout dans la base",
       "command": "while",
@@ -17244,13 +17223,6 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
-    }, {
-      "id": "3f7540b5-a026-465e-af47-0e0a523f74a8",
-      "comment": "",
-      "command": "echo",
-      "target": "nombre de membres sur la page = ${nb_membres_page}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "85aabfcd-08f9-4b66-b52d-38d522fdfea7",
       "comment": "",
@@ -18317,17 +18289,24 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "ba372402-e661-43ec-a760-83eba9361372",
+      "comment": "Trier les membres par nom croissant",
+      "command": "executeScript",
+      "target": "function trierNoms(tnoms, tnumeros, croissant = true) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.nom = tnoms[i]; o.numero = tnumeros[i]; tab.push(o); } tab.sort((a, b) => { if (! croissant) { [a, b] = [b, a]; } let comp = a.nom.localeCompare(b.nom); if (comp == 0) { comp = a.numero - b.numero; } return comp; }); return tab; } return trierNoms(${lesnoms}, ${lesnumeros});",
+      "targets": [],
+      "value": "membres_alpha"
+    }, {
       "id": "70bb7748-4061-4971-83d1-5ff6862f170f",
       "comment": "",
       "command": "executeScript",
-      "target": "function trier(tnoms, tnumeros) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.num=tnumeros[i]; o.nom=tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.nom.localeCompare(b.nom); }); let noms = []; tab.forEach((e) => { noms.push(e.nom); }); return noms; } return trier(${lesnoms}, ${lesnumeros});",
+      "target": "function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu; } return extraire(${membres_alpha})",
       "targets": [],
       "value": "noms_tries"
     }, {
       "id": "f26cc622-8d47-4ba3-9ee2-b9ed3952f24b",
       "comment": "",
       "command": "executeScript",
-      "target": "function trier(tnoms, tnumeros) { let tab = []; for (let i = 0; i < tnoms.length; ++i) { let o = Object(); o.num=tnumeros[i]; o.nom=tnoms[i]; tab.push(o); } tab.sort((a, b) => { return a.nom.localeCompare(b.nom); }); let nums = []; tab.forEach((e) => { nums.push(e.num); }); return nums; } return trier(${lesnoms}, ${lesnumeros});",
+      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_alpha})",
       "targets": [],
       "value": "numeros_tries"
     }, {
@@ -19361,7 +19340,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "25e25640-41c1-4a8c-a8f3-288fed7fb46e", "2d33e4b1-0a99-4c1f-a6b8-154362a00c66", "06e32c55-bd03-4164-8dc4-c3f36e39575d"]
+    "tests": ["9d3d8f41-bff5-472e-ac87-6de5f10b4655", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "2d33e4b1-0a99-4c1f-a6b8-154362a00c66", "06e32c55-bd03-4164-8dc4-c3f36e39575d", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
     "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
     "name": "test",
