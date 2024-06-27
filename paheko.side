@@ -18492,8 +18492,429 @@
       "value": ""
     }]
   }, {
+    "id": "cb3e76df-5def-477c-bad3-fbf27d8240f3",
+    "name": "5-03 chercher membre absent",
+    "commands": [{
+      "id": "55fcb139-ec03-4ff2-ac8a-4fb73f55cc7e",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41d12e9b-fd2b-41d7-915e-d45b42d6b922",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abd91ef9-ff3e-4524-8fff-983501ee6608",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "b4c4a65d-eeef-459c-8144-225933a7dcfa",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0876382f-9fbf-455f-b5ac-0e6c0a004969",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "63329a04-29bb-4041-8106-001451e24d6e",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "c3560fa6-a5b9-48ae-b921-c26d08ca8836",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a73d7ea-044e-4a60-b875-519495826aa3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbfbf12e-796f-40dd-a047-e8df1ae253a7",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8be34c7b-a75f-4ac7-9960-21bfd1979523",
+      "comment": "Rendre visibles les options du menu Filtrer",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a250f5cb-6c10-4a75-9b66-7fc7b9728fa6",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "e921d966-4c9e-4bfb-bbb3-d2228f4996ea",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_total_membres"
+    }, {
+      "id": "b81eff75-6f68-4930-b796-505ee5734911",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc4a0219-4f93-4912-ac03-ec15fb42cf10",
+      "comment": "Init liste des numéros",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "66eb4192-44a3-4c83-b8f0-1d95563f74fd",
+      "comment": "Init liste des noms",
+      "command": "executeScript",
+      "target": "return []",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "cd6e7f0b-5602-4c1b-a03f-e9a89031e641",
+      "comment": "Traiter les membres déjà présents",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7f23320-2e5e-49d1-8656-3f80e8f72dd1",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "4ecc3a43-6df5-4ced-8759-5ddb68f09e09",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "c9c51215-9311-4308-a7bb-fde014ee482e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_total_membres}",
+      "targets": [],
+      "value": "nb_membres"
+    }, {
+      "id": "edcf9644-1c35-49ff-95ac-7988035a8e26",
+      "comment": "Parcourir les membres enregistrés",
+      "command": "while",
+      "target": "${num} <= ${nb_membres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4d5ab5e-710d-4e66-a451-7c484e91ce4a",
+      "comment": "fin de page ?",
+      "command": "if",
+      "target": "${num} > ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3d1850c-1d13-4765-9f26-34d468d12433",
+      "comment": "passer à la page suivante",
+      "command": "click",
+      "target": "xpath=//li[@class=\"next\"]//a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bc5f243-824b-4c99-b2e6-c26bd0bf05be",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres} - ${nb_membres_page}",
+      "targets": [],
+      "value": "nb_membres"
+    }, {
+      "id": "6de693d9-f3f3-47ed-80fa-8cc2fafcaa86",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "4000ad86-3ec7-4ae5-b1bc-06935c4f13fa",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "0da510f4-2a99-4aa8-9b82-770d6456021d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7df0430d-6f86-44ec-a783-c9b717615b25",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
+      "targets": [],
+      "value": "numeroAffiche"
+    }, {
+      "id": "f5744572-213d-4909-9b73-c47f120eb13b",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "03a1627b-b4ff-45e8-8185-5825833cef78",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "targets": [],
+      "value": "nomAffiche"
+    }, {
+      "id": "400dc937-3b88-47e4-8883-edd68c452264",
+      "comment": "Ajouter nom à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.concat(${nomAffiche})",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "50ef92bb-101c-4fd8-8bbd-adfbd1ac1f5b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "53ccb818-4941-4124-a693-a8e845961c8c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e6d04f0-bd3e-4596-b3a9-f4430fec90ba",
+      "comment": "Générer de nouveaux membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3afc8f5c-923e-4226-973f-dbf1a2efab7b",
+      "comment": "si pas assez de membres",
+      "command": "if",
+      "target": "${nb_total_membres} < 20",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2eaa4fb0-6750-4c59-b25c-65dd5e7a6b64",
+      "comment": "Ajouter nouveaux noms à la liste",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) { ${lesnoms} = ${lesnoms}.concat(chaine(11 + Math.floor(Math.random() * 5))); } return ${lesnoms};",
+      "targets": [],
+      "value": "lesnoms"
+    }, {
+      "id": "d0fee411-2e7b-4612-9f18-af25471dfc9e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "410f2a0e-f891-4b22-8e50-1aa14ddd5b40",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.length",
+      "targets": [],
+      "value": "nb_noms"
+    }, {
+      "id": "e39378a3-4881-4b8c-a186-89d9938db2ab",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_total_membres}",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "b776d1f2-5e74-4508-b104-79b9124301c5",
+      "comment": "Enregistrer les nouveaux noms",
+      "command": "while",
+      "target": "${i} < ${nb_noms}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d029f4-7e11-44eb-9613-1dc76809b3fa",
+      "comment": "Menu ajouter",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e9da433-248d-4090-83c9-3a4e9108975f",
+      "comment": "Mémoriser numéro de membre",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "abbec7f8-9688-44b7-9170-7b28ef245fda",
+      "comment": "Ajouter numéro à la liste",
+      "command": "executeScript",
+      "target": "return ${lesnumeros}.concat(${numero})",
+      "targets": [],
+      "value": "lesnumeros"
+    }, {
+      "id": "68cac8c6-c44b-45eb-a721-c11585358e2f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${lesnoms}.at(${i})",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "7e4c3112-e20a-49f9-978f-fe2b9c3b3380",
+      "comment": "Saisir le nom",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "d45d86c5-9ecf-4e70-bf75-c38c323729e7",
+      "comment": "Enregistrer",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2fab015-738a-41e2-b100-51b1344f949e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "ddf26bb1-3f70-409f-affd-cd815a192cdc",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eeaacd66-07ef-43ca-8cb8-25c507f4238f",
+      "comment": "Générer un nom absent de la liste ",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1); }; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }; const accent = \"àâäéèêëîïôöùûü\"; const normal = \"aaaeeeeiioouuu\"; function normaliser (chaine) { let resu = \"\"; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (normaliser(e).localeCompare(elem) == 0) { nb += 1; } } return nb; } function genererNom(tab) { while (true) { let nom = chaine(12); let nb = nbocc(normaliser(nom), tab); if (nb == 0) { return nom; }}}; return genererNom(${lesnoms})",
+      "targets": [],
+      "value": "nom_cherche"
+    }, {
+      "id": "dee087d6-6caa-41da-b677-6dcb0e207519",
+      "comment": "",
+      "command": "echo",
+      "target": "cherché : ${nom_cherche}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc01ebba-16fa-4d89-b980-d52cc4a516ae",
+      "comment": "menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [
+        ["css=.current b", "css:finder"],
+        ["xpath=//li[2]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Membres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00d9d82f-84fc-4e99-adda-b25ac1803912",
+      "comment": "",
+      "command": "type",
+      "target": "name=qt",
+      "targets": [
+        ["name=qt", "name"],
+        ["css=fieldset > input", "css:finder"],
+        ["xpath=//input[@name='qt']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${nom_cherche}"
+    }, {
+      "id": "32b1728f-278b-447c-ae0c-de26324be140",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type=\"submit\"]",
+      "targets": [
+        ["css=.icn-btn:nth-child(3)", "css:finder"],
+        ["xpath=//button[@value='1']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57edae49-007a-437d-9fe9-b1952bc6b1d8",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//header/h1",
+      "targets": [],
+      "value": "titre_page"
+    }, {
+      "id": "1c64c382-1288-42e6-90f7-1c9cdb8f93f9",
+      "comment": "",
+      "command": "assert",
+      "target": "titre_page",
+      "targets": [],
+      "value": "Recherche de membre"
+    }, {
+      "id": "ca20be4f-7a8b-4594-8976-e6bdac2de26a",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tbody/tr",
+      "targets": [],
+      "value": "nb_res"
+    }]
+  }, {
     "id": "7c55c402-5f6b-4b67-bbfe-b4d167ea2dda",
-    "name": "5-03 chercher numéro membre présent",
+    "name": "5-11 chercher numéro membre présent",
     "commands": [{
       "id": "d722c0fc-6785-4aa6-8f56-d302788cc759",
       "comment": "",
@@ -18893,7 +19314,7 @@
     }]
   }, {
     "id": "222c2c01-b33a-4c51-8f6e-103f9ac3504d",
-    "name": "5-04 chercher numéro membre absent",
+    "name": "5-12 chercher numéro membre absent",
     "commands": [{
       "id": "3ecc1451-817f-4247-8fc3-353f0c6abe8c",
       "comment": "",
@@ -19354,7 +19775,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["e222e9ff-b40c-4b8b-a9b8-1adfc1e68184", "e0b8520c-d128-4cd9-b6fa-b351ea91d4d2", "7c55c402-5f6b-4b67-bbfe-b4d167ea2dda", "222c2c01-b33a-4c51-8f6e-103f9ac3504d"]
+    "tests": ["e222e9ff-b40c-4b8b-a9b8-1adfc1e68184", "e0b8520c-d128-4cd9-b6fa-b351ea91d4d2", "cb3e76df-5def-477c-bad3-fbf27d8240f3", "7c55c402-5f6b-4b67-bbfe-b4d167ea2dda", "222c2c01-b33a-4c51-8f6e-103f9ac3504d"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
