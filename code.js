@@ -284,7 +284,8 @@ function genererCourriel(tab)
 		let nb = nbocc(courriel, tab);
 		if (nb == 0) { return courriel; }
 	}
-}
+};
+return genererCourriel(${lescourriels})
 
 // ------------------------------------------------------------------------
 // sélectionner un courriel au hasard dans un tableau en s'assurant
