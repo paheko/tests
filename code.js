@@ -46,7 +46,7 @@ const chaine = (length) => {
     }
     return str;
 };
-return chaine(8) + "@ici.fr";
+return chaine(8) + "@" + chaine(5) + ".fr";
 
 // code postal
 return Math.random().toString(10).substring(2, 7);
@@ -274,3 +274,31 @@ function genererNom(tab)
 }
 return genererNom(${lesnoms})
 
+// ------------------------------------------------------------------------
+// générer une nouvelle adresse de courriel en s'assurant qu'elle est unique
+// ------------------------------------------------------------------------
+function genererCourriel(tab)
+{
+	while (true) {
+		let courriel = chaine(8) + "@" + chaine(5) + ".fr";
+		let nb = nbocc(courriel, tab);
+		if (nb == 0) { return courriel; }
+	}
+}
+
+// ------------------------------------------------------------------------
+// sélectionner un courriel au hasard dans un tableau en s'assurant
+// qu'il est unique et renvoyer son indice
+// ------------------------------------------------------------------------
+function getCourriel(tab)
+{
+	while (true) {
+		let ind = Math.floor(Math.random() * tab.length);
+		let nom = tab.at(ind);
+		if (nom.length > 0) {
+			let nb = nbocc(nom, tab);
+			if (nb == 1) { return ind; }
+		}
+	}
+}
+return getCourriel(${lescourriels})
