@@ -105,6 +105,10 @@ done
 
 # S'assurer que le script de test est à jour
 make ${TESTFILE}
+if [[ $? -ne 0 ]]
+then
+	exit $?
+fi
 
 if [[ "$tests" == "tous" ]]
 then
