@@ -303,3 +303,14 @@ function getCourriel(tab)
 	}
 }
 return getCourriel(${lescourriels})
+
+// fabriquer un courriel qui contient une chaîne (@xxx) donnée
+function homonyme(chaine, lg) {
+	let chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+	let str = '';
+	for (let i = 0; i < lg; i++) {
+		str += chars.charAt(Math.floor(Math.random() * chars.length));
+	}
+	return str + chaine + ".fr";
+}
+return homonyme(${courriel_cherche}, 9);
