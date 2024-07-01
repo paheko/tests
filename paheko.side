@@ -17744,13 +17744,6 @@
       "targets": [],
       "value": "numero_cherche"
     }, {
-      "id": "d889c91a-9415-4a01-acd0-714782a9c12c",
-      "comment": "",
-      "command": "echo",
-      "target": "cherché : ${numero_cherche} ${nom_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "41fe6725-7be4-4b97-bd83-5e8b5980214b",
       "comment": "menu Membres",
       "command": "click",
@@ -17819,13 +17812,6 @@
       "target": "xpath=//dt[contains(., \"Nom & prénom\")]/following-sibling::dd[1]",
       "targets": [],
       "value": "nom_trouve"
-    }, {
-      "id": "6f875321-ed40-4625-becd-22405d92fbad",
-      "comment": "",
-      "command": "echo",
-      "target": "trouvé  : ${numero_trouve} ${nom_trouve}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "4da11a59-5b1b-4877-b476-6f861fd8f536",
       "comment": "",
@@ -18275,13 +18261,6 @@
       ],
       "value": ""
     }, {
-      "id": "8bd81746-a2ee-4b12-9d9c-2c45551bd4c2",
-      "comment": "",
-      "command": "echo",
-      "target": "nom à chercher = ${nom_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "ba372402-e661-43ec-a760-83eba9361372",
       "comment": "Trier les membres par nom croissant",
       "command": "executeScript",
@@ -18434,13 +18413,6 @@
       "target": "return ${numeros_tries}.at(${num})",
       "targets": [],
       "value": "numero"
-    }, {
-      "id": "262c11e7-3305-4061-b8ec-a9491d5bca5c",
-      "comment": "",
-      "command": "echo",
-      "target": "${numero_trouve} ${nom_trouve} = ${nom} (${numero})",
-      "targets": [],
-      "value": ""
     }, {
       "id": "f20ccecc-3d14-490b-89c5-7f12ba5d7baf",
       "comment": "vérifier si le nom trouvé correspond à la recherche",
@@ -18843,13 +18815,6 @@
       "targets": [],
       "value": "nom_cherche"
     }, {
-      "id": "dee087d6-6caa-41da-b677-6dcb0e207519",
-      "comment": "",
-      "command": "echo",
-      "target": "cherché : ${nom_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "cc01ebba-16fa-4d89-b980-d52cc4a516ae",
       "comment": "menu Membres",
       "command": "click",
@@ -19250,13 +19215,6 @@
       "targets": [],
       "value": "numero_cherche"
     }, {
-      "id": "305ab0a6-6eac-4c54-b727-d24dec84f480",
-      "comment": "",
-      "command": "echo",
-      "target": "numéro à chercher = ${numero_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "2cee297b-cbc9-41c2-980f-e914a158bd16",
       "comment": "menu Membres",
       "command": "click",
@@ -19297,13 +19255,6 @@
       "target": "xpath=//dt[contains(., \"Numéro de membre\")]/following-sibling::dd[1]",
       "targets": [],
       "value": "numero_trouve"
-    }, {
-      "id": "51515de8-0005-4424-8dde-77df5f7da4a4",
-      "comment": "",
-      "command": "echo",
-      "target": "numéro trouvé = ${numero_trouve}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "2023b28b-d68a-48ee-a364-612d277c46ae",
       "comment": "",
@@ -19664,13 +19615,6 @@
       "targets": [],
       "value": "numero_cherche"
     }, {
-      "id": "27754c6d-ddf4-40f8-a85d-8e01a2597c2f",
-      "comment": "",
-      "command": "echo",
-      "target": "numéro à chercher = ${numero_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "af848da9-c5c4-446d-9976-d6c350121945",
       "comment": "menu Membres",
       "command": "click",
@@ -20024,13 +19968,6 @@
       "targets": [],
       "value": "lescourriels"
     }, {
-      "id": "9a1c8dcc-b689-46b4-8970-3a4c27c59258",
-      "comment": "",
-      "command": "//echo",
-      "target": "courriel = ${courriel}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "54ffc7b9-1ae2-49ab-a427-6e801c559709",
       "comment": "Retour page précédente",
       "command": "executeScript",
@@ -20049,13 +19986,6 @@
       "comment": "",
       "command": "end",
       "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "726972b4-81a3-46a6-b357-a11e71d2b52d",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb courriel = ${nb_courriel}",
       "targets": [],
       "value": ""
     }, {
@@ -20238,13 +20168,6 @@
       "targets": [],
       "value": "nom_cherche"
     }, {
-      "id": "b3d95e8a-ec12-4166-8396-19c8696c050f",
-      "comment": "",
-      "command": "echo",
-      "target": "cherché : ${numero_cherche}, ${nom_cherche}, ${courriel_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "24dfdf59-92ea-4f7f-bb29-45b98f68f0eb",
       "comment": "menu Membres",
       "command": "click",
@@ -20320,13 +20243,6 @@
       "target": "xpath=//a[contains(@href, 'mailto:')]",
       "targets": [],
       "value": "courriel_trouve"
-    }, {
-      "id": "2a6ae256-e53c-4d93-aec6-a3e755eab531",
-      "comment": "",
-      "command": "echo",
-      "target": "trouvé  : ${numero_trouve} ${nom_trouve} ${courriel_trouve}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "7577ea10-15f8-442e-a0e1-6a45818f5b4e",
       "comment": "",
@@ -20640,13 +20556,6 @@
       "targets": [],
       "value": "lescourriels"
     }, {
-      "id": "fdaf559c-1de9-492e-935a-7b263e1854e5",
-      "comment": "",
-      "command": "//echo",
-      "target": "courriel = ${courriel}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "6644c0a0-3d1f-4c0c-849c-ca3dbc0d830b",
       "comment": "Retour page précédente",
       "command": "executeScript",
@@ -20665,13 +20574,6 @@
       "comment": "",
       "command": "end",
       "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "37424ca9-25a6-4a0e-85ae-b7222b1388ca",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb courriel = ${nb_courriel}",
       "targets": [],
       "value": ""
     }, {
@@ -20832,13 +20734,6 @@
       "target": "function nbocc(elem, tab) { let nb = 0; for (const e of tab) { if (e.localeCompare(elem) == 0) { nb += 1; } } return nb;};const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str;}; function genererCourriel(tab){ while (true) { let courriel = chaine(8) + \"@\" + chaine(5) + \".fr\"; let nb = nbocc(courriel, tab); if (nb == 0) { return courriel; }}}; return genererCourriel(${lescourriels})",
       "targets": [],
       "value": "courriel_cherche"
-    }, {
-      "id": "1bc46a87-434f-4514-8c06-0d95219ad20e",
-      "comment": "",
-      "command": "echo",
-      "target": "cherché : ${courriel_cherche}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "a09a0f14-3cb9-453d-af28-a4aee9dc26ee",
       "comment": "menu Membres",
@@ -21193,13 +21088,6 @@
       "targets": [],
       "value": "lescourriels"
     }, {
-      "id": "36e3f0c9-46eb-47f6-859e-415f90816154",
-      "comment": "",
-      "command": "//echo",
-      "target": "courriel = ${courriel}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "479121e2-f411-44f8-834a-8a558325810a",
       "comment": "Retour page précédente",
       "command": "executeScript",
@@ -21218,13 +21106,6 @@
       "comment": "",
       "command": "end",
       "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c6f38c13-6d9b-48d2-a38f-46db2d07c70f",
-      "comment": "",
-      "command": "//echo",
-      "target": "nb courriel = ${nb_courriel}",
       "targets": [],
       "value": ""
     }, {
@@ -21530,13 +21411,6 @@
       "targets": [],
       "value": "nb_homonymes"
     }, {
-      "id": "336a31a9-0a01-4dbf-b9e5-2079661316da",
-      "comment": "",
-      "command": "echo",
-      "target": "cherché : ${courriel_cherche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "287ec7c5-8349-499a-abc8-e666ba21cef4",
       "comment": "menu Membres",
       "command": "click",
@@ -21647,13 +21521,6 @@
       "target": "xpath=//tbody/tr[${i}]/td[4]",
       "targets": [],
       "value": "courriel_trouve"
-    }, {
-      "id": "496e87d3-410d-4d25-9b52-c8033f1f1db9",
-      "comment": "",
-      "command": "echo",
-      "target": "trouvé  : ${numero_trouve} ${nom_trouve} ${courriel_trouve}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "b37e24cb-ffa8-411b-b302-8911dc18dcf8",
       "comment": "",
