@@ -18023,20 +18023,6 @@
       "targets": [],
       "value": "membres_alpha"
     }, {
-      "id": "70bb7748-4061-4971-83d1-5ff6862f170f",
-      "comment": "",
-      "command": "executeScript",
-      "target": "function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu; } return extraire(${membres_alpha})",
-      "targets": [],
-      "value": "noms_tries"
-    }, {
-      "id": "f26cc622-8d47-4ba3-9ee2-b9ed3952f24b",
-      "comment": "",
-      "command": "executeScript",
-      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_alpha})",
-      "targets": [],
-      "value": "numeros_tries"
-    }, {
       "id": "c23cd8df-5720-47f0-b2f4-83c745abf9c8",
       "comment": "Faire la liste des homonymes",
       "command": "",
@@ -18047,7 +18033,7 @@
       "id": "2dc16d09-f423-475c-931e-c29e268da8e9",
       "comment": "",
       "command": "executeScript",
-      "target": "const accent = \"àâäéèêëîïôöùûü\"; const normal = \"aaaeeeeiioouuu\"; function normaliser (chaine) { let resu = \"\"; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function indonymes(chaine, tab) { let homos = []; for (let i = 0 ; i < tab.length; ++i) { if (normaliser(tab[i]).includes(chaine)) { homos.push(i); }} return homos; }; return indonymes(${nom_cherche}, ${noms_tries});",
+      "target": "const accent = \"àâäéèêëîïôöùûü\"; const normal = \"aaaeeeeiioouuu\"; function normaliser (chaine) { let resu = \"\"; chaine = chaine.toLocaleLowerCase(); for (let i = 0; i < chaine.length; ++i) { let ind = accent.indexOf(chaine[i]); if (ind == -1) { resu += chaine[i]; } else { resu += normal[ind]; }} return resu; } function indonymes(chaine, tab) { let homos = []; for (let i = 0 ; i < tab.length; ++i) { if (normaliser(tab[i].nom).includes(chaine)) { homos.push(i); }} return homos; }; return indonymes(${nom_cherche}, ${membres_alpha});",
       "targets": [],
       "value": "tab_pos"
     }, {
@@ -18158,14 +18144,14 @@
       "id": "2bac713b-e68b-449d-9c83-e74943ad714d",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${noms_tries}.at(${num})",
+      "target": "return ${membres_alpha}[${num}].nom",
       "targets": [],
       "value": "nom"
     }, {
       "id": "373eaf44-e53e-40c2-9431-f9027dc2cc04",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${numeros_tries}.at(${num})",
+      "target": "return ${membres_alpha}[${num}].numero",
       "targets": [],
       "value": "numero"
     }, {
@@ -21131,31 +21117,10 @@
       "targets": [],
       "value": "membres_alpha"
     }, {
-      "id": "a43f4b91-572f-467c-89ac-2a870b078666",
-      "comment": "",
-      "command": "executeScript",
-      "target": "function extraire(tab) { let resu = []; tab.forEach((e) => { resu.push(e.nom); }); return resu; } return extraire(${membres_alpha})",
-      "targets": [],
-      "value": "noms_tries"
-    }, {
-      "id": "612d2636-4b95-4162-b526-e32d281c358c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.numero); }); return resu;} return extraire(${membres_alpha})",
-      "targets": [],
-      "value": "numeros_tries"
-    }, {
-      "id": "3de27121-2acd-4926-9fa8-754fa236f57d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "function extraire(tab){ let resu = []; tab.forEach((e) => { resu.push(e.courriel); }); return resu;} return extraire(${membres_alpha})",
-      "targets": [],
-      "value": "courriels_tries"
-    }, {
       "id": "81b1ce8b-854c-449e-94eb-3f8a4412dffb",
       "comment": "indices des homonymes",
       "command": "executeScript",
-      "target": "function indonymes(chaine, tab) { let homos = []; for (let i = 0 ; i < tab.length; ++i) { if (tab[i].includes(chaine)) { homos.push(i); }} return homos; }; return indonymes(${courriel_cherche}, ${courriels_tries});",
+      "target": "function indonymes(chaine, tab) { let homos = []; for (let i = 0 ; i < tab.length; ++i) { if (tab[i].courriel.includes(chaine)) { homos.push(i); }} return homos; }; return indonymes(${courriel_cherche}, ${membres_alpha});",
       "targets": [],
       "value": "tab_pos"
     }, {
@@ -21280,21 +21245,21 @@
       "id": "b37e24cb-ffa8-411b-b302-8911dc18dcf8",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${noms_tries}.at(${num})",
+      "target": "return ${membres_alpha}[${num}].nom",
       "targets": [],
       "value": "nom"
     }, {
       "id": "b9e442bc-83d4-49e5-a4a4-07c82657657e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${numeros_tries}.at(${num})",
+      "target": "return ${membres_alpha}[${num}].numero",
       "targets": [],
       "value": "numero"
     }, {
       "id": "080edca2-807a-43f3-85b8-86621de9b4af",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${courriels_tries}.at(${num})",
+      "target": "return ${membres_alpha}[${num}].courriel",
       "targets": [],
       "value": "courriel"
     }, {
