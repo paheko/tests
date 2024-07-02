@@ -221,23 +221,13 @@ function verif(chaine, nom) {
 }
 
 // ------------------------------------------------------------------------
-// faire un tableau des « homonymes » de chaine
+// faire un tableau d'indice des « homonymes » de chaine
+// tab est un tableau d'objets (nom, numero)
 // ------------------------------------------------------------------------
-function homonymes(chaine, tab) {
-	let homos = []
-	for (const e of tab) {
-		if (normaliser(e).includes(chaine)) {
-			homos.push(e);
-		}
-	}
-	return homos;
-}
-
-// idem en renvoyant les indices
 function indonymes(chaine, tab) {
 	let homos = [];
 	for (let i = 0 ; i < tab.length; ++i) {
-		if (normaliser(tab[i]).includes(chaine)) {
+		if (normaliser(tab[i].nom).includes(chaine)) {
 			homos.push(i);
 		}
 	}
