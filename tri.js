@@ -35,16 +35,6 @@ function trierNoms(tnoms, tnumeros, croissant = true)
 	return tab;
 }
 
-// extraire le tableau des noms d'un tableau d'objets trié
-function extraireNoms(tab)
-{
-	let noms = [];
-	tab.forEach((e) => {
-		noms.push(e.nom);
-	});
-	return noms;
-}
-
 // afficher un tableau
 function afficher(msg, tab)
 {
@@ -82,14 +72,6 @@ function trierVilles(tvilles, tnumeros, croissant = true)
 		return comp;
 	});
 	return tab;
-}
-
-// extraire le tableau des villes d'un tableau d'objets trié
-function extraireVilles(tab)
-{
-	let villes = [];
-	tab.forEach((e) => { villes.push(e.ville); });
-	return villes;
 }
 
 // trier les membres selon le parent
@@ -207,24 +189,16 @@ const tresp = [
 // trier par nom croissant puis décroissant
 let tab_noms = trierNoms(tnoms, tnumeros);
 afficher("Tri par nom croissant :", tab_noms);
-// let tnoms_trie = extraireNoms(tab_noms);
-// afficher("Tableau de noms trié en ordre croissant", tnoms_trie);
 
 tab_noms = trierNoms(tnoms, tnumeros, false);
 afficher("Tri par nom décroissant :", tab_noms);
-// tnoms_trie = extraireNoms(tab_noms);
-// afficher("Tableau de noms trié en ordre décroissant", tnoms_trie);
 
 // trier par ville croissante puis décroissante
 let tab_villes = trierVilles(tvilles, tnumeros);
 afficher("Tri par ville croissant :", tab_villes);
-// let tvilles_trie = extraireVilles(tab_villes);
-// afficher("Tableau de villes trié en ordre croissant", tvilles_trie);
 
 tab_villes = trierVilles(tvilles, tnumeros, false);
 afficher("Tri par ville décroissant :", tab_villes);
-// tvilles_trie = extraireVilles(tab_villes);
-// afficher("Tableau de villes trié en ordre décroissant", tvilles_trie);
 
 // trier par parent croissant
 let tab_parents = trierParents(parents, tnoms, tnumeros);
