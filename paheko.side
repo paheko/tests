@@ -21854,6 +21854,204 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "e9ac5acc-6ff2-4523-807e-1316b020d8ca",
+    "name": "6-02 supprimer membre 1",
+    "commands": [{
+      "id": "1f97c921-613d-47e5-bdac-46f191995147",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00fb3352-3297-44f8-8efd-84b68bf62035",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "168739d7-f0e5-440f-a564-2cc14a993d71",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "6cd5f45b-2fe6-4a25-805e-e2a50a066110",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0958c5ff-7c36-43a5-8bbc-e672aae10dcb",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "235cfae5-9598-467a-8143-bd9b9f6c7b43",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "aaa9ed86-55b1-4ec6-a809-b92a2477ebe5",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbff11be-b9d2-4379-a093-66e3ed36cb23",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d355cd1-ab99-4f2d-934f-e922307961e1",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8200f4bf-5659-4c07-80b5-d5ceb774c535",
+      "comment": "Rendre visibles les options du menu Filtrer",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54742745-eba2-4afd-80b3-fbd02d3061c9",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58da6287-1e38-467e-8604-95d12fe10cfa",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "3719b99a-45ba-49bd-b298-2431f340bccd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_initial_membres"
+    }, {
+      "id": "59643ed8-bebf-42a8-aa33-4fe2d2e12250",
+      "comment": "",
+      "command": "check",
+      "target": "//table[@class=\"list\"]/tbody//input[@type=\"checkbox\"][@value=\"1\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "444cf8d2-4469-4eb7-89eb-ceb29f9b67b5",
+      "comment": "",
+      "command": "//click",
+      "target": "id=f_selected_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b795d85a-6b5a-46b6-8f1e-53f7c6451d2e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@name=\"action\"]/option[contains(text(), \"Supprimer les membres\")]",
+      "targets": [
+        ["name=action", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='action']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afc28a43-1f49-4351-8d8c-426425d07ae3",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "19e6305c-e7cf-4969-89f6-181a0593019b",
+      "comment": "",
+      "command": "click",
+      "target": "name=delete",
+      "targets": [
+        ["name=delete", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='delete']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8aeba682-cb10-43ed-b2bf-577230f432af",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//h1",
+      "targets": [],
+      "value": "msg"
+    }, {
+      "id": "c640734d-595f-4773-868f-cbce8e0dbca8",
+      "comment": "",
+      "command": "assert",
+      "target": "msg",
+      "targets": [],
+      "value": "Erreur"
+    }, {
+      "id": "6128ea51-79e2-41d6-811d-e04b9bb823e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Retour')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa9e44eb-7acb-4879-a3f1-c69dd103d0cb",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceea15ae-7871-4d5d-a680-fdd7611d6731",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "aefe30e3-30f9-48d8-92e9-338782976eae",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_final_membres"
+    }, {
+      "id": "e7d33fd2-0a2d-401e-a9ae-eacf569e04d7",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_final_membres",
+      "targets": [],
+      "value": "${nb_initial_membres}"
+    }]
   }],
   "suites": [{
     "id": "6bdd4e16-7197-4388-9a5f-350523eb6c98",
@@ -21903,7 +22101,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["13254e39-41ef-4909-ac46-f8ad0174d1b0"]
+    "tests": ["13254e39-41ef-4909-ac46-f8ad0174d1b0", "e9ac5acc-6ff2-4523-807e-1316b020d8ca"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
