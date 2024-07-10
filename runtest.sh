@@ -21,11 +21,12 @@ aide()
 {
 	cat <<EOF
 Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
-Appel : $(basename $0) [-f fichier] [-a] [-h] [test ..]
+Appel : $(basename $0) [-f fichier] [-a] [-n] [-h] [test ..]
 
 -f fichier : fichier de test (défaut : paheko.side)
--h		   : afficher cette aide
 -a		   : exécuter tous les tests du fichier
+-n		   : ne pas tuer le processus en fin de test
+-h		   : afficher cette aide
 test	   : nom (partiel ou complet) d'un test ou d'une suite à exécuter
 EOF
 }
@@ -52,7 +53,7 @@ traiter_test()
 
 # les constantes
 TESTFILE=paheko_v4.side
-# TESTFILE=tests_v4.side
+KILL=1
 BROWSER=chrome
 CHROME_OPT="goog:chromeOptions.args=[headless]"
 TIMEOUT=1000000
@@ -92,6 +93,11 @@ do
 			tests="tous"
 			break
 			;;
+		-n )
+			KILL=0
+			shift
+			;;
+			# ne pas tuer le processus en fin de test
 		"-h" | -? )
 			aide
 			exit
@@ -114,7 +120,12 @@ if [[ "$tests" == "tous" ]]
 then
 	# exécuter tous les tests
 	COMMEXEC="${COMMANDE} ${TESTFILE}"
-	eval ${COMMEXEC} 2>&1 | traiter_test
+	if [[ $KILL -eq 1 ]]
+	then
+		eval ${COMMEXEC} 2>&1 | traiter_test
+	else
+		eval ${COMMEXEC}
+	fi
 elif [[ $# -gt 0 ]]
 	 # exécuter les tests passés en arguments
 then
@@ -122,7 +133,12 @@ then
 	do
 		echo "Tester « $test »"
 		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
-		eval ${COMMEXEC} 2>&1 | traiter_test
+		if [[ $KILL -eq 1 ]]
+		then
+			eval ${COMMEXEC} 2>&1 | traiter_test
+		else
+			eval ${COMMEXEC}
+		fi
 	done
 else
 	# Afficher les noms des suites de tests
@@ -147,7 +163,12 @@ else
 		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
 		CURIFS=$IFS
 		IFS=$OLDIFS
-		eval ${COMMEXEC} 2>&1 | traiter_test
+		if [[ $KILL -eq 1 ]]
+		then
+			lstmeval ${COMMEXEC} 2>&1 | traiter_test
+		else
+			eval ${COMMEXEC}
+		fi
 		IFS=$CURIFS
 	done
 	IFS=$OLDIFS
