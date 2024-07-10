@@ -21945,7 +21945,7 @@
       "id": "59643ed8-bebf-42a8-aa33-4fe2d2e12250",
       "comment": "",
       "command": "check",
-      "target": "//table[@class=\"list\"]/tbody//input[@type=\"checkbox\"][@value=\"1\"]",
+      "target": "xpath=//table[@class=\"list\"]/tbody//input[@type=\"checkbox\"][@value=\"1\"]",
       "targets": [],
       "value": ""
     }, {
