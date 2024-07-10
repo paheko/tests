@@ -22318,7 +22318,7 @@
     }, {
       "id": "b7f36dfb-dfc6-46b4-a685-a1ad4f3405f5",
       "comment": "",
-      "command": "//type",
+      "command": "type",
       "target": "id=f_date_inscription",
       "targets": [],
       "value": "${date}"
