@@ -304,3 +304,13 @@ function homonyme(chaine, lg) {
 	return str + chaine + ".fr";
 }
 return homonyme(${courriel_cherche}, 9);
+
+// fabriquer une date (pseudo-)aléatoire
+function getDate()
+{
+	let date = new Date();
+	let ms = date.getTime();
+	ms += 3 + Math.floor(Math.random() * 5 * 24 * 60 * 60 * 1000);
+	date.setTime(ms);
+	return date.toLocaleDateString();
+}
