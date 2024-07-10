@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------------
 // fabriquer une chaine aléatoire
-const chaine = (length) => {
-	let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzàâäéèêëîïôöûüùÀÂÄÉÈÊËÎÏÔÖÛÜÙ';
+const mdp = (length) => {
+	let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzàâäéèêëîïôöûüùÀÂÄÉÈÊËÎÏÔÖÛÜÙ&~"#\'{([-|`_@)]=°+}€<>,?;.:/!§«»¿×÷¡';
 	let str = '';
     for (let i = 0; i < length; i++) {
         str += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -9,7 +9,7 @@ const chaine = (length) => {
     return str;
 }
 // renvoyer une chaine
-return chaine(10)
+return mdp(10)
 
 // renvoyer un tableau de chaines
 for (let i = 0; i < 3 + Math.floor(Math.random() * 5); ++i) {
