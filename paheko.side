@@ -919,20 +919,6 @@
       ],
       "value": "${courriel}"
     }, {
-      "id": "9ca7bf72-7213-4edf-9d20-13589ec9d8d3",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c84e6073-7d7e-4116-b825-83f0a245141b",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "84552c91-deed-4d0f-aae1-8933597eec1d",
       "comment": "Adresse",
       "command": "type",
@@ -1046,13 +1032,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "c414ed84-69e1-4069-8d89-76cc7d94d985",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "fa560762-3b6c-4f64-a0ce-4f92805a5503",
       "comment": "Vérif adresse",
@@ -1219,13 +1198,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "014f1bc2-059b-4731-b9b8-959b3a046e7b",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "3d52af5d-6637-4424-8179-e7b1a10bf24b",
       "comment": "Adresse postale",
       "command": "store",
@@ -1327,20 +1299,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "a4aa9ecd-b849-4009-b6ee-c04007b17ad4",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c8a2357e-a3b3-47d9-98dd-a2ab3034dbea",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "ba793090-3027-4217-875b-f3209ece7a9b",
       "comment": "Adresse",
@@ -1461,13 +1419,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "28a6cc2b-5d0b-4032-affd-38fe234e4b55",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "57d9e90b-4e62-44cb-88b6-240cc937cbb7",
       "comment": "Vérif adresse",
@@ -1648,13 +1599,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "2f9d6666-9017-4df2-8483-d6757a42a163",
-      "comment": "",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "009a0309-b962-49fb-b5f6-bb67e9d84443",
       "comment": "",
       "command": "store",
@@ -1756,20 +1700,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "469a96d1-5a00-42c0-ad2e-ebf5bfea2ad4",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9a463acc-7950-4a04-806c-04669a0fb84b",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "1376637c-6418-4a61-80e3-3bc88e08ed89",
       "comment": "Adresse",
@@ -1890,13 +1820,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "2429c4fd-8a60-4731-943f-9f4364d4b515",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "3aea85a1-f5d6-48cd-a4df-0e0cd5e14a72",
       "comment": "Vérif adresse",
@@ -2063,13 +1986,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "4d196958-b7f4-4f7e-bfd0-846e304767f1",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "5896a2ab-c2f0-4a1f-b6c8-2bfa024e835f",
       "comment": "Adresse postale",
       "command": "store",
@@ -2171,20 +2087,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "77d2378d-a83c-4076-9907-23d3aea1c0b4",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "73871e9e-1857-49ff-a572-9c893ba1e6b3",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "8521c5bd-a29a-4688-8217-bc2877757382",
       "comment": "Adresse",
@@ -2305,13 +2207,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "c6cb668d-47fd-411c-bb75-a26128af03ec",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "1d5966a8-b875-48fd-b56f-ee2c9ae23d8a",
       "comment": "Vérif adresse",
@@ -2493,14 +2388,14 @@
       "value": ""
     }, {
       "id": "0211dfaa-ccb5-4536-b195-8dc03b5eefee",
-      "comment": "Mémoriser numéro du responsable",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
       "value": "numero_responsable"
     }, {
       "id": "bd826a05-76cb-4b8d-800a-13e7eca77baf",
-      "comment": "Nom du responsable",
+      "comment": "",
       "command": "executeScript",
       "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
       "targets": [],
@@ -2512,6 +2407,26 @@
       "target": "id=f_nom",
       "targets": [],
       "value": "${nom_responsable}"
+    }, {
+      "id": "8105d295-cf16-4d20-9442-2a2487794f0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "594fc8a5-9c7d-4eb3-a91c-57b4c767e423",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "26b34df7-3a41-4b06-8c4f-d44332771388",
       "comment": "Enregistrer",
@@ -2546,13 +2461,6 @@
       "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
       "targets": [],
       "value": "courriel"
-    }, {
-      "id": "acfc959b-04c2-415d-870a-a798c4b1d107",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
     }, {
       "id": "5e02f2f1-585f-40d1-8b31-3d8b725c1f45",
       "comment": "Adresse postale",
@@ -2707,20 +2615,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "207196a5-8de9-4883-881f-ec0ba8d496c5",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "34ee90e0-b301-4d20-b988-b1820ce5566a",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "2580aabe-3ebf-4fc3-a275-2013947b9c2f",
       "comment": "Adresse",
@@ -2880,13 +2774,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "4c9e3aab-19df-4812-9702-6aa5fb68b051",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "c4a67d17-17ef-4af3-89ef-42dc59c5db55",
       "comment": "Vérif adresse",
@@ -3061,11 +2948,31 @@
       "value": "numresponsable"
     }, {
       "id": "d4da98a2-1f99-4b36-a056-2a9617c77f6c",
-      "comment": "Le responsable",
+      "comment": "",
       "command": "type",
       "target": "id=f_nom",
       "targets": [],
       "value": "Zhamberlain Luuc"
+    }, {
+      "id": "b4f8e92c-22f3-4552-9fe2-d60dec886d67",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "bc1dc0c2-5755-4c9c-b9ef-7fdbbed6d366",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "8a8ab9cc-8d39-4462-9acc-611144afaab0",
       "comment": "Enregistrer",
@@ -3107,13 +3014,6 @@
       "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
       "targets": [],
       "value": "courriel"
-    }, {
-      "id": "8afb2f34-46b3-410c-b733-20f45e1ff657",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
     }, {
       "id": "a660f928-50a3-4a6b-b546-987e13b853d1",
       "comment": "Adresse postale",
@@ -3301,20 +3201,6 @@
       ],
       "value": "${courriel}"
     }, {
-      "id": "04adad26-3b22-413a-9d2a-86fef5d8ddbe",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "79382d6c-5cf7-4ba2-b168-02d0b02ff62e",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "91702519-b59f-4ed3-8074-fdbc639ece86",
       "comment": "Adresse",
       "command": "type",
@@ -3473,13 +3359,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "ec1f5103-aeeb-4a1c-be84-26c93b7bbefc",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "2e5d7700-563d-4e05-a605-3314c332f2d7",
       "comment": "Vérif adresse",
@@ -3646,13 +3525,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "e71c0422-9471-4d62-a43e-7da5200052b1",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "0e7fc5d1-d5aa-4efc-b5e6-396ba22331c8",
       "comment": "Adresse postale",
       "command": "store",
@@ -3775,20 +3647,6 @@
       ],
       "value": "${courriel}"
     }, {
-      "id": "63bf7072-1fde-4f84-b892-dd4cee1abcea",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "01040a1a-37be-4440-9270-10ab30450d39",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "22d15378-fe16-45ff-aec5-c4058e9a6f75",
       "comment": "Adresse",
       "command": "type",
@@ -3908,13 +3766,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "86f2975c-c56e-4b59-86f9-9d3c4fe10bcb",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "ce79a6a6-5eed-4afe-9144-68b090310bfc",
       "comment": "Vérif adresse",
@@ -4081,13 +3932,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "a04df44f-738c-4aaa-a8dd-3e8cca9eac78",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "cb650d21-a943-4f06-9d9a-9e9941e1efbe",
       "comment": "Adresse postale",
       "command": "store",
@@ -4195,20 +4039,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "0b8e7a8f-ab4a-4e7d-9914-74c445741e30",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e9b448cf-24a8-44f0-a054-5a58e5e15c11",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "120d346c-4569-4203-ab5d-7517eed5a90d",
       "comment": "Adresse",
@@ -4397,13 +4227,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "eff183bd-f7a1-4547-ba6a-88d9b5d4c906",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "229586b3-ab68-4d2c-9311-90e5ec230ec5",
       "comment": "Adresse postale",
       "command": "store",
@@ -4505,20 +4328,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "9829dda7-c7fa-4de7-a185-04031e266da2",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7ccf9ace-4194-45cf-8581-b1a4a5fb07f3",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "ef3d0879-e451-4069-9baf-54b6cb5811cf",
       "comment": "Adresse",
@@ -4707,13 +4516,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "977b4cb8-b190-41b2-be24-a3ab15880b90",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "3ff2f21f-b062-4265-bfb8-61d2255cd722",
       "comment": "Adresse postale",
       "command": "store",
@@ -4815,20 +4617,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "71e80643-1bd4-4f6f-901a-466e55034b11",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b11ec51-6d78-486d-8cb6-fbbe7525ccdb",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "d3e7886f-363f-49d8-9c4a-267dd8b4ca37",
       "comment": "Adresse",
@@ -5017,13 +4805,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "a31eed35-08ed-4461-ba7f-3b2fe06f9575",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "0f647a3d-21f1-4831-a59f-d74bcd35d103",
       "comment": "Adresse postale",
       "command": "store",
@@ -5125,20 +4906,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "73e4e90a-f8ef-4c30-b38a-81628e545dc0",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "99c64321-6a7c-4725-9b81-a4e72d29a7de",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "9c11922d-ce4d-4b4f-a4fe-84bb6bcf98db",
       "comment": "Adresse",
@@ -5327,13 +5094,6 @@
       "targets": [],
       "value": "courriel"
     }, {
-      "id": "ff484a1f-8f73-45a8-adba-c9e92984e4d5",
-      "comment": "Pays",
-      "command": "store",
-      "target": "France",
-      "targets": [],
-      "value": "pays"
-    }, {
       "id": "3f6f2d20-719c-43da-bffc-da4a22deb2eb",
       "comment": "Adresse postale",
       "command": "store",
@@ -5435,20 +5195,6 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
-    }, {
-      "id": "771d68af-4baa-40ad-9b7f-a2a06ccc325c",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_pays",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "45d063ee-0ef3-47de-ad72-46c98b072b73",
-      "comment": "Pays",
-      "command": "//click",
-      "target": "xpath=//select[@id=\"f_pays\"]/option[contains(text(), \"${pays}\")]",
-      "targets": [],
-      "value": ""
     }, {
       "id": "3d1afcff-1633-4ead-8af5-fe995229c22e",
       "comment": "Adresse",
@@ -5595,13 +5341,6 @@
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel}"
-    }, {
-      "id": "b9f4f884-97d9-4f0d-9e21-86378f3b6afa",
-      "comment": "Vérif pays",
-      "command": "//assertText",
-      "target": "xpath=//dt[contains(.,'Pays')]/following-sibling::dd",
-      "targets": [],
-      "value": "${pays}"
     }, {
       "id": "9101d731-d209-41a1-a280-307e54af0045",
       "comment": "Vérif adresse",
@@ -6031,6 +5770,26 @@
         ["xpath=//dd[10]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "bec563ad-66fb-43bb-89cd-7c5d73d873de",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "74d311dc-6673-46e9-b341-db6b40766f51",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "ffb5a045-2e68-4e6d-801f-37fe2d7a1ccc",
       "comment": "Enregistrer les infos",
@@ -6476,13 +6235,6 @@
       "targets": [],
       "value": "numeros_alpha"
     }, {
-      "id": "ff06723a-4e7a-40b7-9266-3354e358cf6f",
-      "comment": "",
-      "command": "//echo",
-      "target": "${num_cat} : ${cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "4b9c1dbe-52e3-4f74-9fb8-f18103d0c4a5",
       "comment": "",
       "command": "executeScript",
@@ -6531,13 +6283,6 @@
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
-    }, {
-      "id": "df80777b-02ae-4f4b-8df5-c42240e70f9e",
-      "comment": "",
-      "command": "//echo",
-      "target": "${i} : ${categorie}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "c0df0e94-678e-42d1-a144-afd399fec3a1",
       "comment": "",
@@ -6812,13 +6557,6 @@
       "targets": [],
       "value": "lescategories"
     }, {
-      "id": "d99af581-f989-48a6-a186-1be1ffd27e4d",
-      "comment": "",
-      "command": "//echo",
-      "target": "${numeroAffiche} : ${nomAffiche} - ${categorie} - ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "09757cfc-8f04-4456-8676-90bb91dbad74",
       "comment": "Retour page précédente",
       "command": "executeScript",
@@ -6881,13 +6619,6 @@
       "target": "return ${lesnoms}.length",
       "targets": [],
       "value": "nb_noms"
-    }, {
-      "id": "45e4e37a-fdcf-4176-a987-bf3aee9a3dbb",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "4f3b6610-df08-4e94-9def-70c61b777ec9",
       "comment": "Parcourir liste noms pour ajout dans la base",
@@ -6965,13 +6696,6 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "248c7a3b-af8c-4430-b3dd-c08774c7fc02",
-      "comment": "",
-      "command": "//echo",
-      "target": "Ajout de ${nom}, catégorie = ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "fd59fdfa-40e1-40d5-b487-8311c41fdc86",
       "comment": "Générer ville",
       "command": "executeScript",
@@ -6991,6 +6715,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "fafe1340-236b-4199-8898-2815c385abfd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "e4b88e80-c9ea-4c47-8095-edda4f31389a",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "b8312fab-db26-4c94-bf73-a92975a2df9d",
       "comment": "Enregistrer les infos",
@@ -7471,13 +7215,6 @@
       "targets": [],
       "value": "numeros_alpha"
     }, {
-      "id": "335345c1-50ec-49c3-9a31-f8dbd38bed78",
-      "comment": "",
-      "command": "//echo",
-      "target": "${num_cat} : ${cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "9d6293a8-63bc-48b7-8808-2aac0f347a34",
       "comment": "",
       "command": "executeScript",
@@ -7526,13 +7263,6 @@
       "target": "return ${i} + 1",
       "targets": [],
       "value": "i"
-    }, {
-      "id": "61d7a3d8-4e33-427c-9289-fffffc2bfb1c",
-      "comment": "",
-      "command": "//echo",
-      "target": "${i} : ${categorie}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "385ca0c6-9f1e-47b8-93d0-ddf8c81fb06c",
       "comment": "",
@@ -7807,13 +7537,6 @@
       "targets": [],
       "value": "lescategories"
     }, {
-      "id": "59958a98-a26c-4ecb-9d1d-390b08ccb457",
-      "comment": "",
-      "command": "//echo",
-      "target": "${numeroAffiche} : ${nomAffiche} - ${categorie} - ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "79d1d84f-6210-4d0b-8754-164206b07cdf",
       "comment": "Retour page précédente",
       "command": "executeScript",
@@ -7876,13 +7599,6 @@
       "target": "return ${lesnoms}.length",
       "targets": [],
       "value": "nb_noms"
-    }, {
-      "id": "2cd909e4-29ea-4980-9234-fec73248cb3f",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i}, nb_total_membres=${nb_total_membres}, nb_noms=${nb_noms}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "608e596c-a258-42c3-9b67-6aaf9f24458c",
       "comment": "Parcourir liste noms pour ajout dans la base",
@@ -7960,13 +7676,6 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "6bec2cff-8d48-43b9-a49e-762f5c2c125f",
-      "comment": "",
-      "command": "//echo",
-      "target": "Ajout de ${nom}, catégorie = ${num_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "876ce548-9f68-4016-ba84-fca1e93242ac",
       "comment": "Générer ville",
       "command": "executeScript",
@@ -8039,6 +7748,26 @@
         ["xpath=//dd[13]/input", "xpath:position"]
       ],
       "value": "01/01/2001"
+    }, {
+      "id": "8a1b5ee9-5ecc-4490-b334-0deaabd8a0b7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "7979264d-65d4-4def-93c8-101c70f3a0bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "2764d85f-e4b7-4ee8-b671-eca8ef3e7a96",
       "comment": "Enregistrer les infos",
@@ -8727,6 +8456,26 @@
       ],
       "value": "${ville}"
     }, {
+      "id": "bd9724c6-9b97-4696-bd81-9be5defd05c4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "6be72c44-87b7-4985-9aab-e6e86ca81410",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "91aed930-5be2-480f-a064-293104ef5c3d",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -9358,6 +9107,26 @@
       ],
       "value": "${ville}"
     }, {
+      "id": "18f28b3e-c091-4f15-837d-1051901346fb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "60e89f3c-27d7-4530-a3d1-e4d95db7c7c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "7a4e12ba-25ce-47c6-a0d1-0ce9b8d28855",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -9988,6 +9757,26 @@
         ["xpath=//dd[10]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "a8825934-59d2-41d9-852d-348ef64ea964",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "248824a2-ec7a-49f4-94d1-982d60b63538",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "accae3d8-b4c5-4d30-bf36-51213e131a75",
       "comment": "Enregistrer les infos",
@@ -10661,6 +10450,26 @@
         ["xpath=//dd[10]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "28ce9656-2031-4531-bded-fe63808652d8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "9730c993-6ad2-4713-8863-da9a78127dec",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "cfc6fe5b-4d20-4d10-9cb6-10cb0a61df94",
       "comment": "Enregistrer les infos",
@@ -11411,6 +11220,26 @@
         ["xpath=//dd[10]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "ff3c805e-fc05-4479-ad54-a4710b1816e2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "518805a3-147d-45d4-9c20-fd85c0407beb",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "e3c0ec4e-3292-47a3-b28b-f528f0a9a527",
       "comment": "Enregistrer les infos",
@@ -12303,6 +12132,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "94e089ad-9dc6-4553-9047-98ae5d18bffa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "b2518c46-9134-44d5-925e-9a9fe118c485",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "64df2c00-fac9-43bc-ba02-b39984fef6ab",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -13027,76 +12876,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "f445d142-d2fc-4517-8a8b-4c20379fbf7c",
-      "comment": "Afficher les données mémorisées",
-      "command": "//echo",
-      "target": "Afficher les données mémorisées",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "75831550-cdc5-457e-8bbe-eba97bfadd94",
-      "comment": "",
-      "command": "//echo",
-      "target": "total = ${nb_total_membres}, parents = ${nb_parents}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "48c86452-a294-4d81-9367-91390b3e4f20",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "24554338-1517-4f5f-80ee-f30f14bfdc9c",
-      "comment": "",
-      "command": "//while",
-      "target": "${i} < ${nb_total_membres}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "388949a1-7b3f-4588-93cd-196e1513e163",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesnumeros}.at(${i}) ",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "5f8395fa-44b1-46d9-9822-4f4133649e2f",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesnoms}.at(${i})",
-      "targets": [],
-      "value": "nom"
-    }, {
-      "id": "04ab44dc-7cc2-4d1f-b715-5a141e8d3664",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${lesparents}.at(${i})",
-      "targets": [],
-      "value": "parent"
-    }, {
-      "id": "0c9f913a-43e7-4601-a4df-fa8449033722",
-      "comment": "",
-      "command": "//echo",
-      "target": "${num} : ${nom}, «${parent}»",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "031ae8a2-17e7-4bd7-96d1-dafe71d99a0c",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "84eb4754-3dcd-4950-b105-0196019ca59f",
-      "comment": "",
-      "command": "//end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "f8a6d4c3-f92a-46b6-997e-6e00eda3cb93",
       "comment": "Générer de nouveaux membres si nécessaire",
       "command": "",
@@ -13291,6 +13070,26 @@
       "target": "relative=parent",
       "targets": [],
       "value": ""
+    }, {
+      "id": "dca8c725-972f-444d-974a-db48e82174a1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "11a5c42e-30e1-4764-b84c-d3b34fb086df",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "deffed2d-3568-4748-ad2d-890e63fa6b51",
       "comment": "Enregistrer les infos",
@@ -14363,6 +14162,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "2dc1dd17-8714-4ead-85da-6bbb39dba02f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "8785e2c6-eea3-4037-a0ce-3a668638ea38",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "5dd7d379-932f-4c57-87e4-c86e4cf9fed0",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -15413,6 +15232,26 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "ea71a549-a533-40f2-a8b5-9bab5d69f4ed",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "a1483c0c-400a-4d30-a073-1e936650492e",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "dfc43c01-3653-4039-923d-efe621963979",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -16102,13 +15941,6 @@
       "targets": [],
       "value": "lesnoms"
     }, {
-      "id": "e908fdf3-47ba-4ba4-9ea7-61b5f1043adb",
-      "comment": "",
-      "command": "//echo",
-      "target": "${numeroAffiche} : ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "15c1b8e1-319f-4c17-b49a-ec3297de940f",
       "comment": "",
       "command": "executeScript",
@@ -16220,13 +16052,6 @@
       ],
       "value": "${nom}"
     }, {
-      "id": "fc2f00be-7ae5-40c8-b9af-94ab48c73744",
-      "comment": "",
-      "command": "//echo",
-      "target": "Ajout de ${nom}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "9eda34ba-83b4-486f-9670-8ea1d3787d1c",
       "comment": "Générer ville",
       "command": "executeScript",
@@ -16246,6 +16071,26 @@
         ["xpath=//dd[10]/input", "xpath:position"]
       ],
       "value": "${ville}"
+    }, {
+      "id": "e6684670-73d9-46b3-9a48-340b239e681f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "4edf66cc-a1ce-4074-a7d1-6b4ff7f9d166",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "5258cac1-c8da-4cff-8c06-13d7e3bcb626",
       "comment": "Enregistrer les infos",
@@ -16879,6 +16724,26 @@
       ],
       "value": "${nom}"
     }, {
+      "id": "27200ccb-5b0a-4aeb-ab0b-343636fdd108",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "3df49bff-0795-4c25-9245-e256150e0f8b",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "85a2128a-8d93-494b-9d4e-9c295334b7e5",
       "comment": "Enregistrer",
       "command": "click",
@@ -17335,6 +17200,26 @@
       ],
       "value": "${nom}"
     }, {
+      "id": "c0331f95-62cd-494e-b630-2f7f57ac9278",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "bf1d3984-383c-4d3d-8f77-d2ae52b797e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "75231333-ec6e-4091-b658-2b72d6d7420c",
       "comment": "Enregistrer",
       "command": "click",
@@ -17430,6 +17315,26 @@
         ["xpath=//dd[3]/input", "xpath:position"]
       ],
       "value": "${nom}"
+    }, {
+      "id": "d691ea41-ec13-407a-9f28-57ca9eb555b6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "4182c0bc-1d59-4f3a-b45f-fd1cf6d1d5ff",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "91b6be2d-7963-49a8-aadb-f7505b62236f",
       "comment": "Enregistrer",
@@ -17950,6 +17855,26 @@
       ],
       "value": "${nom}"
     }, {
+      "id": "fedd0cc8-f199-4e97-9712-8cbfacfef384",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "fdf22ad3-4572-45ca-8a14-520a7a3a7de2",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "d45d86c5-9ecf-4e70-bf75-c38c323729e7",
       "comment": "Enregistrer",
       "command": "click",
@@ -18350,6 +18275,26 @@
       ],
       "value": "${nom}"
     }, {
+      "id": "fc724fd9-661a-4bd3-b516-012aca5d788c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "313626b5-2370-4b83-bc3b-063306f676d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
       "id": "c16603c1-1ab1-413d-ae7c-a0e489953e0d",
       "comment": "Enregistrer",
       "command": "click",
@@ -18527,118 +18472,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "cc2b648f-4511-4612-b989-daa602057078",
-      "comment": "Init liste des numéros",
-      "command": "//executeScript",
-      "target": "return []",
-      "targets": [],
-      "value": "lesnumeros"
-    }, {
-      "id": "78982180-4679-4c6f-ba12-b4d28dee5f98",
-      "comment": "Traiter les membres déjà présents",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "37d91f9a-da37-44fb-9da7-266a50080d15",
-      "comment": "",
-      "command": "//storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
-      "targets": [],
-      "value": "nb_membres_page"
-    }, {
-      "id": "fef2d2ad-5c76-48cf-b391-dd6cac1e52a8",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "a79f621b-becb-4f06-97f8-283acaf0cd4b",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${nb_total_membres}",
-      "targets": [],
-      "value": "nb_membres"
-    }, {
-      "id": "a4a2a0a7-25c0-4ec2-b38f-a32de8c4e637",
-      "comment": "Parcourir les membres enregistrés",
-      "command": "//while",
-      "target": "${num} <= ${nb_membres}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3a58e7f9-87e4-4a14-8c2b-b39a5aafc999",
-      "comment": "fin de page ?",
-      "command": "//if",
-      "target": "${num} > ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1f2e18d0-3744-4d27-94ee-d39333909c97",
-      "comment": "passer à la page suivante",
-      "command": "//click",
-      "target": "xpath=//li[@class=\"next\"]//a",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "91289a70-9f60-4ac2-93fb-cb9c039ff123",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${nb_membres} - ${nb_membres_page}",
-      "targets": [],
-      "value": "nb_membres"
-    }, {
-      "id": "4faa3da8-a400-4680-9b85-32af8c3da8e5",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "31f18e85-2ed6-4850-ba77-67dec7b24b7e",
-      "comment": "",
-      "command": "//storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
-      "targets": [],
-      "value": "nb_membres_page"
-    }, {
-      "id": "fdac71b5-f714-480b-897e-dcdd8ee38762",
-      "comment": "",
-      "command": "//end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1b445bf3-5035-4cdc-8db4-9262fedac41f",
-      "comment": "",
-      "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
-      "targets": [],
-      "value": "numeroAffiche"
-    }, {
-      "id": "927f51c7-305f-4ae5-9b79-d3f096fbcba9",
-      "comment": "Ajouter numéro à la liste",
-      "command": "//executeScript",
-      "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
-      "targets": [],
-      "value": "lesnumeros"
-    }, {
-      "id": "e482d402-1200-48ce-915c-85874e56a9f1",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${num} + 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "2a5fb523-ccf9-4447-8257-e9c408d1eb1d",
-      "comment": "",
-      "command": "//end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "4adc920e-d63b-4ddd-9c48-2f9f73d8d8f1",
       "comment": "Générer de nouveaux membres",
       "command": "",
@@ -18702,13 +18535,6 @@
       ],
       "value": ""
     }, {
-      "id": "7e7c728b-9485-4c2b-b4bc-669fbea9041a",
-      "comment": "Mémoriser numéro de membre",
-      "command": "//storeValue",
-      "target": "id=f_numero",
-      "targets": [],
-      "value": "numero"
-    }, {
       "id": "e8f23e3b-f635-46e6-a385-f05024a7fa24",
       "comment": "Ajouter numéro à la liste",
       "command": "//executeScript",
@@ -18735,6 +18561,26 @@
         ["xpath=//dd[3]/input", "xpath:position"]
       ],
       "value": "${nom}"
+    }, {
+      "id": "ed5cf35a-8764-4b78-bf34-811ab2a4b5e0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "5aa27fac-143d-43d6-a845-9512958d0b9c",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "1a372467-588c-45ee-b488-2209b2063139",
       "comment": "Enregistrer",
@@ -20876,6 +20722,26 @@
       "target": "id=f_nom",
       "targets": [],
       "value": "${nom}"
+    }, {
+      "id": "3a3e8f07-2ac9-41f6-ac0c-e9ec68316187",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "c52180b1-cb0f-4194-9834-808ec9908dec",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
     }, {
       "id": "81f36c97-4ca3-4d92-bba0-48795dd49108",
       "comment": "Enregistrer les infos",
