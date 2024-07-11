@@ -21250,13 +21250,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "444cf8d2-4469-4eb7-89eb-ceb29f9b67b5",
-      "comment": "",
-      "command": "//click",
-      "target": "id=f_selected_1",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "b795d85a-6b5a-46b6-8f1e-53f7c6451d2e",
       "comment": "",
       "command": "click",
@@ -21305,24 +21298,41 @@
       "targets": [],
       "value": "Erreur"
     }, {
-      "id": "6128ea51-79e2-41d6-811d-e04b9bb823e2",
-      "comment": "",
-      "command": "click",
-      "target": "css=span",
-      "targets": [
-        ["css=span", "css:finder"],
-        ["xpath=//span", "xpath:position"],
-        ["xpath=//span[contains(.,'Retour')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "aa9e44eb-7acb-4879-a3f1-c69dd103d0cb",
+      "id": "33d41f29-6ad5-403a-bdd0-36d633ef1096",
       "comment": "",
       "command": "selectFrame",
       "target": "relative=parent",
       "targets": [
         ["relative=parent"]
       ],
+      "value": ""
+    }, {
+      "id": "ae00d922-eccc-4e00-9c7a-02289c05dc92",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@class, \"closeBtn\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8da6be2b-7c62-4266-88b2-46e894f2dbf4",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c9793d6-751b-4e17-9151-09fb0b737a0d",
+      "comment": "Rendre visibles les options du menu Filtrer",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2dd9118-10f0-4570-9163-dd0662018d59",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
       "value": ""
     }, {
       "id": "ceea15ae-7871-4d5d-a680-fdd7611d6731",
