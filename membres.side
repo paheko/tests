@@ -23188,6 +23188,464 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "65a4ae11-9b9b-4c9d-ada7-0f0966023fe0",
+    "name": "8-01 import membres (création)",
+    "commands": [{
+      "id": "ec5645db-b300-4ade-a4b9-2e898cac8bfb",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc5504ea-9549-476e-a680-022134c03375",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c07a47d-e19d-47e2-b881-16a519a6d12e",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "aa2606e6-da2d-43b1-90da-4058befe2a16",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "759138e0-fac0-49bf-94ff-63fd477fb3de",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "9d5fcf0f-f3c6-42de-9be6-4722e62de94b",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "124b364f-82bc-4385-82b0-712c88dcef3c",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daccaa43-242a-4e49-919e-3f11befb5d04",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03641ef1-1ee8-47b7-903f-a4b9cd19ff93",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a25908a7-4639-442e-b29b-59e2b165717a",
+      "comment": "rendre visibles les catégories",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bc10380-7d32-4a72-818e-576c2f13bf3d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d23b43-066c-45bd-9047-00a83f798705",
+      "comment": "supprimer tous les membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccf0c1fa-1db4-4c5a-8c44-9b5d99d0792f",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "a90d0f72-859d-4f09-92cf-d46c57f3bf7b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_initial_membres"
+    }, {
+      "id": "bc088d53-aea5-4128-9056-0d5f83bb8d83",
+      "comment": "",
+      "command": "while",
+      "target": "${nb_initial_membres} > 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ba97c7a-fc48-42d0-a5cd-85886099f13a",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "14fbc547-75c8-42fb-913e-a957878e1cf1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "coches"
+    }, {
+      "id": "d1ea098f-5cff-4ee5-a043-0b3fd3e4d25a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "fcad2cc5-728f-4b3a-9481-46e3d5dad459",
+      "comment": "",
+      "command": "while",
+      "target": "${num} <= ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ddbc114-fb37-4dc3-94ac-acc9ce0a40d1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "90af97d1-1550-4c4d-8788-5c4e7309ffc9",
+      "comment": "",
+      "command": "if",
+      "target": "${numero} != \"1\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ec7812d-7e36-42fb-bd1e-ae3802cc645d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${coches} + 1",
+      "targets": [],
+      "value": "coches"
+    }, {
+      "id": "8d34e6d9-9938-4140-8efa-aaa4d4764b77",
+      "comment": "cocher ligne",
+      "command": "check",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//input[@type=\"checkbox\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b431628-6449-461e-996b-7f5444b03336",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9cab631-68f7-48b3-8490-55a2b60ab69e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "a142c937-b612-4590-b083-ea7cedd8c862",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a14c3cb5-3042-4ddc-bcfa-9459b7e33d04",
+      "comment": "",
+      "command": "if",
+      "target": "${coches} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d623100-ca28-4f5d-b1b4-ee38f8e74ea3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@name=\"action\"]/option[contains(text(), \"Supprimer les membres\")]",
+      "targets": [
+        ["name=action", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='action']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aadb015b-efaa-49e5-aa97-109f81f8c332",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "58fba882-70b7-494f-9d37-3c1303483a8a",
+      "comment": "",
+      "command": "click",
+      "target": "name=delete",
+      "targets": [
+        ["name=delete", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='delete']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bbb831d-3565-419c-9ad2-313bbdd3bcb8",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6b55ddc-3fec-4b65-b88a-b244f171b98c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2207983-e296-4cc7-8e60-87e3f3890e4f",
+      "comment": "rendre visibles les catégories",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e986055-1da6-463d-a630-d143ad8475f4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39de6a96-5d91-400b-82ca-2b635e5f9a60",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "594c4e1b-7efd-4049-a508-5d05568dc896",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_initial_membres"
+    }, {
+      "id": "612d4cb0-9573-4281-ac5c-2e5292922579",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd63a40a-f35d-4e1a-9226-8498ebd3d4a5",
+      "comment": "Importer un fichier",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05b208fa-7020-4c3b-a5d8-91ca2907ca06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Import",
+      "targets": [
+        ["linkText=Import", "linkText"],
+        ["css=.tabs li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Import')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'import.php')]", "xpath:href"],
+        ["xpath=//nav/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Import')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c9eb4b7-fbeb-4208-b6a4-b9f364327221",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_file",
+      "targets": [
+        ["id=f_file", "id"],
+        ["name=file", "name"],
+        ["css=#f_file", "css:finder"],
+        ["xpath=//input[@id='f_file']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "/tmp/membres.csv"
+    }, {
+      "id": "6f85a86a-0b7a-4402-bbf4-4695a1c02053",
+      "comment": "",
+      "command": "click",
+      "target": "css=dd:nth-child(2) > label",
+      "targets": [
+        ["css=dd:nth-child(2) > label", "css:finder"],
+        ["xpath=//dd/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Créer tous les membres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7096609f-b9c4-4f11-9899-0cee6c02c1e7",
+      "comment": "",
+      "command": "click",
+      "target": "name=load",
+      "targets": [
+        ["name=load", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='load']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Charger le fichier')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "527a1fe8-f16d-41f4-a395-0e4879423b44",
+      "comment": "nb lignes dans le fichier",
+      "command": "storeText",
+      "target": "xpath=//dd[@class=\"help\"]",
+      "targets": [],
+      "value": "msg_lignes"
+    }, {
+      "id": "eb461043-f835-4ca9-9388-368625917afe",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${msg_lignes}.split(' ')[0])",
+      "targets": [],
+      "value": "nb_lignes_fichier"
+    }, {
+      "id": "9f540e92-7106-4a0a-af99-459a0824587b",
+      "comment": "",
+      "command": "click",
+      "target": "name=preview",
+      "targets": [
+        ["name=preview", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='preview']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Prévisualiser')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3337767-590b-4ca2-894a-e6cd08ab3a31",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//summary",
+      "targets": [],
+      "value": "msg_creation"
+    }, {
+      "id": "69d8867f-8f4c-42d1-b3fc-7648254c8320",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${msg_creation}.split(' ')[0])",
+      "targets": [],
+      "value": "nb_membres_crees"
+    }, {
+      "id": "fffc9aab-49c8-4d82-a89d-a31664c93ae0",
+      "comment": "",
+      "command": "click",
+      "target": "name=import",
+      "targets": [
+        ["name=import", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='import']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "771c860e-ef3c-43c7-8c6f-90bc7e39ab33",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres_crees} + 1",
+      "targets": [],
+      "value": "nb_lignes"
+    }, {
+      "id": "033fb842-2ee8-421d-884e-47407d5ab123",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_lignes",
+      "targets": [],
+      "value": "${nb_lignes_fichier}"
+    }, {
+      "id": "8ef9e0b4-e1a1-4299-8e82-4dc8479b5992",
+      "comment": "Vérifier nombre de membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8a63227-7664-4532-8eb5-0fd3831bd54f",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad8f65b6-72cc-4d9d-ae24-737080a52b8a",
+      "comment": "rendre visibles les catégories",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9785f61-a589-4f89-9c5d-64dc8fc48465",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "496596a2-8fdd-454b-9d83-c107cf9069b3",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "f9b978aa-5991-4d7e-b4db-b0d30e242881",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_final_membres"
+    }, {
+      "id": "76c26d7f-de63-4500-9665-36ccf123857f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_initial_membres} +${nb_membres_crees}",
+      "targets": [],
+      "value": "nb_membres_attendu"
+    }, {
+      "id": "331e993e-815b-4cb0-a125-f2339f1a0ecb",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_final_membres",
+      "targets": [],
+      "value": "${nb_membres_attendu}"
+    }]
   }],
   "suites": [{
     "id": "6bdd4e16-7197-4388-9a5f-350523eb6c98",
@@ -23245,6 +23703,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["4c95e2ee-667c-4e1b-b55b-4cc92eda3c6f", "1e8af828-327f-4540-99ee-9f9843826f29", "51e58cf8-5b73-4a92-8bd9-1a25c9d7ee3a"]
+  }, {
+    "id": "5af091f3-096d-49d7-8829-68f8365996f4",
+    "name": "8 Importer membres",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["65a4ae11-9b9b-4c9d-ada7-0f0966023fe0"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
