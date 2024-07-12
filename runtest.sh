@@ -23,7 +23,7 @@ aide()
 Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
 Appel : $(basename $0) [-f fichier] [-a] [-n] [-h] [test ..]
 
--f fichier : fichier de test (défaut : paheko.side)
+-f fichier : fichier de test (défaut : membres.side)
 -a		   : exécuter tous les tests du fichier
 -n		   : ne pas tuer le processus en fin de test
 -h		   : afficher cette aide
@@ -52,7 +52,7 @@ traiter_test()
 }
 
 # les constantes
-TESTFILE=paheko_v4.side
+TESTFILE=membres_v4.side
 KILL=1
 BROWSER=chrome
 CHROME_OPT="goog:chromeOptions.args=[headless]"
