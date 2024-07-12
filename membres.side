@@ -23269,13 +23269,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "61d23b43-066c-45bd-9047-00a83f798705",
-      "comment": "supprimer tous les membres",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "ccf0c1fa-1db4-4c5a-8c44-9b5d99d0792f",
       "comment": "",
       "command": "storeText",
@@ -23289,6 +23282,13 @@
       "target": "return Number(${membres}.split(/ /)[0])",
       "targets": [],
       "value": "nb_initial_membres"
+    }, {
+      "id": "61d23b43-066c-45bd-9047-00a83f798705",
+      "comment": "supprimer tous les membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "bc088d53-aea5-4128-9056-0d5f83bb8d83",
       "comment": "",
@@ -23646,6 +23646,249 @@
       "targets": [],
       "value": "${nb_membres_attendu}"
     }]
+  }, {
+    "id": "f5864c55-04ad-413e-a5a7-d48b78e473d8",
+    "name": "8-02 import membres (conflit)",
+    "commands": [{
+      "id": "68df0c74-6f89-4d6a-9db5-ccd822500da1",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82c0c6f4-4627-40d0-85e2-429b1271fb61",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e782f760-d14d-4013-aec0-6b48f91d65f4",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "9ffa3a29-bacc-4413-8d7f-50515d8c0fbb",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da10bca3-4a78-4f0d-9b07-52eda8c13f21",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "1972b763-11a6-438d-8e7b-3a4b4dca4a49",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "f5a9caee-b829-428c-9ad4-2a840eaf5b8e",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfe60c22-aeb4-41e4-bb8d-768c74efd3b2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93be136d-fea2-483b-a185-a2eb7f630b9d",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e925dcc-94a3-48f4-bd75-be0f99e2b421",
+      "comment": "rendre visibles les catégories",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05d4d45f-dda5-4d7f-a456-a7de5e2b2c36",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20cea181-0dff-44b8-8b46-1c304658c7a5",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "7a5764f5-f8fc-4ef3-ae4c-5e5b89f64c18",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_initial_membres"
+    }, {
+      "id": "6ba460ff-9c62-4b70-bfa6-d8c1fb8202e5",
+      "comment": "Importer un fichier",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fc83f98-9bdd-40ed-9fd4-056cad1895fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Import",
+      "targets": [
+        ["linkText=Import", "linkText"],
+        ["css=.tabs li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Import')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'import.php')]", "xpath:href"],
+        ["xpath=//nav/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Import')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48e1f30c-c1e4-4d64-9c98-5d9bde28cf27",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_file",
+      "targets": [
+        ["id=f_file", "id"],
+        ["name=file", "name"],
+        ["css=#f_file", "css:finder"],
+        ["xpath=//input[@id='f_file']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "/tmp/membres-conflit.csv"
+    }, {
+      "id": "68eb4d56-c188-410c-b1df-66223037e96d",
+      "comment": "",
+      "command": "click",
+      "target": "css=dd:nth-child(2) > label",
+      "targets": [
+        ["css=dd:nth-child(2) > label", "css:finder"],
+        ["xpath=//dd/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Créer tous les membres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf263fb8-5b8f-44fd-aa7e-205a04d5e86e",
+      "comment": "",
+      "command": "click",
+      "target": "name=load",
+      "targets": [
+        ["name=load", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='load']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Charger le fichier')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dda7c0c5-e6e2-46b7-9da2-5f53b257449d",
+      "comment": "nb lignes dans le fichier",
+      "command": "storeText",
+      "target": "xpath=//dd[@class=\"help\"]",
+      "targets": [],
+      "value": "msg_lignes"
+    }, {
+      "id": "76770b8b-2326-4a0c-8f16-5877b6002d8c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${msg_lignes}.split(' ')[0])",
+      "targets": [],
+      "value": "nb_lignes_fichier"
+    }, {
+      "id": "45ba6894-bd3a-4d64-922d-e85b98b668f2",
+      "comment": "",
+      "command": "click",
+      "target": "name=preview",
+      "targets": [
+        ["name=preview", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='preview']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Prévisualiser')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b067e229-15ce-440a-873f-fc64cf8698a7",
+      "comment": "conflit de numéros",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45edb121-16ff-4f0e-8234-50ff719dc301",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//div[contains(@class, \"error\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bcbd534-38b4-429d-9111-d29852bc01d2",
+      "comment": "Vérifier nombre de membres",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b93b0cc-23ee-45f5-88da-1968c1a74b04",
+      "comment": "Menu Membres",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f2ef47f-ce6f-42ae-a770-5fcd8357f4f4",
+      "comment": "rendre visibles les catégories",
+      "command": "executeScript",
+      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f5b8fb-bc06-4641-ae4b-4d35395c0ece",
+      "comment": "Filtrer : toutes même cachées",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d55971ce-a28b-46ec-9658-cdf4261a2a6e",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "targets": [],
+      "value": "membres"
+    }, {
+      "id": "9071c518-6da7-455a-8368-aee71d55e748",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${membres}.split(/ /)[0])",
+      "targets": [],
+      "value": "nb_final_membres"
+    }, {
+      "id": "23f73093-a848-47f9-9204-969e13027042",
+      "comment": "",
+      "command": "assert",
+      "target": "nb_final_membres",
+      "targets": [],
+      "value": "${nb_initial_membres}"
+    }]
   }],
   "suites": [{
     "id": "6bdd4e16-7197-4388-9a5f-350523eb6c98",
@@ -23709,7 +23952,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["65a4ae11-9b9b-4c9d-ada7-0f0966023fe0"]
+    "tests": ["65a4ae11-9b9b-4c9d-ada7-0f0966023fe0", "f5864c55-04ad-413e-a5a7-d48b78e473d8"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
