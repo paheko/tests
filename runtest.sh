@@ -21,10 +21,11 @@ aide()
 {
 	cat <<EOF
 Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
-Appel : $(basename $0) [-f fichier] [-a] [-n] [-h] [test ..]
+Appel : $(basename $0) [-f fichier] [-a] [-c] [-n] [-h] [test ..]
 
 -f fichier : fichier de test (défaut : membres.side)
 -a		   : exécuter tous les tests du fichier
+-c		   : afficher la fenêtre de chrome
 -n		   : ne pas tuer le processus en fin de test
 -h		   : afficher cette aide
 test	   : nom (partiel ou complet) d'un test ou d'une suite à exécuter
@@ -62,7 +63,6 @@ JESTOPTIONS='"\"--detectOpenHandles\""'
 # les options
 declare -A options
 options=(
-	[-c]=${CHROME_OPT}
 	[--jest-timeout]=${TIMEOUT}
 	[--jest-options]=${JESTOPTIONS}
 )
@@ -93,6 +93,11 @@ do
 			tests="tous"
 			break
 			;;
+		-c )
+			# afficher la fenêtre de chrome
+			chrome=yes
+			shift
+			;;
 		-n )
 			KILL=0
 			shift
@@ -108,6 +113,11 @@ do
 			;;
 	esac
 done
+
+if [[ -z "$chrome" ]]
+then
+	COMMANDE="${COMMANDE} -c ${CHROME_OPT}"
+fi
 
 # S'assurer que le script de test est à jour
 make ${TESTFILE}
