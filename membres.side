@@ -23190,7 +23190,7 @@
     }]
   }, {
     "id": "65a4ae11-9b9b-4c9d-ada7-0f0966023fe0",
-    "name": "8-01 import membres (création)",
+    "name": "8-01 import création",
     "commands": [{
       "id": "ec5645db-b300-4ade-a4b9-2e898cac8bfb",
       "comment": "",
@@ -23496,7 +23496,7 @@
         ["xpath=//input[@id='f_file']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "/tmp/membres.csv"
+      "value": "/tmp/asso.csv"
     }, {
       "id": "6f85a86a-0b7a-4402-bbf4-4695a1c02053",
       "comment": "",
@@ -23648,7 +23648,7 @@
     }]
   }, {
     "id": "f5864c55-04ad-413e-a5a7-d48b78e473d8",
-    "name": "8-02 import membres (conflit)",
+    "name": "8-02 import création conflit",
     "commands": [{
       "id": "68df0c74-6f89-4d6a-9db5-ccd822500da1",
       "comment": "",
@@ -23773,7 +23773,7 @@
         ["xpath=//input[@id='f_file']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "/tmp/membres-conflit.csv"
+      "value": "/tmp/asso-conflit.csv"
     }, {
       "id": "68eb4d56-c188-410c-b1df-66223037e96d",
       "comment": "",
@@ -23891,7 +23891,7 @@
     }]
   }, {
     "id": "a050c509-bc64-425a-b616-91ef9af5468a",
-    "name": "8-11 import sans en-tête (création)",
+    "name": "8-03 import création sans en-tête",
     "commands": [{
       "id": "74f1331e-1fa4-4496-9436-41078207ca94",
       "comment": "",
@@ -24197,7 +24197,7 @@
         ["xpath=//input[@id='f_file']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "/tmp/membres-sans-entete.csv"
+      "value": "/tmp/asso-sans-entete.csv"
     }, {
       "id": "d13d24ed-ba75-43ac-b30c-3a7a80220a4f",
       "comment": "",
@@ -24296,21 +24296,21 @@
       "id": "106e39c7-676b-4dd9-bc07-181f139bca21",
       "comment": "",
       "command": "click",
-      "target": "xpath=//select[@name=\"translation_table[7]\"]/option[@value='telephone']",
+      "target": "xpath=//select[@name=\"translation_table[6]\"]/option[@value='telephone']",
       "targets": [],
       "value": ""
     }, {
       "id": "fdd94268-f8af-4443-8b88-fc25c27d2343",
       "comment": "",
       "command": "click",
-      "target": "xpath=//select[@name=\"translation_table[8]\"]/option[@value='lettre_infos']",
+      "target": "xpath=//select[@name=\"translation_table[7]\"]/option[@value='lettre_infos']",
       "targets": [],
       "value": ""
     }, {
       "id": "b057dac7-7d29-4839-ac6a-0eb73efe4caa",
       "comment": "",
       "command": "click",
-      "target": "xpath=//select[@name=\"translation_table[9]\"]/option[@value='date_inscription']",
+      "target": "xpath=//select[@name=\"translation_table[8]\"]/option[@value='date_inscription']",
       "targets": [],
       "value": ""
     }, {
