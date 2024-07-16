@@ -329,3 +329,34 @@ function cocher(idCase)
 		cases[i].checked = true;
 	}
 }
+
+// ------------------------------------------------------------------------
+// ajouter tous les membres d'une page au tableau paramètre
+// ------------------------------------------------------------------------
+function ajouterMembresPage(tmembres)
+{
+	for (const elem of document.querySelectorAll('table[class="list"] > tbody > tr'))
+	{
+		let o = Object();
+		o.numero = elem.querySelector('td[class="num"]').textContent.trim();
+		o.nom = elem.querySelector('th').textContent.trim();
+		tmembres.push(o);
+	}
+	return tmembres;
+}
+
+// ------------------------------------------------------------------------
+// ajouter des membres au tableau paramètre
+// ------------------------------------------------------------------------
+const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length));} let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin; }
+function ajouterMembres(tmembres, num)
+{
+	for (let i = 0; i < 7 + Math.floor(Math.random() * 15); ++i) {
+		let o = Object();
+		o.nom = chaine(11 + Math.floor(Math.random() * 5));
+		o.numero = num;
+		tmembres.push(o);
+		++num;
+	}
+	return tmembres;
+}
