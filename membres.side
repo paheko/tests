@@ -23304,80 +23304,10 @@
       "targets": [],
       "value": "nb_membres_page"
     }, {
-      "id": "14fbc547-75c8-42fb-913e-a957878e1cf1",
-      "comment": "",
+      "id": "f5b1cfb5-2fa5-46d7-a244-a09ef4081a25",
+      "comment": "cocher toutes les cases de la page",
       "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "coches"
-    }, {
-      "id": "d1ea098f-5cff-4ee5-a043-0b3fd3e4d25a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "fcad2cc5-728f-4b3a-9481-46e3d5dad459",
-      "comment": "",
-      "command": "while",
-      "target": "${num} <= ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6ddbc114-fb37-4dc3-94ac-acc9ce0a40d1",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]",
-      "targets": [],
-      "value": "numero"
-    }, {
-      "id": "90af97d1-1550-4c4d-8788-5c4e7309ffc9",
-      "comment": "",
-      "command": "if",
-      "target": "${numero} != \"1\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0ec7812d-7e36-42fb-bd1e-ae3802cc645d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${coches} + 1",
-      "targets": [],
-      "value": "coches"
-    }, {
-      "id": "8d34e6d9-9938-4140-8efa-aaa4d4764b77",
-      "comment": "cocher ligne",
-      "command": "check",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//input[@type=\"checkbox\"]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2b431628-6449-461e-996b-7f5444b03336",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a9cab631-68f7-48b3-8490-55a2b60ab69e",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${num} + 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "a142c937-b612-4590-b083-ea7cedd8c862",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a14c3cb5-3042-4ddc-bcfa-9459b7e33d04",
-      "comment": "",
-      "command": "if",
-      "target": "${coches} > 0",
+      "target": "function cocher(idCase) { const table = idCase.closest(\"table\"); const body = table.querySelector(\"tbody\"); const elems = body.querySelectorAll('td[class=\"check\"] > input[type=\"checkbox\"]'); for (let i = 0; i < elems.length; ++i) { elems[i].checked = true; }} cocher(f_all)",
       "targets": [],
       "value": ""
     }, {
@@ -23419,13 +23349,6 @@
       "comment": "",
       "command": "selectFrame",
       "target": "relative=parent",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e6b55ddc-3fec-4b65-b88a-b244f171b98c",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -24005,80 +23928,10 @@
       "targets": [],
       "value": "nb_membres_page"
     }, {
-      "id": "5a74215c-f4de-4fce-8758-c1101320e037",
-      "comment": "",
+      "id": "afd6d7af-bd5a-4fa4-9840-29acd9cae20b",
+      "comment": "cocher toutes les cases de la page",
       "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "coches"
-    }, {
-      "id": "073aa024-005f-4888-965c-64b8535dca14",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "e78df211-c850-432a-ac53-1cd68702f342",
-      "comment": "",
-      "command": "while",
-      "target": "${num} <= ${nb_membres_page}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8acb27b5-8a44-4fc5-a8c9-84352e4d888f",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]",
-      "targets": [],
-      "value": "numero"
-    }, {
-      "id": "7c468304-b01d-422d-8c5d-a38843282710",
-      "comment": "",
-      "command": "if",
-      "target": "${numero} != \"1\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "98f0b35d-eddc-4f4a-8968-5cd1355ee699",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${coches} + 1",
-      "targets": [],
-      "value": "coches"
-    }, {
-      "id": "896ff6e0-2be7-428b-89ec-e359fbe89592",
-      "comment": "cocher ligne",
-      "command": "check",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]//input[@type=\"checkbox\"]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dc640987-c170-44a5-a2a7-cd7b36ef7641",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9929cd21-bba7-4c1f-b88a-6f3787d729fe",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${num} + 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "bae048bd-168f-49c8-925f-1e41eae0cff9",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "89ff14cf-fd4c-49fa-98de-656eb274d808",
-      "comment": "",
-      "command": "if",
-      "target": "${coches} > 0",
+      "target": "function cocher(idCase) { const table = idCase.closest(\"table\"); const body = table.querySelector(\"tbody\"); const elems = body.querySelectorAll('td[class=\"check\"] > input[type=\"checkbox\"]'); for (let i = 0; i < elems.length; ++i) { elems[i].checked = true; }} cocher(f_all)",
       "targets": [],
       "value": ""
     }, {
@@ -24086,12 +23939,7 @@
       "comment": "",
       "command": "click",
       "target": "xpath=//select[@name=\"action\"]/option[contains(text(), \"Supprimer les membres\")]",
-      "targets": [
-        ["name=action", "name"],
-        ["css=select", "css:finder"],
-        ["xpath=//select[@name='action']", "xpath:attributes"],
-        ["xpath=//select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "25ddf95f-e033-484d-8203-f64415603c31",
@@ -24120,13 +23968,6 @@
       "comment": "",
       "command": "selectFrame",
       "target": "relative=parent",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "560948e1-0ed6-4397-bc48-755b54247f36",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
