@@ -314,3 +314,18 @@ function getDate()
 	date.setTime(ms);
 	return date.toLocaleDateString();
 }
+
+// ------------------------------------------------------------------------
+// cocher toutes les cases du corps de la table quand celle de
+// la ligne de titre est cochée
+// param idCase : case de la ligne de titre
+// ------------------------------------------------------------------------
+function cocher(idCase)
+{
+	const table = idCase.closest("table");
+	const body = table.querySelector("tbody");
+	const cases = body.querySelectorAll('td[class="check"] > input[type="checkbox"]');
+	for (let i = 0; i < cases.length; ++i) {
+		cases[i].checked = true;
+	}
+}
