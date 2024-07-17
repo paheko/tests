@@ -1,0 +1,357 @@
+* Test paheko
+** Notes
+*** problème avec instruction conditionnelle dans 4-09 et 4-10
+#+BEGIN_SRC shell
+if (${nb_parents} >= 2)
+{ ... }
+else if (${nb_total_membres} > 2)
+// ce bloc est exécuté même si nb_parents >= 2
+{ ... }
+#+END_SRC
+
+**Contournement**
+#+BEGIN_SRC shell
+if (${nb_parents} >= 2)
+{ ... }
+else if ${nb_parents} < 2 && ${nb_total_membres} > 2
+// ce bloc est exécuté même si nb_parents >= 2
+{ ... }
+#+END_SRC
+*** problème avec apostrophe
+- pas d'apostrophe dans les éléments de tableau, sinon problème
+- si apostrophe dans une chaîne => lors de l'appel d'un script :
+  problème avec l'IDE mais pas avec le runner
+*** erreur timeout
+Il y a un bug, référenceé ici : https://github.com/SeleniumHQ/selenium-ide/issues/1819
+qui affiche un message d'erreur après une longue pause :
+#+BEGIN_COMMENT
+  Jest did not exit one second after the test run has completed.
+
+  'This usually means that there are asynchronous operations that
+  weren't stopped in your tests. Consider running Jest with
+  `--detectOpenHandles` to troubleshoot this issue.
+#+END_COMMENT
+l'ajout de « detectOpenHandles » est strictement sans effet...
+D'où la tentative de contournement dans runtest
+*** comparer des nombres
+Les valeurs récupérées sur une page sont des chaînes => à convertir en
+nombre avec Number pour faire une comparaison numérique (ex : numéro
+de membre)
+*** display:none
+Impossible de sélectionner un élément avec l'attribut **display:none**
+; il faut préalablement lui mettre l'attribut **display:block**
+*** numéro de téléphone
+- **Attention**, un numéro qui commence par 0 est formatté avec un
+  espace entre les paires de chiffres !!
+*** Version mobile
+- les libellés des boutons du menu principal n'apparaissent pas et ne
+  sont donc pas trouvés, ni par un chemin xpath, ni par un chemin css
+  ; il faut donc utiliser un chemin qui s'arrête à l'url du lien
+  correspondant.
+- les sous-menus n'apparaissent pas => pas d'accès direct => il faut
+  procéder par étape : menu puis sous-menu
+- lors de l'ajout d'un membre, le bouton Enregistrer n'est pas visible
+  et ne peut être cliqué ; pour le rendre visible, il faut passer
+  d'une rubrique à l'autre avec la touche Tab ou avec PageDown, par
+  exemple après avoir saisi la date.... **mais** :
+  - avec navigateur chrome : pas de sélecteur de date ! => il faut ruser :(
+  - même ainsi, il se peut que le bouton ne puisse recevoir le clic
+    (voir ci-dessous) ; apparemment le webdriver firefox ne réagit pas
+    à PageDown et celui de chrome réagit à Tab, mais ça ne suffit pas
+    à rendre cliquable le bouton Enregistrer
+
+Bref, ce qui marche pour le driver chrome ne marche pas pour celui de firefox et vice-versa..
+
+#+BEGIN_SRC shell
+> selenium-side-runner -c "browserName=firefox" -f "mobile" paheko_v4.side
+
+    Element <button class="main icn-btn" name="save" type="submit"> is not clickable
+    at point (125,633) because another element <ul> obscures it
+#+END_SRC
+
+*** Objet javascript
+- Syntaxe accès aux objets : ${objet}.attribut ou ${objet}.methode
+
+#+BEGIN_SRC
+// refusé par le runner
+return ${membre.nom}
+
+// accepté
+return ${membre}.nom;
+#+END_SRC
+
+*** input type="checkbox
+Pour activer un /<input type="checkbox"/, il vaut mieux utiliser
+**check** car le runner (de chrome ?) n'aime pas **click**
+*** Appel de fonction
+L'/appel de fonction/ définie dans le script avec une variable de
+l'IDE en param ne fonction qu'avec Chrome.  NB : vérifier exactement
+ce qui ne fonctionne pas avec firefox ?
+
+*** Envoi de fichier
+Ne fonctionne qu'avec chrome
+
+** DONE Installation
+*** DONE installation initiale
+*** DONE installation sur base existante
+*** DONE vérification premier membre
+** DONE Connexion
+*** DONE connexion correcte
+*** DONE connexion échec identifiant
+*** DONE connexion échec mdp
+** TODO Membres
+*** DONE virer commandes d'affichage
+*** DONE créer un membre
+**** données de la fiche membre
+- Catégorie : choisir parmi les possibilités
+- Rattacher à un membre : non / choisir un membre
+- Numéro : par défaut ou à saisir
+- Nom & prénom (oblig)
+- Adresse E-Mail
+- Pays
+- Adresse postale
+- Code postal
+- Ville
+- Numéro de téléphone
+- Inscription à la lettre d'information
+- Date d'inscription
+**** DONE standard
+**** DONE standard, version mobile
+- échec avec runner + firefox (voir plus haut)
+**** DONE autre pays
+**** DONE Catégorie « Ancien membre »
+***** DONE vérifier catégorie du membre créé
+**** DONE Inscrit à la lettre
+**** DONE date bizarre
+**** DONE attaché à un autre membre (choix unique)
+**** DONE attaché à un autre membre (plusieurs choix)
+- utiliser et vérifier le numéro du responsable
+**** DONE numéro différent de celui proposé par défaut
+**** DONE numéro en double
+**** DONE date antérieure min
+**** DONE date postérieure max
+**** DONE nom en double refusé
+**** DONE nom en double accepté
+*** DONE lister les membres
+**** DONE ajouter ville pour vérif tri par ville
+**** DONE toutes les catégories
+***** TODO gérer le cas où les membres occupent plus d'une page
+Vérifier si on peut supprimer un tri inutile
+**** DONE toutes catégories sauf cachées
+**** DONE une seule catégorie
+**** DONE tri par différents critères
+***** DONE num : croissant et décroissant
+***** DONE nom : idem
+Le nouveau tri est comme ceci :
+colonne IS NULL DESC, colonne DESC, numero DESC
+(DESC est remplacé par ASC pour un tri croissant)
+Autre changement du coup : les champs non-vides sont placés en dernier
+pour un tri croissant, en premier pour un tri décroissant.
+
+***** DONE ville : idem
+Tri par ville
+- ville (dé)croissant, numéro membre (dé)croissant
+- ville vide en fin(début), numéro membre (dé)croissant
+
+***** DONE rattaché à : idem
+
+Pour la colonne "rattaché à" : on met un tri sur la
+qualité de parent, puis le nom du parent en premier, puis le nom du
+membre, puis son numéro :
+- id_parent IS NULL ASC, nom_parent DESC, nom_membre DESC, numero DESC
+  - parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant
+  - parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant
+
+***** DONE responsable : idem
+is_parent ASC, nom_membre DESC, numero DESC
+
+**** DONE consulter fiche
+*** DONE rechercher des membres
+**** Remarques :
+- si la recherche trouve un seul résultat, elle affiche directement la
+  fiche du membre
+- s'il y a plusieurs résultats, la recherche affiche l'onglet
+  « Recherche avancée » avec les résultats
+- s'il n'y a aucun résultat, la recherche affiche l'onglet
+  « Recherche avancée » avec une liste de résultats vide
+**** DONE chercher par nom
+***** DONE résultat unique (garantir l'unicité du nom cherché)
+***** DONE plusieurs résultats
+***** DONE aucun résultat
+**** DONE chercher par numéro
+***** DONE un résultat
+***** DONE aucun résultat
+**** DONE par courriel
+***** DONE un seul résultat => fiche membre
+***** DONE 0 résultat => onglet « Recherche avancée »
+***** DONE plusieurs résultats => onglet « Recherche avancée »
+*** DONE supprimer un membre
+NB : le tri des membres ne change pas après suppression
+**** DONE plusieurs membres sélectionnés
+**** DONE sélectionné = admin (ou connecté ?)
+**** aucun membre sélectionné => action interdite
+*** DONE modifier un membre
+**** DONE modifier caractéristiques « simples »
+ - si un seul membre => en créer un deuxième
+ - chercher le premier numéro disponible
+ - chercher puis modifier le premier membre de numéro différent de 1
+ - modifier les différents champs
+   - numéro
+   - catégorie
+   - nom, prénom
+   - courriel
+   - adresse
+   - code postal
+   - ville
+   - téléphone
+   - lettre info
+   - date inscription
+ - enregistrer
+ - vérifier les infos
+**** DONE définir le mot de passe du membre
+- sélectionner un membre actif (pas ancien, car pas le droit de se
+  connecter)
+- cliquer Définir mdp
+- saisir deux fois un mdp généré
+- mémoriser nom et adresse courriel
+- déconnecter
+- connexion avec
+  - adresse courriel
+  - mdp
+- vérifier Nom présent page accueil
+- vérifier numéro membre sur fiche membre
+**** DONE rattacher un membre
+- créer deux membres et mémoriser leurs numéros
+- rattacher le premier au deuxième à l'aide de son numéro
+- vérifier les deux membres
+*** DONE importer des membres
+**** Remarques
+- Si déjà tu peux tester qu'un fichier CSV donné s'importe bien, c'est
+  déjà génial je pense
+- ¿ Tester les possiblités d'ignorer certains champs ?
+**** DONE Créer tous les membres
+- Tous les membres trouvés dans le fichier seront créés.
+- Cela peut amener à avoir des membres en doublon si on réalise
+  plusieurs imports du même fichier.
+***** DONE création sans conflit
+***** DONE création avec conflit
+***** DONE création sans en-tête
+***** ¿ création en choisissant certaines options ?
+**** DONE Mettre à jour en utilisant le numéro de membre
+- Les membres présents dans le fichier qui mentionnent un numéro de
+  membre seront mis à jour en utilisant ce numéro.
+- Si une ligne du fichier mentionne un numéro de membre qui n'existe
+  pas ou n'a pas de numéro de membre, l'import échouera.
+***** DONE tous les membres existent ; certains sont mis à jour
+***** DONE au moins un membre n'existe pas
+**** DONE Automatique : créer ou mettre à jour en utilisant le numéro de membre
+- Met à jour la fiche d'un membre si son numéro existe, sinon crée un
+  membre si le numéro de membre indiqué n'existe pas ou n'est pas
+  renseigné.
+*** TODO exporter des membres
+
+Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
+ça produit bien un fichier de plus de 0 octets ça sera bien.
+
+*** TODO préférence des membres
+**** TODO catégorie par défaut
+**** TODO identifiant connexion
+**** TODO identité
+**** TODO journaux
+**** TODO déconnexion automatique
+*** TODO ajouter un champ à la fiche membre
+*** TODO modifier un champ de la fiche membre
+*** TODO changer l'ordre des champs de la fiche membre
+
+-> vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
+la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
+dans la liste des membres
+
++ Autres éléments de config des membres :
+-> modifier l'identifiant de connexion
+-> modifier les champs pour l'identité du membre
+
+*** TODO supprimer un champ dans la fiche membre
+*** TODO ajouter une catégorie
+*** TODO modifier une catégorie
+*** TODO supprimer une catégorie
+
+-> vérifier que le droit lecture/écriture/administration fonctionne
+bien, notamment via le bouton "connexion à la place du membre"
+
+*** journal d'audit
+** prise en main
+*** DONE test installation
+
+ Exemple de test (après avoir installé un Paheko sur sa machine, sur le
+ vhost "paheko.localhost", sans base de données) :
+ - se rendre à l'adresse http://testpaheko.local.bzh
+ - remplir le formulaire d'installation
+ - valider le formulaire (cliquer sur le bouton en bas de page)
+ - sur la page suivante cliquer ensuite sur "configuration" dans le menu
+ - vérifier que les informations de l'association indiquées lors
+   l'installation se retrouvent exactement dans les champs de la
+   configuration
+ - cliquer sur le menu "Membres"
+ - vérifier que le membre par défaut est bien dans la liste
+ - cliquer sur la fiche du membre
+ - vérifier que l'adresse e-mail et autres infos remplies à
+   l'installation sont bien là
+
+ interpeller noircir colis allumer
+
+*** DONE test connexion
+ - si déjà connecté => fermer connexion
+
+*** TODO Démarrer la comptabilité
+ - cas normal
+   - choix du PC
+   - dates exercice
+ - vérifications
+   - nombre d'écritures
+   - PC
+   - dates exercice
+ - tester erreur saisie dates
+ - tester modif pays
+
+*** TODO test saisie recette
+
+ Un autre test pour la compta :
+ - se rendre à l'adresse http://testpaheko.local.bzh/admin/ (après avoir été
+   connecté dans un test précédent, que je ne détaille pas ici)
+ - cliquer sur le menu "Saisie" dans la compta
+ - cliquer sur "recette"
+ - renseigner un libellé, un montant, les comptes, autres champs etc.
+ - valider le formulaire
+ - sur la page de détail de l'écriture, vérifier que toutes les
+   mentions, comptes et montants correspondent à ce qui a été saisi
+ - se rendre sur la page compte de résultat
+ - vérifier que le montant de la recette apparaît bien dans les
+   produits, que le nom du compte est bon, etc.
+
+** exemples
+*** parcours table
+Voir file:///home/engel/outils/selenium/tuto.side : lister membres
+- compter le nombre d'éléments de la table => nb_elem
+- itérer avec un compteur (while) => num
+- accéder à l'élément courant grâce au compteur //tr[${num}]
+
+| Command         | Target                                                   | Value   |
+|-----------------+----------------------------------------------------------+---------|
+| storeXpathCount | xpath=//table[@class=\"list\"]/tbody/tr/th//span         | nb_elem |
+| executeScript   | return 1                                                 | num     |
+| while           | ${num} <= ${nb_elem}                                     |         |
+| storeText       | xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span | nom     |
+| echo            | ${nom}                                                   |         |
+| execute script  | return ${num} + 1                                        | num     |
+| end             |                                                          |         |
+
+*** données structurées
+- les objets ne sont pas acceptés par le runner (voir
+  https://github.com/SeleniumHQ/selenium-ide/issues/1603)
+- voir file:///home/engel/outils/selenium/tuto.side forEach
+*** envoi fichier
+Voir file:///home/engel/devel/recusDons/test/recusDons.side
+**Ne fonctionne qu'avec chrome**
+- insérer (type) le chemin du fichier dans le champ de saisie du nom
+- cliquer le bouton d'envoi
