@@ -360,3 +360,20 @@ function ajouterMembres(tmembres, num)
 	}
 	return tmembres;
 }
+
+// Compter le nombre de membres créés et modifiés
+function compter()
+{
+	let o = { cree: 0, modif: 0 };
+	for (const msg of document.querySelectorAll('summary > h2'))
+	{
+		if (msg.textContent.includes('créé')) {
+			o.cree = Number(msg.textContent.split(' ')[0]);
+		}
+		if (msg.textContent.includes('modifié')) {
+			o.modif = Number(msg.textContent.split(' ')[0]);
+		}
+	}
+	return o;
+}
+
