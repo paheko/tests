@@ -23457,6 +23457,13 @@
       ],
       "value": ""
     }, {
+      "id": "512f0c67-b8b5-4f16-8132-fe7355211876",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//p[contains(@class, \"confirm\")]",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "771c860e-ef3c-43c7-8c6f-90bc7e39ab33",
       "comment": "",
       "command": "executeScript",
@@ -24151,6 +24158,13 @@
         ["xpath=//button[2]", "xpath:position"],
         ["xpath=//button[contains(.,'Importer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "6f5b0266-6b2f-4fb5-8d0a-73e562f86203",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//p[contains(@class, \"confirm\")]",
+      "targets": [],
       "value": ""
     }, {
       "id": "d4ab6967-f883-403c-86ab-4480536ce5c0",
