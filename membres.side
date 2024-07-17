@@ -23381,8 +23381,8 @@
     }, {
       "id": "6f85a86a-0b7a-4402-bbf4-4695a1c02053",
       "comment": "",
-      "command": "click",
-      "target": "css=dd:nth-child(2) > label",
+      "command": "check",
+      "target": "xpath=//input[@id=\"f_mode_create\"]",
       "targets": [
         ["css=dd:nth-child(2) > label", "css:finder"],
         ["xpath=//dd/label", "xpath:position"],
@@ -23658,8 +23658,8 @@
     }, {
       "id": "68eb4d56-c188-410c-b1df-66223037e96d",
       "comment": "",
-      "command": "click",
-      "target": "css=dd:nth-child(2) > label",
+      "command": "check",
+      "target": "xpath=//input[@id=\"f_mode_create\"]",
       "targets": [
         ["css=dd:nth-child(2) > label", "css:finder"],
         ["xpath=//dd/label", "xpath:position"],
@@ -24000,8 +24000,8 @@
     }, {
       "id": "d13d24ed-ba75-43ac-b30c-3a7a80220a4f",
       "comment": "",
-      "command": "click",
-      "target": "css=dd:nth-child(2) > label",
+      "command": "check",
+      "target": "xpath=//input[@id=\"f_mode_create\"]",
       "targets": [
         ["css=dd:nth-child(2) > label", "css:finder"],
         ["xpath=//dd/label", "xpath:position"],
