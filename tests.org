@@ -135,7 +135,7 @@ Ne fonctionne qu'avec chrome
 *** DONE lister les membres
 **** DONE ajouter ville pour vérif tri par ville
 **** DONE toutes les catégories
-***** TODO gérer le cas où les membres occupent plus d'une page
+***** DONE gérer le cas où les membres occupent plus d'une page
 Vérifier si on peut supprimer un tri inutile
 **** DONE toutes catégories sauf cachées
 **** DONE une seule catégorie
@@ -248,36 +248,47 @@ NB : le tri des membres ne change pas après suppression
 - Met à jour la fiche d'un membre si son numéro existe, sinon crée un
   membre si le numéro de membre indiqué n'existe pas ou n'est pas
   renseigné.
-*** TODO exporter des membres
+*** DONE exporter des membres
 
 Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 ça produit bien un fichier de plus de 0 octets ça sera bien.
 
-*** TODO préférence des membres
-**** TODO catégorie par défaut
-**** TODO identifiant connexion
-**** TODO identité
-**** TODO journaux
+- avec le runner :
+  - avec fenêtre, fichier exporté placé dans le répertoire par défaut ~/Downloads
+  - sans fenêtre, le fichier est enregistré dans le répertoire de travail... pas toujours !
+	- MAIS l'ajout d'une opération après le déclenchement de
+      l'enregistrement permet la bonne terminaison de l'enregistrement
+
+- avec l'IDE sous chrome : la version 107 de chrome ne supporte plus l'IDE ....
+
+*** TODO configuration membres Préférences
+**** TODO catégorie par défaut des nouveaux membres
+**** TODO champ utilisé comme identifiant connexion
+**** TODO champs utilisés pour définir identité
+**** TODO ¿ Rattachement de membres ?
+**** TODO ¿ durée de conservation journaux d'activité ?
 **** TODO déconnexion automatique
-*** TODO ajouter un champ à la fiche membre
-*** TODO modifier un champ de la fiche membre
-*** TODO changer l'ordre des champs de la fiche membre
+*** TODO configuration membres Fiche
+**** TODO ajouter un champ à la fiche membre
+**** TODO modifier un champ de la fiche membre
+**** TODO changer l'ordre des champs de la fiche membre
 
--> vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
-la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
-dans la liste des membres
+ -> vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
+ la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
+ dans la liste des membres
 
-+ Autres éléments de config des membres :
--> modifier l'identifiant de connexion
--> modifier les champs pour l'identité du membre
+ + Autres éléments de config des membres :
+ -> modifier l'identifiant de connexion
+ -> modifier les champs pour l'identité du membre
 
-*** TODO supprimer un champ dans la fiche membre
-*** TODO ajouter une catégorie
-*** TODO modifier une catégorie
-*** TODO supprimer une catégorie
-
--> vérifier que le droit lecture/écriture/administration fonctionne
-bien, notamment via le bouton "connexion à la place du membre"
+**** TODO supprimer un champ dans la fiche membre
+*** TODO configuration membres Catégories et Droits
+**** TODO ajouter une catégorie
+**** TODO modifier une catégorie
+**** TODO supprimer une catégorie
+**** TODO droits
+ -> vérifier que le droit lecture/écriture/administration fonctionne
+ bien, notamment via le bouton "connexion à la place du membre"
 
 *** journal d'audit
 ** prise en main
