@@ -86,9 +86,15 @@ return getDate(${date});
 
 // ------------------------------------------------------------------------
 // rendre visibles les options de filtres de membre
-var nav = document.querySelector(".dropdown");
-var li = nav.querySelectorAll("li");
+const nav = document.querySelector(".dropdown");
+const li = nav.querySelectorAll("li");
 for (const l of li) { l.style.display="block"; }
+return;
+
+// rendre visibles les options d'export
+const nav = document.querySelector(".tabs");
+let span = nav.querySelector("aside > span > span");
+span.style.display = "block";
 return;
 
 
