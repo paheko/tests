@@ -25874,7 +25874,7 @@
       "id": "7e753325-177e-4c6a-9413-9a0bef82b6af",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//thead/tr/td[3]",
+      "target": "xpath=//thead//a[contains(@href, \"identity\")]",
       "targets": [],
       "value": "titre_colonne"
     }, {
@@ -25930,7 +25930,7 @@
       "id": "f5bf22e3-fc3a-47b7-bbb2-0c72fce0a46b",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"Nom & prénom\")]/following-sibling::dd/a",
+      "target": "xpath=//dt[contains(.,\"Nom & prénom\")]/following-sibling::dd",
       "targets": [],
       "value": "nom_prenom"
     }, {
@@ -25954,6 +25954,13 @@
       "target": "return ${identite_premier}.includes(${nom_prenom}) && ${identite_premier}.includes(${courriel})",
       "targets": [],
       "value": "ok_identite"
+    }, {
+      "id": "b52ca7e8-4c91-43ed-b869-3d8f234a7627",
+      "comment": "",
+      "command": "assert",
+      "target": "ok_identite",
+      "targets": [],
+      "value": "true"
     }, {
       "id": "a5dd1a6a-cec3-42b1-8475-e53132c5bb84",
       "comment": "restaurer le champ identité initial",
