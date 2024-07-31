@@ -126,6 +126,10 @@ then
 	exit $?
 fi
 
+# fichiers csv
+rm -f Membres*.csv *membres.csv
+cp -p *.csv /tmp
+
 if [[ "$tests" == "tous" ]]
 then
 	# exécuter tous les tests
