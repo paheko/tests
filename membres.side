@@ -6756,13 +6756,6 @@
       "targets": [],
       "value": "nb_membres_cat"
     }, {
-      "id": "56ab778a-c590-4196-8168-533eaa8ab61e",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres non cachés = ${nb_membres_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3ed9c9d2-68a3-40fc-a135-bc73703f1505",
       "comment": "Filtrer : toutes sauf cachées",
       "command": "click",
@@ -6853,13 +6846,6 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
-    }, {
-      "id": "779f1ee1-cf59-40c2-818b-f971069bd983",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres sur la page = ${nb_membres_page}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "9c99a149-7ce1-45de-a63e-e6d235d81078",
       "comment": "",
@@ -6958,20 +6944,6 @@
       "target": "return ${lescategories}.at(${i})",
       "targets": [],
       "value": "categorie"
-    }, {
-      "id": "c519db38-1a13-4778-b8ab-886a0735a6b1",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "666e71ac-3851-42d2-b266-4a8d1a6e25c0",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom} cat=${categorie}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "7b8dcbb8-6572-4f62-ba4f-95fff0fadad9",
       "comment": "",
@@ -7796,13 +7768,6 @@
       "targets": [],
       "value": "nb_membres_cat"
     }, {
-      "id": "9e450853-15c1-47f8-bb5a-8fbccf03daa5",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres dans la catégorie ${num_categorie} = ${nb_membres_cat}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "78c4caf5-7f2a-4c85-a985-789651423ef7",
       "comment": "Filtrer : catégorie choisie",
       "command": "click",
@@ -7893,13 +7858,6 @@
       "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
       "targets": [],
       "value": "nb_membres_page"
-    }, {
-      "id": "e6c1a7a6-af4e-4c5a-b552-cc1c567574d0",
-      "comment": "",
-      "command": "//echo",
-      "target": "nombre de membres sur la page = ${nb_membres_page}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "cdbcea32-d3c3-4361-a86b-df4e67c43850",
       "comment": "",
@@ -7998,20 +7956,6 @@
       "target": "return ${lescategories}.at(${i})",
       "targets": [],
       "value": "categorie"
-    }, {
-      "id": "b76359fc-56db-478c-9f21-f76e453d7882",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "153a2dc9-d3ea-436a-852d-e91e73e276db",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom} cat=${categorie}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "8db0fac1-9192-45e0-abe9-9cf95d22a7ff",
       "comment": "",
@@ -13405,20 +13349,6 @@
       "targets": [],
       "value": "parent"
     }, {
-      "id": "2172a3c2-2926-45e0-bbc1-3d1cae2565a6",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche} ${parentAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "570fda81-5863-4247-8064-7af915c8a067",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom} ${parent}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "5409fdaf-c3b1-4972-9ecf-ac47d0fba6b3",
       "comment": "",
       "command": "executeScript",
@@ -16300,20 +16230,6 @@
       "target": "return ${lesnoms}.at(${i})",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "ab8a0b81-b0ba-4a98-b2a6-21d1e0f0e1d6",
-      "comment": "",
-      "command": "//echo",
-      "target": "n=${num} ${numeroAffiche} ${nomAffiche}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a9272408-2d37-48d1-8595-35aeeb43462a",
-      "comment": "",
-      "command": "//echo",
-      "target": "i=${i} ${numero} ${nom}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "cfab7f82-617f-47ba-ad58-9d7faf8a6864",
       "comment": "",
@@ -20633,7 +20549,7 @@
       "value": "nb_total_membres"
     }, {
       "id": "137549b6-1daa-44f3-b2a1-10025c5bd579",
-      "comment": "si pas assez de membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_total_membres} < 10",
       "targets": [],
@@ -20954,10 +20870,17 @@
     }, {
       "id": "9134a9df-c731-4a24-bf72-37f281c95903",
       "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "//executeScript",
+      "command": "executeScript",
       "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
       "targets": [],
       "value": ""
+    }, {
+      "id": "cac06737-1754-4ac4-9f30-477e9a2fd5a2",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": "1000"
     }, {
       "id": "36e6ebf2-46bb-486c-a024-da720132d872",
       "comment": "",
@@ -21028,13 +20951,6 @@
       "target": "return ${lesnoms}[${i}]",
       "targets": [],
       "value": "nom"
-    }, {
-      "id": "05f92014-6a86-4a35-8c18-2f3bd562c92e",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "return ${asuppr}[${i}]",
-      "targets": [],
-      "value": "suppr"
     }, {
       "id": "2a264014-c268-47e6-8f7c-1a1ba2d40902",
       "comment": "",
@@ -22456,20 +22372,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "952de114-6e8d-42d2-8ee2-1b49d2cafb9d",
-      "comment": "Membres/Ajouter",
-      "command": "//click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "95c01b0f-66c7-49db-870c-b7a0d2df947f",
-      "comment": "",
-      "command": "//storeValue",
-      "target": "id=f_numero",
-      "targets": [],
-      "value": "numero_dispo"
-    }, {
       "id": "8b21b72c-22f7-4eef-845c-03a2791d87d8",
       "comment": "chercher un membre à modifier",
       "command": "",
@@ -23061,13 +22963,6 @@
       "target": "xpath=//dt[contains(., \"Membres rattachés\")]/following-sibling::dd//span",
       "targets": [],
       "value": "nb_enfants"
-    }, {
-      "id": "f104f33d-b018-4ef9-9faf-afdf2eb6beb9",
-      "comment": "",
-      "command": "echo",
-      "target": "nb enfants = ${nb_enfants}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "ce363f17-5998-4de3-9a61-52fe315ea8b7",
       "comment": "",
