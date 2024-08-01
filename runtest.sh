@@ -21,14 +21,15 @@ aide()
 {
 	cat <<EOF
 Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
-Appel : $(basename $0) [-f fichier] [-a] [-c] [-n] [-h] [test ..]
+Appel : $(basename $0) [-f fichier] [-a] [-c] [-n]  [-z répertoire] [-h][test ..]
 
--f fichier : fichier de test (défaut : membres.side)
--a		   : exécuter tous les tests du fichier
--c		   : afficher la fenêtre de chrome
--n		   : ne pas tuer le processus en fin de test
--h		   : afficher cette aide
-test	   : nom (partiel ou complet) d'un test ou d'une suite à exécuter
+-f fichier    : fichier de test (défaut : membres.side)
+-a		      : exécuter tous les tests du fichier
+-c		      : afficher la fenêtre de chrome
+-n		      : ne pas tuer le processus en fin de test
+-z répertoire : sauver une copie d'écran dans le répertoire indiqué
+-h		      : afficher cette aide
+test	      : nom (partiel ou complet) d'un test ou d'une suite à exécuter
 EOF
 }
 
@@ -53,10 +54,11 @@ traiter_test()
 }
 
 # les constantes
-TESTFILE=membres_v4.side
-KILL=1
 BROWSER=chrome
 CHROME_OPT="goog:chromeOptions.args=[headless]"
+IMGDIR=""
+KILL=1
+TESTFILE=membres_v4.side
 TIMEOUT=1000000
 JESTOPTIONS='"\"--detectOpenHandles\""'
 
@@ -99,10 +101,16 @@ do
 			shift
 			;;
 		-n )
+			# ne pas tuer le processus en fin de test
 			KILL=0
 			shift
 			;;
-			# ne pas tuer le processus en fin de test
+		-z )
+			shift
+			IMGDIR="$1"
+			mkdir -p $IMGDIR
+			shift
+			;;
 		"-h" | -? )
 			aide
 			exit
@@ -117,6 +125,11 @@ done
 if [[ -z "$chrome" ]]
 then
 	COMMANDE="${COMMANDE} -c ${CHROME_OPT}"
+fi
+
+if [[ -n "$IMGDIR" ]]
+then
+	COMMANDE="${COMMANDE} -z ${IMGDIR}"
 fi
 
 # S'assurer que le script de test est à jour
