@@ -25744,6 +25744,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e5d637a4-6733-4a04-95a1-b749c2e00ca4",
+      "comment": "",
+      "command": "store",
+      "target": "Adresse E-Mail",
+      "targets": [],
+      "value": "champ_identite"
+    }, {
       "id": "7b803583-3ba3-4992-a791-96fb8d9b136a",
       "comment": "",
       "command": "click",
@@ -25789,12 +25796,12 @@
       ],
       "value": ""
     }, {
-      "id": "e5d637a4-6733-4a04-95a1-b749c2e00ca4",
+      "id": "be2eb6e8-59b7-490f-a4e4-6a57a9bf2362",
       "comment": "",
-      "command": "store",
-      "target": "Adresse E-Mail",
+      "command": "waitForElementVisible",
+      "target": "xpath=//th[contains(text(), \"${champ_identite}\")]",
       "targets": [],
-      "value": "champ_identite"
+      "value": "30000"
     }, {
       "id": "6827a5a4-58bf-4c37-abc7-1d94727fbcfb",
       "comment": "",
@@ -25853,14 +25860,14 @@
       "id": "46a1f302-505e-4ff8-804a-622e2a8e24b8",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${titre_colonne}.includes(${champ_identite})",
+      "target": "return ${titre_colonne}.includes(${champ_identite}) && ${titre_colonne}.includes(\"Nom & prénom\")",
       "targets": [],
-      "value": "ok"
+      "value": "ok_colonne"
     }, {
       "id": "77226f67-136b-4fa0-b84e-3ae49340de6a",
       "comment": "",
       "command": "assert",
-      "target": "ok",
+      "target": "ok_colonne",
       "targets": [],
       "value": "true"
     }, {
@@ -25890,12 +25897,12 @@
       "command": "executeScript",
       "target": "return ${titre}.includes(${courriel})",
       "targets": [],
-      "value": "ok"
+      "value": "ok_titre"
     }, {
       "id": "59cf5b07-3167-4b06-b433-11dabb01bd00",
       "comment": "",
       "command": "assert",
-      "target": "ok",
+      "target": "ok_titre",
       "targets": [],
       "value": "true"
     }, {
@@ -25971,6 +25978,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "69bf0b61-896c-432b-82ef-8b93e4e7429c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "name=save",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "5287c3f7-3f52-44e8-ad19-d4c6b9fb7fb5",
       "comment": "",
       "command": "click",
@@ -25984,12 +25998,16 @@
       ],
       "value": ""
     }, {
-      "id": "8ea57dfc-ee65-4370-98d0-93009f3f0833",
+      "id": "537d2ca9-44c4-48b2-9b91-087a4ae5a756",
       "comment": "",
-      "command": "waitForElementVisible",
-      "target": "xpath=//p[contains(@class, \"confirm\")]",
-      "targets": [],
-      "value": "30000"
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/logout.php\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "02fea879-c742-4a8e-af1d-6df832e7a947",
@@ -26074,6 +26092,13 @@
       ],
       "value": ""
     }, {
+      "id": "a2d54859-bd85-4c9f-b8f5-a6c32d3ec129",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(text(), \"Nom & prénom\")]/button",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "57a7a856-ffe1-4f22-84c6-7f1a7a370e67",
       "comment": "supprimer champ nom",
       "command": "click",
@@ -26109,6 +26134,13 @@
       "target": "Adresse E-Mail",
       "targets": [],
       "value": "champ_identite"
+    }, {
+      "id": "825b8794-fd46-4316-a0c3-acb9ae799e4f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//th[contains(text(), \"${champ_identite}\")]",
+      "targets": [],
+      "value": "30000"
     }, {
       "id": "7ae922bb-2dee-4e3b-9276-53ccf2da4469",
       "comment": "",
@@ -26162,12 +26194,12 @@
       "command": "executeScript",
       "target": "return ${titre_colonne}.includes(${champ_identite})",
       "targets": [],
-      "value": "ok"
+      "value": "ok_colonne"
     }, {
       "id": "e2ea3ba9-67b6-4a47-9a18-10d65851cce7",
       "comment": "",
       "command": "assert",
-      "target": "ok",
+      "target": "ok_colonne",
       "targets": [],
       "value": "true"
     }, {
@@ -26197,12 +26229,12 @@
       "command": "executeScript",
       "target": "return ${titre}.includes(${courriel})",
       "targets": [],
-      "value": "ok"
+      "value": "ok_titre"
     }, {
       "id": "29b146ab-422a-45d6-8daa-6636c99e4662",
       "comment": "",
       "command": "assert",
-      "target": "ok",
+      "target": "ok_titre",
       "targets": [],
       "value": "true"
     }, {
@@ -26300,6 +26332,13 @@
       ],
       "value": ""
     }, {
+      "id": "18c14f02-2405-44a2-9f32-c0a1dc2fcf44",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//th[contains(text(), \"Nom & prénom\")]",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "c355687c-05eb-4035-a24b-a2da7df34f90",
       "comment": "",
       "command": "click",
@@ -26333,12 +26372,16 @@
       ],
       "value": ""
     }, {
-      "id": "18c14f02-2405-44a2-9f32-c0a1dc2fcf44",
+      "id": "befd38a0-c208-4979-85d4-36f7c7c63978",
       "comment": "",
-      "command": "waitForElementVisible",
-      "target": "xpath=//p[contains(@class, \"confirm\")]",
-      "targets": [],
-      "value": "30000"
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/logout.php\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "639dbeb9-8199-4613-98e7-ae8948f484a2",
