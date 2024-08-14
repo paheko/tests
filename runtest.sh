@@ -21,7 +21,7 @@ aide()
 {
 	cat <<EOF
 Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
-Appel : $(basename $0) [-f fichier] [-a] [-c] [-n]  [-z répertoire] [-h][test ..]
+Appel : $(basename $0) [-f fichier] [-a] [-c] [-n] [-z répertoire] [-h] [test ..]
 
 -f fichier    : fichier de test (défaut : membres.side)
 -a		      : exécuter tous les tests du fichier
@@ -55,26 +55,19 @@ traiter_test()
 
 # les constantes
 BROWSER=chrome
-CHROME_OPT="goog:chromeOptions.args=[headless]"
+CHROME_OPTIONS=disable-search-engine-choice-screen
 IMGDIR=""
+JEST_OPTIONS='"\"--detectOpenHandles\""'
 KILL=1
 TESTFILE=membres_v4.side
 TIMEOUT=1000000
-JESTOPTIONS='"\"--detectOpenHandles\""'
 
 # les options
 declare -A options
 options=(
 	[--jest-timeout]=${TIMEOUT}
-	[--jest-options]=${JESTOPTIONS}
+	[--jest-options]=${JEST_OPTIONS}
 )
-
-# la commande
-COMMANDE=selenium-side-runner
-for elem in ${!options[@]}
-do
-	COMMANDE="${COMMANDE} $elem ${options[$elem]}"
-done
 
 # Traiter les arguments
 while [[ $# -gt 0 ]]
@@ -92,7 +85,7 @@ do
 			;;
 		-a )
 			# exécuter tous les tests
-			tests="tous"
+			tests=tous
 			break
 			;;
 		-c )
@@ -124,13 +117,22 @@ done
 
 if [[ -z "$chrome" ]]
 then
-	COMMANDE="${COMMANDE} -c ${CHROME_OPT}"
+	CHROME_OPTIONS="${CHROME_OPTIONS},headless"
 fi
+options[-c]+="goog:chromeOptions.args=[${CHROME_OPTIONS}]"
 
 if [[ -n "$IMGDIR" ]]
 then
-	COMMANDE="${COMMANDE} -z ${IMGDIR}"
+	options[-z]+=${IMGDIR}
 fi
+
+# la commande
+COMMANDE=selenium-side-runner
+for elem in ${!options[@]}
+do
+	COMMANDE="${COMMANDE} $elem ${options[$elem]}"
+done
+echo "${COMMANDE}"
 
 # S'assurer que le script de test est à jour
 make ${TESTFILE}
@@ -154,8 +156,8 @@ then
 		eval ${COMMEXEC}
 	fi
 elif [[ $# -gt 0 ]]
-	 # exécuter les tests passés en arguments
 then
+	# exécuter les tests passés en arguments
 	for test in "$@"
 	do
 		echo "Tester « $test »"
@@ -192,7 +194,7 @@ else
 		IFS=$OLDIFS
 		if [[ $KILL -eq 1 ]]
 		then
-			lstmeval ${COMMEXEC} 2>&1 | traiter_test
+			eval ${COMMEXEC} 2>&1 | traiter_test
 		else
 			eval ${COMMEXEC}
 		fi
