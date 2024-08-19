@@ -86,7 +86,7 @@ do
 		-a )
 			# exécuter tous les tests
 			tests=tous
-			break
+			shift
 			;;
 		-c )
 			# afficher la fenêtre de chrome
@@ -132,7 +132,6 @@ for elem in ${!options[@]}
 do
 	COMMANDE="${COMMANDE} $elem ${options[$elem]}"
 done
-echo "${COMMANDE}"
 
 # S'assurer que le script de test est à jour
 make ${TESTFILE}
@@ -149,6 +148,7 @@ if [[ "$tests" == "tous" ]]
 then
 	# exécuter tous les tests
 	COMMEXEC="${COMMANDE} ${TESTFILE}"
+	echo "$COMMEXEC"
 	if [[ $KILL -eq 1 ]]
 	then
 		eval ${COMMEXEC} 2>&1 | traiter_test
@@ -162,6 +162,7 @@ then
 	do
 		echo "Tester « $test »"
 		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
+		echo "$COMMEXEC"
 		if [[ $KILL -eq 1 ]]
 		then
 			eval ${COMMEXEC} 2>&1 | traiter_test
@@ -190,6 +191,7 @@ else
 	for test in $lesTests
 	do
 		COMMEXEC="${COMMANDE} -f \"$test\" ${TESTFILE}"
+		echo "$COMMEXEC"
 		CURIFS=$IFS
 		IFS=$OLDIFS
 		if [[ $KILL -eq 1 ]]
