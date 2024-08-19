@@ -295,6 +295,9 @@ l'IDE mais pas toujours par le runner
 ***** DONE 11-01 ajout année naissance
 ***** DONE 11-02 ajout champ perso texte libre
 ***** DONE 11-03 ajout champ perso texte choix multiple
+***** DONE 11-04 ajout champ perso texte multilignes
+***** DONE 11-05 ajout champ perso calculé
+***** DONE 11-06 ajout champ perso email
 **** TODO modifier un champ de la fiche membre
 **** TODO changer l'ordre des champs de la fiche membre
 
