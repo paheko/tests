@@ -28791,13 +28791,6 @@
     "timeout": 300,
     "tests": ["f1a25071-156c-4487-984c-6fb730b0e8e2", "91ef7a3d-27a5-4d1a-bb91-5ffdb927bb64", "eba6c550-37b2-4e7e-9352-d50cd1aeb2bf", "2f1dd424-4188-4ff9-ba9b-63c1085b89d0", "8275ba53-edfc-40c6-ab55-2c9d9d76c10b", "1493219f-1880-4b77-8332-e780660d301e", "cbd065d0-2d2e-4433-b7b3-756af25bdbf5", "5a7f0fc2-fc66-46b2-a5f6-0d97c61d515a", "e6dc8eef-f38a-482b-8128-f46648bffe42", "3d1fc496-8036-4948-af1e-607d5375e813", "2d33e4b1-0a99-4c1f-a6b8-154362a00c66", "06e32c55-bd03-4164-8dc4-c3f36e39575d", "25e25640-41c1-4a8c-a8f3-288fed7fb46e"]
   }, {
-    "id": "f7119734-cb63-4c70-b0d6-6c1ff8281761",
-    "name": "test",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
-  }, {
     "id": "6b30df35-a48e-4c91-9fb6-6ae47eaa85be",
     "name": "05 Recherches",
     "persistSession": false,
@@ -28839,6 +28832,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["d2e0733a-118a-4d98-a508-0b727abcfd3c", "fc3ad5c3-261a-481a-9f7e-1910280b2787", "02fea879-c742-4a8e-af1d-6df832e7a947", "639dbeb9-8199-4613-98e7-ae8948f484a2", "67bfd994-d024-48bd-a966-508263ad5687"]
+  }, {
+    "id": "40d04477-f2e7-4b20-bfd1-463ff672bcba",
+    "name": "11 modification fiche membre",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c548c5b3-dada-4e5d-af7f-2767bf5e2b6d", "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca", "340b4d62-de7f-4c00-a559-e4f6a2246f08"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
