@@ -383,3 +383,18 @@ function compter()
 	return o;
 }
 
+// additionner les codes des nb premiers caractères d'une chaîne
+// @pre nb <= chaine.length
+function calculer(nb, chaine)
+{
+	let somme = 0;
+	for (let i = 0; i < nb; ++i) {
+		somme += chaine.charCodeAt(i);
+	}
+	return somme;
+}
+
+function mod(courriel)
+{
+	return courriel.substr(0, courriel.indexOf('@')) + "@ici.bzh";
+}
