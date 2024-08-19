@@ -27653,7 +27653,7 @@
       "id": "20ade5bb-6b60-4bc1-b242-341e07d2ec02",
       "comment": "afficher dans la liste",
       "command": "check",
-      "target": "xpath=//input[@id=\"f_list_table_1\"]",
+      "target": "id=f_list_table_1",
       "targets": [],
       "value": ""
     }, {
@@ -27814,6 +27814,27 @@
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
       "value": "${surnom}"
+    }, {
+      "id": "4a0698e9-cdff-4e39-9e74-81a97de40993",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/users/\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa4f70ea-2669-4e4a-9695-3cff3c635db4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"surnom\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26b83690-1ae4-4782-a4f0-b88825d1d7b7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "history.back()",
+      "targets": [],
+      "value": ""
     }, {
       "id": "f9d83865-0614-4ba0-93f2-5751a1b3f9fc",
       "comment": "",
@@ -28099,6 +28120,20 @@
       "comment": "",
       "command": "assertElementNotPresent",
       "target": "xpath=//th[text()=\"${libelle_champ}\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2384d69f-4c58-451a-81e0-dca879d67f32",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/users/\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aa7dae4-a0e7-40a8-9afb-866382235c78",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"surnom\")]",
       "targets": [],
       "value": ""
     }]
