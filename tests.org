@@ -91,17 +91,25 @@ ce qui ne fonctionne pas avec firefox ?
 *** Envoi de fichier
 Ne fonctionne qu'avec chrome
 
-** DONE Installation
+*** Exception javascript (CORRIGÉ)
+quand l'inspecteur est ouvert, le clic sur le sélecteur d'identité des
+membres (Configuration/Membres/Préférences) déclenche une exception
+javascript (TypeError: document.querySelector(...) is null) sur l'instruction :
+#+BEGIN_SRC javascript
+document.querySelector('input').focus();
+#+END_SRC
+
+** DONE 01 Installation
 *** DONE installation initiale
 *** DONE installation sur base existante
 *** DONE vérification premier membre
-** DONE Connexion
+** DONE 02 Connexion
 *** DONE connexion correcte
 *** DONE connexion échec identifiant
 *** DONE connexion échec mdp
 ** TODO Membres
 *** DONE virer commandes d'affichage
-*** DONE créer un membre
+*** DONE 03 créer un membre
 **** données de la fiche membre
 - Catégorie : choisir parmi les possibilités
 - Rattacher à un membre : non / choisir un membre
@@ -132,7 +140,7 @@ Ne fonctionne qu'avec chrome
 **** DONE date postérieure max
 **** DONE nom en double refusé
 **** DONE nom en double accepté
-*** DONE lister les membres
+*** DONE 04 lister les membres
 **** DONE ajouter ville pour vérif tri par ville
 **** DONE toutes les catégories
 ***** DONE gérer le cas où les membres occupent plus d'une page
@@ -166,7 +174,7 @@ membre, puis son numéro :
 is_parent ASC, nom_membre DESC, numero DESC
 
 **** DONE consulter fiche
-*** DONE rechercher des membres
+*** DONE 05 rechercher des membres
 **** Remarques :
 - si la recherche trouve un seul résultat, elle affiche directement la
   fiche du membre
@@ -185,12 +193,12 @@ is_parent ASC, nom_membre DESC, numero DESC
 ***** DONE un seul résultat => fiche membre
 ***** DONE 0 résultat => onglet « Recherche avancée »
 ***** DONE plusieurs résultats => onglet « Recherche avancée »
-*** DONE supprimer un membre
+*** DONE 06 supprimer un membre
 NB : le tri des membres ne change pas après suppression
 **** DONE plusieurs membres sélectionnés
 **** DONE sélectionné = admin (ou connecté ?)
 **** aucun membre sélectionné => action interdite
-*** DONE modifier un membre
+*** DONE 07 modifier un membre
 **** DONE modifier caractéristiques « simples »
  - si un seul membre => en créer un deuxième
  - chercher le premier numéro disponible
@@ -224,7 +232,7 @@ NB : le tri des membres ne change pas après suppression
 - créer deux membres et mémoriser leurs numéros
 - rattacher le premier au deuxième à l'aide de son numéro
 - vérifier les deux membres
-*** DONE importer des membres
+*** DONE 08 importer des membres
 **** Remarques
 - Si déjà tu peux tester qu'un fichier CSV donné s'importe bien, c'est
   déjà génial je pense
@@ -248,7 +256,7 @@ NB : le tri des membres ne change pas après suppression
 - Met à jour la fiche d'un membre si son numéro existe, sinon crée un
   membre si le numéro de membre indiqué n'existe pas ou n'est pas
   renseigné.
-*** DONE exporter des membres
+*** DONE 09 exporter des membres
 
 Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 ça produit bien un fichier de plus de 0 octets ça sera bien.
@@ -261,15 +269,32 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 
 - avec l'IDE sous chrome : la version 107 de chrome ne supporte plus l'IDE ....
 
-*** TODO configuration membres Préférences
-**** TODO catégorie par défaut des nouveaux membres
-**** TODO champ utilisé comme identifiant connexion
-**** TODO champs utilisés pour définir identité
-**** TODO ¿ Rattachement de membres ?
-**** TODO ¿ durée de conservation journaux d'activité ?
-**** TODO déconnexion automatique
-*** TODO configuration membres Fiche
+*** DONE 10 configuration membres Préférences
+**** DONE 10-01 catégorie par défaut des nouveaux membres
+**** DONE champs utilisés pour définir identité
+***** DONE 10-02 ajouter adresse courriel au champ Nom & Prénom
+***** DONE 10-03 remplacer le champ Nom & Prénom par le champ courriel
+**** DONE identifiant connexion
+***** DONE 10-04 connexion par numéro
+**** DONE durée de conservation journaux d'activité
+***** DONE 10-05 journal : aucun
+- créer un membre
+- lui attribuer un mot de passe
+- mettre la durée de conservatin à 0
+- déconnexion admin
+- connexion du membre
+- vérifier journal connexion vide
+- déconnexion
+- connexion admin
+- vérification absence membre dans journal
+**** ¿ déconnexion automatique ?
+*** TODO 11 configuration membres Fiche
 **** TODO ajouter un champ à la fiche membre
+PB : le bouton de suppression finale du champ est pris en compte par
+l'IDE mais pas toujours par le runner
+***** DONE 11-01 ajout année naissance
+***** DONE 11-02 ajout champ perso texte libre
+***** DONE 11-03 ajout champ perso texte choix multiple
 **** TODO modifier un champ de la fiche membre
 **** TODO changer l'ordre des champs de la fiche membre
 
@@ -282,7 +307,7 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
  -> modifier les champs pour l'identité du membre
 
 **** TODO supprimer un champ dans la fiche membre
-*** TODO configuration membres Catégories et Droits
+*** TODO 12 configuration membres Catégories et Droits
 **** TODO ajouter une catégorie
 **** TODO modifier une catégorie
 **** TODO supprimer une catégorie
