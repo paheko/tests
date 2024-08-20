@@ -29690,13 +29690,6 @@
       "targets": [],
       "value": "code"
     }, {
-      "id": "4b0fc178-8b05-4f03-bd90-a16ea3e7fbdb",
-      "comment": "",
-      "command": "echo",
-      "target": "nom=${nom}, code=${code}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "5e619452-54b7-465e-99bf-51e106b8bc33",
       "comment": "",
       "command": "assertText",
@@ -29946,6 +29939,20 @@
       "targets": [],
       "value": "${libelle_champ}"
     }, {
+      "id": "7a9c1b1c-679e-4383-bc87-7c58778b1350",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return g.normalizeString(${libelle_champ}).replace(/[^a-z_]+/g, '_')",
+      "targets": [],
+      "value": "nom_champ"
+    }, {
+      "id": "088bd161-f32e-4407-b740-d6b26cbeb519",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 'f_' + ${nom_champ}",
+      "targets": [],
+      "value": "id_champ"
+    }, {
       "id": "735f4a84-64c4-4c2d-a2ec-2dba3368aa51",
       "comment": "Afficher dans la liste des membres",
       "command": "check",
@@ -30061,12 +30068,12 @@
       "command": "executeScript",
       "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
       "targets": [],
-      "value": "courriel"
+      "value": "valeur_champ"
     }, {
       "id": "d20f75bd-3b1a-41e9-b6cf-65eb1241467d",
       "comment": "",
       "command": "type",
-      "target": "id=f_courriel",
+      "target": "id=${id_champ}",
       "targets": [
         ["id=f_email", "id"],
         ["name=email", "name"],
@@ -30074,7 +30081,7 @@
         ["xpath=//input[@id='f_email']", "xpath:attributes"],
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
-      "value": "${courriel}"
+      "value": "${valeur_champ}"
     }, {
       "id": "42a1c013-fcac-40c9-893f-4609e6ebc53c",
       "comment": "",
@@ -30122,7 +30129,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${courriel}"
+      "value": "${valeur_champ}"
     }, {
       "id": "1fbce62f-0977-4f2c-8a2d-2c4fd46b58fc",
       "comment": "",
@@ -30134,7 +30141,7 @@
       "id": "c84d0825-2d68-4938-9705-f83cee257740",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"courriel\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"${nom_champ}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -30262,7 +30269,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${courriel}"
+      "value": "${valeur_champ}"
     }, {
       "id": "d38db739-64c6-446a-a4e2-67e20a437523",
       "comment": "",
@@ -30274,16 +30281,16 @@
       "id": "f5cab3f7-8065-4ff9-8ba3-679e816bf066",
       "comment": "",
       "command": "executeScript",
-      "target": "function mod(courriel) { return courriel.substr(0, courriel.indexOf('@')) + \"@ici.bzh\"; } return mod(${courriel})",
+      "target": "function mod(courriel) { return courriel.substr(0, courriel.indexOf('@')) + \"@ici.bzh\"; } return mod(${valeur_champ})",
       "targets": [],
-      "value": "courriel_mod"
+      "value": "valeur_champ"
     }, {
       "id": "2bd14fe2-9b27-4af5-871f-ed4ff6871cce",
       "comment": "",
       "command": "type",
-      "target": "id=f_courriel",
+      "target": "id=${id_champ}",
       "targets": [],
-      "value": "${courriel_mod}"
+      "value": "${valeur_champ}"
     }, {
       "id": "aec309a1-bd74-4bb4-8f51-88d2476f4667",
       "comment": "",
@@ -30303,7 +30310,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${courriel_mod}"
+      "value": "${valeur_champ}"
     }, {
       "id": "ac3720b5-6c24-47bd-961f-a3b0e247b74b",
       "comment": "Déconnexion membre",
@@ -30442,7 +30449,7 @@
       "id": "54eb8b6c-22e6-4c7e-bef4-eb779b807fe8",
       "comment": "",
       "command": "assertElementNotPresent",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"courriel\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"${nom_champ}\")]",
       "targets": [],
       "value": ""
     }]
