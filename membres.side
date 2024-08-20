@@ -28932,6 +28932,13 @@
       "targets": [],
       "value": "${libelle_champ}"
     }, {
+      "id": "47d2595b-7bb0-4efa-a560-5085b7322f28",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 'f_' + g.normalizeString(${libelle_champ}).replace(/[^a-z_]+/g, '_')",
+      "targets": [],
+      "value": "id_champ"
+    }, {
       "id": "814d2a1a-ca2e-40a4-b9c0-92b0b09403f3",
       "comment": "",
       "command": "type",
@@ -29040,12 +29047,12 @@
       "command": "store",
       "target": "Je suis né\\nvoici longtemps",
       "targets": [],
-      "value": "texte_bio"
+      "value": "valeur_champ"
     }, {
       "id": "acc48e40-1c9b-4ad9-abc2-012e23a9d2ae",
       "comment": "",
       "command": "type",
-      "target": "id=f_biographie",
+      "target": "id=${id_champ}",
       "targets": [
         ["id=f_biographie", "id"],
         ["name=biographie", "name"],
@@ -29053,7 +29060,7 @@
         ["xpath=//textarea[@id='f_biographie']", "xpath:attributes"],
         ["xpath=//dd[14]/textarea", "xpath:position"]
       ],
-      "value": "${texte_bio}"
+      "value": "${valeur_champ}"
     }, {
       "id": "bc89630b-ba40-4894-940b-fa14ad7d2d6f",
       "comment": "",
@@ -29101,7 +29108,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${texte_bio}"
+      "value": "${valeur_champ}"
     }, {
       "id": "9d1bc5d4-cd90-4193-9595-30311c46fd49",
       "comment": "",
@@ -29220,7 +29227,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${texte_bio}"
+      "value": "${valeur_champ}"
     }, {
       "id": "0baa2a46-7590-4732-9aa5-20931e8ea52e",
       "comment": "",
@@ -29234,12 +29241,12 @@
       "command": "store",
       "target": "Pas grand chose à dire\\nTout roule",
       "targets": [],
-      "value": "texte_bio_mod"
+      "value": "valeur_champ"
     }, {
       "id": "f87dce78-4756-4c35-9234-1fec05e12610",
       "comment": "",
       "command": "type",
-      "target": "id=f_biographie",
+      "target": "id=${id_champ}",
       "targets": [
         ["id=f_biographie", "id"],
         ["name=biographie", "name"],
@@ -29247,7 +29254,7 @@
         ["xpath=//textarea[@id='f_biographie']", "xpath:attributes"],
         ["xpath=//dd[14]/textarea", "xpath:position"]
       ],
-      "value": "${texte_bio_mod}"
+      "value": "${valeur_champ}"
     }, {
       "id": "f674b308-3cba-42db-adf6-19e1d16cd794",
       "comment": "",
@@ -29267,7 +29274,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${texte_bio_mod}"
+      "value": "${valeur_champ}"
     }, {
       "id": "121538e9-bcb0-413a-9c70-f1b7831fb033",
       "comment": "Déconnexion membre",
