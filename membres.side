@@ -27650,6 +27650,20 @@
       "targets": [],
       "value": "${libelle_champ}"
     }, {
+      "id": "845fdf99-1b9f-4c77-87b6-fbf0ade6608b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return g.normalizeString(${libelle_champ}).replace(/[^a-z_]+/g, '_')",
+      "targets": [],
+      "value": "nom_champ"
+    }, {
+      "id": "2c288443-6692-43ee-aa6f-60aac15d8c84",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 'f_' + ${nom_champ}",
+      "targets": [],
+      "value": "id_champ"
+    }, {
       "id": "20ade5bb-6b60-4bc1-b242-341e07d2ec02",
       "comment": "afficher dans la liste",
       "command": "check",
@@ -27758,14 +27772,14 @@
       "command": "store",
       "target": "polo",
       "targets": [],
-      "value": "surnom"
+      "value": "valeur_champ"
     }, {
       "id": "073a7fc5-5f65-4726-9568-b083c9f77469",
       "comment": "",
       "command": "type",
-      "target": "id=f_surnom",
+      "target": "id=${id_champ}",
       "targets": [],
-      "value": "${surnom}"
+      "value": "${valeur_champ}"
     }, {
       "id": "1313a108-34ec-46a7-b9a3-87df1e191f5f",
       "comment": "",
@@ -27813,7 +27827,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${surnom}"
+      "value": "${valeur_champ}"
     }, {
       "id": "4a0698e9-cdff-4e39-9e74-81a97de40993",
       "comment": "",
@@ -27825,7 +27839,7 @@
       "id": "fa4f70ea-2669-4e4a-9695-3cff3c635db4",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"surnom\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"${nom_champ}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -27953,7 +27967,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${surnom}"
+      "value": "${valeur_champ}"
     }, {
       "id": "1c880cb2-fee1-4bd7-8075-7a0b71edaedc",
       "comment": "",
@@ -27967,14 +27981,14 @@
       "command": "store",
       "target": "marco",
       "targets": [],
-      "value": "surnom"
+      "value": "valeur_champ"
     }, {
       "id": "ba6cd831-80eb-4206-b1d7-38372904088c",
       "comment": "",
       "command": "type",
-      "target": "id=f_surnom",
+      "target": "id=${id_champ}",
       "targets": [],
-      "value": "${surnom}"
+      "value": "${valeur_champ}"
     }, {
       "id": "6491e095-4aab-41e0-88fe-9c1f4b0fbca7",
       "comment": "",
@@ -27994,7 +28008,7 @@
       "command": "assertText",
       "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
       "targets": [],
-      "value": "${surnom}"
+      "value": "${valeur_champ}"
     }, {
       "id": "bf886799-82d7-48fc-a5b5-f527f2fc6640",
       "comment": "Déconnexion",
@@ -28133,7 +28147,7 @@
       "id": "7aa7dae4-a0e7-40a8-9afb-866382235c78",
       "comment": "",
       "command": "assertElementNotPresent",
-      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"surnom\")]",
+      "target": "xpath=//thead[@class=\"userOrder\"]//a[contains(@href,\"${nom_champ}\")]",
       "targets": [],
       "value": ""
     }]
