@@ -145,9 +145,10 @@ then
 	exit $?
 fi
 
-# fichiers csv
+# copie les fichiers à envoyer dans /tmp
 rm -f Membres*.csv *membres.csv
 cp -p *.csv /tmp
+cp -p cv*.pdf /tmp
 
 if [[ "$TESTS" == "tous" ]]
 then
