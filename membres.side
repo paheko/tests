@@ -39230,20 +39230,6 @@
       "targets": [],
       "value": "libelle_champ"
     }, {
-      "id": "58025169-a7a4-4f8f-8016-336ecbf71dd4",
-      "comment": "",
-      "command": "store",
-      "target": "anciennete",
-      "targets": [],
-      "value": "nom_champ"
-    }, {
-      "id": "4145a4c8-a8f8-492c-a41f-8d06fcb6e75d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 'f_' + ${nom_champ}",
-      "targets": [],
-      "value": "id_champ"
-    }, {
       "id": "4e5a2055-020d-4118-b012-cc3c5bf60603",
       "comment": "",
       "command": "check",
@@ -39526,6 +39512,397 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "8462cb7c-312b-4a01-a91d-bbe93166deab",
+    "name": "11-31 ajout date naissance",
+    "commands": [{
+      "id": "9008f58e-d008-4863-84d1-ec80437acc57",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e87862ef-6a14-4194-9e6b-4668a1a7f9d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4c343d6-053b-4084-8c05-321b4b155c71",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "0672ab68-2883-46d5-8734-a3158c9673f5",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4da1722c-c44d-4b0f-bef4-ed284e2653c2",
+      "comment": "identifiant",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "dd9f5a1c-67b1-43ea-9f2c-a83c409ad2e1",
+      "comment": "mot de passe",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "f57bf62d-9f5f-4e51-9ef1-4a8b29f6ba93",
+      "comment": "Connexion",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aaabc1e3-c3fa-46c3-885a-e0d298b9aac1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13f642d6-ae48-4f2d-9776-c8b9ba65ce62",
+      "comment": "ajouter champ date naissance",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45b6374b-8337-4260-8cba-3a137a8f7d49",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b5da56a-f2fc-49e0-86b8-c60a16f91bab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e00665b-7e7d-4ef5-a626-2a9ebb6f5820",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24c6911f-4266-4c64-bd2b-9becd7ef0700",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@href=\"new.php\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ea9ebf4-ac48-4d11-990e-7b033ab7a5cc",
+      "comment": "",
+      "command": "store",
+      "target": "Date de naissance complète",
+      "targets": [],
+      "value": "libelle_champ"
+    }, {
+      "id": "0e9b377c-bca4-43de-acda-657a404f7b18",
+      "comment": "",
+      "command": "check",
+      "target": "id=f_preset_date_naissance",
+      "targets": [
+        ["css=#f_default_category > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='2']", "xpath:attributes"],
+        ["xpath=//select[@id='f_default_category']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Anciens membres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07fbd75a-0a46-4826-a996-d79448860c36",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fd20086-d53b-4340-be14-001daa509ee7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//p[contains(@class,\"confirm\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8360f8b-ff8b-48ed-98b1-b5a2baf6c54f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e33d0a7-c861-40db-961c-a039b9b69246",
+      "comment": "créer un membre",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53652bdb-df29-46ab-b91d-4161d9abb4d2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ajouter",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01585335-dc5b-4828-a3f3-bc1a1f5af742",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero"
+    }, {
+      "id": "ee69d974-e5b3-41ab-84fe-888939f6990e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom"
+    }, {
+      "id": "a015c311-d81d-488d-a1bf-6a18a36f7395",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom}"
+    }, {
+      "id": "f39ca79f-83d4-4166-b99a-424d4cdc2e80",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@\" + chaine(5) + \".fr\"",
+      "targets": [],
+      "value": "courriel"
+    }, {
+      "id": "14c43910-5325-48a9-b4ec-f37ddb15cc8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel}"
+    }, {
+      "id": "e1d7b2c0-9e8c-484e-a3d3-3520a508cc9a",
+      "comment": "",
+      "command": "store",
+      "target": "15/06/2007",
+      "targets": [],
+      "value": "valeur_champ"
+    }, {
+      "id": "3df30278-1499-4038-89b3-7486f9ed305f",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_date_naissance",
+      "targets": [],
+      "value": "${valeur_champ}"
+    }, {
+      "id": "95cf551c-3d07-4a8a-ac30-0ecd8167d30f",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b29ac546-3f2b-462c-a19e-8e5c0790f4ca",
+      "comment": "vérifier infos membre",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b37e8aba-8709-4ab5-888c-73d69d205ae4",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero}"
+    }, {
+      "id": "f9e61085-e030-40e8-bb5b-a6654df183d0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom}"
+    }, {
+      "id": "66091cd4-c0e9-4dcf-bd43-8193671a4d7a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "${courriel}"
+    }, {
+      "id": "87cdc6fa-e198-4ce4-80d8-45d8ba3161c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "targets": [],
+      "value": "${valeur_champ}"
+    }, {
+      "id": "7410b16f-775b-4313-8313-d8d7532454c7",
+      "comment": "supprimer le champ ajouté",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1de9a3d6-4b17-4d61-a88c-80df008f9840",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41dd2da5-c8c6-4571-9a23-480135ac6172",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bfc8265-c597-4597-8423-f252f96ce41a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60690e3c-901d-40f6-b110-c0310c4474e5",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tbody/tr",
+      "targets": [],
+      "value": "nb_champs"
+    }, {
+      "id": "b913d936-fda5-4d41-8ff0-a1eadf28038d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28ea83de-093f-4dd3-b753-fcb7f3c54f8e",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdc44a84-607c-414c-ae5c-f81bdecb86f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=label",
+      "targets": [
+        ["css=label", "css:finder"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Cocher cette case pour supprimer le champ, cela effacera de manière permanente cette donnée de toutes les fiches membres.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f25c9a8d-2f62-4712-9650-f70b0ae2e2ff",
+      "comment": "",
+      "command": "click",
+      "target": "name=delete",
+      "targets": [
+        ["name=delete", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='delete']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a449ee4-8bdd-4d4b-9c65-22c6c86ac3e9",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "54911326-a6af-4428-9fc4-559fa34fba88",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "6bdd4e16-7197-4388-9a5f-350523eb6c98",
@@ -39603,7 +39980,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c548c5b3-dada-4e5d-af7f-2767bf5e2b6d", "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca", "340b4d62-de7f-4c00-a559-e4f6a2246f08", "7a858aed-70b7-4c7a-bc4f-799216bb455b", "4073d67e-c10e-4c4a-a994-b6c8e2520b19", "ba5e6368-646b-447e-9e5e-3c3cdded211a", "482dfae4-a690-4334-a7f0-6207ab17e15b", "e465aafe-cbe2-47d2-853f-ad1df276fbfb", "4ca407f4-01a9-466a-89ee-c7d772a0281e", "1af743ad-6fd1-4adc-a2e7-0bc3bfbc026e", "ee2ad930-7a67-41d0-9723-fec221c087e3", "a0a6c815-f9c9-49ae-ab27-4163b3938ca6", "34ba9dd6-5286-4f13-8258-f3250cc09186", "950a6823-ce21-4ddc-a5f8-75902d8d59a0", "f3d16774-e224-4813-8a5a-f9dc795ba159", "2949f623-c0f5-47b8-beb0-38a9d3e42a8c", "01eaf4aa-1799-4407-83c4-ae2ed011ac63", "9ce79904-4a45-4a8f-89b5-5a18e73e374b", "9ba45fa6-cbe4-4bea-8de6-d57505df827b", "2f90c2f6-6b1b-4703-abc9-a137b58f0443"]
+    "tests": ["c548c5b3-dada-4e5d-af7f-2767bf5e2b6d", "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca", "340b4d62-de7f-4c00-a559-e4f6a2246f08", "7a858aed-70b7-4c7a-bc4f-799216bb455b", "4073d67e-c10e-4c4a-a994-b6c8e2520b19", "ba5e6368-646b-447e-9e5e-3c3cdded211a", "482dfae4-a690-4334-a7f0-6207ab17e15b", "e465aafe-cbe2-47d2-853f-ad1df276fbfb", "4ca407f4-01a9-466a-89ee-c7d772a0281e", "1af743ad-6fd1-4adc-a2e7-0bc3bfbc026e", "ee2ad930-7a67-41d0-9723-fec221c087e3", "a0a6c815-f9c9-49ae-ab27-4163b3938ca6", "34ba9dd6-5286-4f13-8258-f3250cc09186", "950a6823-ce21-4ddc-a5f8-75902d8d59a0", "f3d16774-e224-4813-8a5a-f9dc795ba159", "2949f623-c0f5-47b8-beb0-38a9d3e42a8c", "01eaf4aa-1799-4407-83c4-ae2ed011ac63", "9ce79904-4a45-4a8f-89b5-5a18e73e374b", "9ba45fa6-cbe4-4bea-8de6-d57505df827b", "2f90c2f6-6b1b-4703-abc9-a137b58f0443", "8462cb7c-312b-4a01-a91d-bbe93166deab"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
