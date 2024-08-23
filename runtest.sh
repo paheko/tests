@@ -39,17 +39,23 @@ traiter_test()
 	motif="^Ran all test suites.*"
 	while read line
 	do
-		echo "$line"
 		if
-			echo $line | grep -q -E -e "$motif"
+			echo "$line" | grep -q -e "Playback._executionLoop"
 		then
-			echo "** Fini ***"
-			pids=$(pgrep --full selenium-side-runner)
-			if [[ -n "$pids" ]]
+			continue
+		else
+			echo "$line"
+			if
+				echo $line | grep -q -E -e "$motif"
 			then
-				kill $pids
+				echo "** Fini ***"
+				pids=$(pgrep --full selenium-side-runner)
+				if [[ -n "$pids" ]]
+				then
+					kill $pids
+				fi
+				ps faux | grep selenium-side-runner | grep -v grep
 			fi
-			ps faux | grep selenium-side-runner | grep -v grep
 		fi
 	done
 }
