@@ -398,3 +398,35 @@ function mod(courriel)
 {
 	return courriel.substr(0, courriel.indexOf('@')) + "@ici.bzh";
 }
+
+// fabriquer chaîne date + heure
+return ${valeur_champ_date} + " à " + ${valeur_champ_time}.replace(/:/, "h")
+
+// calculer le nombre d'années entières entre deux dates
+// d1 : sous la forme jj/mm/aaaa
+// d2 : Date avec d1 <= d2
+function diff(d1, d2)
+{
+	let [j1, m1, a1] = d1.split('/').map((x) => Number(x));
+	let a2 = d2.getFullYear();
+	let m2 = d2.getMonth() + 1;
+	let j2 = d2.getDate();
+	let diffAnnee = a2 - a1;
+	if ((m2 < m1) || (m2 == m1 && j2 < j1)) { --diffAnnee; }
+	return diffAnnee;
+}
+
+return diff("30/10/2015", new Date());
+
+// cas où la deuxième date est celle du jour
+function diff(d1)
+{
+	let [j1, m1, a1] = d1.split('/').map((x) => Number(x));
+	const d2 = new Date();
+	let a2 = d2.getFullYear();
+	let m2 = d2.getMonth() + 1;
+	let j2 = d2.getDate();
+	let diffAnnee = a2 - a1;
+	if ((m2 < m1) || (m2 == m1 && j2 < j1)) { --diffAnnee; }
+	return diffAnnee;
+}
