@@ -298,6 +298,41 @@ l'IDE mais pas toujours par le runner
 ***** DONE 11-04 ajout champ perso texte multilignes
 ***** DONE 11-05 ajout champ perso calculé
 ***** DONE 11-06 ajout champ perso email
+***** DONE 11-07 ajout champ perso url
+***** DONE 11-08 ajout champ perso case à cocher
+***** DONE 11-09 ajout champ perso date
+***** DONE 11-10 ajout champ perso date et heure
+***** DONE 11-11 ajout champ perso année
+***** DONE 11-12 ajout champ perso fichier
+- utilise les fichiers /tmp/cv.pdf et /tmp/cv2.pdf
+- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
+***** DONE 11-13 ajout champ perso mot de passe
+- question :  ce mot de passe ne sert pas à se connecter, donc à quoi sert-il ?
+- pour vérifier le mot de passe, il faut :
+  - connecter le membre
+  - modifier les infos personnelles
+  - afficher le mot de passe :
+	- NB : le mdp qui s'affiche (en fonctionnement interactif) est
+      celui enregistré par le navigateur pour l'admin !!
+	- NB : en mode runner, le champ est vide =>impossible de vérifier le mdp
+  - Remarque : la modification du mot de passe est prise en compte mais on
+    ne peut le voir qu'en exportant les données de la fiche membre
+***** DONE 11-14 ajout champ perso nombre
+***** DONE 11-15 ajout champ perso nombre à virgule
+***** DONE 11-16 ajout champ perso numéro téléphone
+***** DONE 11-17 ajout champ perso Sélecteur à choix unique
+***** DONE 11-18 ajout champ perso Sélecteur à choix multiple
+***** DONE 11-19 ajout champ perso pays
+- Pour définir le pays par défaut, il faut indiquer son code à deux
+  lettres et non son nom complet => à documenter ou à changer
+***** TODO 11-xx ajout champ perso mois et année
+- PB : aucun contrôle sur le contenu de ce champ, on peut y saisir n'importe quoi
+***** DONE 11-30 ajout ancienneté
+- c'est un champ calculé à partir de la date d'inscription
+***** DONE 11-31 ajout date naissance
+***** DONE 11-32 ajout pays
+***** TODO ¿ saisir une donnée erronée dans chaque champ ?
+Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
 **** TODO modifier un champ de la fiche membre
 **** TODO changer l'ordre des champs de la fiche membre
 
