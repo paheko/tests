@@ -27405,7 +27405,7 @@
       "id": "bc015ec8-c06a-487e-8390-ba796ee26a7d",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${annee_naissance}"
     }, {
@@ -27825,7 +27825,7 @@
       "id": "4d59e3ee-d889-4c64-8ace-4e8676d0e484",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -27965,7 +27965,7 @@
       "id": "9f0c4f68-152e-4d80-a312-c9945fce277b",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -28006,7 +28006,7 @@
       "id": "05573975-1c01-434a-8205-77bc52b9921d",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -28508,7 +28508,7 @@
       "id": "e0c035ca-dc33-4e93-960d-4ace82aac75b",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_2}"
     }, {
@@ -28627,7 +28627,7 @@
       "id": "8dc7d5c9-5c19-44b9-90d9-20f06cc1960e",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_2}"
     }, {
@@ -28672,7 +28672,7 @@
       "id": "9cd6dba1-8a53-4bf2-beaa-e943ac7f9b01",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_1}"
     }, {
@@ -29120,7 +29120,7 @@
       "id": "d1079935-c068-4c7f-a19f-54c3d6bac34f",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -29239,7 +29239,7 @@
       "id": "fe72d32e-9286-42cb-9360-7ace1cb44687",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -29286,7 +29286,7 @@
       "id": "f3b72b09-d9a3-44e3-a5f4-fa0bab6b1d1f",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -29714,7 +29714,7 @@
       "id": "5e619452-54b7-465e-99bf-51e106b8bc33",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${code}"
     }, {
@@ -30148,7 +30148,7 @@
       "id": "bf111ca8-cad8-4b1f-850c-2cdeef2408ed",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -30288,7 +30288,7 @@
       "id": "5d7b6cdc-3000-4053-aa9e-c1083f19acc5",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -30329,7 +30329,7 @@
       "id": "59da4f4a-0f69-4e14-ad32-7a93ea37f361",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -30805,7 +30805,7 @@
       "id": "2ea45acd-cc72-4669-9213-944e16f3c2f2",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -30945,7 +30945,7 @@
       "id": "0c6d4e34-64a3-4dce-9dd8-16e690664d88",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -30986,7 +30986,7 @@
       "id": "6ce190fb-e52e-4b4c-9dca-7601f649b17f",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -31456,7 +31456,7 @@
       "id": "a4919d00-dd2d-48cf-8995-ea615f601c53",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "Non"
     }, {
@@ -31575,7 +31575,7 @@
       "id": "e6e8273c-7457-435f-b724-a6945cafa32d",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "Non"
     }, {
@@ -31609,7 +31609,7 @@
       "id": "c815ec22-f069-465e-83ac-d14e60e889b5",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "Oui"
     }, {
@@ -32064,7 +32064,7 @@
       "id": "4d424969-8f8a-4001-9abc-ae7516af5084",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -32183,7 +32183,7 @@
       "id": "21e1f4ab-5095-417f-9bb0-19ab910f41be",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -32224,7 +32224,7 @@
       "id": "cee3ef4e-6fda-4a59-8dfc-eb48d541b700",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -32713,7 +32713,7 @@
       "id": "a300daff-929e-45f0-9192-e1ff1e4c97b1",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -32832,7 +32832,7 @@
       "id": "81653362-32c4-4ec3-8c28-e29088d1840e",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -32894,7 +32894,7 @@
       "id": "f1b743c3-f873-4903-bd45-d90f164574df",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -33349,7 +33349,7 @@
       "id": "3ec50296-c023-4de2-b5a0-e799fe3f41be",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -33468,7 +33468,7 @@
       "id": "1652091d-ed4f-4cbe-a281-3db0e4d95647",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -33509,7 +33509,7 @@
       "id": "ea9de1b1-7d00-4c91-9c62-0ab0c120a245",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -33958,7 +33958,7 @@
       "id": "e7d05a4c-d5f0-4a2a-8fe7-1e2922e56e5f",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }, {
@@ -34780,14 +34780,14 @@
       "id": "1c917456-b6c3-45cf-9d99-28df696a4650",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }, {
       "id": "be01e7e5-5298-45e9-af5c-db44390536df",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "*****"
     }, {
@@ -34906,14 +34906,14 @@
       "id": "19a1fc79-fc4d-4532-8d08-68f01756fa49",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }, {
       "id": "3848123f-7590-4139-8a26-111c794c4af5",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "*****"
     }, {
@@ -35416,7 +35416,7 @@
       "id": "5139e793-287d-45f9-a23e-eb7f65ae3a63",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -35535,7 +35535,7 @@
       "id": "98b8790d-1d98-49a7-8444-d2166c8d98c8",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -35576,7 +35576,7 @@
       "id": "cdb97ab4-d205-4b90-be48-d2028c2cc50f",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -36038,7 +36038,7 @@
       "id": "9e59f9e2-9cbb-4fa2-ad45-83ec56c4a9c9",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -36157,7 +36157,7 @@
       "id": "3e9c67a3-39df-4b2b-9363-116d98bfb8da",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -36205,7 +36205,7 @@
       "id": "1c9fdc20-c629-4623-9f2a-85b5d63c1979",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -36660,7 +36660,7 @@
       "id": "01edc872-c19f-4b23-9af4-58194e892a3c",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd/a",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd/a",
       "targets": [],
       "value": "numero_affiche"
     }, {
@@ -36793,7 +36793,7 @@
       "id": "dffac920-e473-435d-876e-a781a17214d1",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd/a",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd/a",
       "targets": [],
       "value": "numero_affiche"
     }, {
@@ -36848,7 +36848,7 @@
       "id": "c4ac428a-88ad-4e74-aa9a-1552b3001efd",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd/a",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd/a",
       "targets": [],
       "value": "numero_affiche"
     }, {
@@ -37374,7 +37374,7 @@
       "id": "cc33d10d-c9f4-43a8-b1b1-2e2e19fca565",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_2}"
     }, {
@@ -37493,7 +37493,7 @@
       "id": "1faae72e-a601-4538-aaac-2c4894f7ff04",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_2}"
     }, {
@@ -37527,7 +37527,7 @@
       "id": "689160b6-7f51-4ed1-a8c3-57766e71fb62",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${couleur_3}"
     }, {
@@ -37998,7 +37998,7 @@
       "id": "32893d64-5de7-4b69-8290-6ceddb8f3df0",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]",
       "targets": [],
       "value": "nb_sports"
     }, {
@@ -38012,14 +38012,14 @@
       "id": "37234b80-087b-4ca3-8ea5-1810218ede2b",
       "comment": "",
       "command": "click",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_1}\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_1}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "e9308fe6-f686-4f9d-a5fa-16d003e6f9cb",
       "comment": "",
       "command": "click",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_3}\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_3}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38067,7 +38067,7 @@
       "id": "ce5b0686-5d07-4e8a-ace5-42c031ff0d23",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
       "targets": [],
       "value": "sports_pratiques"
     }, {
@@ -38081,14 +38081,14 @@
       "id": "cc33d10d-c9f4-43a8-b1b1-2e2e19fca565",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "6cba5f8e-28ee-40eb-85a5-d7e72c04e732",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_3}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_3}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38207,7 +38207,7 @@
       "id": "0c818f01-f3dd-4497-963e-585d212f83d1",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
       "targets": [],
       "value": "sports_pratiques"
     }, {
@@ -38221,14 +38221,14 @@
       "id": "c0731dd8-6ec9-40fa-a8fc-e8df4a7ac746",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "8f02dad9-2820-44af-a185-495fc5b216a5",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_3}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_3}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38242,21 +38242,21 @@
       "id": "d0e62546-747d-4a54-ae33-6910b3da4631",
       "comment": "",
       "command": "click",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_3}\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_3}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "3e09658c-013d-4b78-adfa-f79138836fc4",
       "comment": "",
       "command": "click",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_2}\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_2}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "fda106e4-e6c1-41d1-94e0-2639c2e7b22c",
       "comment": "",
       "command": "click",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_4}\")]",
+      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_4}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38276,7 +38276,7 @@
       "id": "c3b18b96-fdf9-4ce9-80a1-1016a9fe69d4",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
       "targets": [],
       "value": "sports_pratiques"
     }, {
@@ -38290,21 +38290,21 @@
       "id": "a9d2576f-026f-4be2-93db-d9f9088f02a1",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "6c66c7f3-28ea-4915-b825-3c85a6c952db",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_2}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_2}\")]",
       "targets": [],
       "value": ""
     }, {
       "id": "2c09b02f-45cc-4542-8c95-06f7905686e9",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd//li[contains(text(), \"${sport_4}\")]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_4}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38795,7 +38795,7 @@
       "id": "70afe3b5-bae8-477d-ba2f-82db90070b73",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -38935,7 +38935,7 @@
       "id": "980362e2-070b-4f3e-84f5-72b8690a06ac",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -38983,7 +38983,7 @@
       "id": "376696de-b508-478d-970b-f7c7986a64c6",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -39403,7 +39403,7 @@
       "id": "a9e21893-0382-4640-907f-a9e9d46407e0",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${difference_annee}"
     }, {
@@ -39794,7 +39794,7 @@
       "id": "87cdc6fa-e198-4ce4-80d8-45d8ba3161c0",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -40262,7 +40262,7 @@
       "id": "a7409078-d04b-47bd-9b1a-560958b04615",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -40388,7 +40388,7 @@
       "id": "5f5cc558-8cf5-485c-b8a7-c284106009d8",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
@@ -40436,7 +40436,7 @@
       "id": "25df8ad1-f403-47a0-b93f-08eafafca274",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//dt[contains(.,\"${libelle_champ}\")]/following-sibling::dd",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${valeur_champ}"
     }, {
