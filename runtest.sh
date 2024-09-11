@@ -24,13 +24,13 @@ Exécuter un, plusieurs ou tous les tests d'un fichier de test Selenium
 Appel : $(basename $0) [-f fichier] [-a] [-c] [-n] [-z répertoire] [-h] [test ..]
 
 -f fichier    : fichier de test (défaut : membres.side)
--a		      : exécuter tous les tests du fichier
--c		      : afficher la fenêtre de chrome
--n		      : ne pas tuer le processus en fin de test
--v			  : afficher la ligne de commande
+-a            : exécuter tous les tests du fichier
+-c            : afficher la fenêtre de chrome
+-n            : ne pas tuer le processus en fin de test
+-v            : afficher la ligne de commande
 -z répertoire : sauver une copie d'écran dans le répertoire indiqué
--h		      : afficher cette aide
-test	      : nom (partiel ou complet) d'un test ou d'une suite à exécuter
+-h            : afficher cette aide
+test          : nom (partiel ou complet) d'un test ou d'une suite à exécuter
 EOF
 }
 
@@ -61,20 +61,21 @@ traiter_test()
 }
 
 # les constantes
-CHROME_OPTIONS=disable-search-engine-choice-screen
+CHROME_OPTIONS=disable-search-engine-choice-screen,disable-infobars
 JEST_OPTIONS='"\"--detectOpenHandles\""'
 TIMEOUT=1000000
 
 # les options
 IMGDIR=""
 KILL=1
-TESTFILE=membres_v4.side
+TESTFILE=membres_v3.side
 declare -A options
 options=(
 	[--jest-timeout]=${TIMEOUT}
 	[--jest-options]=${JEST_OPTIONS}
 )
 
+ARGS=""
 # Traiter les arguments
 while [[ $# -gt 0 ]]
 do
@@ -83,9 +84,9 @@ do
 			shift
 			TESTFILE="$1"
 			if
-				! echo "$TESTFILE" | grep -q -e "_v4"
+				! echo "$TESTFILE" | grep -q -e "_v3"
 			then
-				TESTFILE=$(basename "$TESTFILE" ".side")_v4.side
+				TESTFILE=${TESTFILE/.side/_v3.side}
 			fi
 			shift
 			;;
@@ -115,9 +116,13 @@ do
 			mkdir -p $IMGDIR
 			shift
 			;;
-		"-h" | -? )
+		-h | -? )
 			aide
 			exit
+			;;
+		-* )
+			ARGS+=" $1"
+			shift
 			;;
 		* )
 			# exécuter les tests fournis en argument
@@ -138,7 +143,7 @@ then
 fi
 
 # la commande
-COMMANDE=selenium-side-runner
+COMMANDE="selenium-side-runner $ARGS"
 for elem in ${!options[@]}
 do
 	COMMANDE="${COMMANDE} $elem ${options[$elem]}"
@@ -151,7 +156,7 @@ then
 	exit $?
 fi
 
-# copie les fichiers à envoyer dans /tmp
+# copier les fichiers à envoyer dans /tmp
 rm -f Membres*.csv *membres.csv
 cp -p *.csv /tmp
 cp -p cv*.pdf /tmp
