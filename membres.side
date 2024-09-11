@@ -27125,7 +27125,7 @@
     }]
   }, {
     "id": "c548c5b3-dada-4e5d-af7f-2767bf5e2b6d",
-    "name": "11-01 ajout année naissance",
+    "name": "11-31 ajout année naissance",
     "commands": [{
       "id": "fad4e699-eb78-4fc8-8e60-a24dd2fe416a",
       "comment": "",
@@ -27516,7 +27516,7 @@
     }]
   }, {
     "id": "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca",
-    "name": "11-02 ajout texte libre",
+    "name": "11-16 ajout texte libre",
     "commands": [{
       "id": "c3fd3819-d125-49a9-9c12-66133228fd6d",
       "comment": "",
@@ -27634,6 +27634,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "8aaf1bef-ff65-4e2f-923c-d2f5d7ac1b66",
+      "comment": "Texte libre, plusieurs lignes",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_type\"]/option[@value=\"text\"]",
+      "targets": [],
       "value": ""
     }, {
       "id": "5e66a5ed-bd1c-41f1-86e8-5ac431d8db90",
@@ -28153,7 +28160,7 @@
     }]
   }, {
     "id": "340b4d62-de7f-4c00-a559-e4f6a2246f08",
-    "name": "11-03 ajout texte choix",
+    "name": "11-17 ajout texte choix multiple",
     "commands": [{
       "id": "b650089f-b23b-4f7d-bf7a-0d0278240389",
       "comment": "",
@@ -28805,7 +28812,7 @@
     }]
   }, {
     "id": "7a858aed-70b7-4c7a-bc4f-799216bb455b",
-    "name": "11-04 ajout texte multilignes",
+    "name": "11-18 ajout texte plusieurs lignes",
     "commands": [{
       "id": "8592d352-6761-405d-8b97-0c542c3831e4",
       "comment": "",
@@ -29419,7 +29426,7 @@
     }]
   }, {
     "id": "4073d67e-c10e-4c4a-a994-b6c8e2520b19",
-    "name": "11-05 ajout champ calculé",
+    "name": "11-19 ajout champ calculé",
     "commands": [{
       "id": "43132073-c6e7-4c99-b7da-0658b46446c4",
       "comment": "",
@@ -29819,7 +29826,7 @@
     }]
   }, {
     "id": "ba5e6368-646b-447e-9e5e-3c3cdded211a",
-    "name": "11-06 ajout email",
+    "name": "11-01 ajout email",
     "commands": [{
       "id": "3a088280-2c8d-4d70-a9e3-8bb7196c8941",
       "comment": "",
@@ -30476,7 +30483,7 @@
     }]
   }, {
     "id": "482dfae4-a690-4334-a7f0-6207ab17e15b",
-    "name": "11-07 ajout url",
+    "name": "11-02 ajout url",
     "commands": [{
       "id": "e6d3ffc5-2dd3-47c6-8864-da7d06ca3afc",
       "comment": "",
@@ -31133,7 +31140,7 @@
     }]
   }, {
     "id": "e465aafe-cbe2-47d2-853f-ad1df276fbfb",
-    "name": "11-08 ajout case à cocher",
+    "name": "11-03 ajout case à cocher",
     "commands": [{
       "id": "22856df5-01fd-4e81-a258-fb96b5272f81",
       "comment": "",
@@ -31742,7 +31749,7 @@
     }]
   }, {
     "id": "4ca407f4-01a9-466a-89ee-c7d772a0281e",
-    "name": "11-09 ajout date",
+    "name": "11-04 ajout date",
     "commands": [{
       "id": "d559ea98-b01e-4a2a-9ad7-f06f0fa13281",
       "comment": "",
@@ -32357,7 +32364,7 @@
     }]
   }, {
     "id": "1af743ad-6fd1-4adc-a2e7-0bc3bfbc026e",
-    "name": "11-10 ajout date et heure",
+    "name": "11-05 ajout date et heure",
     "commands": [{
       "id": "de48dbd8-43c0-4e8b-b3b0-855cf374de6c",
       "comment": "",
@@ -33027,7 +33034,7 @@
     }]
   }, {
     "id": "ee2ad930-7a67-41d0-9723-fec221c087e3",
-    "name": "11-11 ajout année",
+    "name": "11-07 ajout année",
     "commands": [{
       "id": "67fe774e-b1d5-4193-9771-d68d4b4ae9dd",
       "comment": "",
@@ -33642,7 +33649,7 @@
     }]
   }, {
     "id": "a0a6c815-f9c9-49ae-ab27-4163b3938ca6",
-    "name": "11-12 ajout fichier",
+    "name": "11-08 ajout fichier",
     "commands": [{
       "id": "e5eac55d-c8b9-47eb-ade5-09a378ebb856",
       "comment": "",
@@ -34444,7 +34451,7 @@
     }]
   }, {
     "id": "34ba9dd6-5286-4f13-8258-f3250cc09186",
-    "name": "11-13 ajout mot de passe",
+    "name": "11-09 ajout mot de passe",
     "commands": [{
       "id": "d356f1f9-f330-4fd6-acfc-bb8f16c54f40",
       "comment": "",
@@ -35080,7 +35087,7 @@
     }]
   }, {
     "id": "950a6823-ce21-4ddc-a5f8-75902d8d59a0",
-    "name": "11-14 ajout nombre",
+    "name": "11-10 ajout nombre",
     "commands": [{
       "id": "9f8dcc01-b6b1-4c05-bd36-6ce7dbe13b64",
       "comment": "",
@@ -35695,7 +35702,7 @@
     }]
   }, {
     "id": "f3d16774-e224-4813-8a5a-f9dc795ba159",
-    "name": "11-15 ajout nombre à virgule",
+    "name": "11-11 ajout nombre à virgule",
     "commands": [{
       "id": "49aaf1a9-3b8f-4464-8ec0-4161dad10988",
       "comment": "",
@@ -36324,7 +36331,7 @@
     }]
   }, {
     "id": "2949f623-c0f5-47b8-beb0-38a9d3e42a8c",
-    "name": "11-16 ajout téléphone",
+    "name": "11-12 ajout téléphone",
     "commands": [{
       "id": "157afc84-494b-4e4c-a3fe-797e53df14d4",
       "comment": "",
@@ -36981,7 +36988,7 @@
     }]
   }, {
     "id": "01eaf4aa-1799-4407-83c4-ae2ed011ac63",
-    "name": "11-17 ajout sélecteur choix unique",
+    "name": "11-13 ajout sélecteur choix unique",
     "commands": [{
       "id": "58e25be1-e13c-48c4-ab29-60185c46b6ba",
       "comment": "",
@@ -37646,7 +37653,7 @@
     }]
   }, {
     "id": "9ce79904-4a45-4a8f-89b5-5a18e73e374b",
-    "name": "11-18 ajout sélecteur choix multiple",
+    "name": "11-14 ajout sélecteur choix multiple",
     "commands": [{
       "id": "188b55e6-56dd-4182-bdca-7a252e725374",
       "comment": "",
@@ -38423,7 +38430,7 @@
     }]
   }, {
     "id": "9ba45fa6-cbe4-4bea-8de6-d57505df827b",
-    "name": "11-19 ajout sélecteur pays",
+    "name": "11-15 ajout sélecteur pays",
     "commands": [{
       "id": "30b1d386-9340-4777-8b60-e58a80906b3c",
       "comment": "",
@@ -39500,7 +39507,7 @@
     }]
   }, {
     "id": "8462cb7c-312b-4a01-a91d-bbe93166deab",
-    "name": "11-31 ajout date naissance",
+    "name": "11-32 ajout date naissance",
     "commands": [{
       "id": "9008f58e-d008-4863-84d1-ec80437acc57",
       "comment": "",
@@ -39891,7 +39898,7 @@
     }]
   }, {
     "id": "6cf67a44-31a7-4633-9a7d-e5e6fb63fb79",
-    "name": "11-32 ajout pays",
+    "name": "11-33 ajout pays",
     "commands": [{
       "id": "9c879e70-9231-4331-975d-50c55f647f8a",
       "comment": "",
@@ -40555,7 +40562,7 @@
     }]
   }, {
     "id": "731de8ad-89b7-4242-ab2f-27310e42f6ff",
-    "name": "11-20 ajout mois et année",
+    "name": "11-06 ajout mois et année",
     "commands": [{
       "id": "5ba13851-3d65-47af-9dd7-77dfc63a3708",
       "comment": "",
@@ -41405,7 +41412,7 @@
     }]
   }, {
     "id": "296dd358-da84-4f5d-a1e0-e035021b288c",
-    "name": "11-33 ajout photo",
+    "name": "11-34 ajout photo",
     "commands": [{
       "id": "b88cb1dc-ef59-4503-9d4d-92e222b71df2",
       "comment": "",
@@ -42208,7 +42215,7 @@
     }]
   }, {
     "id": "092e4b79-eeae-4ea9-8c09-1c059370f310",
-    "name": "11-34 ajout pronom",
+    "name": "11-35 ajout pronom",
     "commands": [{
       "id": "b7fe99e0-164e-4761-a15b-c0bf9dae9170",
       "comment": "",
@@ -42919,7 +42926,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c548c5b3-dada-4e5d-af7f-2767bf5e2b6d", "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca", "340b4d62-de7f-4c00-a559-e4f6a2246f08", "7a858aed-70b7-4c7a-bc4f-799216bb455b", "4073d67e-c10e-4c4a-a994-b6c8e2520b19", "ba5e6368-646b-447e-9e5e-3c3cdded211a", "482dfae4-a690-4334-a7f0-6207ab17e15b", "e465aafe-cbe2-47d2-853f-ad1df276fbfb", "4ca407f4-01a9-466a-89ee-c7d772a0281e", "1af743ad-6fd1-4adc-a2e7-0bc3bfbc026e", "ee2ad930-7a67-41d0-9723-fec221c087e3", "a0a6c815-f9c9-49ae-ab27-4163b3938ca6", "34ba9dd6-5286-4f13-8258-f3250cc09186", "950a6823-ce21-4ddc-a5f8-75902d8d59a0", "f3d16774-e224-4813-8a5a-f9dc795ba159", "2949f623-c0f5-47b8-beb0-38a9d3e42a8c", "01eaf4aa-1799-4407-83c4-ae2ed011ac63", "9ce79904-4a45-4a8f-89b5-5a18e73e374b", "9ba45fa6-cbe4-4bea-8de6-d57505df827b", "731de8ad-89b7-4242-ab2f-27310e42f6ff", "2f90c2f6-6b1b-4703-abc9-a137b58f0443", "8462cb7c-312b-4a01-a91d-bbe93166deab", "6cf67a44-31a7-4633-9a7d-e5e6fb63fb79", "296dd358-da84-4f5d-a1e0-e035021b288c", "092e4b79-eeae-4ea9-8c09-1c059370f310", "22bcb88c-198f-4e5d-b3b0-d58feb9100be"]
+    "tests": ["ba5e6368-646b-447e-9e5e-3c3cdded211a", "482dfae4-a690-4334-a7f0-6207ab17e15b", "e465aafe-cbe2-47d2-853f-ad1df276fbfb", "4ca407f4-01a9-466a-89ee-c7d772a0281e", "1af743ad-6fd1-4adc-a2e7-0bc3bfbc026e", "731de8ad-89b7-4242-ab2f-27310e42f6ff", "ee2ad930-7a67-41d0-9723-fec221c087e3", "a0a6c815-f9c9-49ae-ab27-4163b3938ca6", "34ba9dd6-5286-4f13-8258-f3250cc09186", "950a6823-ce21-4ddc-a5f8-75902d8d59a0", "f3d16774-e224-4813-8a5a-f9dc795ba159", "2949f623-c0f5-47b8-beb0-38a9d3e42a8c", "01eaf4aa-1799-4407-83c4-ae2ed011ac63", "9ce79904-4a45-4a8f-89b5-5a18e73e374b", "9ba45fa6-cbe4-4bea-8de6-d57505df827b", "3d0feea6-0edc-4669-ab3c-54f2b5d4ebca", "340b4d62-de7f-4c00-a559-e4f6a2246f08", "7a858aed-70b7-4c7a-bc4f-799216bb455b", "4073d67e-c10e-4c4a-a994-b6c8e2520b19", "2f90c2f6-6b1b-4703-abc9-a137b58f0443", "c548c5b3-dada-4e5d-af7f-2767bf5e2b6d", "8462cb7c-312b-4a01-a91d-bbe93166deab", "6cf67a44-31a7-4633-9a7d-e5e6fb63fb79", "296dd358-da84-4f5d-a1e0-e035021b288c", "092e4b79-eeae-4ea9-8c09-1c059370f310", "22bcb88c-198f-4e5d-b3b0-d58feb9100be"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
