@@ -14,7 +14,6 @@ else if (${nb_total_membres} > 2)
 if (${nb_parents} >= 2)
 { ... }
 else if ${nb_parents} < 2 && ${nb_total_membres} > 2
-// ce bloc est exécuté même si nb_parents >= 2
 { ... }
 #+END_SRC
 *** problème avec apostrophe
@@ -289,7 +288,7 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 - vérification absence membre dans journal
 **** ¿ déconnexion automatique ?
 *** TODO 11 configuration membres Fiche
-**** TODO ajouter un champ à la fiche membre
+**** DONE ajouter un champ à la fiche membre
 PB : le bouton de suppression finale du champ est pris en compte par
 l'IDE mais pas toujours par le runner
 ***** DONE 11-01 ajout année naissance
@@ -325,12 +324,22 @@ l'IDE mais pas toujours par le runner
 ***** DONE 11-19 ajout champ perso pays
 - Pour définir le pays par défaut, il faut indiquer son code à deux
   lettres et non son nom complet => à documenter ou à changer
-***** TODO 11-xx ajout champ perso mois et année
-- PB : aucun contrôle sur le contenu de ce champ, on peut y saisir n'importe quoi
+***** DONE 11-20 ajout champ perso mois et année
+- avec le driver de chrome :
+  - saisir le mois
+  - envoyer le code de la touche de tabulation
+  - saisir l'année
+fonctionne avec runner et le driver dechrome mais probalement pas avec celui de firefox
 ***** DONE 11-30 ajout ancienneté
 - c'est un champ calculé à partir de la date d'inscription
 ***** DONE 11-31 ajout date naissance
 ***** DONE 11-32 ajout pays
+***** DONE saisir un champ avec un identifiant déjà existant
+- Ce nom de champ est déjà utilisé par un autre champ : adresse, code_postal,
+  ville, telephone, lettre_infos_1, date_inscription
+- numero : Aucun champ de numéro de membre n'existe
+- nom : Aucun champ de nom de membre n'existe
+- email : Aucun champ d'identifiant de connexion n'existe
 ***** TODO ¿ saisir une donnée erronée dans chaque champ ?
 Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
 **** TODO modifier un champ de la fiche membre
