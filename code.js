@@ -430,3 +430,42 @@ function diff(d1)
 	if ((m2 < m1) || (m2 == m1 && j2 < j1)) { --diffAnnee; }
 	return diffAnnee;
 }
+
+// transformer année mois numérique en texte
+// 1977-03 => juillet 1977
+// 1977-15 => mars 1978
+function toText(chaine)
+{
+	let lesMois = ["janvier", "février", "mars", "avril", "mai", "juin",
+				   "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+	let ma = chaine.split('-');
+	var annee = Number(ma[0]);
+	var mois = Number(ma[1]);
+	if (mois > 12) {
+		annee += Math.floor(mois / 12);
+		mois = mois % 12;
+	}
+	if (mois == 0) {
+		annee -= 1;
+		mois = 12;
+	}
+	return lesMois[mois - 1] + " " + annee;
+}
+
+// variante
+function toText(mois, annee)
+{
+	let lesMois = ["janvier", "février", "mars", "avril", "mai", "juin",
+				   "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+	var mois = Number(mois);
+	var annee = Number(annee);
+	if (mois > 12) {
+		annee += Math.floor(mois / 12);
+		mois = mois % 12;
+	}
+	if (mois == 0) {
+		annee -= 1;
+		mois = 12;
+	}
+	return lesMois[mois - 1] + " " + annee;
+}
