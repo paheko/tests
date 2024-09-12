@@ -31925,18 +31925,6 @@
       ],
       "value": ""
     }, {
-      "id": "116878a9-820a-4258-93ff-3bc29750c057",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[contains(text(), \"Sélectionner des fichiers\")]",
-      "targets": [
-        ["css=.icn-btn:nth-child(1)", "css:finder"],
-        ["xpath=//button[@type='button']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sélectionner des fichiers')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "49052367-18cb-4892-b6e6-b9e31167b697",
       "comment": "",
       "command": "executeScript",
@@ -32189,18 +32177,6 @@
       "target": "index=0",
       "targets": [
         ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "e0fea6ad-584d-4093-9a19-f55f16193588",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[contains(text(), \"Sélectionner des fichiers\")]",
-      "targets": [
-        ["css=.icn-btn:nth-child(1)", "css:finder"],
-        ["xpath=//button[@type='button']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sélectionner des fichiers')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
