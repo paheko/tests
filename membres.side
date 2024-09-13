@@ -43036,10 +43036,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "d4a20676-845d-4213-8d9c-ab5466fc8131",
+      "comment": "",
+      "command": "store",
+      "target": "Numéro de membre",
+      "targets": [],
+      "value": "libelle_champ"
+    }, {
       "id": "15985178-c0ac-4142-b437-87fcada7a681",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
@@ -43084,6 +43091,13 @@
         ["relative=parent"]
       ],
       "value": ""
+    }, {
+      "id": "90a417c4-ddd0-435b-8425-ecf24cf689fa",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td[2]",
+      "targets": [],
+      "value": "Obligatoire"
     }, {
       "id": "20decff5-77ad-4b2f-a01d-859aae43cc21",
       "comment": "créer un membre",
@@ -43176,7 +43190,7 @@
       "id": "11ecf6b0-37a0-400f-a996-3a8e60980821",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
+      "target": "xpath=//dt[contains(.,'${libelle_champ}')]/following-sibling::dd",
       "targets": [],
       "value": "numero"
     }, {
@@ -43253,7 +43267,7 @@
       "id": "37cd309d-9037-4f35-a2de-47116bfef2f4",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
@@ -43298,6 +43312,13 @@
         ["relative=parent"]
       ],
       "value": ""
+    }, {
+      "id": "0dc76062-bc0d-404c-b400-7e70fa984ee0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td[2]",
+      "targets": [],
+      "value": "Obligatoire"
     }]
   }, {
     "id": "38833b4a-62c8-4f5d-9865-8f38d1ee3994",
