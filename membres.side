@@ -27071,13 +27071,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "191a5623-72d0-412a-859f-b2e5b53a3d74",
-      "comment": "",
-      "command": "//click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "8042a84b-ff68-4ef5-8685-789eaa3d4979",
       "comment": "",
       "command": "click",
@@ -27709,17 +27702,10 @@
       ],
       "value": ""
     }, {
-      "id": "9f6b9754-965c-41a4-b726-4916adf4ad39",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "74d1b201-3075-405f-8ddb-5cfcf0299b9c",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -28362,17 +28348,10 @@
       ],
       "value": ""
     }, {
-      "id": "088788be-bbad-4809-b239-afc4f79c5bf4",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "e44f23be-2df8-44cb-b66d-3294535f9532",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -28981,17 +28960,10 @@
       ],
       "value": ""
     }, {
-      "id": "3e02ea11-6859-4591-a1b9-4f9c606602c4",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "daf30cbc-7441-412d-ba1e-d76f6f22396d",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -29592,17 +29564,10 @@
       ],
       "value": ""
     }, {
-      "id": "ed5fb49f-477f-4a37-bba9-e25c88bfeaf2",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "99cf627f-c87c-4b4b-a8c3-7bfdaf51148a",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -30258,17 +30223,10 @@
       ],
       "value": ""
     }, {
-      "id": "c8674cf7-a605-4a99-930d-6f37730ee454",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "321b439c-33c8-4156-979d-4745edde21df",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -30919,17 +30877,10 @@
       ],
       "value": ""
     }, {
-      "id": "c180e07c-60cb-47ae-8043-c81bff0467a7",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "7e87fed4-cdc0-4e9b-b0c5-6dc42588cbb3",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -31530,17 +31481,10 @@
       ],
       "value": ""
     }, {
-      "id": "bab5147f-8c87-461c-8b82-ecb79bf33457",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "5a2f0ded-4fdb-46e0-9092-f0f7ba6a5236",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -32304,17 +32248,10 @@
       ],
       "value": ""
     }, {
-      "id": "034fe384-5163-4822-aa39-6ec8202f3553",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "5beaa52c-d0c4-44eb-b5b1-32022aa60a51",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -32936,17 +32873,10 @@
       ],
       "value": ""
     }, {
-      "id": "cd22d4ba-5399-4cdb-b9c5-308f04738e9f",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "ad32793b-b311-4cf4-962e-744d49d03eb8",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -33547,17 +33477,10 @@
       ],
       "value": ""
     }, {
-      "id": "ae2623b9-2738-48df-8cf7-4168899828cb",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "9e5650ca-c5f2-44b0-87b7-f0a7e8d238ef",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -34172,17 +34095,10 @@
       ],
       "value": ""
     }, {
-      "id": "de69a42a-5db8-48a3-a02a-c17737c0b038",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "50d047e7-2b06-412e-a850-616f7cb64a25",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -34825,17 +34741,10 @@
       ],
       "value": ""
     }, {
-      "id": "533b032d-b067-46fb-b830-51538801d071",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "b76eb7c9-8f20-41a2-a0ce-b8bdf8c025da",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -35486,17 +35395,10 @@
       ],
       "value": ""
     }, {
-      "id": "a729db8f-f6d8-453e-bb4a-0780b3e62d6b",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "f5ce1293-9d7b-45f7-a60a-f3e9e4a93c67",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -36259,17 +36161,10 @@
       ],
       "value": ""
     }, {
-      "id": "20460e08-7b58-4bcb-809d-48dcf252adc6",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "2506210c-18a1-4679-9255-95b131cf9370",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -36934,17 +36829,10 @@
       ],
       "value": ""
     }, {
-      "id": "8b5beb54-d80e-406e-8354-06e14ba9bba0",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "722ff5af-6d0b-443a-b168-6365826710a2",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -37560,17 +37448,10 @@
       ],
       "value": ""
     }, {
-      "id": "a30e8724-dd4c-44f1-8d44-ac598ed92b0a",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "6d328d7a-2b0a-4d63-bd72-ec0e921fa0ea",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38222,17 +38103,10 @@
       ],
       "value": ""
     }, {
-      "id": "08ea7582-e1ef-4764-b587-1a0c9968fcff",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "a9b8d522-ad62-4774-94d5-3b37d9dab267",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -38832,17 +38706,10 @@
       ],
       "value": ""
     }, {
-      "id": "670c1c54-2aeb-495c-a98e-1f646733a371",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "2b1abbba-56e0-4cfb-9caa-1cec43ec5863",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -39228,17 +39095,10 @@
       ],
       "value": ""
     }, {
-      "id": "96496f9d-a271-405d-8f01-2f841001ff87",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "cbc00a67-2a60-4055-98ed-f9b50d70d73d",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -39610,17 +39470,10 @@
       ],
       "value": ""
     }, {
-      "id": "33b77b50-5ea0-4c26-beff-17284bacd091",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "ae6006f6-1b64-43e8-800a-082742b9529a",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -39991,17 +39844,10 @@
       ],
       "value": ""
     }, {
-      "id": "470403fa-a396-4684-8b43-8deb18a446ab",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "4b67d3d6-e1e5-414d-88b7-39e14b4bf493",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -40372,17 +40218,10 @@
       ],
       "value": ""
     }, {
-      "id": "60690e3c-901d-40f6-b110-c0310c4474e5",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "b913d936-fda5-4d41-8ff0-a1eadf28038d",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -40588,17 +40427,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2542af12-e990-467b-bc5b-06aee611dcae",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "653ed0c2-b00f-459d-8b64-1cd128f97945",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"edit.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -41032,17 +40864,10 @@
       ],
       "value": ""
     }, {
-      "id": "7a42c793-db98-4b18-9e4c-26134903e249",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "4205519f-84ca-4690-b1a8-3431d689f13f",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -41242,17 +41067,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d1b09645-481d-49c5-b005-9e1602df5500",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "f2bbc2cc-1621-4e55-aa8b-a1f91d27d7ba",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"edit.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -41794,17 +41612,10 @@
       ],
       "value": ""
     }, {
-      "id": "cd97f43d-9530-4252-b9c7-19b36eadb7d0",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "e413a0d3-1bb1-4eb6-be68-e67a27672a37",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -42011,17 +41822,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "446a7cb3-6308-4c04-a407-ba01646589d5",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "5ade83a4-5aa0-43dc-9382-d38c72e53ee8",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"edit.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -42420,17 +42224,10 @@
       ],
       "value": ""
     }, {
-      "id": "f4546b2d-4571-4fc5-a8da-3ea555ca2d3d",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
       "id": "b60dc041-9eda-4362-b0c1-53b753054f2f",
       "comment": "",
       "command": "click",
-      "target": "xpath=//tbody/tr[${nb_champs}]//td//a[contains(@href, \"delete.php\")]",
+      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -43932,13 +43729,6 @@
         ["xpath=//li/a", "xpath:position"],
         ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "a0d799de-342a-49eb-802d-72d1ce3cca95",
-      "comment": "",
-      "command": "//assertElementPresent",
-      "target": "xpath=//dt[contains(., \"${libelle_champ}\") and contains(., \"obligatoire\")]",
-      "targets": [],
       "value": ""
     }, {
       "id": "506953b3-82d0-435e-b19e-0b8b8ee8a851",
