@@ -46127,24 +46127,114 @@
       "targets": [],
       "value": "${email}"
     }, {
-      "id": "1f0735e6-1121-495f-a935-22f39afb762f",
-      "comment": "modifier email",
+      "id": "dc81bc8c-ddaa-49c8-8218-19c6c9427e26",
+      "comment": "attribuer un mot de passe au membre",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "93fd0929-bd09-4e79-b690-ec7a14ada4ef",
+      "id": "bbf2c63b-d1e6-4ef1-b877-ed02ec400ec9",
       "comment": "",
-      "command": "chooseOkOnNextConfirmation",
-      "target": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"edit_security.php\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "1f73d663-1edd-41c0-bab6-3c3c6d74599d",
+      "id": "3874670b-f983-4196-bacf-857e02ff62a0",
+      "comment": "",
+      "command": "store",
+      "target": "soin oeuf mélodieux intellectuel",
+      "targets": [],
+      "value": "mdp"
+    }, {
+      "id": "daf8d6af-ee27-4ead-a8b9-248aad89c897",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "f86cfbdb-f645-4e7e-8994-59eab9eb193a",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [
+        ["id=f_password", "id"],
+        ["css=#f_password", "css:finder"],
+        ["xpath=//input[@id='f_password']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${mdp}"
+    }, {
+      "id": "d63456a8-9725-42bf-bb39-fc995244dcf5",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password_confirmed",
+      "targets": [
+        ["id=f_password", "id"],
+        ["css=#f_password", "css:finder"],
+        ["xpath=//input[@id='f_password']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${mdp}"
+    }, {
+      "id": "43e3b0b8-1fe7-48b9-8d97-1a77cd9e9216",
       "comment": "",
       "command": "click",
-      "target": "name=login_as",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e99df20d-6f82-4db8-89c2-4d3003643ab3",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "55e50f39-9192-471b-88d5-abf6aafb24bd",
+      "comment": "Déconnexion admin",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/logout.php')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8322a9a5-ad4f-45cb-bd9e-bb531f561268",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "${email}"
+    }, {
+      "id": "14a81d28-9cb1-4950-ac44-60d3fcc9b815",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "${mdp}"
+    }, {
+      "id": "62200d6d-0ac8-42a6-aedf-8fc4f281a556",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f0735e6-1121-495f-a935-22f39afb762f",
+      "comment": "modifier email",
+      "command": "",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
