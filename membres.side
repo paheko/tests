@@ -42557,10 +42557,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "1e9d3787-e2d5-45b1-b1f3-d6f7a34e9994",
+      "comment": "",
+      "command": "store",
+      "target": "Numéro de membre",
+      "targets": [],
+      "value": "libelle_champ"
+    }, {
       "id": "0d623ede-f8fb-43b3-b3e9-d85128d80760",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
@@ -42665,7 +42672,7 @@
       "id": "c0a07be4-44fb-4965-bc28-0f0eb01cf3c9",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
@@ -43119,7 +43126,7 @@
     }]
   }, {
     "id": "38833b4a-62c8-4f5d-9865-8f38d1ee3994",
-    "name": "12-03 numéro non visible",
+    "name": "12-03 numéro non visible fiche membre",
     "commands": [{
       "id": "3fbee3ad-a823-4bd6-b96f-e3989ec010a2",
       "comment": "",
@@ -43219,10 +43226,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "87bda24f-81f1-4781-97ca-af74801e2148",
+      "comment": "",
+      "command": "store",
+      "target": "Numéro de membre",
+      "targets": [],
+      "value": "libelle_champ"
+    }, {
       "id": "4dc1e6d6-0764-4367-9fc9-717ec1eb2252",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
@@ -43408,7 +43422,7 @@
       "id": "e1665e0d-212b-42dd-9c11-547310465805",
       "comment": "",
       "command": "assertElementNotPresent",
-      "target": "xpath=//dt[text()=\"Numéro de membre\"]",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }, {
@@ -43485,7 +43499,7 @@
       "id": "9407b973-b335-4513-83e4-81103b102dbd",
       "comment": "",
       "command": "click",
-      "target": "xpath=//th[text()=\"Numéro de membre\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td/a[contains(@href, \"edit.php\")]",
       "targets": [
         ["css=tr:nth-child(1) > .actions span", "css:finder"],
         ["xpath=//td[6]/a/span", "xpath:position"],
