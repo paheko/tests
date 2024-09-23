@@ -43752,20 +43752,6 @@
       "targets": [],
       "value": "numero"
     }, {
-      "id": "9fe0ad99-5107-44c1-84db-d581d6fa1741",
-      "comment": "",
-      "command": "//executeScript",
-      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
-      "targets": [],
-      "value": "nom"
-    }, {
-      "id": "4b873567-ac77-41ef-a5fa-4c78c1be73a3",
-      "comment": "",
-      "command": "//type",
-      "target": "id=f_nom",
-      "targets": [],
-      "value": "${nom}"
-    }, {
       "id": "3598eedb-4291-4d43-a0f0-1baf70afa2a7",
       "comment": "",
       "command": "executeScript",
