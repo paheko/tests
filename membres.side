@@ -5538,7 +5538,7 @@
       "id": "101be00f-b93c-441c-88df-20a945043d9f",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -5587,7 +5587,7 @@
       "id": "ce4df8c7-5533-46a9-9ec7-e9c418089d9a",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -5849,7 +5849,7 @@
       "id": "0028717f-ebce-480b-8f3d-56a7e3f5f06b",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -5968,7 +5968,7 @@
       "id": "46815ff0-b3d9-421d-a11c-cab1104d708f",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -5989,7 +5989,7 @@
       "id": "4369c968-42b0-4be3-8b21-871423c0e617",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -6392,7 +6392,7 @@
       "id": "ae2de33d-e456-42ff-bab9-b22e81278490",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -6448,7 +6448,7 @@
       "id": "c9951ea1-ce87-41fa-9abc-34799278e179",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -6476,7 +6476,7 @@
       "id": "a0203550-7e83-49df-bd5d-708bcd34b0a0",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -6843,7 +6843,7 @@
       "id": "0e64841b-3923-40d2-a8b3-0c2dddaddf13",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -6899,7 +6899,7 @@
       "id": "bdda7799-804f-4755-b4ea-3fe26a983750",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -6920,7 +6920,7 @@
       "id": "31c08e88-7eff-4b43-a4f3-67fca427f742",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -7344,7 +7344,7 @@
       "id": "1e6925a8-754c-4283-a774-0999207cd2ab",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -7400,7 +7400,7 @@
       "id": "26809156-4d04-4195-9e4f-7737966f6105",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -7428,7 +7428,7 @@
       "id": "5ff86d7e-b086-4084-b551-e58e113593ce",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -7855,7 +7855,7 @@
       "id": "8ffb7d91-2ca3-4114-8e3d-56836a37c1cb",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -7911,7 +7911,7 @@
       "id": "55203e0e-99bd-4b68-a0bf-7af85e094fb7",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -7932,7 +7932,7 @@
       "id": "0cc31ccc-c915-4c0d-b650-21be38317551",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -8132,7 +8132,7 @@
       "id": "b6ca1c3c-a512-4fd2-8ab8-b5d9fc4ce4e5",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8188,7 +8188,7 @@
       "id": "5fef2f36-43a9-47c7-bf5d-270bb05e5e06",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8216,7 +8216,7 @@
       "id": "6ea880e7-39fd-4ca2-8c5c-98d77656c159",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -8464,7 +8464,7 @@
       "id": "12f52c5d-2788-4089-ada8-9536aa0eaba9",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8492,14 +8492,14 @@
       "id": "1d5eb444-2bac-43e5-97bc-b5ee41784bd8",
       "comment": "premier nom",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/th",
       "targets": [],
       "value": "nom1"
     }, {
       "id": "5098badc-0505-4cf0-9252-0b43e57f167d",
       "comment": "deuxième nom",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/th",
       "targets": [],
       "value": "nom2"
     }, {
@@ -8583,7 +8583,7 @@
       "id": "529e74d2-801e-403d-a508-4d5d5942205b",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8604,7 +8604,7 @@
       "id": "b63dea9f-1926-4a73-8a74-5072ee1c5a9b",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -8783,7 +8783,7 @@
       "id": "744c5628-5288-4013-b3ec-4280056d2566",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8839,7 +8839,7 @@
       "id": "c582d908-f598-4dda-a338-f2ebfeeab766",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -8867,7 +8867,7 @@
       "id": "d27e9939-6cb5-4ca8-86ab-6d6f3b3a802c",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -9115,7 +9115,7 @@
       "id": "4a1e447e-42be-4049-bcbd-9255922fdfd2",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9143,14 +9143,14 @@
       "id": "b231a60f-6949-47cb-95c0-9912f85e39ad",
       "comment": "premier nom",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/th",
       "targets": [],
       "value": "nom1"
     }, {
       "id": "82fee705-6f66-4dfc-9b39-7aa56cb9d5b8",
       "comment": "deuxième nom",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${nb_membres_page}]/th",
       "targets": [],
       "value": "nom2"
     }, {
@@ -9234,7 +9234,7 @@
       "id": "ddef7b2c-1e03-4ecb-b6d3-2002c50c9d33",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9255,7 +9255,7 @@
       "id": "f13d054e-29b9-43e3-aed6-023352260cdb",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -9434,7 +9434,7 @@
       "id": "841cc2c2-f307-4ece-9826-ac74379ecab5",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9490,7 +9490,7 @@
       "id": "c5ac0c14-eab3-4208-ae3f-1bc4e25a5bb2",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9518,7 +9518,7 @@
       "id": "e0a1aa64-93f0-4d90-a554-2dad9d11b816",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -9766,7 +9766,7 @@
       "id": "592d2744-fb15-4420-8c29-ea333fbfff07",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9899,7 +9899,7 @@
       "id": "f644149a-10c4-48a1-8467-2b94b62263e2",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -9920,7 +9920,7 @@
       "id": "d6b6f688-512a-4215-8df2-a73ae6bb9ba4",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -10106,7 +10106,7 @@
       "id": "7c2dee7e-f26a-4a24-9c70-8f0d53b88746",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10162,7 +10162,7 @@
       "id": "0a900b5a-b050-41c0-aa66-2b62958374a9",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10190,7 +10190,7 @@
       "id": "25bc8f2f-073c-4a38-94cf-715429942d7b",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -10459,7 +10459,7 @@
       "id": "3363eea4-6fcc-4dcb-bdad-5a9a12a7ffaa",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10655,7 +10655,7 @@
       "id": "a22f551c-0073-4baf-a66c-ec821c658e9b",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10676,7 +10676,7 @@
       "id": "f2561586-d9d3-4b7c-92d0-cac77e09912e",
       "comment": "nom affiché",
       "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -10876,7 +10876,7 @@
       "id": "06820e63-1f34-4f1f-866c-caca5c1c3232",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10932,7 +10932,7 @@
       "id": "e23f04a8-67a4-4edb-831e-848cbc139715",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -10960,7 +10960,7 @@
       "id": "db73c987-7e29-4e86-ab02-e05be7cec7a3",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -11229,7 +11229,7 @@
       "id": "01d80644-1171-4f0e-aec7-2aee6524270a",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -11425,7 +11425,7 @@
       "id": "630f7f6a-3dff-4206-a8bd-6d9ad5737e02",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -11446,7 +11446,7 @@
       "id": "c82a67e3-89fd-454c-bef2-897e3595fef2",
       "comment": "nom affiché",
       "command": "//storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -11660,7 +11660,7 @@
       "id": "0e0436e3-de81-40d2-bd21-2fe0ed884f9e",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -11716,7 +11716,7 @@
       "id": "78540ec2-2524-49ef-8dc1-c76926cf9823",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -11744,7 +11744,7 @@
       "id": "3f0c452a-4fb3-4962-891f-61f2bf34ce10",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -12140,7 +12140,7 @@
       "id": "4a88bfa1-6850-4c1e-be38-dbc821a7d934",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -12189,14 +12189,14 @@
       "id": "9473ae96-2a7f-4555-aa81-5627b4d821d4",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th",
       "targets": [],
       "value": "membre1"
     }, {
       "id": "20a8bada-4099-4f0b-bba8-59bf4f3337b6",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
@@ -12245,14 +12245,14 @@
       "id": "eab45a3b-bed9-4cb7-91a4-9755e875de48",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
       "id": "68ef9b49-6413-4da8-9532-d92cb8e7d32e",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th",
       "targets": [],
       "value": "membre3"
     }, {
@@ -12357,7 +12357,7 @@
       "id": "f02c60c7-f013-4d94-ac44-cb4f9db4e060",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -12378,7 +12378,7 @@
       "id": "289585f2-f24b-4da0-92e5-f2df91dd5e49",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -12599,7 +12599,7 @@
       "id": "45517ce5-faaf-443d-b2fc-4a1bbba721ef",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -12655,7 +12655,7 @@
       "id": "dd96c8c2-0eb7-4462-a6ca-e6a270cceb6a",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -12683,7 +12683,7 @@
       "id": "4e4d7cb7-5b66-4ade-b867-bc2f4ecabaa9",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -12882,6 +12882,13 @@
       "targets": [],
       "value": "parent"
     }, {
+      "id": "b1ff6ae8-6a53-431e-838c-7001cbf13329",
+      "comment": "",
+      "command": "echo",
+      "target": "membre=(${nom}), parent=(${parent})",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "37b6d65b-4e89-4a59-a0ed-21f0031ce53b",
       "comment": "Ajouter parent à la liste",
       "command": "executeScript",
@@ -13079,7 +13086,7 @@
       "id": "9bf41c97-597e-43e7-ad67-b29e4fd17244",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -13128,14 +13135,14 @@
       "id": "ee85bc32-e9cf-40f0-b2fa-3628cf76d53d",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th",
       "targets": [],
       "value": "membre1"
     }, {
       "id": "08480205-ca0c-458c-b882-03dc3decdfdc",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
@@ -13184,14 +13191,14 @@
       "id": "eafff0d1-e42d-4232-8757-522cec8c4813",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
       "id": "f75aefbe-a4f6-4daf-a5cc-0a887f4d5d81",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th",
       "targets": [],
       "value": "membre3"
     }, {
@@ -13296,7 +13303,7 @@
       "id": "7d945625-631c-494e-9d83-70d5d120e0e3",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -13317,7 +13324,7 @@
       "id": "4c5cdd03-0e71-4c17-bddd-cc249f9f2976",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -13552,7 +13559,7 @@
       "id": "ceeaab00-74bb-4f2e-9054-cd5cb3ddd746",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -13608,7 +13615,7 @@
       "id": "1293995b-e614-49a6-841b-a2a194baa813",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -13636,7 +13643,7 @@
       "id": "ab2cba33-3f4f-4231-b7d2-aaf4e0c856a6",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -14163,7 +14170,7 @@
       "id": "c6dc61ce-8f44-4817-99b2-499cfae531a3",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -14198,14 +14205,14 @@
       "id": "6658e51a-5800-4495-9f57-8d2670f6e350",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th",
       "targets": [],
       "value": "membre1"
     }, {
       "id": "75fb2bf9-294b-4bc7-ba4f-8ac09f2aa4b8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
@@ -14254,14 +14261,14 @@
       "id": "1d09df65-22b2-498f-81b7-dbea3e2550be",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
       "id": "ec71954d-15f4-4717-966d-a40576b54118",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th",
       "targets": [],
       "value": "membre3"
     }, {
@@ -14366,7 +14373,7 @@
       "id": "03f4bd1f-5d77-40fa-bc8f-83605c9c3ef3",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -14387,7 +14394,7 @@
       "id": "97f2d9f1-14e2-42e5-8921-ffafc49721a2",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -14622,7 +14629,7 @@
       "id": "4a4c564d-5221-4233-a992-dad66e8485bb",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -14678,7 +14685,7 @@
       "id": "bf0ff72e-086a-4f48-9272-d5ac0d7afa96",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -14706,7 +14713,7 @@
       "id": "7371bae6-9c03-4233-bf33-fe19bb4a76b2",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -15233,7 +15240,7 @@
       "id": "c7e36893-4a8f-4f38-902a-f8f2886f9236",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -15268,14 +15275,14 @@
       "id": "9570a400-a8df-42c8-beda-4016dd249ac8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]//th",
       "targets": [],
       "value": "membre1"
     }, {
       "id": "39bcbeea-dd55-4e8a-8eda-b03a65c46c03",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
@@ -15324,14 +15331,14 @@
       "id": "4fabd8c1-3d45-4631-b2e4-4442e6cb7818",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[2]//th",
       "targets": [],
       "value": "membre2"
     }, {
       "id": "8142d289-8479-4b3d-ba84-31de7a9be8b9",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[3]//th",
       "targets": [],
       "value": "membre3"
     }, {
@@ -15436,7 +15443,7 @@
       "id": "45391cf7-38b8-4f76-ae70-b5aedf2902b3",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -15457,7 +15464,7 @@
       "id": "0fcae787-adc3-4b05-b845-789dcee4330c",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -15734,7 +15741,7 @@
       "id": "e8bbd22e-a1af-4518-9c61-9e41fd6ae5ab",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -15790,7 +15797,7 @@
       "id": "9dc0d635-24ec-41a6-86ec-58b9b727a3f5",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -15818,7 +15825,7 @@
       "id": "529d1349-1152-4522-bfc5-2d20e969dfab",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -16136,7 +16143,7 @@
       "id": "605fe194-1320-4466-9dc0-451d830f7eb7",
       "comment": "Nombre de membres sur la page",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16192,7 +16199,7 @@
       "id": "cef5916c-3baa-44ef-b179-09bc12cec949",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16213,7 +16220,7 @@
       "id": "b75c820c-8cd8-4908-9da4-860004173bb9",
       "comment": "nom affiché",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -16392,7 +16399,7 @@
       "id": "4e7fdabe-c637-4d53-991d-29545a5272e2",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16448,7 +16455,7 @@
       "id": "abce90af-cadd-473e-b9a9-b336457eaa3a",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16476,7 +16483,7 @@
       "id": "21abdaca-a8c7-40ae-83f7-4d9a34078951",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -16868,7 +16875,7 @@
       "id": "6c197fe1-c42d-44ae-9cd4-df6725c3d73f",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16924,7 +16931,7 @@
       "id": "f6b8d10c-9f5d-47b0-9a30-9384f9c27c70",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -16952,7 +16959,7 @@
       "id": "bc3c917a-bc8b-4595-bf8e-e6626d9253a7",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -17523,7 +17530,7 @@
       "id": "d7f23320-2e5e-49d1-8656-3f80e8f72dd1",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -17579,7 +17586,7 @@
       "id": "4000ad86-3ec7-4ae5-b1bc-06935c4f13fa",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -17607,7 +17614,7 @@
       "id": "03a1627b-b4ff-45e8-8185-5825833cef78",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -17957,7 +17964,7 @@
       "id": "f0632a5a-1e59-40c9-9fa3-b9472a707d73",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -18013,7 +18020,7 @@
       "id": "f9a02556-81d8-4377-a01e-a322adf47fe4",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -18692,7 +18699,7 @@
       "id": "2c016cd3-b9e8-4be6-8824-e08af0112f9d",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -18755,7 +18762,7 @@
       "id": "b4249191-a20f-47e2-8c30-18f1462bcbf2",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -18783,7 +18790,7 @@
       "id": "62a4dc20-47fd-4457-84ce-576203bb8239",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -19280,7 +19287,7 @@
       "id": "a41655d3-8cf4-416e-b86e-cbb0ae58d90e",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -19343,7 +19350,7 @@
       "id": "2f211e8f-84f0-40cd-8c08-a1eafa0ae6a3",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -19371,7 +19378,7 @@
       "id": "09953410-8355-4ae8-90f8-d0bf0c64a2bc",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -19812,7 +19819,7 @@
       "id": "24d766f0-237a-4d17-a281-401794706f73",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -19875,7 +19882,7 @@
       "id": "cd3671a1-cf90-4d02-bef1-33434a04c93c",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -19903,7 +19910,7 @@
       "id": "9a535a9d-3064-41ba-985c-95eb237d9c30",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -20683,7 +20690,7 @@
       "id": "56f815b2-5098-4368-8cd2-00c1d37a67a6",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -20746,7 +20753,7 @@
       "id": "33eff90f-9bf8-4b6f-ad8b-91e2f519dd7d",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -20969,7 +20976,7 @@
       "id": "281e5c73-5396-4780-a2e7-424f97d7a03c",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
@@ -23153,7 +23160,7 @@
       "id": "5ba97c7a-fc48-42d0-a5cd-85886099f13a",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
@@ -23791,7 +23798,7 @@
       "id": "1e1556ea-b244-476b-b624-bbe50a1fe22a",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//table[@class=\"list\"]/tbody/tr/th//span",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr/td[@class=\"num\"]",
       "targets": [],
       "value": "nb_membres_page"
     }, {
