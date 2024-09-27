@@ -33975,7 +33975,7 @@
       "value": ""
     }, {
       "id": "03a917ff-a6cc-4e5a-a266-6ca80bf8582a",
-      "comment": "ajouter sélecteur choix multiple",
+      "comment": "ajouter sélecteur choix multiple visible fiche membre",
       "command": "",
       "target": "",
       "targets": [],
@@ -34037,7 +34037,7 @@
       "value": ""
     }, {
       "id": "f9415dbc-d0a4-4c06-a89b-60b2a7715315",
-      "comment": "sélecteur choix multiple",
+      "comment": "",
       "command": "click",
       "target": "xpath=//select[@id=\"f_type\"]/option[@value=\"multiple\"]",
       "targets": [],
@@ -34045,8 +34045,8 @@
     }, {
       "id": "29122289-e21a-48b3-b1c8-ca70bdad4cfb",
       "comment": "",
-      "command": "store",
-      "target": "Sports pratiqués",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str;};return chaine(10)",
       "targets": [],
       "value": "libelle_champ"
     }, {
@@ -34156,9 +34156,9 @@
       "value": "${sport_4}"
     }, {
       "id": "b09cceb5-196b-4c06-8de0-6889da11a60a",
-      "comment": "Voir et modifier ce champ",
+      "comment": "",
       "command": "check",
-      "target": "xpath=//input[@id=\"f_user_access_level_2\"]",
+      "target": "id=f_user_access_level_1",
       "targets": [],
       "value": ""
     }, {
@@ -34251,20 +34251,6 @@
       ],
       "value": "${courriel}"
     }, {
-      "id": "32893d64-5de7-4b69-8290-6ceddb8f3df0",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]",
-      "targets": [],
-      "value": "nb_sports"
-    }, {
-      "id": "5240adc1-3cd8-4af4-afd6-26eb4d9637a2",
-      "comment": "",
-      "command": "assert",
-      "target": "nb_sports",
-      "targets": [],
-      "value": "4"
-    }, {
       "id": "37234b80-087b-4ca3-8ea5-1810218ede2b",
       "comment": "",
       "command": "click",
@@ -34320,20 +34306,6 @@
       "targets": [],
       "value": "${courriel}"
     }, {
-      "id": "ce5b0686-5d07-4e8a-ace5-42c031ff0d23",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
-      "targets": [],
-      "value": "sports_pratiques"
-    }, {
-      "id": "d2988a4a-33ed-44b0-bcc9-6ffabcdfc29b",
-      "comment": "",
-      "command": "assert",
-      "target": "sports_pratiques",
-      "targets": [],
-      "value": "2"
-    }, {
       "id": "cc33d10d-c9f4-43a8-b1b1-2e2e19fca565",
       "comment": "",
       "command": "assertElementPresent",
@@ -34341,10 +34313,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6cba5f8e-28ee-40eb-85a5-d7e72c04e732",
+      "id": "b2e87295-764d-4460-b6d7-209b4d6ef014",
       "comment": "",
       "command": "assertElementPresent",
       "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_3}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d36c7ca-ac80-41d6-8e2f-8c88b81c19e3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_2}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cba5f8e-28ee-40eb-85a5-d7e72c04e732",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_4}\")]",
       "targets": [],
       "value": ""
     }, {
@@ -34447,7 +34433,7 @@
       "value": ""
     }, {
       "id": "9b5dbb81-5fc2-4894-8010-5810050ebe64",
-      "comment": "vérifier choix et modifier",
+      "comment": "vérifier présence nouveau champ",
       "command": "",
       "target": "",
       "targets": [],
@@ -34459,20 +34445,6 @@
       "target": "xpath=//a[contains(@href, \"/admin/me\")]",
       "targets": [],
       "value": ""
-    }, {
-      "id": "0c818f01-f3dd-4497-963e-585d212f83d1",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
-      "targets": [],
-      "value": "sports_pratiques"
-    }, {
-      "id": "a700a6ae-a106-4b09-adcc-dce4d26de9c7",
-      "comment": "",
-      "command": "assert",
-      "target": "sports_pratiques",
-      "targets": [],
-      "value": "2"
     }, {
       "id": "c0731dd8-6ec9-40fa-a8fc-e8df4a7ac746",
       "comment": "",
@@ -34488,78 +34460,16 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "268fe5a7-d3cb-403f-92b8-a58f0dad96b5",
+      "id": "a641e587-8538-480d-b50f-7a6cf792d98a",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/me/edit.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d0e62546-747d-4a54-ae33-6910b3da4631",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_3}\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3e09658c-013d-4b78-adfa-f79138836fc4",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_2}\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fda106e4-e6c1-41d1-94e0-2639c2e7b22c",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//dt[starts-with(., \"${libelle_champ}\")]/following-sibling::dd[not(@class=\"help\")]/label[contains(text(), \"${sport_4}\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f0e00447-dca5-4446-aff3-590d3941ba17",
-      "comment": "",
-      "command": "click",
-      "target": "name=save",
-      "targets": [
-        ["name=save", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='save']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c3b18b96-fdf9-4ce9-80a1-1016a9fe69d4",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li",
-      "targets": [],
-      "value": "sports_pratiques"
-    }, {
-      "id": "d6d34240-3199-465a-a6a9-ff412ade895b",
-      "comment": "",
-      "command": "assert",
-      "target": "sports_pratiques",
-      "targets": [],
-      "value": "3"
-    }, {
-      "id": "a9d2576f-026f-4be2-93db-d9f9088f02a1",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_1}\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6c66c7f3-28ea-4915-b825-3c85a6c952db",
-      "comment": "",
-      "command": "assertElementPresent",
+      "command": "assertElementNotPresent",
       "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_2}\")]",
       "targets": [],
       "value": ""
     }, {
-      "id": "2c09b02f-45cc-4542-8c95-06f7905686e9",
+      "id": "104e7851-5a6f-4363-ba3b-bf39976ea407",
       "comment": "",
-      "command": "assertElementPresent",
+      "command": "assertElementNotPresent",
       "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd//li[contains(text(), \"${sport_4}\")]",
       "targets": [],
       "value": ""
@@ -34568,115 +34478,6 @@
       "comment": "Déconnexion membre",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/logout.php')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "675cb7c7-5195-4b8b-8c90-12859e506268",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "48d1a365-f18b-4504-ba32-e91b4301a2db",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "0ec95ed2-b11c-4681-afd7-097bbc556288",
-      "comment": "Connexion admin",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4ff30d06-aa39-4673-9d14-09f275dffb34",
-      "comment": "supprimer le champ ajouté",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6f343d03-118a-41ef-92e4-81e1782a85bf",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
-      "targets": [
-        ["css=li:nth-child(6) b", "css:finder"],
-        ["xpath=//li[6]/h3/a/b", "xpath:position"],
-        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "84c7de3b-da9c-4bd6-9d03-5b48a8366ada",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "eaffc834-e454-4ccd-b169-df7896bb4766",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "2506210c-18a1-4679-9255-95b131cf9370",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1784cc17-35b5-4d7e-9b83-c31efcfd9de4",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "b8aa3f8a-2f4b-42dc-ba56-5ff49bf642e2",
-      "comment": "",
-      "command": "check",
-      "target": "xpath=//input[@id='f_confirm_delete_1']",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d8b3fd53-fcbb-4159-8d1e-7a3c7e66f362",
-      "comment": "",
-      "command": "click",
-      "target": "name=delete",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "890ede15-5298-4616-b2ff-d72b04bb6ffa",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "56f23c96-9d11-4827-850e-aa655e02f564",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }]
