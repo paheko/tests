@@ -30419,7 +30419,7 @@
       "value": ""
     }, {
       "id": "6f1c4ae9-d79a-4b57-8f31-15d74acfef2b",
-      "comment": "ajouter champ perso fichier",
+      "comment": "ajouter champ perso fichier visible fiche membre",
       "command": "",
       "target": "",
       "targets": [],
@@ -30481,7 +30481,7 @@
       "value": ""
     }, {
       "id": "3950846e-73ad-413a-bb6b-7e9c7168485b",
-      "comment": "champ fichier",
+      "comment": "",
       "command": "click",
       "target": "xpath=//select[@id=\"f_type\"]/option[@value=\"file\"]",
       "targets": [],
@@ -30489,8 +30489,8 @@
     }, {
       "id": "8f9e630c-2c0a-492d-b233-9a0be7e2ca25",
       "comment": "",
-      "command": "store",
-      "target": "Curriculum vitae",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str;};return chaine(10)",
       "targets": [],
       "value": "libelle_champ"
     }, {
@@ -30523,9 +30523,9 @@
       "value": "Parle-nous de toi :)"
     }, {
       "id": "1d552ca0-edbd-425b-a56a-b10266e7ac5a",
-      "comment": "Voir et modifier ce champ",
+      "comment": "",
       "command": "check",
-      "target": "xpath=//input[@id=\"f_user_access_level_2\"]",
+      "target": "id=f_user_access_level_1",
       "targets": [],
       "value": ""
     }, {
@@ -30853,7 +30853,7 @@
       "value": ""
     }, {
       "id": "6af9f8b0-d3a6-4c0c-b8fc-5709cdf8f69e",
-      "comment": "vérifier présence fichier et le modifier",
+      "comment": "vérifier présence nouveau champ",
       "command": "",
       "target": "",
       "targets": [],
@@ -30873,255 +30873,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "75c73f38-43a7-4755-bad6-7ee33b3c9ac2",
-      "comment": "supprimer le fichier",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bd8603ad-3e79-47ac-88b8-5a3f294a4f7d",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"delete.php\") and contains(@href, \"${nom_fichier}\")]",
-      "targets": [
-        ["css=.icn-btn:nth-child(2) > span", "css:finder"],
-        ["xpath=//a[2]/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "bf05d966-045a-482d-a560-2e62a2acf81b",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "b273b480-af43-4e01-84dd-bd79e75ad1b7",
-      "comment": "",
-      "command": "click",
-      "target": "name=delete",
-      "targets": [
-        ["name=delete", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='delete']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c4d9b00e-8088-416d-891e-6f67cfa996a8",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [
-        ["relative=parent"]
-      ],
-      "value": ""
-    }, {
-      "id": "d354737b-cf4f-416e-b2f2-f7c1b3c0e614",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "xpath=//figcaption/a[contains(@href, \"${nom_fichier}\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1ba2a0da-2faf-43ac-b645-3622556f4d13",
-      "comment": "ajouter un autre fichier",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "331fcefb-d2fc-4b6b-8730-281c5ad3e64b",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href,\"upload.php\")]",
-      "targets": [
-        ["css=.action-upload span", "css:finder"],
-        ["xpath=//p/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Ajouter un fichier')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "10f4d6f8-1605-4ff3-bb3b-28da4ef8c241",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "c1b7028d-a8fd-4d54-8eab-6a1f9e1756a8",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let filename = document.querySelector(\"#f_file\"); filename.style.display=\"block\"; return;",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c62ada70-17a9-4b0c-925f-e71c19e90111",
-      "comment": "",
-      "command": "store",
-      "target": "cv2.pdf",
-      "targets": [],
-      "value": "nom_fichier"
-    }, {
-      "id": "fbc25801-c1a6-49e2-a80f-7bca5ab55f4d",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_file",
-      "targets": [
-        ["id=f_file", "id"],
-        ["name=file[]", "name"],
-        ["css=#f_file", "css:finder"],
-        ["xpath=//input[@id='f_file']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "/tmp/${nom_fichier}"
-    }, {
-      "id": "4bff3792-31a2-4276-936e-774fb141dc43",
-      "comment": "",
-      "command": "click",
-      "target": "name=upload",
-      "targets": [
-        ["name=upload", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='upload']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Envoyer')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "b3957390-3121-48a9-9ed2-13bc66528f1f",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dc3eb32b-e354-4c39-b083-2c10e41629aa",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "xpath=//figcaption/a[contains(@href, \"${nom_fichier}\")]",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "30393c71-c1b7-4c2c-a093-c30c4125cc3b",
       "comment": "Déconnexion membre",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/logout.php')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4e3fb854-50c2-429d-87cf-77de8989f0ab",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "10c7d31e-532c-4314-9557-ead90e90fd02",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "7e4f9bc6-47b1-4a0c-9595-ec0949f49351",
-      "comment": "Connexion admin",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7fd10949-dab7-4ba4-97f4-a67784714b33",
-      "comment": "supprimer le champ ajouté",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dd15d647-1d4c-4341-acbf-0894e932ec09",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
-      "targets": [
-        ["css=li:nth-child(6) b", "css:finder"],
-        ["xpath=//li[6]/h3/a/b", "xpath:position"],
-        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "cc100274-c2bb-4829-ae10-52f3283ac132",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "fbbe7c96-61a2-467b-b504-f636eeee7e58",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5beaa52c-d0c4-44eb-b5b1-32022aa60a51",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3763d431-a446-491c-bb38-7de409492e56",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "f5d25094-bd75-4b52-8687-6047cfeac006",
-      "comment": "",
-      "command": "check",
-      "target": "xpath=//input[@id='f_confirm_delete_1']",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5884f071-38ac-4fb2-89d4-944cc3b8bf96",
-      "comment": "",
-      "command": "click",
-      "target": "name=delete",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "16060b10-1656-4a96-a988-ffd3077f4038",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "9aba8324-85a8-4c07-b801-45d4767d174c",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
       "targets": [],
       "value": ""
     }]
