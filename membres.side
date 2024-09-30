@@ -38121,6 +38121,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "4053e32b-d121-46db-b00c-d13915116eb8",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//input[@id=\"f_preset_pays\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "3897980b-57c7-4c9c-a4d4-b5c2b6fe33d2",
+      "comment": "",
+      "command": "if",
+      "target": "${nb} == 1",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8065bc0d-dcfe-464a-be70-9fd0061efd87",
       "comment": "",
       "command": "store",
@@ -38162,47 +38176,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0e5502c2-f9e1-47ba-b769-30a72bd7212a",
-      "comment": "autoriser modification",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "653ed0c2-b00f-459d-8b64-1cd128f97945",
+      "id": "302dbd5a-15db-475e-a27c-d9bd3edc01d9",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"edit.php\")]",
+      "command": "storeXpathCount",
+      "target": "xpath=//th[text()=\"${libelle_champ}\"]/following-sibling::td[3]/span[@title=\"Visible\"]",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "3c8cbd03-6e01-4756-9dcb-88844fa8e817",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2294aea5-e765-4e24-b275-c2e55d466ef7",
-      "comment": "",
-      "command": "check",
-      "target": "xpath=//input[@id=\"f_user_access_level_2\"]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "703699e9-55ea-4bda-b501-c46d6bbd5a56",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name=\"save\"]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "331ea367-629a-4c2b-8267-3d09240d95c0",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [],
-      "value": ""
+      "value": "visible"
     }, {
       "id": "012077c5-72c6-4a26-bf00-9df130082d7d",
       "comment": "créer un membre",
@@ -38362,10 +38341,10 @@
       "targets": [],
       "value": "${valeur_champ}"
     }, {
-      "id": "4801bff0-a46b-4974-82c6-672f1f069dfd",
-      "comment": "attribuer un mot de passe au membre",
-      "command": "",
-      "target": "",
+      "id": "9f5163a5-c042-4e54-b3c9-2e72d1884afd",
+      "comment": "",
+      "command": "if",
+      "target": "${visible} == 1",
       "targets": [],
       "value": ""
     }, {
@@ -38468,7 +38447,7 @@
       "value": ""
     }, {
       "id": "332e0f2c-abf1-4b5f-92b1-ff3bf203c49c",
-      "comment": "vérifier pays et le modifier",
+      "comment": "vérifier pays",
       "command": "",
       "target": "",
       "targets": [],
@@ -38488,54 +38467,6 @@
       "targets": [],
       "value": "${valeur_champ}"
     }, {
-      "id": "6a62069e-b7d4-4851-b9f5-8fcfa6a0d5ad",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/me/edit.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "249bbbc4-14d3-4f5e-9f0a-8a48b8da1cd1",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 2 + Math.floor(Math.random() * (${nb_pays} - 1))",
-      "targets": [],
-      "value": "num_pays"
-    }, {
-      "id": "de52175b-6860-4985-936b-0f8006a608b9",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=//select[@id=\"${id_champ}\"]/option[${num_pays}]",
-      "targets": [],
-      "value": "valeur_champ"
-    }, {
-      "id": "044b9cf0-d3b2-4dd1-a0e2-bb982b944df8",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//select[@id=\"${id_champ}\"]/option[${num_pays}]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "91380263-c358-48c1-ab5d-13716c63c93f",
-      "comment": "",
-      "command": "click",
-      "target": "name=save",
-      "targets": [
-        ["name=save", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='save']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "25df8ad1-f403-47a0-b93f-08eafafca274",
-      "comment": "",
-      "command": "assertText",
-      "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
-      "targets": [],
-      "value": "${valeur_champ}"
-    }, {
       "id": "4d955d84-c92e-4ac9-9b5e-dbc280b55565",
       "comment": "Déconnexion membre",
       "command": "click",
@@ -38543,112 +38474,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "429a5b6b-c57e-41d7-8b98-95ad8d925d1f",
+      "id": "41b94457-49c8-404f-a373-d3841d9e0ef0",
       "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "8bb6e914-1cbe-413b-9c43-943fa52eaa97",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "4046cb60-aaec-4635-b905-009e4191a756",
-      "comment": "Connexion admin",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bb477137-3f9b-401f-9b9e-daf59b5a98cd",
-      "comment": "supprimer le champ ajouté",
-      "command": "",
+      "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "65926016-d754-457f-8ebd-f3b7c03db798",
+      "id": "6067cbd9-5fec-4f06-97b4-a83945c41f81",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
-      "targets": [
-        ["css=li:nth-child(6) b", "css:finder"],
-        ["xpath=//li[6]/h3/a/b", "xpath:position"],
-        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "4adcf85b-d45b-4a60-afa1-28dc2156e16b",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "8df8ea27-6556-449e-80ff-e46bebbd84c5",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4205519f-84ca-4690-b1a8-3431d689f13f",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "108ad630-5068-4375-a94b-c94f55c0e3c8",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "726e5019-8e74-4428-af3b-e65bb32a5914",
-      "comment": "",
-      "command": "check",
-      "target": "xpath=//input[@id='f_confirm_delete_1']",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "84951c73-ef15-4870-969f-6f164bdda32a",
-      "comment": "",
-      "command": "click",
-      "target": "name=delete",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5357be94-a03c-4771-ac24-0f91cdbedfb8",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "9db629c9-38fa-42f8-a779-4a051c9c1494",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }]
