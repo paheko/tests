@@ -1,7 +1,9 @@
+#+STARTUP: show3levels
+#+STARTUP: inlineimages
 * Test paheko
 ** Notes
 *** problème avec instruction conditionnelle dans 4-09 et 4-10
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 if (${nb_parents} >= 2)
 { ... }
 else if (${nb_total_membres} > 2)
@@ -10,7 +12,7 @@ else if (${nb_total_membres} > 2)
 #+END_SRC
 
 **Contournement**
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 if (${nb_parents} >= 2)
 { ... }
 else if ${nb_parents} < 2 && ${nb_total_membres} > 2
@@ -42,6 +44,45 @@ Impossible de sélectionner un élément avec l'attribut **display:none**
 *** numéro de téléphone
 - **Attention**, un numéro qui commence par 0 est formatté avec un
   espace entre les paires de chiffres !!
+*** accès élément tableau javascript
+#+BEGIN_SRC javascript
+// refusé par IDE mais accepté par runner
+return ${t}[${i}]
+#+END_SRC
+*** Objet javascript
+- Syntaxe accès aux objets : ${objet}.attribut ou ${objet}.methode
+
+#+BEGIN_SRC javascript
+// refusé par le runner
+return ${membre.nom}
+
+// accepté
+return ${membre}.nom;
+#+END_SRC
+
+*** input type="checkbox
+Pour (dés)activer un /<input type="checkbox"/, il faut utiliser
+**(un)check** car le runner (de chrome ?) n'aime pas **click**
+*** Appel de fonction
+L'/appel de fonction/ définie dans le script avec une variable de
+l'IDE en param ne fonction qu'avec Chrome.  NB : vérifier exactement
+ce qui ne fonctionne pas avec firefox ?
+
+*** Envoi de fichier
+- Ne fonctionne qu'avec chrome
+- *Important* : Ne pas cliquer sur le bouton d'ouverture du sélecteur
+  de fichier : il ne se refermera pas et masquera les éléments de la
+  fenêtre précédente qui ne pourront plus être activés
+*** Sélectionner un onglet/une fenêtre après ouverture
+- dans la commande qui ouvre une nouvelle fenêtre ou un nouvel onglet,
+  cliquer l'icône « Add new window configuration » tout à droite de la
+  commance ; saisir un nom de fenre qu'on pourra utiliser plus loin
+  pour sélectionner la fenêtre quand elle sera ouverte avec la
+  commande :
+  #+BEGIN_SRC
+	select window | handle=${nom_fenêtre}
+  #+END_SRC
+- voir 13-01 suppression adresse
 *** Version mobile
 - les libellés des boutons du menu principal n'apparaissent pas et ne
   sont donc pas trouvés, ni par un chemin xpath, ni par un chemin css
@@ -61,34 +102,12 @@ Impossible de sélectionner un élément avec l'attribut **display:none**
 
 Bref, ce qui marche pour le driver chrome ne marche pas pour celui de firefox et vice-versa..
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC bash
 > selenium-side-runner -c "browserName=firefox" -f "mobile" paheko_v4.side
 
     Element <button class="main icn-btn" name="save" type="submit"> is not clickable
     at point (125,633) because another element <ul> obscures it
 #+END_SRC
-
-*** Objet javascript
-- Syntaxe accès aux objets : ${objet}.attribut ou ${objet}.methode
-
-#+BEGIN_SRC
-// refusé par le runner
-return ${membre.nom}
-
-// accepté
-return ${membre}.nom;
-#+END_SRC
-
-*** input type="checkbox
-Pour activer un /<input type="checkbox"/, il vaut mieux utiliser
-**check** car le runner (de chrome ?) n'aime pas **click**
-*** Appel de fonction
-L'/appel de fonction/ définie dans le script avec une variable de
-l'IDE en param ne fonction qu'avec Chrome.  NB : vérifier exactement
-ce qui ne fonctionne pas avec firefox ?
-
-*** Envoi de fichier
-Ne fonctionne qu'avec chrome
 
 *** Exception javascript (CORRIGÉ)
 quand l'inspecteur est ouvert, le clic sur le sélecteur d'identité des
@@ -266,8 +285,6 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 	- MAIS l'ajout d'une opération après le déclenchement de
       l'enregistrement permet la bonne terminaison de l'enregistrement
 
-- avec l'IDE sous chrome : la version 107 de chrome ne supporte plus l'IDE ....
-
 *** DONE 10 configuration membres Préférences
 **** DONE 10-01 catégorie par défaut des nouveaux membres
 **** DONE champs utilisés pour définir identité
@@ -287,25 +304,34 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 - connexion admin
 - vérification absence membre dans journal
 **** ¿ déconnexion automatique ?
-*** TODO 11 configuration membres Fiche
-**** DONE ajouter un champ à la fiche membre
-PB : le bouton de suppression finale du champ est pris en compte par
-l'IDE mais pas toujours par le runner
-***** DONE 11-01 ajout année naissance
-***** DONE 11-02 ajout champ perso texte libre
-***** DONE 11-03 ajout champ perso texte choix multiple
-***** DONE 11-04 ajout champ perso texte multilignes
-***** DONE 11-05 ajout champ perso calculé
-***** DONE 11-06 ajout champ perso email
-***** DONE 11-07 ajout champ perso url
-***** DONE 11-08 ajout champ perso case à cocher
-***** DONE 11-09 ajout champ perso date
-***** DONE 11-10 ajout champ perso date et heure
-***** DONE 11-11 ajout champ perso année
-***** DONE 11-12 ajout champ perso fichier
+*** DONE 11 ajouter un champ à la fiche membre
+- vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
+  la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
+  dans la liste des membres
+- les champs prédéfinis s'ajoutent avant les champs personnalisés et
+  semble-t-il de temps en temps, le nouveau champ (perso) est ajouté en
+  avant-dernière position !
+- PB : le bouton de suppression finale du champ est pris en compte par
+  l'IDE mais pas toujours par le runner
+***** DONE 11-01 ajout champ perso email
+***** DONE 11-02 ajout champ perso url
+***** DONE 11-03 ajout champ perso case à cocher
+***** DONE 11-04 ajout champ perso date
+***** DONE 11-05 ajout champ perso date et heure
+***** DONE 11-06 ajout champ perso mois et année
+- avec le driver de chrome :
+  - saisir le mois
+  - envoyer le code de la touche de tabulation
+  - saisir l'année
+fonctionne avec runner et le driver de chrome mais probablement pas avec celui de firefox
+***** DONE 11-07 ajout champ perso année
+***** DONE 11-08 ajout champ perso fichier
+- utilise le fichier /tmp/cv.pdf
+- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
+***** DONE 11-08a ajout champ perso fichier avec modification
 - utilise les fichiers /tmp/cv.pdf et /tmp/cv2.pdf
 - PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
-***** DONE 11-13 ajout champ perso mot de passe
+***** DONE 11-09 ajout champ perso mot de passe
 - question :  ce mot de passe ne sert pas à se connecter, donc à quoi sert-il ?
 - pour vérifier le mot de passe, il faut :
   - connecter le membre
@@ -316,52 +342,99 @@ l'IDE mais pas toujours par le runner
 	- NB : en mode runner, le champ est vide =>impossible de vérifier le mdp
   - Remarque : la modification du mot de passe est prise en compte mais on
     ne peut le voir qu'en exportant les données de la fiche membre
-***** DONE 11-14 ajout champ perso nombre
-***** DONE 11-15 ajout champ perso nombre à virgule
-***** DONE 11-16 ajout champ perso numéro téléphone
-***** DONE 11-17 ajout champ perso Sélecteur à choix unique
-***** DONE 11-18 ajout champ perso Sélecteur à choix multiple
-***** DONE 11-19 ajout champ perso pays
+***** DONE 11-10 ajout champ perso nombre
+***** DONE 11-11 ajout champ perso nombre à virgule
+***** DONE 11-12 ajout champ perso numéro téléphone
+***** DONE 11-13 ajout champ perso Sélecteur à choix unique
+***** DONE 11-14 ajout champ perso Sélecteur à choix multiple
+***** DONE 11-15 ajout champ perso pays
 - Pour définir le pays par défaut, il faut indiquer son code à deux
   lettres et non son nom complet => à documenter ou à changer
-***** DONE 11-20 ajout champ perso mois et année
-- avec le driver de chrome :
-  - saisir le mois
-  - envoyer le code de la touche de tabulation
-  - saisir l'année
-fonctionne avec runner et le driver dechrome mais probalement pas avec celui de firefox
+***** DONE 11-16 ajout champ perso texte libre
+***** DONE 11-17 ajout champ perso texte choix multiple
+***** DONE 11-18 ajout champ perso texte multilignes
+***** DONE 11-19 ajout champ perso calculé
 ***** DONE 11-30 ajout ancienneté
 - c'est un champ calculé à partir de la date d'inscription
-***** DONE 11-31 ajout date naissance
-***** DONE 11-32 ajout pays
-***** DONE saisir un champ avec un identifiant déjà existant
-- Ce nom de champ est déjà utilisé par un autre champ : adresse, code_postal,
-  ville, telephone, lettre_infos_1, date_inscription
-- numero : Aucun champ de numéro de membre n'existe
-- nom : Aucun champ de nom de membre n'existe
-- email : Aucun champ d'identifiant de connexion n'existe
+***** DONE 11-31 ajout année naissance
+***** DONE 11-32 ajout date naissance
+***** DONE 11-33 ajout pays
+***** DONE 11-34 ajout photo
+- utilise le fichier /tmp/photo.jpg
+***** DONE 11-35 ajout pronom
+***** DONE 11-36 ajout âge en fonction année naissance
+- ajouter année naissance
+- ajouter âge
+- tenir compte du cas où il y a déjà un champ âge/date naissance
+***** DONE 11-37 ajout âge en fonction date naissance
+- ajouter date naissance
+- ajouter âge
+- tenir compte du cas où il y a déjà un champ âge/année naissance
+***** TODO 11-90 saisir un champ avec un identifiant déjà existant
+- récupérer l'identifiant d'un champ déjà présent
+- messages d'erreur différents selon le champ :
+  - Ce nom de champ est déjà utilisé par un autre champ : adresse, code_postal,
+	ville, telephone, lettre_infos_1, date_inscription
+  - numero : Aucun champ de numéro de membre n'existe
+  - nom    : Aucun champ de nom de membre n'existe
+  - email  : Aucun champ d'identifiant de connexion n'existe
 ***** TODO ¿ saisir une donnée erronée dans chaque champ ?
 Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
-**** TODO modifier un champ de la fiche membre
-**** TODO changer l'ordre des champs de la fiche membre
-
- -> vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
- la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
- dans la liste des membres
-
- + Autres éléments de config des membres :
- -> modifier l'identifiant de connexion
- -> modifier les champs pour l'identité du membre
-
-**** TODO supprimer un champ dans la fiche membre
-*** TODO 12 configuration membres Catégories et Droits
+*** DONE 12 modifier un champ de la fiche membre
+**** DONE 12-01 numéro non affiché liste membres
+**** DONE TEST SUPPRIMÉ 12-02 numéro non obligatoire
+Même si on ne saisit pas un numéro, il sera automatiquement affecté
+- le test est-il pertinent ?
+- faut-il empêcher cette modification ?
+**** DONE 12-03 numéro non visible fiche membre
+**** DONE TEST SUPPRIMÉ car devenu inutile 12-06 nom, prénom non affiché liste membres
+- la modification n'est plus possible
+**** DONE 12-07 nom, prénom non obligatoire
+**** DONE 12-08 nom, prénom modifiable
+**** DONE 12-09 nom, prénom non visible fiche membre
+**** DONE 12-11 e-mail affiché liste membres
+**** DONE 12-12 e-mail obligatoire
+**** DONE [[./images/attention-petit.png]] 12-13 e-mail modifiable
+- après « se connecter à  sa place » :
+  - clic « Mes infos personnelles » échoue
+  - impossible ensuite de se connecter en tant qu'admin
+  - réinstallation nécessaire !
+- avec attribution d'un mot de passe :
+  - changement email possible, mais si adresse générée aléatoirement :
+	- attente longue lors enregistrement
+	- changement accepté mais apparition mention « Adresse invalide » (en rouge)
+	- possibilité pour le membre de se déconnecter puis de se
+      reconnecter mais le statut email reste toujours invalide
+  - le problème ne se pose pas avec une adresse valide :)
+**** DONE 12-14 e-mail non visible fiche membre
+**** DONE 12-16 mot de passe modifiable
+- fonctionne, mais temps d'attente long lors de l'enregistrement du
+  nouveau mot de passe
+**** DONE 12-17 mot de passe non visible
+*** TODO 13 changer l'ordre des champs de la fiche membre
+**** DONE 13-01 intervertir numéro et nom
+- est-ce utile de tester d'autres changements d'ordre ?
+*** TODO supprimer un champ dans la fiche membre
+- le clic sur le bouton de confirmation de la suppression n'est pas
+  pris en compte
+- même problème en utilisant du code javascript pour ouvrir le
+  dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
+  ce cas, c'est la case à cocher qui n'est pas cochée !
+- certains champs dépendent d'un autre : âge dépend de l'année de
+  naissance => on ne peut supprimer année si âge est présent !
+**** TODO Suppression adresse postale
+- échec => inutile de poursuivre
+*** TODO Autres
+- Autres éléments de config des membres :
+  - modifier l'identifiant de connexion
+  - modifier les champs pour l'identité du membre
+*** TODO configuration membres Catégories et Droits
 **** TODO ajouter une catégorie
 **** TODO modifier une catégorie
 **** TODO supprimer une catégorie
 **** TODO droits
  -> vérifier que le droit lecture/écriture/administration fonctionne
  bien, notamment via le bouton "connexion à la place du membre"
-
 *** journal d'audit
 ** prise en main
 *** DONE test installation
