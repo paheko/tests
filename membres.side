@@ -39453,7 +39453,7 @@
     }]
   }, {
     "id": "9ee360d7-d167-4cb6-9a6f-c571c52a0c7f",
-    "name": "11-36 ajout âge/année naissance",
+    "name": "11-36 ajout âge selon année naissance",
     "commands": [{
       "id": "ce1cac19-f8c9-44da-9313-350275f19f48",
       "comment": "",
@@ -40019,7 +40019,7 @@
     }]
   }, {
     "id": "0e90818d-fe5f-4135-bafa-99f640d63714",
-    "name": "11-37 ajout âge/date naissance",
+    "name": "11-37 ajout âge selon date naissance",
     "commands": [{
       "id": "dd5e6c38-5348-4bbe-be42-3a824b62c581",
       "comment": "",
@@ -46351,7 +46351,7 @@
     "tests": ["d2e0733a-118a-4d98-a508-0b727abcfd3c", "fc3ad5c3-261a-481a-9f7e-1910280b2787", "02fea879-c742-4a8e-af1d-6df832e7a947", "639dbeb9-8199-4613-98e7-ae8948f484a2", "67bfd994-d024-48bd-a966-508263ad5687"]
   }, {
     "id": "40d04477-f2e7-4b20-bfd1-463ff672bcba",
-    "name": "11 modification fiche membre",
+    "name": "11 ajout champs fiche membre",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
