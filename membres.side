@@ -39636,10 +39636,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "bddd9228-c190-4306-a0d7-5b27abe79c90",
+      "id": "33a446e1-9b6a-49c7-b0c8-31165f9a9e77",
       "comment": "",
       "command": "store",
-      "target": "f_preset_age_annee",
+      "target": "age_annee",
+      "targets": [],
+      "value": "nom_champ"
+    }, {
+      "id": "bddd9228-c190-4306-a0d7-5b27abe79c90",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 'f_preset_' + ${nom_champ}",
       "targets": [],
       "value": "id_champ"
     }, {
@@ -39691,17 +39698,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0e037fe1-db5a-484f-ba8d-f4998235d0f3",
+      "id": "f2944082-65b7-4c9f-b82c-88c1aef0c80c",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//th[text()=\"${libelle_champ_age}\"]",
+      "target": "xpath=//input[@value=\"${nom_champ}\"]",
       "targets": [],
       "value": ""
     }, {
       "id": "191c6f17-7a41-47ee-820b-367b206cd26c",
       "comment": "",
       "command": "storeXpathCount",
-      "target": "xpath=//th[text()=\"${libelle_champ_age}\"]/following-sibling::td[3]/span[@title=\"Visible\"]",
+      "target": "xpath=//input[@value=\"age_annee\"]/parent::td/following-sibling::td[3]/span[@title=\"Visible\"]",
       "targets": [],
       "value": "visible"
     }, {
@@ -39842,19 +39849,96 @@
       "targets": [],
       "value": "age_calcule"
     }, {
+      "id": "785cef2e-de56-4dfe-b27c-5b5b7f2a9452",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "5b466bb2-82c5-4dae-a308-6f4af34d5262",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "6005694b-6607-4a31-bc3f-20179ebccfe8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "age_ok"
+    }, {
+      "id": "7122da0e-4ed9-49d7-ac5f-40ff98b8db59",
+      "comment": "",
+      "command": "while",
+      "target": "${num} <= ${nb}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b09bc510-79fd-4774-b98e-0eef6ba46f83",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]/following-sibling::dd",
+      "target": "xpath=(//dt[text()=\"${libelle_champ_age}\"])[${num}]/following-sibling::dd",
       "targets": [],
       "value": "age_affiche"
     }, {
       "id": "b52a46fc-1bcd-4c9a-80ba-4155b33c9c07",
       "comment": "",
-      "command": "assert",
-      "target": "age_affiche",
+      "command": "if",
+      "target": "${age_affiche} == ${age_calcule}",
       "targets": [],
-      "value": "${age_calcule}"
+      "value": ""
+    }, {
+      "id": "ec60af3e-44b6-4e32-b865-ed07a6d4f9db",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "age_ok"
+    }, {
+      "id": "023b700b-887b-4bed-9f7a-648803b6c2c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "bf0e8a45-d6ca-4646-b18e-1c3bab880acb",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8bf749b-82a0-4692-9d4a-49eeeb740cb9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "1ccc1cca-986e-495c-a852-8f6dd9e7cef2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91bee6aa-0ac9-4d9e-8163-761ea7517027",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "262e4b99-9bce-46f1-86e3-02cf9658293a",
+      "comment": "",
+      "command": "assert",
+      "target": "age_ok",
+      "targets": [],
+      "value": "1"
     }, {
       "id": "9155a4f5-6b74-4f86-946f-f929ba4b5b18",
       "comment": "",
@@ -39982,19 +40066,96 @@
       "targets": [],
       "value": "${annee_naissance}"
     }, {
-      "id": "83b34b0e-9e4d-4d86-b71a-b26899df6b69",
+      "id": "6af4e0a4-a63d-410d-9807-cd249433e435",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]",
+      "targets": [],
+      "value": "nb"
+    }, {
+      "id": "275d85d8-ac44-435a-ab28-2fe6aa6354fe",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "f43688ee-3066-49f3-8cb7-3ee5cd735dbf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "age_ok"
+    }, {
+      "id": "3b9572bc-a276-4b8c-affb-29ae5d4b9184",
+      "comment": "",
+      "command": "while",
+      "target": "${num} <= ${nb}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88b59614-ae4f-42d2-ad46-9c1a4d0affa8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]/following-sibling::dd",
+      "target": "xpath=(//dt[text()=\"${libelle_champ_age}\"])[${num}]/following-sibling::dd",
       "targets": [],
       "value": "age_affiche"
     }, {
-      "id": "47c4ae99-34ac-4f38-9581-b6e0630d8d64",
+      "id": "c3024f57-6e84-438a-833d-e55011a6a583",
+      "comment": "",
+      "command": "if",
+      "target": "${age_affiche} == ${age_calcule}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cf81f48-7a5c-460e-b829-9e2b28047fc8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "age_ok"
+    }, {
+      "id": "9331daee-d09f-487e-83bc-a8baeef11965",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "3e5472df-8797-4c08-bc4e-d0c48d6b86fa",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d01e76e1-1bf4-49ca-890b-708c702a494d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "dfb44996-6236-40ff-9c42-0a3bb47e2326",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ba0d08d-77f1-458b-ab8a-b425ed78df87",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70e2effb-f855-4f28-8e8a-7e401efce93f",
       "comment": "",
       "command": "assert",
-      "target": "age_affiche",
+      "target": "age_ok",
       "targets": [],
-      "value": "${age_calcule}"
+      "value": "1"
     }, {
       "id": "f4f8a838-1ac2-4632-9e53-524ddcd22b4f",
       "comment": "Déconnexion membre",
