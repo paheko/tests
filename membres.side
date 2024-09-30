@@ -39553,6 +39553,48 @@
       ],
       "value": ""
     }, {
+      "id": "3dc7cd09-482e-45c2-896e-453ecdcc9252",
+      "comment": "récupérer l'identifiant d'un champ présent",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96410a4e-236e-43d4-ba65-204291d05a1c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tbody/tr[last()]//a[contains(@href, \"edit.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56d6f135-d1f6-4267-b228-4d41253acbaa",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "619c3d8d-8311-486f-b4e6-2e5f60164e73",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=f_name",
+      "targets": [],
+      "value": "nom_champ"
+    }, {
+      "id": "cc3d3fe4-7237-4a45-bba2-a1073bb6c24f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a/span[text()=\"Annuler\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a30863e-56b7-4016-9ca7-2f93c3348a36",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e23b19d8-3ca3-494a-8e17-0e2b6d7ad65d",
       "comment": "",
       "command": "click",
@@ -39574,7 +39616,7 @@
       "value": ""
     }, {
       "id": "a0684597-50f2-4ece-839e-cb9f64052f90",
-      "comment": "champ texte",
+      "comment": "",
       "command": "click",
       "target": "xpath=//select[@id=\"f_type\"]/option[@value=\"text\"]",
       "targets": [],
@@ -39594,26 +39636,12 @@
       "targets": [],
       "value": "${libelle_champ}"
     }, {
-      "id": "506c9349-d77d-496c-9564-2891884fb3ea",
-      "comment": "",
-      "command": "store",
-      "target": "adresse",
-      "targets": [],
-      "value": "nom_champ"
-    }, {
       "id": "786b8766-b7e9-4673-b2eb-f8f922517999",
       "comment": "",
       "command": "type",
       "target": "id=f_name",
       "targets": [],
       "value": "${nom_champ}"
-    }, {
-      "id": "30fa3352-c786-49fe-9e0f-904d96117efe",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 'f_' + ${nom_champ}",
-      "targets": [],
-      "value": "id_champ"
     }, {
       "id": "9502ea51-9b93-4279-bb4a-136942e7d8d8",
       "comment": "",
