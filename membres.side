@@ -36421,7 +36421,7 @@
       "value": ""
     }, {
       "id": "b3a42fdd-5ec9-4ad2-838f-d2dad7ffff16",
-      "comment": "ajouter champ perso calculé",
+      "comment": "ajouter champ perso calculé visible fiche membre",
       "command": "",
       "target": "",
       "targets": [],
@@ -36491,8 +36491,8 @@
     }, {
       "id": "235e4bff-0249-4d6e-9ae4-a5ce6cc3a427",
       "comment": "",
-      "command": "store",
-      "target": "Bizarre",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str;};return chaine(10)",
       "targets": [],
       "value": "libelle_champ"
     }, {
@@ -36650,7 +36650,7 @@
       "id": "37b42cc8-b2cc-42d5-b79d-b9df5b20df69",
       "comment": "",
       "command": "executeScript",
-      "target": "function calculer(nb, chaine){ let somme = 0; for (let i = 0; i < nb; ++i) { somme += chaine.charCodeAt(i);\t} return somme; } return calculer(5, ${nom});",
+      "target": "function calculer(nb, chaine){ let somme = 0; for (let i = 0; i < nb; ++i) { somme += chaine.charCodeAt(i);} return somme; } return calculer(5, ${nom});",
       "targets": [],
       "value": "code"
     }, {
@@ -36660,94 +36660,6 @@
       "target": "xpath=//dt[text()=\"${libelle_champ}\"]/following-sibling::dd",
       "targets": [],
       "value": "${code}"
-    }, {
-      "id": "2256aef1-4e16-49ac-a647-ac20ebff04b4",
-      "comment": "supprimer le champ ajouté",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4b4fb86e-e444-452d-a5c0-db776f3efcff",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
-      "targets": [
-        ["css=li:nth-child(6) b", "css:finder"],
-        ["xpath=//li[6]/h3/a/b", "xpath:position"],
-        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "3d5c7385-27f1-48ed-8543-cc3d86653f55",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "65098d50-8994-410f-94c0-8bda5da57599",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//a[contains(@href, \"/admin/config/fields\")]",
-      "targets": [
-        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
-        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "cbc00a67-2a60-4055-98ed-f9b50d70d73d",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//tbody/tr[last()]//td//a[contains(@href, \"delete.php\")]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a1fb3b80-ca8a-475b-912a-7b0cff9d8ce7",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=0",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "2848407a-eba5-46e7-938b-b262c66c94f8",
-      "comment": "",
-      "command": "check",
-      "target": "xpath=//input[@id='f_confirm_delete_1']",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ee791676-1a15-4d0f-afbf-4b4a04ae8590",
-      "comment": "",
-      "command": "click",
-      "target": "name=delete",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9eaa9a78-b307-463a-b9a2-cbfc39c36c26",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "relative=parent",
-      "targets": [
-        ["index=0"]
-      ],
-      "value": ""
-    }, {
-      "id": "53d9e84b-1c52-4288-a1d7-b1093a5d4728",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "xpath=//th[text()=\"${libelle_champ}\"]",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "2f90c2f6-6b1b-4703-abc9-a137b58f0443",
