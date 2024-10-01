@@ -40363,14 +40363,14 @@
       "targets": [],
       "value": ""
     }, {
-    "id": "9c75ddbb-01d3-49c9-a86e-a7be3133be2f",
+      "id": "9c75ddbb-01d3-49c9-a86e-a7be3133be2f",
       "comment": "",
       "command": "store",
       "target": "age_date",
       "targets": [],
       "value": "nom_champ"
     }, {
-		"id": "1ba927b3-7712-493b-87f7-84e436a3bd34",
+      "id": "1ba927b3-7712-493b-87f7-84e436a3bd34",
       "comment": "",
       "command": "executeScript",
       "target": "return 'f_preset_' + ${nom_champ}",
@@ -40576,91 +40576,91 @@
       "targets": [],
       "value": "age_calcule"
     }, {
-     "id": "14be73dc-eb85-46fa-8f0d-ca0385ced772",
+      "id": "14be73dc-eb85-46fa-8f0d-ca0385ced772",
       "comment": "",
       "command": "storeXpathCount",
       "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]",
       "targets": [],
       "value": "nb"
     }, {
-		"id": "229ef8d7-be17-4e4b-a04f-a045dedc66f2",
+      "id": "229ef8d7-be17-4e4b-a04f-a045dedc66f2",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "adf37067-e6f5-4f9b-9a1b-992ed2857809",
+      "id": "adf37067-e6f5-4f9b-9a1b-992ed2857809",
       "comment": "",
       "command": "executeScript",
       "target": "return 0",
       "targets": [],
       "value": "age_ok"
     }, {
-		"id": "02ea2b06-09d5-4948-a768-a2c9ce70ae00",
+      "id": "02ea2b06-09d5-4948-a768-a2c9ce70ae00",
       "comment": "",
       "command": "while",
       "target": "${num} <= ${nb}",
       "targets": [],
       "value": ""
     }, {
-		"id": "c9a164a7-ba09-413d-b0d0-9e9b4785bf2c",
+      "id": "c9a164a7-ba09-413d-b0d0-9e9b4785bf2c",
       "comment": "",
       "command": "storeText",
       "target": "xpath=(//dt[text()=\"${libelle_champ_age}\"])[${num}]/following-sibling::dd",
       "targets": [],
       "value": "age_affiche"
     }, {
-		"id": "f472abb6-3e51-496c-b6ff-f8a71250a88f",
+      "id": "f472abb6-3e51-496c-b6ff-f8a71250a88f",
       "comment": "",
       "command": "if",
       "target": "${age_affiche} == ${age_calcule}",
       "targets": [],
       "value": ""
     }, {
-		"id": "94d7bc13-415c-4b5d-8c12-c2e093c040f4",
+      "id": "94d7bc13-415c-4b5d-8c12-c2e093c040f4",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "age_ok"
     }, {
-		"id": "03c95230-cab0-4fc1-9c80-201dbd925ab2",
+      "id": "03c95230-cab0-4fc1-9c80-201dbd925ab2",
       "comment": "",
       "command": "executeScript",
       "target": "return ${nb} + 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "d792d24c-ede5-4432-a776-b9fd3f6d59d9",
+      "id": "d792d24c-ede5-4432-a776-b9fd3f6d59d9",
       "comment": "",
       "command": "else",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "26e3cc7d-8178-4575-9caa-1b3f5a807473",
+      "id": "26e3cc7d-8178-4575-9caa-1b3f5a807473",
       "comment": "",
       "command": "executeScript",
       "target": "return ${num} + 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "9e0d7a02-b14c-4d67-ae33-dd02484fbb43",
+      "id": "9e0d7a02-b14c-4d67-ae33-dd02484fbb43",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "1c4d6444-a77d-4db5-8372-58ba1fcae7cb",
+      "id": "1c4d6444-a77d-4db5-8372-58ba1fcae7cb",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "1eab7860-c55f-4097-b924-b038d35a089a",
+      "id": "1eab7860-c55f-4097-b924-b038d35a089a",
       "comment": "",
       "command": "assert",
       "target": "age_ok",
@@ -40793,91 +40793,91 @@
       "targets": [],
       "value": "${date_naissance}"
     }, {
-    "id": "7777a7c3-aeec-4291-9677-6a9e1586c2db",
+      "id": "7777a7c3-aeec-4291-9677-6a9e1586c2db",
       "comment": "",
       "command": "storeXpathCount",
       "target": "xpath=//dt[text()=\"${libelle_champ_age}\"]",
       "targets": [],
       "value": "nb"
     }, {
-		"id": "e2422889-7373-453d-9797-94be7b7d39c0",
+      "id": "e2422889-7373-453d-9797-94be7b7d39c0",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "2fa67e0d-fd01-4276-9c44-a2a82fd39ea1",
+      "id": "2fa67e0d-fd01-4276-9c44-a2a82fd39ea1",
       "comment": "",
       "command": "executeScript",
       "target": "return 0",
       "targets": [],
       "value": "age_ok"
     }, {
-		"id": "69f308f1-ecbb-40ab-8928-a63ef07a412c",
+      "id": "69f308f1-ecbb-40ab-8928-a63ef07a412c",
       "comment": "",
       "command": "while",
       "target": "${num} <= ${nb}",
       "targets": [],
       "value": ""
     }, {
-		"id": "5b514001-b5a8-4bd1-8048-b9de0b712ce0",
+      "id": "5b514001-b5a8-4bd1-8048-b9de0b712ce0",
       "comment": "",
       "command": "storeText",
       "target": "xpath=(//dt[text()=\"${libelle_champ_age}\"])[${num}]/following-sibling::dd",
       "targets": [],
       "value": "age_affiche"
     }, {
-		"id": "91d93e3d-47d9-4674-bdb3-2dd18d19f7ee",
+      "id": "91d93e3d-47d9-4674-bdb3-2dd18d19f7ee",
       "comment": "",
       "command": "if",
       "target": "${age_affiche} == ${age_calcule}",
       "targets": [],
       "value": ""
     }, {
-		"id": "5fa3b73e-9b16-45cc-8ccd-1ade60d33c7a",
+      "id": "5fa3b73e-9b16-45cc-8ccd-1ade60d33c7a",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
       "value": "age_ok"
     }, {
-		"id": "6008e584-3cbe-45ae-9516-0a9eb865d477",
+      "id": "6008e584-3cbe-45ae-9516-0a9eb865d477",
       "comment": "",
       "command": "executeScript",
       "target": "return ${nb} + 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "ba69d69a-5b0c-4bea-a42b-c12a67064c5e",
+      "id": "ba69d69a-5b0c-4bea-a42b-c12a67064c5e",
       "comment": "",
       "command": "else",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "d8332ade-e409-42da-9a4d-96ee6f6bc545",
+      "id": "d8332ade-e409-42da-9a4d-96ee6f6bc545",
       "comment": "",
       "command": "executeScript",
       "target": "return ${num} + 1",
       "targets": [],
       "value": "num"
     }, {
-		"id": "5f96851f-eeff-4eff-958e-788695b84a10",
+      "id": "5f96851f-eeff-4eff-958e-788695b84a10",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "f6af3f10-c6ff-4f7b-af2b-a8c7b2070f65",
+      "id": "f6af3f10-c6ff-4f7b-af2b-a8c7b2070f65",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-		"id": "1a7d8f76-abb3-45f9-b764-f562aaa44b4e",
+      "id": "1a7d8f76-abb3-45f9-b764-f562aaa44b4e",
       "comment": "",
       "command": "assert",
       "target": "age_ok",
@@ -41056,17 +41056,32 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "fda0047a-8c9e-4c78-b244-5fdb5d0781b6",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "93026ffd-5bdd-4106-ad4b-8d513bb82c17",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "04bdd1ba-22cb-4e18-881e-098029898e9c",
       "comment": "",
       "command": "click",
       "target": "xpath=//button[@name=\"add\"]",
-      "targets": [
-        ["name=save", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='save']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
-      ],
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d47f38b-5f62-437d-8ad3-c73e7357e538",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "a0684597-50f2-4ece-839e-cb9f64052f90",
