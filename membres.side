@@ -27232,6 +27232,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "577e78a5-e869-4851-9548-704aee719ab3",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "03078156-7e35-42f6-94b1-61caf6038a73",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "659e6eb2-210e-4f47-a451-41b66a219d21",
       "comment": "",
       "command": "click",
@@ -27243,6 +27257,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "c660bb5e-d74e-4689-a69b-3ad1125f569f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "8d104495-5b5f-467b-94cc-f70f4f76515c",
@@ -27686,6 +27707,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "0e2443bb-c375-42f4-bb61-e3b235b7d200",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "7c3b511d-6950-418e-8fca-93e1e9e700ff",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "965190f6-7845-42fb-9cb0-0bc4af834468",
       "comment": "",
       "command": "click",
@@ -27697,6 +27732,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "31035a22-ed9a-4967-b14a-3771bfa5169b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "b3dcd520-2b45-4adc-bba4-69c259c6ddb9",
@@ -28140,6 +28182,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "fdc34aba-d726-4e27-b3c6-71360564926c",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "67a371f2-7313-4db1-9019-f6f19fed9177",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "a73325ef-c181-440b-b960-ed48cacb223e",
       "comment": "",
       "command": "click",
@@ -28151,6 +28207,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "8d66bb2c-be3b-4d63-a2d7-bc1bf2c1ba2c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "9069e0f8-afe0-408e-ac60-b243f1c9ce81",
@@ -28595,6 +28658,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "53aefc4a-0872-487a-a932-1e3c2ebaa90b",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "9c02e28d-6c5a-4ff6-af4a-3c6d6a454b56",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "81177ff7-ae55-43e5-a95c-9ca2a0291d3f",
       "comment": "",
       "command": "click",
@@ -28608,8 +28685,15 @@
       ],
       "value": ""
     }, {
+      "id": "5d47f38b-5f62-437d-8ad3-c73e7357e538",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "7440e3ed-e913-4cce-a031-9e5559fdf663",
-      "comment": "champ date",
+      "comment": "",
       "command": "click",
       "target": "xpath=//select[@id=\"f_type\"]/option[@value=\"date\"]",
       "targets": [],
@@ -29049,6 +29133,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "057bef3e-4ea2-487c-9074-23e68e77c6f4",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "0e3a2d99-0573-49e8-b471-1f7ea8e5640a",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3d89a52d-15a1-4dbe-ae4b-02dc2fafec20",
       "comment": "",
       "command": "click",
@@ -29060,6 +29158,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "0eb60375-5035-45aa-add7-2d724efd1a42",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "8c90d36d-4f21-441f-b773-7568981e6db3",
@@ -29537,6 +29642,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "68e7036c-7a49-40fb-8f02-c7c7cac3e05f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "e5ba19f0-4e87-46aa-81a5-6181e5981765",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "27bd2e2e-3a30-4a4d-b7a8-1705a2354a97",
       "comment": "",
       "command": "click",
@@ -29548,6 +29667,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "22a38a40-6111-4c5b-84b1-468cee067c01",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "d6d58230-d3bf-4098-a2b2-3031b0f7e664",
@@ -30013,6 +30139,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "77fd94f6-b533-4b99-b01f-809918e5dd10",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "410c27f5-0057-4fd1-92cc-5464bb059c00",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "207e1d91-a82c-4ae2-a59e-468df4bdf8b1",
       "comment": "",
       "command": "click",
@@ -30024,6 +30164,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "ed816044-1f4e-47ff-87ef-8ac83c505e1c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "cffbe98c-d7c9-44e5-9fc0-96a9b6ea3b64",
@@ -30467,6 +30614,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "cdc6576d-ca22-42fd-bba3-bf4a1e6c3e1a",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "3e9272ed-87e1-4cd0-80cc-7b5da22e8081",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "9b4a2877-05d6-4100-b124-87755aef3ceb",
       "comment": "",
       "command": "click",
@@ -30478,6 +30639,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "e964045b-668a-473e-b3a9-04eff79f8dc9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "3950846e-73ad-413a-bb6b-7e9c7168485b",
@@ -30989,6 +31157,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "36cfe541-2840-4986-828d-5c8f3b4ce751",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "e9a6bd59-797a-453c-97ba-bfc8e8e4ec25",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "435f3f67-9e5f-4872-aae6-a9e3046d96f0",
       "comment": "",
       "command": "click",
@@ -31000,6 +31182,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "e28b9dfa-ad41-40bf-8a16-c2cf4a965763",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "3234c107-8246-4c67-b7f8-72cd28dbe8a6",
@@ -31647,6 +31836,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "95309f6f-4695-4eb0-96b0-15d27458da5b",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "c6fa13de-a57b-4928-8806-eb7afd96dbd6",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "43e0b02a-d381-4bcb-89fc-3100ca6f95eb",
       "comment": "",
       "command": "click",
@@ -31658,6 +31861,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "2e2037fa-a53e-4d49-9011-fad17b32564d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "ce0c020a-4bc8-4e92-8f2d-6538e4427b68",
@@ -32115,6 +32325,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "d05b2abb-88e9-4d1a-9fb5-681c06233f13",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "f719773e-114f-49d9-94cc-785da7496fa3",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "88027eed-d536-4cec-8dd1-c8d6f82d69f9",
       "comment": "",
       "command": "click",
@@ -32126,6 +32350,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "ec732966-1662-4ea1-a5db-def6090474ee",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "4f1bdf0d-c09c-46a8-9448-e0212a676649",
@@ -32569,6 +32800,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "dd013bc1-206d-462e-a116-5c65b1e5918c",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "0ffa188a-9008-40fd-8650-7a39906d92b1",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5cb1e648-bf63-4984-8eca-42a7a4d237e3",
       "comment": "",
       "command": "click",
@@ -32580,6 +32825,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "457f3475-da56-466a-9adb-cecdcca47662",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "43c235b6-ad98-48be-8eb9-5723dd0b6593",
@@ -33030,6 +33282,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "f59d5e50-e020-4d89-9a7e-125e6a0d8511",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "70229130-d23b-48f9-bf68-ef4080d51bbb",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "7b550dd9-40b8-460f-af27-38b5ae359017",
       "comment": "",
       "command": "click",
@@ -33041,6 +33307,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "c09b16b4-e16e-4058-b3b8-bebbbb0f1100",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "832e22d4-b72d-4bd9-aa16-d772c68c7701",
@@ -33512,6 +33785,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "72cb3f83-60d5-437b-82bf-fd3924b43d34",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "8d25af19-ecad-47b4-bd1a-a3240d7654f3",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e58be736-f377-4b8b-a85c-508cec3c098c",
       "comment": "",
       "command": "click",
@@ -33523,6 +33810,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "f7c5d2ad-27fc-4e0d-84f7-2ad94fcf777a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "9cc772fb-434d-4f58-9404-220898e494d4",
@@ -34023,6 +34317,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "5683df07-8e6c-4d92-b435-aa0af0307d05",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "4bd53098-cb64-4061-a26e-095235412f39",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5f180948-5c82-485f-a9de-e86208c02a42",
       "comment": "",
       "command": "click",
@@ -34034,6 +34342,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "bd3e0e26-627d-476c-b55d-b4b7f7284109",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "f9415dbc-d0a4-4c06-a89b-60b2a7715315",
@@ -34590,6 +34905,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "b66b940e-a1af-492e-ada9-a8bac1011e13",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "07208e4d-2ae7-4449-9cad-873eb8f6c35e",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "67db3598-4e28-48a5-9473-e498d45e7972",
       "comment": "",
       "command": "click",
@@ -34601,6 +34930,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "729bb6e0-3a19-464c-a5d6-d0b94a67aa1a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "0dfc9751-a687-4ba6-8b3f-e6fc8f316acc",
@@ -35073,6 +35409,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "65a14a01-7bd8-4abc-9a3c-e4d3c0f446de",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+	  "id": "6aac474e-b122-4eda-83b6-3794f43146e6",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c4fb3eeb-814b-472b-a7af-e291a70a108e",
       "comment": "",
       "command": "click",
@@ -35084,6 +35434,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+	  "id": "a3a40c0f-8184-4b70-803e-c25f90dbfaef",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "8aaf1bef-ff65-4e2f-923c-d2f5d7ac1b66",
@@ -35514,6 +35871,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "84e4ce63-28f9-4f13-840e-a68175f8f2e9",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "11d68863-9a21-4fbe-be88-42bd76dba587",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "168ad4b9-40df-4507-87bc-84a7108f781d",
       "comment": "",
       "command": "click",
@@ -35525,6 +35896,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "31f5d89a-ff2d-474f-8b3d-6b7d37716873",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "bbbc6bca-f79f-4168-9863-6b6acda5b6f3",
@@ -36022,6 +36400,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "6803174b-24e4-4cd6-88ca-69c693fa5490",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "5b2dc311-1232-4208-bacc-37accbec08bc",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c3acd961-ae32-4b82-b034-cb09e32d076f",
       "comment": "",
       "command": "click",
@@ -36033,6 +36425,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "03b70b93-00d3-4ef5-91ac-c022079d2f12",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "e2b95045-82d4-4856-ae08-7b9493d64a01",
@@ -36469,6 +36868,20 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "86687f65-5df9-4211-80b9-effca2de44ad",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name=\"add\"]",
+      "targets": [],
+      "value": "nb_add"
+    }, {
+      "id": "6e16fb2e-20cd-4457-8cc1-02858ece4a00",
+      "comment": "",
+      "command": "if",
+      "target": "${nb_add} > 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "1d6548d4-8719-4ee9-9c78-ce86e36f2131",
       "comment": "",
       "command": "click",
@@ -36480,6 +36893,13 @@
         ["xpath=//p/button", "xpath:position"],
         ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "c1537472-3d31-4518-965c-dfe2a035daa8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "79820c8d-ebf5-4ec5-a6cd-1be38e27b66c",
