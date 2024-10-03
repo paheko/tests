@@ -26686,11 +26686,7 @@
       "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, \"/admin/logout.php\")]",
-      "targets": [
-        ["css=li:nth-child(6) b", "css:finder"],
-        ["xpath=//li[6]/h3/a/b", "xpath:position"],
-        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -27240,15 +27236,18 @@
       ],
       "value": ""
     }, {
-      "id": "2e88ac0c-d22d-4451-b4c3-00cbb34f3a68",
+      "id": "c62034c3-8565-47c7-93b1-7b0bea1b7d90",
+      "comment": "",
+      "command": "type",
+      "target": "name=qt",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "51abd84d-b6f3-414b-bdbd-787a1ebb324a",
       "comment": "",
       "command": "click",
-      "target": "xpath=//td[@class=\"num\"]//span[text()=\"1\"]",
-      "targets": [
-        ["css=.actions > .icn-btn:nth-child(1) > span", "css:finder"],
-        ["xpath=//tbody/tr/td[4]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Fiche membre')]", "xpath:innerText"]
-      ],
+      "target": "xpath=//button[@title=\"Chercher\"]",
+      "targets": [],
       "value": ""
     }, {
       "id": "36fdffb3-3763-4031-87ba-da879f01ead9",
@@ -27527,6 +27526,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "648188b9-743e-4dfa-826e-bb6ac55373b3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "cbccd877-4b97-41a0-9183-91ac39372e46",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "e6a391ed-47f5-4673-934c-933db9143648",
       "comment": "",
       "command": "click",
@@ -27799,6 +27818,13 @@
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
+    }, {
+      "id": "1671344f-288d-46e0-8896-b70a01e4ae2f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//p[contains(@class, \"confirm\")]",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "ba5e6368-646b-447e-9e5e-3c3cdded211a",
