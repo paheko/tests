@@ -26230,6 +26230,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "f06bb68a-56d6-4555-a188-82ef4e5f3e91",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "808947f4-36f6-4cbd-9f90-8e2b5302a413",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "be147bdc-5664-43c0-9682-7cb079fbe87b",
       "comment": "",
       "command": "click",
