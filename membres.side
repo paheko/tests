@@ -5800,7 +5800,7 @@
       "value": ""
     }, {
       "id": "5d76ed2a-7cd3-4750-8428-5c86ce723e18",
-      "comment": "Menu ajouter",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
       "targets": [
@@ -5879,6 +5879,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "ded0841d-2a65-429f-acf5-32b257b7d471",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "0954252b-2c80-4350-911e-0e771369750d",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "39dac2d0-9f79-48bb-b089-97fb3558fc2b",
       "comment": "Enregistrer les infos",
@@ -6810,6 +6830,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "e1d81cab-0fa2-4b08-b4ae-a374a580497e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "314e74ac-8e4a-4013-b1df-02252a2f64e3",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "b8312fab-db26-4c94-bf73-a92975a2df9d",
       "comment": "Enregistrer les infos",
@@ -8495,6 +8535,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "4127dc18-a24f-47c8-8c7c-df4f4a65a427",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "0b1b4fff-8c78-41cf-a94d-6268e78573e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "91aed930-5be2-480f-a064-293104ef5c3d",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -9146,6 +9206,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "57fbba97-12b8-4112-8f71-deda5e3ad150",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "bcfdeb2c-e58c-4955-b0f8-62bde611e74b",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "7a4e12ba-25ce-47c6-a0d1-0ce9b8d28855",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -9796,6 +9876,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "a7b3d47a-8e76-4cb0-879e-8fbb6a3c816b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "c366f28e-9250-498b-ba97-b21a8f244c71",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "accae3d8-b4c5-4d30-bf36-51213e131a75",
       "comment": "Enregistrer les infos",
@@ -10489,6 +10589,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "68731483-d1f0-43cc-a464-1ee78473f7f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "8c34921d-a59b-4924-8a1f-8c73cc132d03",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "cfc6fe5b-4d20-4d10-9cb6-10cb0a61df94",
       "comment": "Enregistrer les infos",
@@ -11259,6 +11379,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "34aca6e6-c876-49fd-8565-13f7b1cc1245",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "19f8ba64-f3be-4f90-9179-0ab4ce7dd55c",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "e3c0ec4e-3292-47a3-b28b-f528f0a9a527",
       "comment": "Enregistrer les infos",
@@ -12171,6 +12311,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "556e3e4b-5387-43cf-9f0a-31a9894a9555",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "22a5234b-0cef-4eb5-a8bc-cbd24fa72a39",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "64df2c00-fac9-43bc-ba02-b39984fef6ab",
       "comment": "Enregistrer les infos",
       "command": "click",
@@ -12999,13 +13159,6 @@
       "targets": [],
       "value": "parent"
     }, {
-      "id": "b1ff6ae8-6a53-431e-838c-7001cbf13329",
-      "comment": "",
-      "command": "echo",
-      "target": "membre=(${nom}), parent=(${parent})",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "37b6d65b-4e89-4a59-a0ed-21f0031ce53b",
       "comment": "Ajouter parent à la liste",
       "command": "executeScript",
@@ -13116,6 +13269,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "4dc90551-b52a-4baf-940c-01e1b5068964",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "4d0fefb2-f584-412a-956b-cf96e1a87e20",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "deffed2d-3568-4748-ad2d-890e63fa6b51",
       "comment": "Enregistrer les infos",
@@ -14015,6 +14188,26 @@
       ],
       "value": "${nomParent}"
     }, {
+      "id": "f0baf0cd-5af7-4cda-92a4-f6b789d89c7f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "6dce6f74-5d8a-4d61-a0a1-c893e6889650",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "eb8918ad-5257-4cd5-a461-f3b1be7cd56a",
       "comment": "Enregistrer les infos du parent",
       "command": "click",
@@ -14193,6 +14386,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "d7391022-6114-4051-bba5-6968f01aad60",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "2e478d9d-5bf1-4d64-bf3d-a9f1c62cc806",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "5dd7d379-932f-4c57-87e4-c86e4cf9fed0",
       "comment": "Enregistrer les infos",
@@ -15085,6 +15298,26 @@
       ],
       "value": "${nomParent}"
     }, {
+      "id": "8eb98de6-8a5c-4d47-a5c4-8d0020100ae6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "55ba42c2-12fe-4685-8419-f063ba15bc49",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "4367746c-10d0-4cf8-8cce-d004844a6f25",
       "comment": "Enregistrer les infos du parent",
       "command": "click",
@@ -15263,6 +15496,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "24fb1a8f-5510-4a06-8968-0d82dceb89ba",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "e6be9fa7-66dd-4b91-b8ae-1e23b1cc3439",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "dfc43c01-3653-4039-923d-efe621963979",
       "comment": "Enregistrer les infos",
@@ -16103,6 +16356,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel}"
+    }, {
+      "id": "3ba08522-284d-4484-a078-a817d48cb680",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "3f080ec0-ebcc-49e9-8d81-039bcc921f30",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "5258cac1-c8da-4cff-8c06-13d7e3bcb626",
       "comment": "Enregistrer les infos",
