@@ -21494,7 +21494,7 @@
     }, {
       "id": "cac06737-1754-4ac4-9f30-477e9a2fd5a2",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
       "targets": [],
       "value": "1000"
@@ -26356,7 +26356,7 @@
     }, {
       "id": "d20b6698-68a6-417b-ab8e-11677000ce91",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
@@ -26482,7 +26482,7 @@
     }, {
       "id": "be2eb6e8-59b7-490f-a4e4-6a57a9bf2362",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//th[contains(text(), \"${champ_identite}\")]",
       "targets": [],
       "value": "30000"
@@ -26664,7 +26664,7 @@
     }, {
       "id": "69bf0b61-896c-432b-82ef-8b93e4e7429c",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "name=save",
       "targets": [],
       "value": "30000"
@@ -26774,7 +26774,7 @@
     }, {
       "id": "a2d54859-bd85-4c9f-b8f5-a6c32d3ec129",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//span[contains(text(), \"Nom & prénom\")]/button",
       "targets": [],
       "value": "30000"
@@ -26817,7 +26817,7 @@
     }, {
       "id": "825b8794-fd46-4316-a0c3-acb9ae799e4f",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//th[contains(text(), \"${champ_identite}\")]",
       "targets": [],
       "value": "30000"
@@ -27014,7 +27014,7 @@
     }, {
       "id": "18c14f02-2405-44a2-9f32-c0a1dc2fcf44",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//th[contains(text(), \"Nom & prénom\")]",
       "targets": [],
       "value": "30000"
@@ -27175,7 +27175,7 @@
     }, {
       "id": "3eb61e65-ad22-4f99-b1fe-4a04ca22c01c",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
@@ -27337,7 +27337,7 @@
     }, {
       "id": "02128bc5-c89a-494b-b0f3-db1b868cbcfb",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
@@ -27460,7 +27460,7 @@
     }, {
       "id": "6a20b825-e622-49c5-927c-e33978dc78ce",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
@@ -27814,7 +27814,7 @@
     }, {
       "id": "68b36014-685f-43a9-9753-86d54a3a7538",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "//waitforelementvisible",
       "target": "xpath=//p[contains(@class, \"confirm\")]",
       "targets": [],
       "value": "30000"
