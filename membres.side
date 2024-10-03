@@ -23399,6 +23399,26 @@
       ],
       "value": "${courriel_responsable}"
     }, {
+      "id": "0554473d-3acc-4326-a95e-0931fddfee1b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "040fe6a3-7506-44ad-a07b-3adf12c55e2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "bed67a55-53da-4dd8-bf73-852eba94e002",
       "comment": "Enregistrer",
       "command": "click",
@@ -23466,6 +23486,26 @@
         ["xpath=//dd[4]/input", "xpath:position"]
       ],
       "value": "${courriel_enfant}"
+    }, {
+      "id": "a26c2ba2-cc39-4292-9b88-d19d645aee35",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "bc3a88a4-26b7-481c-a7a9-bc5dbc4cb96b",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
     }, {
       "id": "1ba210aa-8b63-4c02-84ab-a96ae4fa7e31",
       "comment": "Enregistrer",
