@@ -35416,7 +35416,7 @@
       "targets": [],
       "value": "nb_add"
     }, {
-	  "id": "6aac474e-b122-4eda-83b6-3794f43146e6",
+      "id": "6aac474e-b122-4eda-83b6-3794f43146e6",
       "comment": "",
       "command": "if",
       "target": "${nb_add} > 0",
@@ -35436,7 +35436,7 @@
       ],
       "value": ""
     }, {
-	  "id": "a3a40c0f-8184-4b70-803e-c25f90dbfaef",
+      "id": "a3a40c0f-8184-4b70-803e-c25f90dbfaef",
       "comment": "",
       "command": "end",
       "target": "",
@@ -46573,107 +46573,9 @@
       "id": "16a9be55-4ef2-4308-ba11-263aca5c4d84",
       "comment": "",
       "command": "executeScript",
-      "target": "function listerLibelles(tchamps){ for (const elem of document.querySelectorAll('table.list.drag > tbody > tr')) { const libelle = elem.querySelector('th').textContent.trim(); tchamps.push(libelle); } return tchamps;}; return listerLibelles(${tchamps});",
+      "target": "function listerLibelles(t){ for (const elem of document.querySelectorAll('table.list.drag > tbody > tr')) { let o = Object(); o.libelle = elem.querySelector('th').textContent.trim(); o.visible = (elem.querySelector('td > span[title=\"Visible\"]') != null); t.push(o); } return t;} return listerLibelles(${tchamps});",
       "targets": [],
       "value": "tchamps"
-    }, {
-      "id": "f9a5b260-feb6-4fb5-8534-fd5ebca99625",
-      "comment": "vérifier ordre champs dans formulaire ajout membre",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "da3bad10-95c5-4823-8603-b0a7101c6bed",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Ajouter",
-      "targets": [
-        ["linkText=Ajouter", "linkText"],
-        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ecd32878-4123-48bc-af4b-4774c7d4af9d",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//form/fieldset//dt",
-      "targets": [],
-      "value": "nb_champs"
-    }, {
-      "id": "c7d67061-3aa8-4bed-8838-d51fbfc2a779",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "bb04ac12-ce9e-4251-b02f-2bf3537c9d03",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "d116d1b3-0828-4e09-b6f8-a949364b5dd0",
-      "comment": "",
-      "command": "while",
-      "target": "${num} <= Number(${nb_champs})",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "892676bd-a539-42a8-8d3b-0d49f079f521",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${tchamps}[${i}]",
-      "targets": [],
-      "value": "libelle"
-    }, {
-      "id": "e74fe428-13f7-45c5-9e9a-63724ee334f8",
-      "comment": "",
-      "command": "if",
-      "target": "${libelle} != \"Mot de passe\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "848a9a63-e177-4abc-9965-cbd4620de0ce",
-      "comment": "",
-      "command": "assertText",
-      "target": "xpath=//form/fieldset//dt[${num}]/label",
-      "targets": [],
-      "value": "${libelle}"
-    }, {
-      "id": "43629672-3ef6-458d-96e7-9b1f853d8499",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${num} + 1",
-      "targets": [],
-      "value": "num"
-    }, {
-      "id": "2aefb556-6ca8-4f52-9858-14befa1c5818",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8ae44c1e-77a1-445d-80f0-9e80ff2e5338",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "99346c43-bb52-4dd8-8c8e-1ca568090397",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
     }, {
       "id": "d3502417-6e7b-4c06-ac47-2b06aed9b32e",
       "comment": "créer un membre",
@@ -46782,9 +46684,16 @@
       "id": "7a3000ef-b3f5-4597-b8a1-9f1c5065b73c",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${tchamps}[${i}]",
+      "target": "return ${tchamps}[${i}].libelle",
       "targets": [],
       "value": "libelle"
+    }, {
+      "id": "9850709b-cb76-4ef3-8784-08f6a9165240",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tchamps}[${i}].visible",
+      "targets": [],
+      "value": "visible"
     }, {
       "id": "5fb16212-0d28-4620-948d-5a2e458c8215",
       "comment": "",
@@ -46814,7 +46723,7 @@
       "targets": [],
       "value": "i"
     }, {
-      "id": "cfd9c895-e08e-422b-8e4e-497707fcf740",
+      "id": "15d33b1c-c56b-47df-bc02-08f11f78cb6f",
       "comment": "",
       "command": "end",
       "target": "",
@@ -46828,7 +46737,7 @@
       "targets": [],
       "value": "num"
     }, {
-      "id": "15d33b1c-c56b-47df-bc02-08f11f78cb6f",
+      "id": "f8476645-65da-4942-be11-d8674e8e7019",
       "comment": "",
       "command": "end",
       "target": "",
@@ -46894,9 +46803,16 @@
       "id": "c62bd4eb-a81d-40d5-b4ea-a1a6cc79885f",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${tchamps}[${i}]",
+      "target": "return ${tchamps}[${i}].libelle",
       "targets": [],
       "value": "libelle"
+    }, {
+      "id": "b34d2a34-2b87-4606-99b8-1b31c94dc570",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tchamps}[${i}].visible",
+      "targets": [],
+      "value": "visible"
     }, {
       "id": "88425fd4-5b47-44c8-842b-30047dfb9079",
       "comment": "",
@@ -46905,10 +46821,38 @@
       "targets": [],
       "value": "libelleAffiche"
     }, {
-      "id": "291dd5ec-b784-4470-94dd-2819a1274fcd",
+      "id": "2dace9cc-1b19-4534-9a7d-4a1b722f08fe",
       "comment": "",
       "command": "if",
-      "target": "${libelleAffiche} != \"Statut e-mail\"",
+      "target": "${visible} == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdd4224b-5d40-41c3-84da-d90a798024b3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "291dd5ec-b784-4470-94dd-2819a1274fcd",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${libelleAffiche} == \"Statut e-mail\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38aafb1d-769b-4c32-9a41-5ffc757d0be3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${num} + 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "664a41ff-ff51-43d5-a067-f918b9e6e06e",
+      "comment": "",
+      "command": "else",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -46926,13 +46870,6 @@
       "targets": [],
       "value": "i"
     }, {
-      "id": "c82aaad5-76b4-4207-b1aa-3965f60eaca9",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "2723cbb5-2a56-4368-93d4-381638223e91",
       "comment": "",
       "command": "executeScript",
@@ -46941,6 +46878,13 @@
       "value": "num"
     }, {
       "id": "fd0d76d9-79dd-42d1-ad5a-71c7c4fc8eb2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba51e055-50b0-4f95-9dcf-e5398b66396d",
       "comment": "",
       "command": "end",
       "target": "",
