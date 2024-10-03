@@ -21214,6 +21214,26 @@
       ],
       "value": "${courriel}"
     }, {
+      "id": "c8a3f837-8370-47a6-8bec-b4836fdb7f44",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "e0726204-eba0-4845-b088-2be6fb9d4ec0",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
       "id": "81f36c97-4ca3-4d92-bba0-48795dd49108",
       "comment": "Enregistrer les infos",
       "command": "click",
