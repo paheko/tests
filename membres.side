@@ -100,8 +100,15 @@
       "targets": [],
       "value": "nom_admin"
     }, {
+      "id": "7cd9b766-02e9-4591-984c-076e6198d909",
+      "comment": "infos premier membre",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "61706b69-8a95-4f55-b53e-79eb8317f5e8",
-      "comment": "Nom premier membre",
+      "comment": "",
       "command": "type",
       "target": "id=f_user_name",
       "targets": [
@@ -121,7 +128,7 @@
       "value": "courriel_admin"
     }, {
       "id": "697ca21a-79b7-4138-9e21-e6f00a28321d",
-      "comment": "Adresse courriel",
+      "comment": "",
       "command": "type",
       "target": "id=f_user_email",
       "targets": [
@@ -165,7 +172,7 @@
       "value": ""
     }, {
       "id": "43f025a8-6dd0-4f60-9484-0069c6e19c3b",
-      "comment": "Mot de passe",
+      "comment": "",
       "command": "type",
       "target": "id=f_password",
       "targets": [
@@ -191,7 +198,7 @@
       "value": ""
     }, {
       "id": "69e59788-0f98-46b1-8362-39f979b44073",
-      "comment": "Mot de passe (bis)",
+      "comment": "",
       "command": "type",
       "target": "id=f_password_confirmed",
       "targets": [
@@ -204,7 +211,7 @@
       "value": "${mdp_admin}"
     }, {
       "id": "f9af3a0d-0d68-44a9-ad9d-a603cf45f9cb",
-      "comment": "Enregistrer",
+      "comment": "",
       "command": "click",
       "target": "name=save",
       "targets": [
@@ -216,8 +223,15 @@
       ],
       "value": ""
     }, {
+      "id": "f20209b8-66c3-42ff-bf71-632904d61ec7",
+      "comment": "Vérifier infos asso",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8bdb6048-f614-4e87-ad22-fb451fa8c225",
-      "comment": "Menu Configuration",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/config')]",
       "targets": [
@@ -228,28 +242,28 @@
       "value": ""
     }, {
       "id": "18965af9-b3ad-4b6b-85a1-c924b283fb1d",
-      "comment": "Nom de l'asso",
+      "comment": "",
       "command": "assertValue",
       "target": "id=f_org_name",
       "targets": [],
       "value": "${nom_asso}"
     }, {
       "id": "6d51ef7f-5a72-490c-a636-aa8c4126a719",
-      "comment": "Adresse e-mail de contact",
+      "comment": "",
       "command": "assertValue",
       "target": "id=f_org_email",
       "targets": [],
       "value": "${courriel_admin}"
     }, {
       "id": "0d10eb36-b5d6-4004-8272-e03fe4e6647e",
-      "comment": "Pays",
+      "comment": "",
       "command": "assertSelectedLabel",
       "target": "id=f_country",
       "targets": [],
       "value": "France"
     }, {
       "id": "65740c53-7195-40a2-8829-0549149244af",
-      "comment": "Menu Membres",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users')]",
       "targets": [
@@ -260,14 +274,21 @@
       "value": ""
     }, {
       "id": "b6df3153-03ec-4b6e-92fb-80077dcd6d40",
-      "comment": "Nom premier membre",
+      "comment": "",
       "command": "assertText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[1]/th//span",
       "targets": [],
       "value": "${nom_admin}"
     }, {
+      "id": "7a44082a-2101-4fa4-a562-bcd4d5e771d6",
+      "comment": "ajouter numéro téléphone",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "44fc6c36-f8b6-457c-a3ef-01d968672885",
-      "comment": "Bouton Fiche membre",
+      "comment": "",
       "command": "click",
       "target": "xpath=//span[contains(.,'Fiche membre')]",
       "targets": [
@@ -277,40 +298,96 @@
       ],
       "value": ""
     }, {
+      "id": "ebe4d09d-1988-40ca-950c-7100fbf289f7",
+      "comment": "",
+      "command": "click",
+      "target": "//a[starts-with(@href, \"edit.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7616cd98-a0b8-4ee7-9b3b-02f628fa7718",
+      "comment": "",
+      "command": "store",
+      "target": "0123456789",
+      "targets": [],
+      "value": "num_tel"
+    }, {
+      "id": "900b3a32-e46b-4df3-9d07-4e74c7ba594d",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [],
+      "value": "${num_tel}"
+    }, {
+      "id": "c550bad4-93ed-43cc-930f-4e2364a44420",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec6e2e6d-9229-42da-8364-81124d74ed31",
+      "comment": "Vérifier infos admin",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5f6a5b2b-501d-4e56-b8df-cb35005b3255",
-      "comment": "Numéro de membre",
+      "comment": "",
       "command": "assertText",
       "target": "xpath=//dt[contains(.,'Numéro de membre')]/following-sibling::dd",
       "targets": [],
       "value": "1"
     }, {
       "id": "33022e6f-811b-4192-9180-0a99f3243855",
-      "comment": "Nom et prénom",
+      "comment": "",
       "command": "assertText",
       "target": "xpath=//dt[contains(.,'Nom & prénom')]/following-sibling::dd",
       "targets": [],
       "value": "${nom_admin}"
     }, {
       "id": "64e9103a-370c-4737-9882-685d7feaf552",
-      "comment": "Adresse E-Mail",
+      "comment": "",
       "command": "assertText",
       "target": "xpath=//dt[contains(.,'Adresse E-Mail')]/following-sibling::dd/a",
       "targets": [],
       "value": "${courriel_admin}"
     }, {
       "id": "4db2876d-616f-4c1b-b02a-98228dc23225",
-      "comment": "Catégorie du membre",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
       "targets": [],
       "value": "categorie"
     }, {
       "id": "b414fd1f-9102-4f9c-9466-3565b745d1a5",
-      "comment": "Vérifier catégorie",
+      "comment": "",
       "command": "assert",
       "target": "categorie",
       "targets": [],
       "value": "Administrateurs"
+    }, {
+      "id": "09a935eb-dbe1-4b08-817b-14a17b7c7fc2",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//dt[contains(.,'Numéro de téléphone')]/following-sibling::dd/a",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "d0d44ad4-c737-41db-97d3-548934a1b46d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${telephone}.replace(/\\\\s/g, \"\")",
+      "targets": [],
+      "value": "telephone"
+    }, {
+      "id": "14b28143-7979-4c27-9143-9e4923dc60d4",
+      "comment": "",
+      "command": "assert",
+      "target": "telephone",
+      "targets": [],
+      "value": "${num_tel}"
     }]
   }, {
     "id": "b468a6eb-1199-460a-95f8-820df1f2c2f9",
