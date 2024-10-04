@@ -47471,7 +47471,7 @@
       "id": "29f4926d-085b-46b1-a1fb-861ba7b7f8f5",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@href=\"?edit=password\"]",
+      "target": "xpath=//a[starts-with(@href,\"security_password\")]",
       "targets": [],
       "value": ""
     }, {
