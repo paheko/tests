@@ -469,3 +469,35 @@ function toText(mois, annee)
 	}
 	return lesMois[mois - 1] + " " + annee;
 }
+
+// ------------------------------------------------------------------------
+// mettre la liste des libellés des champs de la fiche membre dans le tableau paramètre
+// ------------------------------------------------------------------------
+function listerLibelles(t)
+{
+	for (const elem of document.querySelectorAll('table.list.drag > tbody > tr'))
+	{
+		let o = Object();
+		o.libelle = elem.querySelector('th').textContent.trim();
+		o.visible = (elem.querySelector('td > span[title="Visible"]') != null);
+		t.push(o);
+	}
+	return t;
+}
+
+// ouvrir la boîte de dialogue de suppression d'un élément dans un onglet
+// @param : libellé de l'élément à supprimer
+function open(libelle)
+{
+	// lister les champs qui peuvent être supprimés
+	const elements = document.querySelectorAll('a[href ^= "delete.php"]');
+	for (var i = 0; i < elements.length; ++i)
+	{
+		// trouver la ligne (tr) qui contient l'élément courant
+		let ligne = elements[i].closest('tr');
+		if (ligne.querySelector('th').innerText == libelle) { break; }
+	}
+	// ouvrir l'url dans une autre fenêtre
+	const url = elements[i].href;
+	window.open(url, '_blank').focus();
+}
