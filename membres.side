@@ -21827,7 +21827,7 @@
       "value": ""
     }, {
       "id": "f2dd9118-10f0-4570-9163-dd0662018d59",
-      "comment": " ",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(., \"${categorie}\")]",
       "targets": [],
@@ -49063,7 +49063,7 @@
       "value": ""
     }, {
       "id": "7d1a3e33-05de-4dc7-980f-0bcb7c7af888",
-      "comment": " ",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
@@ -49421,7 +49421,7 @@
       "value": ""
     }, {
       "id": "00b09e58-a049-476a-8c96-5f52ef02a860",
-      "comment": " ",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
@@ -49550,7 +49550,7 @@
       "id": "814fd96d-59ba-495d-97ea-11300a043546",
       "comment": "",
       "command": "click",
-      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a",
+      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a[starts-with(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -49903,7 +49903,7 @@
       "id": "7cfb2f4c-0cd7-4fc5-95d7-41e433a4dbee",
       "comment": "",
       "command": "click",
-      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a",
+      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a[starts-with(@href, \"delete.php\")]",
       "targets": [],
       "value": ""
     }, {
@@ -50081,7 +50081,7 @@
       "value": ""
     }, {
       "id": "1d56e8da-de18-4b82-b3c6-2e3feae2077d",
-      "comment": " ",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
