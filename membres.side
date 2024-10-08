@@ -49318,7 +49318,7 @@
       "id": "9bcd512a-e792-4426-b7cd-ca70799b80f4",
       "comment": "",
       "command": "store",
-      "target": "Anciens membres",
+      "target": "Fourre-tout",
       "targets": [],
       "value": "nom_categorie"
     }, {
@@ -49687,7 +49687,7 @@
       "id": "c467e86c-cd47-480a-abd2-27cb9ad5127a",
       "comment": "",
       "command": "store",
-      "target": "Anciens membres",
+      "target": "Fourre-tout",
       "targets": [],
       "value": "nom_categorie"
     }, {
@@ -50034,7 +50034,7 @@
       "id": "0410b243-addb-468c-aee0-5f23750085ea",
       "comment": "",
       "command": "store",
-      "target": "Membres actifs",
+      "target": "Anciens membres",
       "targets": [],
       "value": "nom_categorie"
     }, {
@@ -50860,7 +50860,7 @@
       "value": ""
     }, {
       "id": "85b8852f-8bb0-4e8c-b3ba-08ccbda2c31a",
-		"comment": "modifier la catégorie : interdire la connexion",
+      "comment": "modifier la catégorie : interdire la connexion",
       "command": "",
       "target": "",
       "targets": [],
