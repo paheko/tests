@@ -50208,7 +50208,7 @@
       "value": ""
     }, {
       "id": "f4f78b61-e897-410d-a046-dd922775cf30",
-      "comment": "Rendre visibles les options du menu Filtrer",
+      "comment": "",
       "command": "executeScript",
       "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
       "targets": [],
@@ -50243,7 +50243,7 @@
       "value": "nb_visibles_init"
     }, {
       "id": "741fbc2b-0441-4c8f-9bca-2468086b25f3",
-      "comment": "Catégories",
+      "comment": "compter les membres dans chaque type de catégorie cachée/visible/",
       "command": "",
       "target": "",
       "targets": [],
@@ -50494,6 +50494,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "08f56275-0cdb-434a-bb5b-3cc6e584f8fb",
+      "comment": "Vérifier le nombre de membres dans les catégories visibles/cachées",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8d103255-aae9-43fc-96c0-e6af71ec7b9b",
       "comment": "",
       "command": "click",
@@ -50509,7 +50516,7 @@
       "value": ""
     }, {
       "id": "b388a3b6-1007-4939-a91e-394e2da6da8f",
-      "comment": "Rendre visibles les options du menu Filtrer",
+      "comment": "",
       "command": "executeScript",
       "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
       "targets": [],
@@ -50853,7 +50860,7 @@
       "value": ""
     }, {
       "id": "85b8852f-8bb0-4e8c-b3ba-08ccbda2c31a",
-      "comment": "modifier la catégorie",
+		"comment": "modifier la catégorie : interdire la connexion",
       "command": "",
       "target": "",
       "targets": [],
