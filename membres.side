@@ -46443,6 +46443,13 @@
       ],
       "value": ""
     }, {
+      "id": "cd69f501-3c5b-47a9-aa47-ce200c736dcf",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//dt[contains(.,'${libelle_champ}')]/following-sibling::dd",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "1b4d9963-68b1-4b7e-a291-f283a09721ae",
       "comment": "",
       "command": "assertText",
