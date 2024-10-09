@@ -51387,7 +51387,7 @@
     }]
   }, {
     "id": "8b29c931-a500-4cf3-9079-13dbe03d1909",
-    "name": "14-20 droit lecture",
+    "name": "14-30 droit lecture",
     "commands": [{
       "id": "c4a46159-4ab0-4d7d-831d-87e5fbfacba3",
       "comment": "",
@@ -51957,7 +51957,7 @@
     }]
   }, {
     "id": "7402d095-05b5-45eb-8029-9c6b106cf42d",
-    "name": "14-21 droit écriture",
+    "name": "14-40 droit écriture",
     "commands": [{
       "id": "825887f7-22fc-43c2-ae07-82f5d15bf7eb",
       "comment": "",
@@ -52499,7 +52499,7 @@
     }]
   }, {
     "id": "793d3286-9eca-4939-b066-a522c7f390e1",
-    "name": "14-22 droit administration",
+    "name": "14-50 droit administration",
     "commands": [{
       "id": "3f95c13c-4da1-49c4-a9e8-e0cb5cce0f99",
       "comment": "",
