@@ -20395,14 +20395,14 @@
       "value": "nb_membres"
     }, {
       "id": "f0a4affd-6807-4eeb-8509-d7771d4b4186",
-      "comment": "Parcourir les membres enregistrés",
+      "comment": "",
       "command": "while",
       "target": "${num} <= ${nb_membres}",
       "targets": [],
       "value": ""
     }, {
       "id": "cfbb1008-7696-448d-93fb-5f6730e3ff4b",
-      "comment": "fin de page ?",
+      "comment": "",
       "command": "if",
       "target": "${num} > ${nb_membres_page}",
       "targets": [],
@@ -20451,7 +20451,7 @@
       "value": "numeroAffiche"
     }, {
       "id": "6734754e-ab54-49a5-b71d-1152a621ee28",
-      "comment": "Ajouter numéro à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnumeros}.concat(Number(${numeroAffiche}))",
       "targets": [],
@@ -20465,14 +20465,14 @@
       "value": "nomAffiche"
     }, {
       "id": "ab3e96a4-af3c-49ac-97d6-73eb6422c162",
-      "comment": "Ajouter nom à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnoms}.concat(${nomAffiche})",
       "targets": [],
       "value": "lesnoms"
     }, {
       "id": "840acc47-f8d2-4ffd-8aa8-95a2f3660332",
-      "comment": "afficher fiche membre",
+      "comment": "",
       "command": "click",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//a",
       "targets": [],
@@ -20528,14 +20528,14 @@
       "value": ""
     }, {
       "id": "e853afe2-1d94-444d-a7ac-1c5efa5a62a5",
-      "comment": "Ajouter courriel à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lescourriels}.concat(${courriel})",
       "targets": [],
       "value": "lescourriels"
     }, {
       "id": "479121e2-f411-44f8-834a-8a558325810a",
-      "comment": "Retour page précédente",
+      "comment": "",
       "command": "executeScript",
       "target": "history.back()",
       "targets": [],
@@ -20556,14 +20556,14 @@
       "value": ""
     }, {
       "id": "a0d80163-9c90-4e0a-a7c1-6fcc4240f083",
-      "comment": "Générer de nouveaux membres",
+      "comment": "Générer de nouveaux membres si besoin",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
       "id": "d72c968c-3e15-43f1-8d1c-dc42c54a4a40",
-      "comment": "si pas assez de membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_total_membres} < 10 || ${nb_courriel} < 5",
       "targets": [],
@@ -20597,15 +20597,22 @@
       "targets": [],
       "value": "i"
     }, {
-      "id": "c355a165-8964-4302-a8da-1c51d0eb8d1a",
+      "id": "1bb5df03-148f-4511-8e1e-e015b30abe13",
       "comment": "Enregistrer les nouveaux noms",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c355a165-8964-4302-a8da-1c51d0eb8d1a",
+      "comment": "",
       "command": "while",
       "target": "${i} < ${nb_noms}",
       "targets": [],
       "value": ""
     }, {
       "id": "f6355f27-b6aa-438c-9db8-cc11a383754e",
-      "comment": "Menu ajouter",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
       "targets": [
@@ -20619,28 +20626,28 @@
       "value": ""
     }, {
       "id": "fffd88db-1e2b-4ecf-9c4f-4c2f4a3da0ba",
-      "comment": "Mémoriser numéro de membre",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
       "value": "numero"
     }, {
       "id": "b62cf6fa-6eef-4397-813a-f253697d2c72",
-      "comment": "Ajouter numéro à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnumeros}.concat(${numero})",
       "targets": [],
       "value": "lesnumeros"
     }, {
       "id": "1bacf0ff-0b97-40b2-bc35-e45396174ba0",
-      "comment": "Adresse courriel",
+      "comment": "",
       "command": "executeScript",
       "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@free.fr\"",
       "targets": [],
       "value": "courriel"
     }, {
       "id": "b3fc611d-0c13-466e-a1a2-e920cf1c1f2a",
-      "comment": "Ajouter courriel à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lescourriels}.concat(${courriel})",
       "targets": [],
@@ -20654,7 +20661,7 @@
       "value": "nom"
     }, {
       "id": "d8b21ad5-51c4-472f-b78c-baeca213ef59",
-      "comment": "Saisir le nom",
+      "comment": "",
       "command": "type",
       "target": "id=f_nom",
       "targets": [
@@ -20667,7 +20674,7 @@
       "value": "${nom}"
     }, {
       "id": "6bdb043d-8b2c-4216-a56e-692181abb884",
-      "comment": "Saisir courriel",
+      "comment": "",
       "command": "type",
       "target": "id=f_email",
       "targets": [
@@ -20700,7 +20707,7 @@
       "value": "${tel}"
     }, {
       "id": "c44dd1f9-0b55-4fa5-b060-9e9e75bea739",
-      "comment": "Enregistrer",
+      "comment": "",
       "command": "click",
       "target": "name=save",
       "targets": [
@@ -20748,7 +20755,7 @@
       "value": "courriel"
     }, {
       "id": "79117715-f96b-4e0b-82f9-99409323f662",
-      "comment": "Menu ajouter",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
       "targets": [
@@ -20762,14 +20769,14 @@
       "value": ""
     }, {
       "id": "ba063acf-a0cb-4738-82eb-0fa538ad9e30",
-      "comment": "Mémoriser numéro de membre",
+      "comment": "",
       "command": "storeValue",
       "target": "id=f_numero",
       "targets": [],
       "value": "numero"
     }, {
       "id": "f91d11c1-7f66-4103-b907-fac58393f541",
-      "comment": "Ajouter numéro à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnumeros}.concat(${numero})",
       "targets": [],
@@ -20783,21 +20790,21 @@
       "value": "nom"
     }, {
       "id": "2c3ff064-547b-4701-8975-1a3726d84904",
-      "comment": "Ajouter nom à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnoms}.concat(${nom})",
       "targets": [],
       "value": "lesnoms"
     }, {
       "id": "cf4f24fe-6096-4ce9-a1ec-47c08c493a50",
-      "comment": "Ajouter courriel à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lescourriels}.concat(${courriel})",
       "targets": [],
       "value": "lescourriels"
     }, {
       "id": "be9eebec-c9f7-4a15-9a8f-21ec3e82acb7",
-      "comment": "Saisir le nom",
+      "comment": "",
       "command": "type",
       "target": "id=f_nom",
       "targets": [
@@ -20810,7 +20817,7 @@
       "value": "${nom}"
     }, {
       "id": "f56d45b7-6f62-48e5-8d66-13984dfb61b8",
-      "comment": "Saisir courriel",
+      "comment": "",
       "command": "type",
       "target": "id=f_email",
       "targets": [
@@ -20843,7 +20850,7 @@
       "value": "${tel}"
     }, {
       "id": "2d62f843-3610-41e9-9ac4-1a98d83b5f5a",
-      "comment": "Enregistrer",
+      "comment": "",
       "command": "click",
       "target": "name=save",
       "targets": [
@@ -20876,8 +20883,15 @@
       "targets": [],
       "value": "nb_homonymes"
     }, {
+      "id": "b8148159-8707-4630-933f-f7f4398a5715",
+      "comment": "chercher un courriel",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "287ec7c5-8349-499a-abc8-e666ba21cef4",
-      "comment": "menu Membres",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users')]",
       "targets": [
@@ -20912,22 +20926,22 @@
     }, {
       "id": "f792d5d5-5e7a-4d9d-8e37-7c8aaeb7d1e8",
       "comment": "",
-      "command": "storeText",
+      "command": "assertText",
       "target": "xpath=//header/h1",
-      "targets": [],
-      "value": "titre_page"
-    }, {
-      "id": "9e5380d3-7223-4c4b-ad82-04b90fbb8181",
-      "comment": "",
-      "command": "assert",
-      "target": "titre_page",
       "targets": [],
       "value": "Recherche de membre"
     }, {
-      "id": "a017a997-215b-41b5-8b39-905eb7f06194",
+      "id": "dce8f5e0-ff17-4834-8015-ae8abd28ea32",
       "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//tbody/tr",
+      "command": "storeText",
+      "target": "xpath=//p[@class=\"help\"]",
+      "targets": [],
+      "value": "ligne_resultat"
+    }, {
+      "id": "0ac0213d-51d7-44db-807f-ce8b2b779465",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${ligne_resultat}.split(/ /)[0])",
       "targets": [],
       "value": "nb_res"
     }, {
@@ -20938,73 +20952,136 @@
       "targets": [],
       "value": "${nb_homonymes}"
     }, {
-      "id": "8c038202-8097-452e-ad25-f4a31cd18329",
-      "comment": "",
-      "command": "assert",
-      "target": "titre_page",
+      "id": "d881f1b0-b016-49e6-ae88-cc623ea29c3e",
+      "comment": "comparer les membres trouvés avec les membres mémorisés",
+      "command": "",
+      "target": "",
       "targets": [],
-      "value": "Recherche de membre"
+      "value": ""
+    }, {
+      "id": "b00553af-5dc3-41b1-af6a-2fdaa303d9f0",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr",
+      "targets": [],
+      "value": "nb_membres_page"
     }, {
       "id": "0f196bd7-8db8-458d-bb9d-b48b5f6a9370",
       "comment": "",
       "command": "executeScript",
       "target": "return 1",
       "targets": [],
-      "value": "i"
+      "value": "num"
+    }, {
+      "id": "765a214e-0462-41f7-9421-f7c26eb466cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "pos"
+    }, {
+      "id": "022a5157-0a59-41e2-871b-2668e894d34e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_res}",
+      "targets": [],
+      "value": "nb_membres"
     }, {
       "id": "04a270e5-dc4e-436d-b591-cd6ff52a04dc",
       "comment": "",
       "command": "while",
-      "target": "${i} <= ${nb_res}",
+      "target": "${num} <= ${nb_membres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dcd5e3b-4a3f-4e33-9697-0e3f9cd09f0c",
+      "comment": "fin de page ?",
+      "command": "if",
+      "target": "${num} > ${nb_membres_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "163d1704-36c8-4d9b-a68a-a329ac36e4da",
+      "comment": "passer à la page suivante",
+      "command": "click",
+      "target": "xpath=//li[@class=\"next\"]/button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42afb524-ce8c-4c60-a18c-70aaa47d8581",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${nb_membres} - ${nb_membres_page}",
+      "targets": [],
+      "value": "nb_membres"
+    }, {
+      "id": "8efa5fa2-902e-4c34-a8a7-7e65efda51f0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "num"
+    }, {
+      "id": "dc3261fb-067f-4705-95c2-869c38e4e428",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//table[@class=\"list\"]/tbody/tr",
+      "targets": [],
+      "value": "nb_membres_page"
+    }, {
+      "id": "2e65b0d0-e1e6-4b5f-9ba9-d23c33045d89",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
       "id": "21347a5f-5ad1-425b-910e-08d5a96d4a41",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${tab_pos}.at(${i}-1)",
+      "target": "return ${tab_pos}.at(${pos})",
       "targets": [],
-      "value": "num"
+      "value": "i"
     }, {
       "id": "60f51c4b-a2c1-4e84-86d2-cd0ca67fc913",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//tbody/tr[${i}]/td[2]/a",
+      "target": "xpath=//tbody/tr[${num}]/td[2]/a",
       "targets": [],
       "value": "nom_trouve"
     }, {
       "id": "2e36f65a-7926-42d1-b0f3-5cadbdc2a746",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//tbody/tr[${i}]/td[3]",
+      "target": "xpath=//tbody/tr[${num}]/td[3]",
       "targets": [],
       "value": "numero_trouve"
     }, {
       "id": "bbb16405-7b14-4bdf-81cb-4d0660ddcddf",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//tbody/tr[${i}]/td[4]",
+      "target": "xpath=//tbody/tr[${num}]/td[4]",
       "targets": [],
       "value": "courriel_trouve"
     }, {
       "id": "b37e24cb-ffa8-411b-b302-8911dc18dcf8",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${membres_alpha}[${num}].nom",
+      "target": "return ${membres_alpha}[${i}].nom",
       "targets": [],
       "value": "nom"
     }, {
       "id": "b9e442bc-83d4-49e5-a4a4-07c82657657e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${membres_alpha}[${num}].numero",
+      "target": "return ${membres_alpha}[${i}].numero",
       "targets": [],
       "value": "numero"
     }, {
       "id": "080edca2-807a-43f3-85b8-86621de9b4af",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${membres_alpha}[${num}].courriel",
+      "target": "return ${membres_alpha}[${i}].courriel",
       "targets": [],
       "value": "courriel"
     }, {
@@ -21046,9 +21123,16 @@
       "id": "678c6a53-2605-44f4-9b99-db4f708d8388",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${i} + 1",
+      "target": "return ${num} + 1",
       "targets": [],
-      "value": "i"
+      "value": "num"
+    }, {
+      "id": "20c530b6-cd4b-4366-a4c1-c49711073d04",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${pos} + 1",
+      "targets": [],
+      "value": "pos"
     }, {
       "id": "5d307308-5ddf-4e16-8d4d-a9c2e8c0e50d",
       "comment": "",
@@ -46685,7 +46769,7 @@
       "id": "edd8ff1e-8c26-48e5-b5e2-c7cb1899883e",
       "comment": "",
       "command": "executeScript",
-      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@free.fr\"",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@gmx.net\"",
       "targets": [],
       "value": "valeur_champ"
     }, {
@@ -46708,13 +46792,6 @@
         ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "cd69f501-3c5b-47a9-aa47-ce200c736dcf",
-      "comment": "",
-      "command": "waitForElementVisible",
-      "target": "xpath=//dt[contains(.,'${libelle_champ}')]/following-sibling::dd",
-      "targets": [],
-      "value": "30000"
     }, {
       "id": "1b4d9963-68b1-4b7e-a291-f283a09721ae",
       "comment": "",
