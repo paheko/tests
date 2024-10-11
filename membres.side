@@ -6351,41 +6351,6 @@
       "targets": [],
       "value": "categories_num"
     }, {
-      "id": "e06c9e97-2f70-4651-8689-47a5f3a3a2bd",
-      "comment": "Afficher les catégories",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "7909c8e3-5efc-401f-9b78-cbe6cb99e182",
-      "comment": "",
-      "command": "while",
-      "target": "${i} < ${nb_categories}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9e47641a-d5a9-42da-b622-328bc1dabe22",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${categories_num}.at(${i})",
-      "targets": [],
-      "value": "categorie"
-    }, {
-      "id": "c6c7d10f-b87f-4e18-9f8c-42e794a2c548",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "c0df0e94-678e-42d1-a144-afd399fec3a1",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "91ff712c-4a7b-44c8-852e-55b81d47a4cc",
       "comment": "Traiter les membres déjà présents",
       "command": "",
@@ -6611,7 +6576,7 @@
       "value": "lesnumeros"
     }, {
       "id": "a0203550-7e83-49df-bd5d-708bcd34b0a0",
-      "comment": "nom affiché",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
@@ -6625,28 +6590,28 @@
       "value": "lesnoms"
     }, {
       "id": "a7870754-5bee-41e4-b293-7050ea0731e3",
-      "comment": "afficher fiche membre",
+      "comment": "",
       "command": "click",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//a",
       "targets": [],
       "value": ""
     }, {
       "id": "80975742-8dbf-4c88-b0a1-12684a81d18c",
-      "comment": "Catégorie du membre",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//dt[contains(.,\"Catégorie\")]/following-sibling::dd[1]",
       "targets": [],
       "value": "categorie"
     }, {
       "id": "da73d314-a4df-497d-a538-5ec456f2b7ea",
-      "comment": "Trouver le numéro de la catégorie",
+      "comment": "",
       "command": "executeScript",
       "target": "function getNumero(cat_name, categories) { let i = 0; while (i < categories.length) { if (categories[i] == cat_name) { return i + 1; } i += 1; }}return getNumero(${categorie}, ${categories_num});",
       "targets": [],
       "value": "num_cat"
     }, {
       "id": "18e8efe9-1991-48bc-a0ae-441f08baac6c",
-      "comment": "ajouter numéro catégorie à la liste",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lescategories}.concat(${num_cat})",
       "targets": [],
@@ -6681,7 +6646,7 @@
       "value": ""
     }, {
       "id": "49841a76-f86c-40d2-9775-4dee82495130",
-      "comment": "si pas assez de membres",
+      "comment": "",
       "command": "if",
       "target": "${nb_total_membres} < 20",
       "targets": [],
@@ -6716,14 +6681,14 @@
       "value": "nb_noms"
     }, {
       "id": "4f3b6610-df08-4e94-9def-70c61b777ec9",
-      "comment": "Parcourir liste noms pour ajout dans la base",
+      "comment": "",
       "command": "while",
       "target": "${i} < ${nb_noms}",
       "targets": [],
       "value": ""
     }, {
       "id": "d8a7fb49-a1d0-41ba-b254-697aac66ab02",
-      "comment": "Menu ajouter",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
       "targets": [
@@ -6907,7 +6872,7 @@
       "value": "membres"
     }, {
       "id": "4d07de3a-06d5-40ef-ba31-9053846c1fe1",
-      "comment": "idem",
+      "comment": "",
       "command": "executeScript",
       "target": "return Number(${membres}.split(/ /)[0])",
       "targets": [],
@@ -7068,35 +7033,35 @@
       "value": ""
     }, {
       "id": "206637b0-0b6e-47c7-bffd-7a67602a6581",
-      "comment": "numéro affiché",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/td[@class=\"num\"]//span",
       "targets": [],
       "value": "numeroAffiche"
     }, {
       "id": "31c08e88-7eff-4b43-a4f3-67fca427f742",
-      "comment": "nom affiché",
+      "comment": "",
       "command": "storeText",
       "target": "xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th",
       "targets": [],
       "value": "nomAffiche"
     }, {
       "id": "58019ba1-317d-459c-b6be-6940ee58c43c",
-      "comment": "numéro mémorisé",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnumeros}.at(${i})",
       "targets": [],
       "value": "numero"
     }, {
       "id": "a2c25509-995c-4694-8f38-07f7eb46dc11",
-      "comment": "nom mémorisé",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lesnoms}.at(${i})",
       "targets": [],
       "value": "nom"
     }, {
       "id": "e1dfa8bf-f6d2-44ef-86d3-6459b3a8c434",
-      "comment": "catégorie mémorisée",
+      "comment": "",
       "command": "executeScript",
       "target": "return ${lescategories}.at(${i})",
       "targets": [],
@@ -7322,41 +7287,6 @@
       "target": "let tab = []; for (let i = 0; i < ${numeros_alpha}.length; ++i) { let o = Object(); o.num=${numeros_alpha}[i]; o.cat=${categories_alpha}[i]; tab.push(o);} ; tab.sort((a, b) => { return a.num - b.num; }); let categs = []; tab.forEach((e) => { categs.push(e.cat); }); return categs;",
       "targets": [],
       "value": "categories_num"
-    }, {
-      "id": "a7fd532c-fb17-4042-b101-8ea51aaba965",
-      "comment": "Afficher les catégories",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "3e85589e-6011-4f7b-9046-79a0163caec9",
-      "comment": "",
-      "command": "while",
-      "target": "${i} < ${nb_categories}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5e909f07-e8f9-4199-9a82-51048300f5b2",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${categories_num}.at(${i})",
-      "targets": [],
-      "value": "categorie"
-    }, {
-      "id": "9db7adab-7a4e-403e-bd3b-4837e28aab34",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "385ca0c6-9f1e-47b8-93d0-ddf8c81fb06c",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
     }, {
       "id": "9aaaa7b6-7190-4874-94c7-43c4229dfe6f",
       "comment": "Traiter les membres déjà présents",
