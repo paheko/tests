@@ -22720,7 +22720,7 @@
     }]
   }, {
     "id": "1e8af828-327f-4540-99ee-9f9843826f29",
-    "name": "07-02 modifier mot de passe",
+    "name": "07-02 attribuer mot de passe",
     "commands": [{
       "id": "ada19c6d-e29f-4af7-8d35-3308903dedd1",
       "comment": "",
