@@ -1,17 +1,35 @@
+#+TITLE: Paheko : tests des membres
+#+AUTHOR: Jean-Christophe Engel
+#+LANGUAGE: fr
 #+STARTUP: show3levels
 #+STARTUP: inlineimages
 #+STARTUP: indent
+#+OPTIONS: toc:2
 * Test paheko
 ** DONE 01 Installation
-*** DONE installation initiale
-*** DONE installation sur base existante
-*** DONE vérification premier membre
+ - Exemple de test (après avoir installé un Paheko sur sa machine, sur
+   le vhost "paheko.localhost", sans base de données) :
+  - se rendre à l'adresse http://testpaheko.local.bzh
+  - remplir le formulaire d'installation
+  - valider le formulaire (cliquer sur le bouton en bas de page)
+  - sur la page suivante cliquer ensuite sur "configuration" dans le menu
+  - vérifier que les informations de l'association indiquées lors
+    l'installation se retrouvent exactement dans les champs de la
+    configuration
+  - cliquer sur le menu "Membres"
+  - vérifier que le membre par défaut est bien dans la liste
+  - cliquer sur la fiche du membre
+  - vérifier que l'adresse e-mail et autres infos remplies à
+    l'installation sont bien là
+  - mdp admin :  interpeller noircir colis allumer
+*** DONE 01-01 installation initiale
+*** DONE 01-01a installation sur base existante
+*** DONE 01-02 vérification premier membre
 ** DONE 02 Connexion
-*** DONE connexion correcte
-*** DONE connexion échec identifiant
-*** DONE connexion échec mdp
+*** DONE 02-01 connexion correcte
+*** DONE 02-02 connexion échec identifiant
+*** DONE 02-03 connexion échec mdp
 ** TODO Membres
-*** DONE virer commandes d'affichage
 *** DONE 03 créer un membre
 **** données de la fiche membre
 - Catégorie : choisir parmi les possibilités
@@ -27,7 +45,7 @@
 - Date d'inscription
 **** DONE 03-01 standard
 **** DONE 03-03 Catégorie « Ancien membre »
-***** DONE vérifier catégorie du membre créé
+- vérifier catégorie du membre créé
 **** DONE 03-04 Inscrit à la lettre
 **** DONE 03-05 date bizarre
 **** DONE 03-06a attaché à un autre membre (choix unique)
@@ -41,36 +59,32 @@
 **** DONE 03-93b nom en double accepté
 *** DONE 04 lister les membres
 **** DONE 04-01 toutes les catégories
-***** DONE gérer le cas où les membres occupent plus d'une page
-Vérifier si on peut supprimer un tri inutile
+- gérer le cas où les membres occupent plus d'une page
+- ¿ vérifier si on peut supprimer un tri inutile ?
 **** DONE 04-02 toutes catégories sauf cachées
 **** DONE 04-03 une seule catégorie
 **** DONE tri par différents critères
-***** DONE 04-06 num : croissant et décroissant
-***** DONE 04-04, 04-05 nom : idem
+***** DONE 04-04, 04-05 tri par nom croissant et décroissant
 Le nouveau tri est comme ceci :
 colonne IS NULL DESC, colonne DESC, numero DESC
 (DESC est remplacé par ASC pour un tri croissant)
 Autre changement du coup : les champs non-vides sont placés en dernier
 pour un tri croissant, en premier pour un tri décroissant.
-
-***** DONE 04-07, 04-08 ville : idem
+***** DONE 04-06 numéro décroissant
+***** DONE 04-07, 04-08 ville croissant et décroissant
 Tri par ville
 - ville (dé)croissant, numéro membre (dé)croissant
 - ville vide en fin(début), numéro membre (dé)croissant
-
-***** DONE 04-09, 04-10 rattaché à : idem
-
-Pour la colonne "rattaché à" : on met un tri sur la
-qualité de parent, puis le nom du parent en premier, puis le nom du
-membre, puis son numéro :
-- id_parent IS NULL ASC, nom_parent DESC, nom_membre DESC, numero DESC
-  - parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant
-  - parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant
-
-***** DONE 04-11, 04-12 responsable : idem
-is_parent ASC, nom_membre DESC, numero DESC
-
+***** DONE 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant
+- pour la colonne "rattaché à" : on met un tri sur la qualité de
+  parent, puis le nom du parent en premier, puis le nom du membre,
+  puis son numéro :
+  - id_parent IS NULL ASC, nom_parent DESC, nom_membre DESC, numero DESC
+    - parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant
+    - parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant
+***** DONE 04-11, 04-12 tri par responsable croissant et décroissant
+- is_parent ASC, nom_membre DESC, numero DESC
+***** DONE 04-90 lister membres sur plusieurs pages
 **** DONE consulter fiche
 *** DONE 05 rechercher des membres
 **** Remarques :
@@ -81,16 +95,20 @@ is_parent ASC, nom_membre DESC, numero DESC
 - s'il n'y a aucun résultat, la recherche affiche l'onglet
   « Recherche avancée » avec une liste de résultats vide
 **** DONE chercher par nom
-***** DONE 05-01 résultat unique (garantir l'unicité du nom cherché)
+***** DONE 05-01 résultat unique
+- garantir l'unicité du nom cherché
 ***** DONE 05-02 plusieurs résultats
 ***** DONE 05-03 aucun résultat
 **** DONE chercher par numéro
 ***** DONE 05-11 un résultat
 ***** DONE 05-12 aucun résultat
 **** DONE par courriel
-***** DONE 05-21 un seul résultat => fiche membre
-***** DONE 05-22 0 résultat => onglet « Recherche avancée »
-***** DONE 05-23 plusieurs résultats => onglet « Recherche avancée »
+***** DONE 05-21 un seul résultat
+- => fiche membre
+***** DONE 05-22 0 résultat
+- => onglet « Recherche avancée »
+***** DONE 05-23 plusieurs résultats
+- => onglet « Recherche avancée »
 *** DONE 06 supprimer un membre
 - NB : le tri des membres ne change pas après suppression
 **** DONE 06-01 plusieurs membres sélectionnés
@@ -114,7 +132,7 @@ is_parent ASC, nom_membre DESC, numero DESC
    - date inscription
  - enregistrer
  - vérifier les infos
-**** DONE 07-02 définir le mot de passe du membre
+**** DONE 07-02 attribuer un mot de passe à un membre
 - sélectionner un membre actif (pas ancien, car pas le droit de se
   connecter)
 - cliquer Définir mdp
@@ -155,14 +173,12 @@ is_parent ASC, nom_membre DESC, numero DESC
   membre si le numéro de membre indiqué n'existe pas ou n'est pas
   renseigné.
 *** DONE 09 exporter des membres
-Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
-ça produit bien un fichier de plus de 0 octets ça sera bien.
-
-- avec le runner :
-  - avec fenêtre, fichier exporté placé dans le répertoire par défaut ~/Downloads
-  - sans fenêtre, le fichier est enregistré dans le répertoire de travail... pas toujours !
-	- MAIS l'ajout d'une opération après le déclenchement de
-      l'enregistrement permet la bonne terminaison de l'enregistrement
+- Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester
+  que ça produit bien un fichier de plus de 0 octets ça sera bien.
+- Résultat avec le runner : le fichier exporté est placé dans le
+  répertoire ~/Downloads ; parfois l'export échoue
+  - MAIS l'ajout d'une opération après le déclenchement de
+    l'enregistrement permet sa bonne terminaison
 **** DONE 09-01 export sauf catégories cachées
 **** DONE 09-02 export toutes catégories
 **** DONE 09-03 export membres actifs
@@ -191,8 +207,6 @@ Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
 - les champs prédéfinis s'ajoutent avant les champs personnalisés et
   semble-t-il de temps en temps, le nouveau champ (perso) est ajouté en
   avant-dernière position !
-- PB : le bouton de suppression finale du champ est pris en compte par
-  l'IDE mais pas toujours par le runner
 ***** DONE 11-01 ajout champ perso email
 ***** DONE 11-02 ajout champ perso url
 ***** DONE 11-03 ajout champ perso case à cocher
@@ -335,36 +349,16 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
 ***** DONE 14-43 droit écriture : modifier admin impossible
 ***** DONE 14-50 droit administration : suppression autre membre possible
 *** TODO supprimer un champ dans la fiche membre
-- le clic sur le bouton de confirmation de la suppression n'est pas
-  pris en compte
+- certains champs dépendent d'un autre : âge dépend de l'année de
+  naissance => on ne peut supprimer année si âge est présent !
+- PROBLÈME : le clic sur le bouton de confirmation de la suppression est pris en compte par
+  l'IDE mais pas toujours par le runner
 - même problème en utilisant du code javascript pour ouvrir le
   dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
   ce cas, c'est la case à cocher qui n'est pas cochée !
-- certains champs dépendent d'un autre : âge dépend de l'année de
-  naissance => on ne peut supprimer année si âge est présent !
 **** TODO Suppression adresse postale
-- échec => inutile de poursuivre
-** prise en main
-*** DONE test installation
-
- Exemple de test (après avoir installé un Paheko sur sa machine, sur le
- vhost "paheko.localhost", sans base de données) :
- - se rendre à l'adresse http://testpaheko.local.bzh
- - remplir le formulaire d'installation
- - valider le formulaire (cliquer sur le bouton en bas de page)
- - sur la page suivante cliquer ensuite sur "configuration" dans le menu
- - vérifier que les informations de l'association indiquées lors
-   l'installation se retrouvent exactement dans les champs de la
-   configuration
- - cliquer sur le menu "Membres"
- - vérifier que le membre par défaut est bien dans la liste
- - cliquer sur la fiche du membre
- - vérifier que l'adresse e-mail et autres infos remplies à
-   l'installation sont bien là
-
- interpeller noircir colis allumer
-
-*** TODO Démarrer la comptabilité
+- échec => inutile de perdre davantage de temps !!!
+** TODO Démarrer la comptabilité
  - cas normal
    - choix du PC
    - dates exercice
@@ -375,9 +369,8 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
  - tester erreur saisie dates
  - tester modif pays
 
-*** TODO test saisie recette
-
- Un autre test pour la compta :
+** TODO test saisie recette
+Un autre test pour la compta :
  - se rendre à l'adresse http://testpaheko.local.bzh/admin/ (après avoir été
    connecté dans un test précédent, que je ne détaille pas ici)
  - cliquer sur le menu "Saisie" dans la compta
@@ -390,13 +383,11 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
  - vérifier que le montant de la recette apparaît bien dans les
    produits, que le nom du compte est bon, etc.
 
-** Exemples
+** Notes
 *** parcours table
-Voir file:///home/engel/outils/selenium/tuto.side : lister membres
 - compter le nombre d'éléments de la table => nb_elem
 - itérer avec un compteur (while) => num
 - accéder à l'élément courant grâce au compteur //tr[${num}]
-
 | Command         | Target                                                   | Value   |
 |-----------------+----------------------------------------------------------+---------|
 | storeXpathCount | xpath=//table[@class=\"list\"]/tbody/tr/th//span         | nb_elem |
@@ -407,16 +398,6 @@ Voir file:///home/engel/outils/selenium/tuto.side : lister membres
 | execute script  | return ${num} + 1                                        | num     |
 | end             |                                                          |         |
 
-*** données structurées
-- les objets ne sont pas acceptés par le runner (voir
-  https://github.com/SeleniumHQ/selenium-ide/issues/1603)
-- voir file:///home/engel/outils/selenium/tuto.side forEach
-*** envoi fichier
-Voir file:///home/engel/devel/recusDons/test/recusDons.side
-**Ne fonctionne qu'avec chrome**
-- insérer (type) le chemin du fichier dans le champ de saisie du nom
-- cliquer le bouton d'envoi
-** Notes
 *** problème avec instruction conditionnelle dans 4-09 et 4-10
 #+BEGIN_SRC bash
 if (${nb_parents} >= 2)
@@ -464,9 +445,9 @@ Impossible de sélectionner un élément avec l'attribut **display:none**
 // refusé par IDE mais accepté par runner
 return ${t}[${i}]
 #+END_SRC
-*** Objet javascript
+*** objet javascript
+voir https://github.com/SeleniumHQ/selenium-ide/issues/1603
 - Syntaxe accès aux objets : ${objet}.attribut ou ${objet}.methode
-
 #+BEGIN_SRC javascript
 // refusé par le runner
 return ${membre.nom}
@@ -474,7 +455,6 @@ return ${membre.nom}
 // accepté
 return ${membre}.nom;
 #+END_SRC
-
 *** input type="checkbox
 Pour (dés)activer un /<input type="checkbox"/, il faut utiliser
 **(un)check** car le runner (de chrome ?) n'aime pas **click**
@@ -482,9 +462,10 @@ Pour (dés)activer un /<input type="checkbox"/, il faut utiliser
 L'/appel de fonction/ définie dans le script avec une variable de
 l'IDE en param ne fonction qu'avec Chrome.  NB : vérifier exactement
 ce qui ne fonctionne pas avec firefox ?
-
 *** Envoi de fichier
 - Ne fonctionne qu'avec chrome
+- insérer (type) le chemin du fichier dans le champ de saisie du nom
+- cliquer le bouton d'envoi
 - *Important* : Ne pas cliquer sur le bouton d'ouverture du sélecteur
   de fichier : il ne se refermera pas et masquera les éléments de la
   fenêtre précédente qui ne pourront plus être activés
