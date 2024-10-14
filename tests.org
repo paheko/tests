@@ -293,13 +293,8 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
   - clic « Mes infos personnelles » échoue
   - impossible ensuite de se connecter en tant qu'admin
   - réinstallation nécessaire !
-- avec attribution d'un mot de passe :
-  - changement email possible, mais si adresse générée aléatoirement :
-	- attente longue lors enregistrement
-	- changement accepté mais apparition mention « Adresse invalide » (en rouge)
-	- possibilité pour le membre de se déconnecter puis de se
-      reconnecter mais le statut email reste toujours invalide
-  - le problème ne se pose pas avec une adresse valide :)
+- avec attribution d'un mot de passe, changement email possible, mais :
+  - attente trèès longue lors enregistrement
 **** DONE 12-14 e-mail non visible fiche membre
 **** DONE 12-16 mot de passe modifiable
 - fonctionne, mais temps d'attente long lors de l'enregistrement du
