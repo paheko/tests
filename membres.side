@@ -21819,6 +21819,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "2a9c0278-81e5-462a-82ca-3b3bc2025ceb",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(@href, '/admin/users')]",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "8da6be2b-7c62-4266-88b2-46e894f2dbf4",
       "comment": "Menu Membres",
       "command": "click",
@@ -54169,7 +54176,7 @@
     }]
   }, {
     "id": "7402d095-05b5-45eb-8029-9c6b106cf42d",
-    "name": "14-40 droit écriture",
+    "name": "14-40 droit écriture : création membre possible",
     "commands": [{
       "id": "825887f7-22fc-43c2-ae07-82f5d15bf7eb",
       "comment": "",
@@ -55476,6 +55483,709 @@
       "value": ""
     }]
   }, {
+    "id": "182cfb32-6ded-4b73-8857-bb85476d34ac",
+    "name": "14-42 droit écriture : changer de catégorie possible",
+    "commands": [{
+      "id": "f2d125b7-339a-4b64-83b7-557997673f42",
+      "comment": "",
+      "command": "open",
+      "target": "http://test.paheko.localhost/admin/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ca338e8-9f7d-448d-a0d5-d5d2fea0e708",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcaa7746-6bf9-42bc-aa77-a8a40c4d1996",
+      "comment": "Vérifier si déjà connecté",
+      "command": "storeXpathCount",
+      "target": "xpath=//button[@name='login']",
+      "targets": [],
+      "value": "connecte"
+    }, {
+      "id": "c62b9be6-979a-48e2-bcd3-db8d03658fbb",
+      "comment": "",
+      "command": "if",
+      "target": "${connecte} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2589b932-6234-4411-b00a-9c72ef742a56",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [
+        ["id=f_id", "id"],
+        ["name=id", "name"],
+        ["css=#f_id", "css:finder"],
+        ["xpath=//input[@id='f_id']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "1ba45836-57fc-42b4-b214-6f0fc3535c46",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [
+        ["id=f_password", "id"],
+        ["name=password", "name"],
+        ["css=#f_password", "css:finder"],
+        ["xpath=//input[@id='f_password']", "xpath:attributes"],
+        ["xpath=//dd[2]/input", "xpath:position"]
+      ],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "b913b04a-89a3-42cc-b779-17223b3fa53b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@name='login']",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='login']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ad19325-af42-4d5d-a69c-13d0f785c710",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c81cb5a9-8057-43cd-9827-ceea6c4f50bb",
+      "comment": "",
+      "command": "store",
+      "target": "Membres actifs",
+      "targets": [],
+      "value": "nom_categorie"
+    }, {
+      "id": "bc35354e-66cf-481c-8329-d5710d0e5efa",
+      "comment": "modifier la catégorie : droit écriture",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cdf3e02-3798-4e53-a306-8cb5f12d82ce",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a16defa5-681b-4672-84ad-827732e45300",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21ce3cda-73f6-4879-942d-007787b802c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/categories\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef1ab73e-b0ea-45c3-954b-76172f1edcc7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a[starts-with(@href, \"edit.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fc1ca44-f209-4262-bb84-8de9bc84af10",
+      "comment": "",
+      "command": "check",
+      "target": "id=f_perm_users_2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2506658e-fdfa-4d88-a9a3-aa6adf3560df",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17b2c94a-a61e-4a76-a066-6d16886038bd",
+      "comment": "Créer deux membres dans la catégorie",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18dc6cd0-9f54-403c-8a39-57abee7452a1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom1"
+    }, {
+      "id": "1532390f-d3b1-4529-a99d-dafcdc78fea6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@free.fr\"",
+      "targets": [],
+      "value": "courriel1"
+    }, {
+      "id": "7d35ee14-104c-4140-987b-4e6b5ff15a1a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "3b2bd282-f257-4502-8bbe-eb9a90090914",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "6e009f81-8343-40ca-8448-15c7fb4722ff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fad9eeda-2bf1-4951-aa7b-c70fb3c229c3",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero1"
+    }, {
+      "id": "5481c179-039c-4748-81f8-43e5621c7159",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${nom_categorie}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6611e6b4-4bff-4332-8176-31bd9f3618e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom1}"
+    }, {
+      "id": "7f1ad2ba-f9f1-428b-ad30-8b562da9e04b",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel1}"
+    }, {
+      "id": "7fc743d2-edd4-48c3-a323-7bc1274d604e",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "455e2be0-7438-4420-940f-e67320a6b836",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "236ee869-3e0e-496d-af1d-a076038f50fd",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e1fcbaf-ded6-436e-90a4-fdff2d658006",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const upper = (str) => { return str.charAt(0).toUpperCase() + str.slice(1);} ; const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } let debut = upper(str.slice(0, length/2)); let fin = upper(str.slice(length/2)); return debut + ' ' + fin;};return chaine(12)",
+      "targets": [],
+      "value": "nom2"
+    }, {
+      "id": "ce1513d3-785c-4b15-bfaf-aeba07bee97f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'abcdefghijklmnopqrstuvwxyz0123456789'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str; }; return chaine(8) + \"@free.fr\"",
+      "targets": [],
+      "value": "courriel2"
+    }, {
+      "id": "2520220f-4987-49d1-8367-211aa3daa38b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const chaine = (length) => { let chars = 'aàbcdeéèfghijklmnoôpqrstuùvwxyz'; let str = ''; for (let i = 0; i < length; i++) { str += chars.charAt(Math.floor(Math.random() * chars.length)); } return str.charAt(0).toUpperCase() + str.slice(1); }; return chaine(15)",
+      "targets": [],
+      "value": "ville"
+    }, {
+      "id": "038a9540-b06e-4a59-9921-8a15b09073f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return '0' + Math.random().toString(10).substring(2, 11);",
+      "targets": [],
+      "value": "tel"
+    }, {
+      "id": "1f006292-1b97-4983-ae92-900b2e521843",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "targets": [
+        ["linkText=Ajouter", "linkText"],
+        ["css=li:nth-child(2) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ajouter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/users/new.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4088ccd-4265-4943-ba99-e469e0ee6bde",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=f_numero",
+      "targets": [],
+      "value": "numero2"
+    }, {
+      "id": "96f17dc3-c3e7-4984-854f-4c85daedfd40",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[contains(text(), \"${nom_categorie}\")]",
+      "targets": [
+        ["css=#f_id_category > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='1']", "xpath:attributes"],
+        ["xpath=//select[@id='f_id_category']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Membres actifs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "070f5830-e0fe-45a3-a905-e2b72b3e2364",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_nom",
+      "targets": [
+        ["id=f_nom", "id"],
+        ["name=nom", "name"],
+        ["css=#f_nom", "css:finder"],
+        ["xpath=//input[@id='f_nom']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${nom2}"
+    }, {
+      "id": "4fcf8df2-8048-4caa-a187-23b87aaceb38",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_email",
+      "targets": [
+        ["id=f_email", "id"],
+        ["name=email", "name"],
+        ["css=#f_email", "css:finder"],
+        ["xpath=//input[@id='f_email']", "xpath:attributes"],
+        ["xpath=//dd[4]/input", "xpath:position"]
+      ],
+      "value": "${courriel2}"
+    }, {
+      "id": "b9309eb2-2c96-4ab7-b7e1-a03e3a21166f",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_ville",
+      "targets": [
+        ["id=f_ville", "id"],
+        ["name=ville", "name"],
+        ["css=#f_ville", "css:finder"],
+        ["xpath=//input[@id='f_ville']", "xpath:attributes"],
+        ["xpath=//dd[10]/input", "xpath:position"]
+      ],
+      "value": "${ville}"
+    }, {
+      "id": "837b3b1e-2e17-4a8d-ab31-98be9eb00863",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_telephone",
+      "targets": [
+        ["id=f_telephone", "id"],
+        ["name=telephone", "name"],
+        ["css=#f_telephone", "css:finder"],
+        ["xpath=//input[@id='f_telephone']", "xpath:attributes"],
+        ["xpath=//dd[11]/input", "xpath:position"]
+      ],
+      "value": "${tel}"
+    }, {
+      "id": "b48f4b33-639b-455a-a805-e7bf743b3d3b",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Créer ce membre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e54550f0-8da6-4114-92e6-55efe9eaba5e",
+      "comment": "connecter ce membre",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "786a93a7-c77e-45a4-beed-644d79884864",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"edit_security.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a506339-78c7-443e-9727-8d48861d20ac",
+      "comment": "",
+      "command": "store",
+      "target": "soin oeuf mélodieux intellectuel",
+      "targets": [],
+      "value": "mdp"
+    }, {
+      "id": "68bca0c2-6028-4d2c-9d49-cce93fa732d3",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "25081105-2e17-430e-960a-29af78101aca",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [
+        ["id=f_password", "id"],
+        ["css=#f_password", "css:finder"],
+        ["xpath=//input[@id='f_password']", "xpath:attributes"],
+        ["xpath=//dd[3]/input", "xpath:position"]
+      ],
+      "value": "${mdp}"
+    }, {
+      "id": "681c8d6f-d6e9-4882-8271-4c6d169e3f67",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password_confirmed",
+      "targets": [
+        ["id=f_password_confirmed", "id"],
+        ["name=password_confirmed", "name"],
+        ["css=#f_password_confirmed", "css:finder"],
+        ["xpath=//input[@id='f_password_confirmed']", "xpath:attributes"],
+        ["xpath=//dd[5]/input", "xpath:position"]
+      ],
+      "value": "${mdp}"
+    }, {
+      "id": "6e54b9bd-532e-436e-b77b-73008253d00f",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [
+        ["name=save", "name"],
+        ["css=.main", "css:finder"],
+        ["xpath=//button[@name='save']", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enregistrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46adff2a-9f5f-46a4-afb4-54c793ca7620",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0b46b62-94b6-46b9-b159-6737e61df27f",
+      "comment": "Déconnexion admin",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/logout.php')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e1e6db5-77ec-4355-9a4a-cd5176adcefb",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "${courriel2}"
+    }, {
+      "id": "5ddb1286-35f0-42c2-925c-457b492ba432",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "${mdp}"
+    }, {
+      "id": "6d9deb30-7ed9-4d68-8a72-feede3647844",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3079503-57d9-4eb9-b6b3-10a504a49df4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/me/\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd8ea9fa-4df4-47c9-ab89-d6a7bbf8ef96",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//dt[text()=\"Numéro de membre\"]/following-sibling::dd",
+      "targets": [],
+      "value": "${numero2}"
+    }, {
+      "id": "f790a9b5-b813-4453-9016-b4239f045429",
+      "comment": "Changer l'autre membre de catégorie",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14eb55e2-cf14-4bfa-b7df-84b57b0df850",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/users\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01d7baaa-d596-48d1-ba9f-87532550120e",
+      "comment": "",
+      "command": "type",
+      "target": "name=qt",
+      "targets": [],
+      "value": "${numero1}"
+    }, {
+      "id": "45f2128e-d21c-4ace-b408-b4be853f7b1e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@title=\"Chercher\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "208c578a-fa99-4403-83ed-f7d943b4b211",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//h1[starts-with(text(),\"${nom1}\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d8b9762-5fa9-4147-b4e7-ad37b4b52fee",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//aside[@class=\"describe\"]//dt[text()=\"Catégorie\"]/following-sibling::dd",
+      "targets": [],
+      "value": "${nom_categorie}"
+    }, {
+      "id": "58bbcd05-788b-4e0f-abf9-903dc8d8d9d1",
+      "comment": "",
+      "command": "store",
+      "target": "Anciens membres",
+      "targets": [],
+      "value": "nouvelle_categorie"
+    }, {
+      "id": "0ea95c56-ea7d-4a19-9587-01755b2c96eb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[starts-with(@href, \"edit.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30dd6da3-eca2-4033-b39f-bddeadb8929d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[text()=\"${nouvelle_categorie}\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "415b8344-cece-4d07-9595-d8294be27292",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//select[@id=\"f_id_category\"]/option[text()=\"${nouvelle_categorie}\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79c0b30f-c4ba-41e6-bf88-faaa967d1838",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65cc7176-9cbe-485b-a9b8-4608e199e7ff",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//aside[@class=\"describe\"]//dt[text()=\"Catégorie\"]/following-sibling::dd",
+      "targets": [],
+      "value": "${nouvelle_categorie}"
+    }, {
+      "id": "46b41dac-c6e4-4b85-9a93-b2b8af211c2b",
+      "comment": "remettre les droits à l'état initial",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19586edf-bf3a-432a-8e54-68f70e1bb015",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/admin/logout.php')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "720d37e7-a2c7-42f4-9042-380a6b37e6a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_id",
+      "targets": [],
+      "value": "jckix@free.fr"
+    }, {
+      "id": "c583291f-2d97-43e9-8ece-9a192b76cd7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=f_password",
+      "targets": [],
+      "value": "interpeller noircir colis allumer"
+    }, {
+      "id": "668ee203-8c0a-4c16-a902-f0353374f231",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f073d37-1a76-4412-ad0c-559573ff5f2b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/\")]",
+      "targets": [
+        ["css=li:nth-child(6) b", "css:finder"],
+        ["xpath=//li[6]/h3/a/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Configuration')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebb5c195-074f-4176-affc-88e7036b6a01",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/users\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d66e2e0-5ec3-4026-94c1-db05a65425db",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, \"/admin/config/categories\")]",
+      "targets": [
+        ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
+        ["xpath=//a[@href='http://test.paheko.localhost/admin/config/users/']", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24dd9a8c-6885-4c5c-989c-f99197d8762c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//table[@class=\"list\"]/tbody//th[text()=\"${nom_categorie}\"]/following-sibling::td/a[starts-with(@href, \"edit.php\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a1f24d1-aacd-4d2a-8ad3-384f508cf5a5",
+      "comment": "",
+      "command": "check",
+      "target": "id=f_perm_users_0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c878f652-8a54-43e5-8261-cb4e290f77f6",
+      "comment": "",
+      "command": "click",
+      "target": "name=save",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "793d3286-9eca-4939-b066-a522c7f390e1",
     "name": "14-50 droit administration",
     "commands": [{
@@ -56290,7 +57000,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["060b5608-629e-45d1-83e4-6a4c5db608e5", "72592be1-aa5c-428f-b16e-8bf09f4103cf", "c38b2445-1882-440e-befa-1dd78c918593", "5f7e280d-ec44-49b7-b373-6109494ba9f7", "d92eebc8-c916-44e0-8f75-0472e7bb52dd", "2fbd88ba-af7e-41f4-a65e-82ceb9b9ddc0", "08ad7abc-cc17-456f-9ff0-a10a7a29e784", "8b29c931-a500-4cf3-9079-13dbe03d1909", "918d1f7a-7547-4c00-8972-fc4744da82cc", "61e3023d-156d-47cb-a26a-5750b7d3ceb6", "7402d095-05b5-45eb-8029-9c6b106cf42d", "8311e834-db9a-40cc-a3ff-558b5be6ba2c", "793d3286-9eca-4939-b066-a522c7f390e1"]
+    "tests": ["060b5608-629e-45d1-83e4-6a4c5db608e5", "72592be1-aa5c-428f-b16e-8bf09f4103cf", "c38b2445-1882-440e-befa-1dd78c918593", "5f7e280d-ec44-49b7-b373-6109494ba9f7", "d92eebc8-c916-44e0-8f75-0472e7bb52dd", "2fbd88ba-af7e-41f4-a65e-82ceb9b9ddc0", "08ad7abc-cc17-456f-9ff0-a10a7a29e784", "8b29c931-a500-4cf3-9079-13dbe03d1909", "918d1f7a-7547-4c00-8972-fc4744da82cc", "61e3023d-156d-47cb-a26a-5750b7d3ceb6", "7402d095-05b5-45eb-8029-9c6b106cf42d", "8311e834-db9a-40cc-a3ff-558b5be6ba2c", "182cfb32-6ded-4b73-8857-bb85476d34ac", "793d3286-9eca-4939-b066-a522c7f390e1"]
   }],
   "urls": ["http://test.paheko.localhost/"],
   "plugins": []
