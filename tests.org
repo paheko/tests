@@ -1,6 +1,421 @@
 #+STARTUP: show3levels
 #+STARTUP: inlineimages
+#+STARTUP: indent
 * Test paheko
+** DONE 01 Installation
+*** DONE installation initiale
+*** DONE installation sur base existante
+*** DONE vérification premier membre
+** DONE 02 Connexion
+*** DONE connexion correcte
+*** DONE connexion échec identifiant
+*** DONE connexion échec mdp
+** TODO Membres
+*** DONE virer commandes d'affichage
+*** DONE 03 créer un membre
+**** données de la fiche membre
+- Catégorie : choisir parmi les possibilités
+- Rattacher à un membre : non / choisir un membre
+- Numéro : par défaut ou à saisir
+- Nom & prénom (oblig)
+- Adresse E-Mail
+- Adresse postale
+- Code postal
+- Ville
+- Numéro de téléphone
+- Inscription à la lettre d'information
+- Date d'inscription
+**** DONE 03-01 standard
+**** DONE 03-03 Catégorie « Ancien membre »
+***** DONE vérifier catégorie du membre créé
+**** DONE 03-04 Inscrit à la lettre
+**** DONE 03-05 date bizarre
+**** DONE 03-06a attaché à un autre membre (choix unique)
+**** DONE 03-06b attaché à un autre membre (plusieurs choix)
+- utiliser et vérifier le numéro du responsable
+**** DONE 03-07 numéro différent de celui proposé par défaut
+**** DONE 03-91 numéro en double
+**** DONE 03-92a date antérieure min
+**** DONE 03-92b date postérieure max
+**** DONE 03-93a nom en double refusé
+**** DONE 03-93b nom en double accepté
+*** DONE 04 lister les membres
+**** DONE 04-01 toutes les catégories
+***** DONE gérer le cas où les membres occupent plus d'une page
+Vérifier si on peut supprimer un tri inutile
+**** DONE 04-02 toutes catégories sauf cachées
+**** DONE 04-03 une seule catégorie
+**** DONE tri par différents critères
+***** DONE 04-06 num : croissant et décroissant
+***** DONE 04-04, 04-05 nom : idem
+Le nouveau tri est comme ceci :
+colonne IS NULL DESC, colonne DESC, numero DESC
+(DESC est remplacé par ASC pour un tri croissant)
+Autre changement du coup : les champs non-vides sont placés en dernier
+pour un tri croissant, en premier pour un tri décroissant.
+
+***** DONE 04-07, 04-08 ville : idem
+Tri par ville
+- ville (dé)croissant, numéro membre (dé)croissant
+- ville vide en fin(début), numéro membre (dé)croissant
+
+***** DONE 04-09, 04-10 rattaché à : idem
+
+Pour la colonne "rattaché à" : on met un tri sur la
+qualité de parent, puis le nom du parent en premier, puis le nom du
+membre, puis son numéro :
+- id_parent IS NULL ASC, nom_parent DESC, nom_membre DESC, numero DESC
+  - parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant
+  - parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant
+
+***** DONE 04-11, 04-12 responsable : idem
+is_parent ASC, nom_membre DESC, numero DESC
+
+**** DONE consulter fiche
+*** DONE 05 rechercher des membres
+**** Remarques :
+- si la recherche trouve un seul résultat, elle affiche directement la
+  fiche du membre
+- s'il y a plusieurs résultats, la recherche affiche l'onglet
+  « Recherche avancée » avec les résultats
+- s'il n'y a aucun résultat, la recherche affiche l'onglet
+  « Recherche avancée » avec une liste de résultats vide
+**** DONE chercher par nom
+***** DONE 05-01 résultat unique (garantir l'unicité du nom cherché)
+***** DONE 05-02 plusieurs résultats
+***** DONE 05-03 aucun résultat
+**** DONE chercher par numéro
+***** DONE 05-11 un résultat
+***** DONE 05-12 aucun résultat
+**** DONE par courriel
+***** DONE 05-21 un seul résultat => fiche membre
+***** DONE 05-22 0 résultat => onglet « Recherche avancée »
+***** DONE 05-23 plusieurs résultats => onglet « Recherche avancée »
+*** DONE 06 supprimer un membre
+- NB : le tri des membres ne change pas après suppression
+**** DONE 06-01 plusieurs membres sélectionnés
+**** DONE 06-02 sélectionné = admin
+**** aucun membre sélectionné => action interdite
+*** DONE 07 modifier un membre
+**** DONE 07-01 modifier caractéristiques « simples »
+ - si un seul membre => en créer un deuxième
+ - chercher le premier numéro disponible
+ - chercher puis modifier le premier membre de numéro différent de 1
+ - modifier les différents champs
+   - numéro
+   - catégorie
+   - nom, prénom
+   - courriel
+   - adresse
+   - code postal
+   - ville
+   - téléphone
+   - lettre info
+   - date inscription
+ - enregistrer
+ - vérifier les infos
+**** DONE 07-02 définir le mot de passe du membre
+- sélectionner un membre actif (pas ancien, car pas le droit de se
+  connecter)
+- cliquer Définir mdp
+- saisir deux fois un mdp généré
+- mémoriser nom et adresse courriel
+- déconnecter
+- connexion avec
+  - adresse courriel
+  - mdp
+- vérifier Nom présent page accueil
+- vérifier numéro membre sur fiche membre
+**** DONE 07-03 rattacher un membre
+- créer deux membres et mémoriser leurs numéros
+- rattacher le premier au deuxième à l'aide de son numéro
+- vérifier les deux membres
+*** DONE 08 importer des membres
+**** Remarques
+- Si déjà tu peux tester qu'un fichier CSV donné s'importe bien, c'est
+  déjà génial je pense
+- ¿ Tester les possiblités d'ignorer certains champs ?
+**** DONE Créer tous les membres
+- Tous les membres trouvés dans le fichier seront créés.
+- Cela peut amener à avoir des membres en doublon si on réalise
+  plusieurs imports du même fichier.
+***** DONE 08-01 création sans conflit
+***** DONE 08-02 création avec conflit
+***** DONE 08-03 création sans en-tête
+***** ¿ création en choisissant certaines options ?
+**** DONE Mettre à jour en utilisant le numéro de membre
+- Les membres présents dans le fichier qui mentionnent un numéro de
+  membre seront mis à jour en utilisant ce numéro.
+- Si une ligne du fichier mentionne un numéro de membre qui n'existe
+  pas ou n'a pas de numéro de membre, l'import échouera.
+***** DONE 08-11 tous les membres existent ; certains sont mis à jour
+***** DONE 08-12 au moins un membre n'existe pas
+**** DONE 08-21 Automatique : créer ou mettre à jour en utilisant le numéro de membre
+- Met à jour la fiche d'un membre si son numéro existe, sinon crée un
+  membre si le numéro de membre indiqué n'existe pas ou n'est pas
+  renseigné.
+*** DONE 09 exporter des membres
+Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
+ça produit bien un fichier de plus de 0 octets ça sera bien.
+
+- avec le runner :
+  - avec fenêtre, fichier exporté placé dans le répertoire par défaut ~/Downloads
+  - sans fenêtre, le fichier est enregistré dans le répertoire de travail... pas toujours !
+	- MAIS l'ajout d'une opération après le déclenchement de
+      l'enregistrement permet la bonne terminaison de l'enregistrement
+**** DONE 09-01 export sauf catégories cachées
+**** DONE 09-02 export toutes catégories
+**** DONE 09-03 export membres actifs
+**** DONE 09-04 export administrateurs
+*** DONE 10 configuration membres Préférences
+**** DONE 10-01 catégorie par défaut des nouveaux membres
+**** DONE 10-02 identité : ajouter adresse courriel au champ Nom & Prénom
+**** DONE 10-03 identité : remplacer le champ Nom & Prénom par le champ courriel
+**** DONE 10-04 connexion par numéro de membre
+**** DONE 10-05 durée de conservation journal : aucun
+- créer un membre
+- lui attribuer un mot de passe
+- mettre la durée de conservatin à 0
+- déconnexion admin
+- connexion du membre
+- vérifier journal connexion vide
+- déconnexion
+- connexion admin
+- vérification absence membre dans journal
+**** DONE 10-06 connexion par numéro de téléphone
+**** ¿ déconnexion automatique ?
+*** DONE 11 ajouter un champ à la fiche membre
+- vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
+  la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
+  dans la liste des membres
+- les champs prédéfinis s'ajoutent avant les champs personnalisés et
+  semble-t-il de temps en temps, le nouveau champ (perso) est ajouté en
+  avant-dernière position !
+- PB : le bouton de suppression finale du champ est pris en compte par
+  l'IDE mais pas toujours par le runner
+***** DONE 11-01 ajout champ perso email
+***** DONE 11-02 ajout champ perso url
+***** DONE 11-03 ajout champ perso case à cocher
+***** DONE 11-04 ajout champ perso date
+***** DONE 11-05 ajout champ perso date et heure
+***** DONE 11-06 ajout champ perso mois et année
+- avec le driver de chrome :
+  - saisir le mois
+  - envoyer le code de la touche de tabulation
+  - saisir l'année
+fonctionne avec runner et le driver de chrome mais probablement pas avec celui de firefox
+***** DONE 11-07 ajout champ perso année
+***** DONE 11-08 ajout champ perso fichier
+- utilise le fichier /tmp/cv.pdf
+- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
+***** DONE 11-08a ajout champ perso fichier avec modification
+- utilise les fichiers /tmp/cv.pdf et /tmp/cv2.pdf
+- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
+***** DONE 11-09 ajout champ perso mot de passe
+- question :  ce mot de passe ne sert pas à se connecter, donc à quoi sert-il ?
+- pour vérifier le mot de passe, il faut :
+  - connecter le membre
+  - modifier les infos personnelles
+  - afficher le mot de passe :
+	- NB : le mdp qui s'affiche (en fonctionnement interactif) est
+      celui enregistré par le navigateur pour l'admin !!
+	- NB : en mode runner, le champ est vide =>impossible de vérifier le mdp
+  - Remarque : la modification du mot de passe est prise en compte mais on
+    ne peut le voir qu'en exportant les données de la fiche membre
+***** DONE 11-10 ajout champ perso nombre
+***** DONE 11-11 ajout champ perso nombre à virgule
+***** DONE 11-12 ajout champ perso numéro téléphone
+***** DONE 11-13 ajout champ perso Sélecteur à choix unique
+***** DONE 11-14 ajout champ perso Sélecteur à choix multiple
+***** DONE 11-15 ajout champ perso pays
+- Pour définir le pays par défaut, il faut indiquer son code à deux
+  lettres et non son nom complet => à documenter ou à changer
+***** DONE 11-16 ajout champ perso texte libre
+***** DONE 11-17 ajout champ perso texte choix multiple
+***** DONE 11-18 ajout champ perso texte multilignes
+***** DONE 11-19 ajout champ perso calculé
+***** DONE 11-30 ajout ancienneté
+- c'est un champ calculé à partir de la date d'inscription
+***** DONE 11-31 ajout année naissance
+***** DONE 11-32 ajout date naissance
+***** DONE 11-33 ajout pays
+***** DONE 11-34 ajout photo
+- utilise le fichier /tmp/photo.jpg
+***** DONE 11-35 ajout pronom
+***** DONE 11-36 ajout âge en fonction année naissance
+- ajouter année naissance
+- ajouter âge
+- tenir compte du cas où il y a déjà un champ âge/date naissance
+***** DONE 11-37 ajout âge en fonction date naissance
+- ajouter date naissance
+- ajouter âge
+- tenir compte du cas où il y a déjà un champ âge/année naissance
+***** DONE 11-90 saisir un champ avec un identifiant déjà existant
+- récupérer l'identifiant d'un champ déjà présent
+- messages d'erreur différents selon le champ :
+  - Ce nom de champ est déjà utilisé par un autre champ : adresse, code_postal,
+	ville, telephone, lettre_infos_1, date_inscription
+  - numero : Aucun champ de numéro de membre n'existe
+  - nom    : Aucun champ de nom de membre n'existe
+  - email  : Aucun champ d'identifiant de connexion n'existe
+***** TODO ¿ saisir une donnée erronée dans chaque champ ?
+Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
+*** DONE 12 modifier un champ de la fiche membre
+**** DONE 12-01 numéro non affiché liste membres
+**** DONE TEST SUPPRIMÉ car devenu inutile 12-02 numéro non obligatoire
+Même si on ne saisit pas un numéro, il sera automatiquement affecté
+- le test est-il pertinent ?
+- faut-il empêcher cette modification ?
+**** DONE 12-03 numéro non visible fiche membre
+**** DONE TEST SUPPRIMÉ car devenu inutile 12-06 nom, prénom non affiché liste membres
+- la modification n'est plus possible
+**** DONE 12-07 nom, prénom non obligatoire
+**** DONE 12-08 nom, prénom modifiable
+**** DONE 12-09 nom, prénom non visible fiche membre
+**** DONE 12-11 e-mail affiché liste membres
+**** DONE 12-12 e-mail obligatoire
+**** DONE [[./images/attention-petit.png]] 12-13 e-mail modifiable
+- après « se connecter à sa place » :
+  - clic « Mes infos personnelles » échoue
+  - impossible ensuite de se connecter en tant qu'admin
+  - réinstallation nécessaire !
+- avec attribution d'un mot de passe :
+  - changement email possible, mais si adresse générée aléatoirement :
+	- attente longue lors enregistrement
+	- changement accepté mais apparition mention « Adresse invalide » (en rouge)
+	- possibilité pour le membre de se déconnecter puis de se
+      reconnecter mais le statut email reste toujours invalide
+  - le problème ne se pose pas avec une adresse valide :)
+**** DONE 12-14 e-mail non visible fiche membre
+**** DONE 12-16 mot de passe modifiable
+- fonctionne, mais temps d'attente long lors de l'enregistrement du
+  nouveau mot de passe
+**** DONE 12-17 mot de passe non visible
+*** DONE 13 changer l'ordre des champs de la fiche membre
+**** DONE 13-01 intervertir numéro et nom
+- est-ce utile de tester d'autres changements d'ordre ?
+*** DONE 14 configuration membres Catégories
+**** DONE 14-01 ajouter une catégorie
+**** DONE 14-01b ajouter deux catégories de même non
+**** DONE 14-02 supprimer une catégorie non vide
+**** DONE 14-03 vider et supprimer une catégorie
+**** DONE modifier une catégorie
+***** DONE 14-10 inverser la visibilité d'une catégorie
+***** DONE 14-11 interdire connexion
+- interdire la connexion d'une catégorie
+- ajouter un membre dans cette catégorie
+- lui attribuer un mot de passe
+- essayer de connecter le membre
+- vérifier l'échec
+***** DONE 14-12 autoriser connexion
+- interdire la connexion d'une catégorie
+- ajouter un membre dans cette catégorie
+- lui attribuer un mot de passe
+- essayer de connecter le membre
+- vérifier l'échec
+*** DONE Droits
+- vérifier que le droit lecture/écriture/administration fonctionne
+  bien, notamment via le bouton "connexion à la place du membre"
+- Gestion des membres
+  - Pas d'accès
+  - Lecture uniquement (peut voir les informations personnelles de
+    tous les membres, y compris leurs inscriptions à des activités)
+  - Lecture & écriture (peut ajouter et modifier des membres, peut
+    changer de catégorie un membre d'une catégorie ayant des droits
+    égaux ou moindres, ne peut pas supprimer des membres, peut inscrire
+    des membres à des activités, peut envoyer des messages collectifs)
+  - Administration (peut tout faire)
+***** DONE 14-20 aucun droit : consultation autre membre impossible
+***** DONE 14-30 droit lecture : consultation autre membre possible
+***** DONE 14-31 droit lecture : modification autre membre impossible
+***** DONE 14-32 droit lecture : création membre impossible
+***** DONE 14-40 droit écriture : création membre possible
+***** DONE 14-41 droit écriture : suppression autre membre impossible
+***** DONE 14-42 droit écriture : changer de catégorie possible
+***** DONE 14-43 droit écriture : modifier admin impossible
+***** DONE 14-50 droit administration : suppression autre membre possible
+*** TODO supprimer un champ dans la fiche membre
+- le clic sur le bouton de confirmation de la suppression n'est pas
+  pris en compte
+- même problème en utilisant du code javascript pour ouvrir le
+  dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
+  ce cas, c'est la case à cocher qui n'est pas cochée !
+- certains champs dépendent d'un autre : âge dépend de l'année de
+  naissance => on ne peut supprimer année si âge est présent !
+**** TODO Suppression adresse postale
+- échec => inutile de poursuivre
+** prise en main
+*** DONE test installation
+
+ Exemple de test (après avoir installé un Paheko sur sa machine, sur le
+ vhost "paheko.localhost", sans base de données) :
+ - se rendre à l'adresse http://testpaheko.local.bzh
+ - remplir le formulaire d'installation
+ - valider le formulaire (cliquer sur le bouton en bas de page)
+ - sur la page suivante cliquer ensuite sur "configuration" dans le menu
+ - vérifier que les informations de l'association indiquées lors
+   l'installation se retrouvent exactement dans les champs de la
+   configuration
+ - cliquer sur le menu "Membres"
+ - vérifier que le membre par défaut est bien dans la liste
+ - cliquer sur la fiche du membre
+ - vérifier que l'adresse e-mail et autres infos remplies à
+   l'installation sont bien là
+
+ interpeller noircir colis allumer
+
+*** TODO Démarrer la comptabilité
+ - cas normal
+   - choix du PC
+   - dates exercice
+ - vérifications
+   - nombre d'écritures
+   - PC
+   - dates exercice
+ - tester erreur saisie dates
+ - tester modif pays
+
+*** TODO test saisie recette
+
+ Un autre test pour la compta :
+ - se rendre à l'adresse http://testpaheko.local.bzh/admin/ (après avoir été
+   connecté dans un test précédent, que je ne détaille pas ici)
+ - cliquer sur le menu "Saisie" dans la compta
+ - cliquer sur "recette"
+ - renseigner un libellé, un montant, les comptes, autres champs etc.
+ - valider le formulaire
+ - sur la page de détail de l'écriture, vérifier que toutes les
+   mentions, comptes et montants correspondent à ce qui a été saisi
+ - se rendre sur la page compte de résultat
+ - vérifier que le montant de la recette apparaît bien dans les
+   produits, que le nom du compte est bon, etc.
+
+** Exemples
+*** parcours table
+Voir file:///home/engel/outils/selenium/tuto.side : lister membres
+- compter le nombre d'éléments de la table => nb_elem
+- itérer avec un compteur (while) => num
+- accéder à l'élément courant grâce au compteur //tr[${num}]
+
+| Command         | Target                                                   | Value   |
+|-----------------+----------------------------------------------------------+---------|
+| storeXpathCount | xpath=//table[@class=\"list\"]/tbody/tr/th//span         | nb_elem |
+| executeScript   | return 1                                                 | num     |
+| while           | ${num} <= ${nb_elem}                                     |         |
+| storeText       | xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span | nom     |
+| echo            | ${nom}                                                   |         |
+| execute script  | return ${num} + 1                                        | num     |
+| end             |                                                          |         |
+
+*** données structurées
+- les objets ne sont pas acceptés par le runner (voir
+  https://github.com/SeleniumHQ/selenium-ide/issues/1603)
+- voir file:///home/engel/outils/selenium/tuto.side forEach
+*** envoi fichier
+Voir file:///home/engel/devel/recusDons/test/recusDons.side
+**Ne fonctionne qu'avec chrome**
+- insérer (type) le chemin du fichier dans le champ de saisie du nom
+- cliquer le bouton d'envoi
 ** Notes
 *** problème avec instruction conditionnelle dans 4-09 et 4-10
 #+BEGIN_SRC bash
@@ -116,398 +531,15 @@ javascript (TypeError: document.querySelector(...) is null) sur l'instruction :
 #+BEGIN_SRC javascript
 document.querySelector('input').focus();
 #+END_SRC
-
-** DONE 01 Installation
-*** DONE installation initiale
-*** DONE installation sur base existante
-*** DONE vérification premier membre
-** DONE 02 Connexion
-*** DONE connexion correcte
-*** DONE connexion échec identifiant
-*** DONE connexion échec mdp
-** TODO Membres
-*** DONE virer commandes d'affichage
-*** DONE 03 créer un membre
-**** données de la fiche membre
-- Catégorie : choisir parmi les possibilités
-- Rattacher à un membre : non / choisir un membre
-- Numéro : par défaut ou à saisir
-- Nom & prénom (oblig)
-- Adresse E-Mail
-- Pays
-- Adresse postale
-- Code postal
-- Ville
-- Numéro de téléphone
-- Inscription à la lettre d'information
-- Date d'inscription
-**** DONE standard
-**** DONE standard, version mobile
-- échec avec runner + firefox (voir plus haut)
-**** DONE autre pays
-**** DONE Catégorie « Ancien membre »
-***** DONE vérifier catégorie du membre créé
-**** DONE Inscrit à la lettre
-**** DONE date bizarre
-**** DONE attaché à un autre membre (choix unique)
-**** DONE attaché à un autre membre (plusieurs choix)
-- utiliser et vérifier le numéro du responsable
-**** DONE numéro différent de celui proposé par défaut
-**** DONE numéro en double
-**** DONE date antérieure min
-**** DONE date postérieure max
-**** DONE nom en double refusé
-**** DONE nom en double accepté
-*** DONE 04 lister les membres
-**** DONE ajouter ville pour vérif tri par ville
-**** DONE toutes les catégories
-***** DONE gérer le cas où les membres occupent plus d'une page
-Vérifier si on peut supprimer un tri inutile
-**** DONE toutes catégories sauf cachées
-**** DONE une seule catégorie
-**** DONE tri par différents critères
-***** DONE num : croissant et décroissant
-***** DONE nom : idem
-Le nouveau tri est comme ceci :
-colonne IS NULL DESC, colonne DESC, numero DESC
-(DESC est remplacé par ASC pour un tri croissant)
-Autre changement du coup : les champs non-vides sont placés en dernier
-pour un tri croissant, en premier pour un tri décroissant.
-
-***** DONE ville : idem
-Tri par ville
-- ville (dé)croissant, numéro membre (dé)croissant
-- ville vide en fin(début), numéro membre (dé)croissant
-
-***** DONE rattaché à : idem
-
-Pour la colonne "rattaché à" : on met un tri sur la
-qualité de parent, puis le nom du parent en premier, puis le nom du
-membre, puis son numéro :
-- id_parent IS NULL ASC, nom_parent DESC, nom_membre DESC, numero DESC
-  - parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant
-  - parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant
-
-***** DONE responsable : idem
-is_parent ASC, nom_membre DESC, numero DESC
-
-**** DONE consulter fiche
-*** DONE 05 rechercher des membres
-**** Remarques :
-- si la recherche trouve un seul résultat, elle affiche directement la
-  fiche du membre
-- s'il y a plusieurs résultats, la recherche affiche l'onglet
-  « Recherche avancée » avec les résultats
-- s'il n'y a aucun résultat, la recherche affiche l'onglet
-  « Recherche avancée » avec une liste de résultats vide
-**** DONE chercher par nom
-***** DONE résultat unique (garantir l'unicité du nom cherché)
-***** DONE plusieurs résultats
-***** DONE aucun résultat
-**** DONE chercher par numéro
-***** DONE un résultat
-***** DONE aucun résultat
-**** DONE par courriel
-***** DONE un seul résultat => fiche membre
-***** DONE 0 résultat => onglet « Recherche avancée »
-***** DONE plusieurs résultats => onglet « Recherche avancée »
-*** DONE 06 supprimer un membre
-NB : le tri des membres ne change pas après suppression
-**** DONE plusieurs membres sélectionnés
-**** DONE sélectionné = admin (ou connecté ?)
-**** aucun membre sélectionné => action interdite
-*** DONE 07 modifier un membre
-**** DONE modifier caractéristiques « simples »
- - si un seul membre => en créer un deuxième
- - chercher le premier numéro disponible
- - chercher puis modifier le premier membre de numéro différent de 1
- - modifier les différents champs
-   - numéro
-   - catégorie
-   - nom, prénom
-   - courriel
-   - adresse
-   - code postal
-   - ville
-   - téléphone
-   - lettre info
-   - date inscription
- - enregistrer
- - vérifier les infos
-**** DONE définir le mot de passe du membre
-- sélectionner un membre actif (pas ancien, car pas le droit de se
-  connecter)
-- cliquer Définir mdp
-- saisir deux fois un mdp généré
-- mémoriser nom et adresse courriel
-- déconnecter
-- connexion avec
-  - adresse courriel
-  - mdp
-- vérifier Nom présent page accueil
-- vérifier numéro membre sur fiche membre
-**** DONE rattacher un membre
-- créer deux membres et mémoriser leurs numéros
-- rattacher le premier au deuxième à l'aide de son numéro
-- vérifier les deux membres
-*** DONE 08 importer des membres
-**** Remarques
-- Si déjà tu peux tester qu'un fichier CSV donné s'importe bien, c'est
-  déjà génial je pense
-- ¿ Tester les possiblités d'ignorer certains champs ?
-**** DONE Créer tous les membres
-- Tous les membres trouvés dans le fichier seront créés.
-- Cela peut amener à avoir des membres en doublon si on réalise
-  plusieurs imports du même fichier.
-***** DONE création sans conflit
-***** DONE création avec conflit
-***** DONE création sans en-tête
-***** ¿ création en choisissant certaines options ?
-**** DONE Mettre à jour en utilisant le numéro de membre
-- Les membres présents dans le fichier qui mentionnent un numéro de
-  membre seront mis à jour en utilisant ce numéro.
-- Si une ligne du fichier mentionne un numéro de membre qui n'existe
-  pas ou n'a pas de numéro de membre, l'import échouera.
-***** DONE tous les membres existent ; certains sont mis à jour
-***** DONE au moins un membre n'existe pas
-**** DONE Automatique : créer ou mettre à jour en utilisant le numéro de membre
-- Met à jour la fiche d'un membre si son numéro existe, sinon crée un
-  membre si le numéro de membre indiqué n'existe pas ou n'est pas
-  renseigné.
-*** DONE 09 exporter des membres
-
-Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester que
-ça produit bien un fichier de plus de 0 octets ça sera bien.
-
-- avec le runner :
-  - avec fenêtre, fichier exporté placé dans le répertoire par défaut ~/Downloads
-  - sans fenêtre, le fichier est enregistré dans le répertoire de travail... pas toujours !
-	- MAIS l'ajout d'une opération après le déclenchement de
-      l'enregistrement permet la bonne terminaison de l'enregistrement
-
-*** DONE 10 configuration membres Préférences
-**** DONE 10-01 catégorie par défaut des nouveaux membres
-**** DONE champs utilisés pour définir identité
-***** DONE 10-02 ajouter adresse courriel au champ Nom & Prénom
-***** DONE 10-03 remplacer le champ Nom & Prénom par le champ courriel
-**** DONE identifiant connexion
-***** DONE 10-04 connexion par numéro
-**** DONE durée de conservation journaux d'activité
-***** DONE 10-05 journal : aucun
-- créer un membre
-- lui attribuer un mot de passe
-- mettre la durée de conservatin à 0
-- déconnexion admin
-- connexion du membre
-- vérifier journal connexion vide
-- déconnexion
-- connexion admin
-- vérification absence membre dans journal
-**** ¿ déconnexion automatique ?
-*** DONE 11 ajouter un champ à la fiche membre
-- vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
-  la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
-  dans la liste des membres
-- les champs prédéfinis s'ajoutent avant les champs personnalisés et
-  semble-t-il de temps en temps, le nouveau champ (perso) est ajouté en
-  avant-dernière position !
-- PB : le bouton de suppression finale du champ est pris en compte par
-  l'IDE mais pas toujours par le runner
-***** DONE 11-01 ajout champ perso email
-***** DONE 11-02 ajout champ perso url
-***** DONE 11-03 ajout champ perso case à cocher
-***** DONE 11-04 ajout champ perso date
-***** DONE 11-05 ajout champ perso date et heure
-***** DONE 11-06 ajout champ perso mois et année
-- avec le driver de chrome :
-  - saisir le mois
-  - envoyer le code de la touche de tabulation
-  - saisir l'année
-fonctionne avec runner et le driver de chrome mais probablement pas avec celui de firefox
-***** DONE 11-07 ajout champ perso année
-***** DONE 11-08 ajout champ perso fichier
-- utilise le fichier /tmp/cv.pdf
-- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
-***** DONE 11-08a ajout champ perso fichier avec modification
-- utilise les fichiers /tmp/cv.pdf et /tmp/cv2.pdf
-- PB : dans la fiche membre, le nom du fichier comporte un « &shy; » avant le point
-***** DONE 11-09 ajout champ perso mot de passe
-- question :  ce mot de passe ne sert pas à se connecter, donc à quoi sert-il ?
-- pour vérifier le mot de passe, il faut :
-  - connecter le membre
-  - modifier les infos personnelles
-  - afficher le mot de passe :
-	- NB : le mdp qui s'affiche (en fonctionnement interactif) est
-      celui enregistré par le navigateur pour l'admin !!
-	- NB : en mode runner, le champ est vide =>impossible de vérifier le mdp
-  - Remarque : la modification du mot de passe est prise en compte mais on
-    ne peut le voir qu'en exportant les données de la fiche membre
-***** DONE 11-10 ajout champ perso nombre
-***** DONE 11-11 ajout champ perso nombre à virgule
-***** DONE 11-12 ajout champ perso numéro téléphone
-***** DONE 11-13 ajout champ perso Sélecteur à choix unique
-***** DONE 11-14 ajout champ perso Sélecteur à choix multiple
-***** DONE 11-15 ajout champ perso pays
-- Pour définir le pays par défaut, il faut indiquer son code à deux
-  lettres et non son nom complet => à documenter ou à changer
-***** DONE 11-16 ajout champ perso texte libre
-***** DONE 11-17 ajout champ perso texte choix multiple
-***** DONE 11-18 ajout champ perso texte multilignes
-***** DONE 11-19 ajout champ perso calculé
-***** DONE 11-30 ajout ancienneté
-- c'est un champ calculé à partir de la date d'inscription
-***** DONE 11-31 ajout année naissance
-***** DONE 11-32 ajout date naissance
-***** DONE 11-33 ajout pays
-***** DONE 11-34 ajout photo
-- utilise le fichier /tmp/photo.jpg
-***** DONE 11-35 ajout pronom
-***** DONE 11-36 ajout âge en fonction année naissance
-- ajouter année naissance
-- ajouter âge
-- tenir compte du cas où il y a déjà un champ âge/date naissance
-***** DONE 11-37 ajout âge en fonction date naissance
-- ajouter date naissance
-- ajouter âge
-- tenir compte du cas où il y a déjà un champ âge/année naissance
-***** TODO 11-90 saisir un champ avec un identifiant déjà existant
-- récupérer l'identifiant d'un champ déjà présent
-- messages d'erreur différents selon le champ :
-  - Ce nom de champ est déjà utilisé par un autre champ : adresse, code_postal,
-	ville, telephone, lettre_infos_1, date_inscription
-  - numero : Aucun champ de numéro de membre n'existe
-  - nom    : Aucun champ de nom de membre n'existe
-  - email  : Aucun champ d'identifiant de connexion n'existe
-***** TODO ¿ saisir une donnée erronée dans chaque champ ?
-Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
-*** DONE 12 modifier un champ de la fiche membre
-**** DONE 12-01 numéro non affiché liste membres
-**** DONE TEST SUPPRIMÉ 12-02 numéro non obligatoire
-Même si on ne saisit pas un numéro, il sera automatiquement affecté
-- le test est-il pertinent ?
-- faut-il empêcher cette modification ?
-**** DONE 12-03 numéro non visible fiche membre
-**** DONE TEST SUPPRIMÉ car devenu inutile 12-06 nom, prénom non affiché liste membres
-- la modification n'est plus possible
-**** DONE 12-07 nom, prénom non obligatoire
-**** DONE 12-08 nom, prénom modifiable
-**** DONE 12-09 nom, prénom non visible fiche membre
-**** DONE 12-11 e-mail affiché liste membres
-**** DONE 12-12 e-mail obligatoire
-**** DONE [[./images/attention-petit.png]] 12-13 e-mail modifiable
-- après « se connecter à  sa place » :
-  - clic « Mes infos personnelles » échoue
-  - impossible ensuite de se connecter en tant qu'admin
-  - réinstallation nécessaire !
-- avec attribution d'un mot de passe :
-  - changement email possible, mais si adresse générée aléatoirement :
-	- attente longue lors enregistrement
-	- changement accepté mais apparition mention « Adresse invalide » (en rouge)
-	- possibilité pour le membre de se déconnecter puis de se
-      reconnecter mais le statut email reste toujours invalide
-  - le problème ne se pose pas avec une adresse valide :)
-**** DONE 12-14 e-mail non visible fiche membre
-**** DONE 12-16 mot de passe modifiable
-- fonctionne, mais temps d'attente long lors de l'enregistrement du
-  nouveau mot de passe
-**** DONE 12-17 mot de passe non visible
-*** TODO 13 changer l'ordre des champs de la fiche membre
-**** DONE 13-01 intervertir numéro et nom
-- est-ce utile de tester d'autres changements d'ordre ?
-*** TODO supprimer un champ dans la fiche membre
-- le clic sur le bouton de confirmation de la suppression n'est pas
-  pris en compte
-- même problème en utilisant du code javascript pour ouvrir le
-  dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
-  ce cas, c'est la case à cocher qui n'est pas cochée !
-- certains champs dépendent d'un autre : âge dépend de l'année de
-  naissance => on ne peut supprimer année si âge est présent !
-**** TODO Suppression adresse postale
-- échec => inutile de poursuivre
-*** TODO Autres
-- Autres éléments de config des membres :
-  - modifier l'identifiant de connexion
-  - modifier les champs pour l'identité du membre
-*** TODO configuration membres Catégories et Droits
-**** TODO ajouter une catégorie
-**** TODO modifier une catégorie
-**** TODO supprimer une catégorie
-**** TODO droits
- -> vérifier que le droit lecture/écriture/administration fonctionne
- bien, notamment via le bouton "connexion à la place du membre"
-*** journal d'audit
-** prise en main
-*** DONE test installation
-
- Exemple de test (après avoir installé un Paheko sur sa machine, sur le
- vhost "paheko.localhost", sans base de données) :
- - se rendre à l'adresse http://testpaheko.local.bzh
- - remplir le formulaire d'installation
- - valider le formulaire (cliquer sur le bouton en bas de page)
- - sur la page suivante cliquer ensuite sur "configuration" dans le menu
- - vérifier que les informations de l'association indiquées lors
-   l'installation se retrouvent exactement dans les champs de la
-   configuration
- - cliquer sur le menu "Membres"
- - vérifier que le membre par défaut est bien dans la liste
- - cliquer sur la fiche du membre
- - vérifier que l'adresse e-mail et autres infos remplies à
-   l'installation sont bien là
-
- interpeller noircir colis allumer
-
-*** DONE test connexion
- - si déjà connecté => fermer connexion
-
-*** TODO Démarrer la comptabilité
- - cas normal
-   - choix du PC
-   - dates exercice
- - vérifications
-   - nombre d'écritures
-   - PC
-   - dates exercice
- - tester erreur saisie dates
- - tester modif pays
-
-*** TODO test saisie recette
-
- Un autre test pour la compta :
- - se rendre à l'adresse http://testpaheko.local.bzh/admin/ (après avoir été
-   connecté dans un test précédent, que je ne détaille pas ici)
- - cliquer sur le menu "Saisie" dans la compta
- - cliquer sur "recette"
- - renseigner un libellé, un montant, les comptes, autres champs etc.
- - valider le formulaire
- - sur la page de détail de l'écriture, vérifier que toutes les
-   mentions, comptes et montants correspondent à ce qui a été saisi
- - se rendre sur la page compte de résultat
- - vérifier que le montant de la recette apparaît bien dans les
-   produits, que le nom du compte est bon, etc.
-
-** exemples
-*** parcours table
-Voir file:///home/engel/outils/selenium/tuto.side : lister membres
-- compter le nombre d'éléments de la table => nb_elem
-- itérer avec un compteur (while) => num
-- accéder à l'élément courant grâce au compteur //tr[${num}]
-
-| Command         | Target                                                   | Value   |
-|-----------------+----------------------------------------------------------+---------|
-| storeXpathCount | xpath=//table[@class=\"list\"]/tbody/tr/th//span         | nb_elem |
-| executeScript   | return 1                                                 | num     |
-| while           | ${num} <= ${nb_elem}                                     |         |
-| storeText       | xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span | nom     |
-| echo            | ${nom}                                                   |         |
-| execute script  | return ${num} + 1                                        | num     |
-| end             |                                                          |         |
-
-*** données structurées
-- les objets ne sont pas acceptés par le runner (voir
-  https://github.com/SeleniumHQ/selenium-ide/issues/1603)
-- voir file:///home/engel/outils/selenium/tuto.side forEach
-*** envoi fichier
-Voir file:///home/engel/devel/recusDons/test/recusDons.side
-**Ne fonctionne qu'avec chrome**
-- insérer (type) le chemin du fichier dans le champ de saisie du nom
-- cliquer le bouton d'envoi
+*** PB : Se connecter à la place d'un membre
+- OK avec l'IDE
+- échec systématique avec le runner => c'est l'admin qui est connecté,
+  pas le membre choisi
+*** PB : suppression champ dans la fiche membre
+- OK avec l'IDE
+- échecs aléatoires avec le runner
+  - le clic sur le bouton de confirmation de la suppression n'est pas
+	pris en compte
+  - même problème en utilisant du code javascript pour ouvrir le
+	dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
+	ce cas, c'est la case à cocher qui n'est pas cochée !
