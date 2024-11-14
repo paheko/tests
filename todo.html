@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+<!-- 2024-11-14 jeu. 14:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paheko : tests des membres</title>
+<meta name="author" content="Jean-Christophe Engel" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Paheko : tests des membres</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc24c02c">1. Test paheko</a>
+<ul>
+<li><a href="#org5c58cb8">1.1. <span class="done DONE">DONE</span> 01 Installation</a></li>
+<li><a href="#org9f38039">1.2. <span class="done DONE">DONE</span> 02 Connexion</a></li>
+<li><a href="#orgf15bd9c">1.3. <span class="todo TODO">TODO</span> Membres</a></li>
+<li><a href="#org008a87a">1.4. <span class="todo TODO">TODO</span> Démarrer la comptabilité</a></li>
+<li><a href="#orgc58c955">1.5. <span class="todo TODO">TODO</span> test saisie recette</a></li>
+<li><a href="#orgc0403dd">1.6. Notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc24c02c" class="outline-2">
+<h2 id="orgc24c02c"><span class="section-number-2">1.</span> Test paheko</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org5c58cb8" class="outline-3">
+<h3 id="org5c58cb8"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> 01 Installation</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Exemple de test (après avoir installé un Paheko sur sa machine, sur
+le vhost "paheko.localhost", sans base de données) :
+<ul class="org-ul">
+<li>se rendre à l'adresse <a href="http://testpaheko.local.bzh">http://testpaheko.local.bzh</a></li>
+<li>remplir le formulaire d'installation</li>
+<li>valider le formulaire (cliquer sur le bouton en bas de page)</li>
+<li>sur la page suivante cliquer ensuite sur "configuration" dans le menu</li>
+<li>vérifier que les informations de l'association indiquées lors
+l'installation se retrouvent exactement dans les champs de la
+configuration</li>
+<li>cliquer sur le menu "Membres"</li>
+<li>vérifier que le membre par défaut est bien dans la liste</li>
+<li>cliquer sur la fiche du membre</li>
+<li>vérifier que l'adresse e-mail et autres infos remplies à
+l'installation sont bien là</li>
+<li>mdp admin :  interpeller noircir colis allumer</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org34ae02f" class="outline-4">
+<h4 id="org34ae02f"><span class="section-number-4">1.1.1.</span> <span class="done DONE">DONE</span> 01-01 installation initiale</h4>
+</div>
+<div id="outline-container-orge62ee9a" class="outline-4">
+<h4 id="orge62ee9a"><span class="section-number-4">1.1.2.</span> <span class="done DONE">DONE</span> 01-01a installation sur base existante</h4>
+</div>
+<div id="outline-container-orgbf5d5e0" class="outline-4">
+<h4 id="orgbf5d5e0"><span class="section-number-4">1.1.3.</span> <span class="done DONE">DONE</span> 01-02 vérification premier membre</h4>
+</div>
+</div>
+<div id="outline-container-org9f38039" class="outline-3">
+<h3 id="org9f38039"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> 02 Connexion</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org84a453b" class="outline-4">
+<h4 id="org84a453b"><span class="section-number-4">1.2.1.</span> <span class="done DONE">DONE</span> 02-01 connexion correcte</h4>
+</div>
+<div id="outline-container-org164c375" class="outline-4">
+<h4 id="org164c375"><span class="section-number-4">1.2.2.</span> <span class="done DONE">DONE</span> 02-02 connexion échec identifiant</h4>
+</div>
+<div id="outline-container-org337e8ea" class="outline-4">
+<h4 id="org337e8ea"><span class="section-number-4">1.2.3.</span> <span class="done DONE">DONE</span> 02-03 connexion échec mdp</h4>
+</div>
+</div>
+<div id="outline-container-orgf15bd9c" class="outline-3">
+<h3 id="orgf15bd9c"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> Membres</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orge6c6e3d" class="outline-4">
+<h4 id="orge6c6e3d"><span class="section-number-4">1.3.1.</span> <span class="done DONE">DONE</span> 03 créer un membre</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3db8132"></a>données de la fiche membre<br />
+<div class="outline-text-5" id="text-1-3-1-1">
+<ul class="org-ul">
+<li>Catégorie : choisir parmi les possibilités</li>
+<li>Rattacher à un membre : non / choisir un membre</li>
+<li>Numéro : par défaut ou à saisir</li>
+<li>Nom &amp; prénom (oblig)</li>
+<li>Adresse E-Mail</li>
+<li>Adresse postale</li>
+<li>Code postal</li>
+<li>Ville</li>
+<li>Numéro de téléphone</li>
+<li>Inscription à la lettre d'information</li>
+<li>Date d'inscription</li>
+</ul>
+</div>
+</li>
+<li><a id="orgccc0eff"></a><span class="done DONE">DONE</span> 03-01 standard<br /></li>
+<li><a id="orgc7fb7a1"></a><span class="done DONE">DONE</span> 03-03 Catégorie « Ancien membre »<br />
+<div class="outline-text-5" id="text-1-3-1-3">
+<ul class="org-ul">
+<li>vérifier catégorie du membre créé</li>
+</ul>
+</div>
+</li>
+<li><a id="org8dbf3b6"></a><span class="done DONE">DONE</span> 03-04 Inscrit à la lettre<br /></li>
+<li><a id="orgd6a42bb"></a><span class="done DONE">DONE</span> 03-05 date bizarre<br /></li>
+<li><a id="org4b9ad8a"></a><span class="done DONE">DONE</span> 03-06a attaché à un autre membre (choix unique)<br /></li>
+<li><a id="org595a6c8"></a><span class="done DONE">DONE</span> 03-06b attaché à un autre membre (plusieurs choix)<br />
+<div class="outline-text-5" id="text-1-3-1-7">
+<ul class="org-ul">
+<li>utiliser et vérifier le numéro du responsable</li>
+</ul>
+</div>
+</li>
+<li><a id="org1669f5e"></a><span class="done DONE">DONE</span> 03-07 numéro différent de celui proposé par défaut<br /></li>
+<li><a id="org114ff66"></a><span class="done DONE">DONE</span> 03-91 numéro en double<br /></li>
+<li><a id="org7748db9"></a><span class="done DONE">DONE</span> 03-92a date antérieure min<br /></li>
+<li><a id="org6d2623a"></a><span class="done DONE">DONE</span> 03-92b date postérieure max<br /></li>
+<li><a id="org58b1537"></a><span class="done DONE">DONE</span> 03-93a nom en double refusé<br /></li>
+<li><a id="org8cf3293"></a><span class="done DONE">DONE</span> 03-93b nom en double accepté<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgdd0b086" class="outline-4">
+<h4 id="orgdd0b086"><span class="section-number-4">1.3.2.</span> <span class="done DONE">DONE</span> 04 lister les membres</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc70e3ca"></a><span class="done DONE">DONE</span> 04-01 toutes les catégories<br />
+<div class="outline-text-5" id="text-1-3-2-1">
+<ul class="org-ul">
+<li>gérer le cas où les membres occupent plus d'une page</li>
+<li>¿ vérifier si on peut supprimer un tri inutile ?</li>
+</ul>
+</div>
+</li>
+<li><a id="org29993f5"></a><span class="done DONE">DONE</span> 04-02 toutes catégories sauf cachées<br /></li>
+<li><a id="org7b3d404"></a><span class="done DONE">DONE</span> 04-03 une seule catégorie<br /></li>
+<li><a id="org1498202"></a><span class="done DONE">DONE</span> tri par différents critères<br />
+<ol class="org-ol">
+<li><a id="org2a0aedc"></a><span class="done DONE">DONE</span> 04-04, 04-05 tri par nom croissant et décroissant<br />
+<div class="outline-text-6" id="text-1-3-2-4-1">
+<p>
+Le nouveau tri est comme ceci :
+colonne IS NULL DESC, colonne DESC, numero DESC
+(DESC est remplacé par ASC pour un tri croissant)
+Autre changement du coup : les champs non-vides sont placés en dernier
+pour un tri croissant, en premier pour un tri décroissant.
+</p>
+</div>
+</li>
+<li><a id="org5087027"></a><span class="done DONE">DONE</span> 04-06 numéro décroissant<br /></li>
+<li><a id="orgea0a273"></a><span class="done DONE">DONE</span> 04-07, 04-08 ville croissant et décroissant<br />
+<div class="outline-text-6" id="text-1-3-2-4-3">
+<p>
+Tri par ville
+</p>
+<ul class="org-ul">
+<li>ville (dé)croissant, numéro membre (dé)croissant</li>
+<li>ville vide en fin(début), numéro membre (dé)croissant</li>
+</ul>
+</div>
+</li>
+<li><a id="org9a9b599"></a><span class="done DONE">DONE</span> 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant<br />
+<div class="outline-text-6" id="text-1-3-2-4-4">
+<ul class="org-ul">
+<li>pour la colonne "rattaché à" : on met un tri sur la qualité de
+parent, puis le nom du parent en premier, puis le nom du membre,
+puis son numéro :
+<ul class="org-ul">
+<li>id<sub>parent</sub> IS NULL ASC, nom<sub>parent</sub> DESC, nom<sub>membre</sub> DESC, numero DESC
+<ul class="org-ul">
+<li>parent (dé)croissant, nom membre (dé)croissant, numéro (dé)croissant</li>
+<li>parent vide à la fin, nom membre (dé)croissant, numéro (dé)croissant</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfe4a64d"></a><span class="done DONE">DONE</span> 04-11, 04-12 tri par responsable croissant et décroissant<br />
+<div class="outline-text-6" id="text-1-3-2-4-5">
+<ul class="org-ul">
+<li>is<sub>parent</sub> ASC, nom<sub>membre</sub> DESC, numero DESC</li>
+</ul>
+</div>
+</li>
+<li><a id="org7ccf9e9"></a><span class="done DONE">DONE</span> 04-90 lister membres sur plusieurs pages<br /></li>
+</ol>
+</li>
+<li><a id="org9b9f6cb"></a><span class="done DONE">DONE</span> consulter fiche<br /></li>
+</ol>
+</div>
+<div id="outline-container-org7ad525f" class="outline-4">
+<h4 id="org7ad525f"><span class="section-number-4">1.3.3.</span> <span class="done DONE">DONE</span> 05 rechercher des membres</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgbd52f0b"></a>Remarques :<br />
+<div class="outline-text-5" id="text-1-3-3-1">
+<ul class="org-ul">
+<li>si la recherche trouve un seul résultat, elle affiche directement la
+fiche du membre</li>
+<li>s'il y a plusieurs résultats, la recherche affiche l'onglet
+« Recherche avancée » avec les résultats</li>
+<li>s'il n'y a aucun résultat, la recherche affiche l'onglet
+« Recherche avancée » avec une liste de résultats vide</li>
+</ul>
+</div>
+</li>
+<li><a id="org68d6970"></a><span class="done DONE">DONE</span> chercher par nom<br />
+<ol class="org-ol">
+<li><a id="orgda77533"></a><span class="done DONE">DONE</span> 05-01 résultat unique<br />
+<div class="outline-text-6" id="text-1-3-3-2-1">
+<ul class="org-ul">
+<li>garantir l'unicité du nom cherché</li>
+</ul>
+</div>
+</li>
+<li><a id="org88714ed"></a><span class="done DONE">DONE</span> 05-02 plusieurs résultats<br /></li>
+<li><a id="orgf02bc12"></a><span class="done DONE">DONE</span> 05-03 aucun résultat<br /></li>
+</ol>
+</li>
+<li><a id="org78603e8"></a><span class="done DONE">DONE</span> chercher par numéro<br />
+<ol class="org-ol">
+<li><a id="org20c564c"></a><span class="done DONE">DONE</span> 05-11 un résultat<br /></li>
+<li><a id="org7657b07"></a><span class="done DONE">DONE</span> 05-12 aucun résultat<br /></li>
+</ol>
+</li>
+<li><a id="org7152582"></a><span class="done DONE">DONE</span> par courriel<br />
+<ol class="org-ol">
+<li><a id="org9ab305b"></a><span class="done DONE">DONE</span> 05-21 un seul résultat<br />
+<div class="outline-text-6" id="text-1-3-3-4-1">
+<ul class="org-ul">
+<li>=&gt; fiche membre</li>
+</ul>
+</div>
+</li>
+<li><a id="orgebf2f9b"></a><span class="done DONE">DONE</span> 05-22 0 résultat<br />
+<div class="outline-text-6" id="text-1-3-3-4-2">
+<ul class="org-ul">
+<li>=&gt; onglet « Recherche avancée »</li>
+</ul>
+</div>
+</li>
+<li><a id="org572e618"></a><span class="done DONE">DONE</span> 05-23 plusieurs résultats<br />
+<div class="outline-text-6" id="text-1-3-3-4-3">
+<ul class="org-ul">
+<li>=&gt; onglet « Recherche avancée »</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org62e0a96" class="outline-4">
+<h4 id="org62e0a96"><span class="section-number-4">1.3.4.</span> <span class="done DONE">DONE</span> 06 supprimer un membre</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<ul class="org-ul">
+<li>NB : le tri des membres ne change pas après suppression</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgb4b93ec"></a><span class="done DONE">DONE</span> 06-01 plusieurs membres sélectionnés<br /></li>
+<li><a id="org3ac6535"></a><span class="done DONE">DONE</span> 06-02 sélectionné = admin<br /></li>
+<li><a id="orgd4cf871"></a>aucun membre sélectionné =&gt; action interdite<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgf461a09" class="outline-4">
+<h4 id="orgf461a09"><span class="section-number-4">1.3.5.</span> <span class="done DONE">DONE</span> 07 modifier un membre</h4>
+<div class="outline-text-4" id="text-1-3-5">
+</div>
+<ol class="org-ol">
+<li><a id="orge4921df"></a><span class="done DONE">DONE</span> 07-01 modifier caractéristiques « simples »<br />
+<div class="outline-text-5" id="text-1-3-5-1">
+<ul class="org-ul">
+<li>si un seul membre =&gt; en créer un deuxième</li>
+<li>chercher le premier numéro disponible</li>
+<li>chercher puis modifier le premier membre de numéro différent de 1</li>
+<li>modifier les différents champs
+<ul class="org-ul">
+<li>numéro</li>
+<li>catégorie</li>
+<li>nom, prénom</li>
+<li>courriel</li>
+<li>adresse</li>
+<li>code postal</li>
+<li>ville</li>
+<li>téléphone</li>
+<li>lettre info</li>
+<li>date inscription</li>
+</ul></li>
+<li>enregistrer</li>
+<li>vérifier les infos</li>
+</ul>
+</div>
+</li>
+<li><a id="org66f7806"></a><span class="done DONE">DONE</span> 07-02 attribuer un mot de passe à un membre<br />
+<div class="outline-text-5" id="text-1-3-5-2">
+<ul class="org-ul">
+<li>sélectionner un membre actif (pas ancien, car pas le droit de se
+connecter)</li>
+<li>cliquer Définir mdp</li>
+<li>saisir deux fois un mdp généré</li>
+<li>mémoriser nom et adresse courriel</li>
+<li>déconnecter</li>
+<li>connexion avec
+<ul class="org-ul">
+<li>adresse courriel</li>
+<li>mdp</li>
+</ul></li>
+<li>vérifier Nom présent page accueil</li>
+<li>vérifier numéro membre sur fiche membre</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf4bd22b"></a><span class="done DONE">DONE</span> 07-03 rattacher un membre<br />
+<div class="outline-text-5" id="text-1-3-5-3">
+<ul class="org-ul">
+<li>créer deux membres et mémoriser leurs numéros</li>
+<li>rattacher le premier au deuxième à l'aide de son numéro</li>
+<li>vérifier les deux membres</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org511c14e" class="outline-4">
+<h4 id="org511c14e"><span class="section-number-4">1.3.6.</span> <span class="done DONE">DONE</span> 08 importer des membres</h4>
+<div class="outline-text-4" id="text-1-3-6">
+</div>
+<ol class="org-ol">
+<li><a id="orgb6e762a"></a>Remarques<br />
+<div class="outline-text-5" id="text-1-3-6-1">
+<ul class="org-ul">
+<li>Si déjà tu peux tester qu'un fichier CSV donné s'importe bien, c'est
+déjà génial je pense</li>
+<li>¿ Tester les possiblités d'ignorer certains champs ?</li>
+</ul>
+</div>
+</li>
+<li><a id="org84e9bef"></a><span class="done DONE">DONE</span> Créer tous les membres<br />
+<div class="outline-text-5" id="text-1-3-6-2">
+<ul class="org-ul">
+<li>Tous les membres trouvés dans le fichier seront créés.</li>
+<li>Cela peut amener à avoir des membres en doublon si on réalise
+plusieurs imports du même fichier.</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org1f0cb9c"></a><span class="done DONE">DONE</span> 08-01 création sans conflit<br /></li>
+<li><a id="org595d039"></a><span class="done DONE">DONE</span> 08-02 création avec conflit<br /></li>
+<li><a id="org2db84da"></a><span class="done DONE">DONE</span> 08-03 création sans en-tête<br /></li>
+<li><a id="orgd08f4b2"></a>¿ création en choisissant certaines options ?<br /></li>
+</ol>
+</li>
+<li><a id="org5ee1f30"></a><span class="done DONE">DONE</span> Mettre à jour en utilisant le numéro de membre<br />
+<div class="outline-text-5" id="text-1-3-6-3">
+<ul class="org-ul">
+<li>Les membres présents dans le fichier qui mentionnent un numéro de
+membre seront mis à jour en utilisant ce numéro.</li>
+<li>Si une ligne du fichier mentionne un numéro de membre qui n'existe
+pas ou n'a pas de numéro de membre, l'import échouera.</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgff70e45"></a><span class="done DONE">DONE</span> 08-11 tous les membres existent ; certains sont mis à jour<br /></li>
+<li><a id="org85425b9"></a><span class="done DONE">DONE</span> 08-12 au moins un membre n'existe pas<br /></li>
+</ol>
+</li>
+<li><a id="org50c378e"></a><span class="done DONE">DONE</span> 08-21 Automatique : créer ou mettre à jour en utilisant le numéro de membre<br />
+<div class="outline-text-5" id="text-1-3-6-4">
+<ul class="org-ul">
+<li>Met à jour la fiche d'un membre si son numéro existe, sinon crée un
+membre si le numéro de membre indiqué n'existe pas ou n'est pas
+renseigné.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd4606d5" class="outline-4">
+<h4 id="orgd4606d5"><span class="section-number-4">1.3.7.</span> <span class="done DONE">DONE</span> 09 exporter des membres</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<ul class="org-ul">
+<li>Je ne sais pas ce que permet Selenium, mais si déjà tu peux tester
+que ça produit bien un fichier de plus de 0 octets ça sera bien.</li>
+<li>Résultat avec le runner : le fichier exporté est placé dans le
+répertoire ~/Downloads ; parfois l'export échoue
+<ul class="org-ul">
+<li>MAIS l'ajout d'une opération après le déclenchement de
+l'enregistrement permet sa bonne terminaison</li>
+</ul></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgef89005"></a><span class="done DONE">DONE</span> 09-01 export sauf catégories cachées<br /></li>
+<li><a id="org1fff4cd"></a><span class="done DONE">DONE</span> 09-02 export toutes catégories<br /></li>
+<li><a id="org8806475"></a><span class="done DONE">DONE</span> 09-03 export membres actifs<br /></li>
+<li><a id="org94af916"></a><span class="done DONE">DONE</span> 09-04 export administrateurs<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8e74591" class="outline-4">
+<h4 id="org8e74591"><span class="section-number-4">1.3.8.</span> <span class="done DONE">DONE</span> 10 configuration membres Préférences</h4>
+<div class="outline-text-4" id="text-1-3-8">
+</div>
+<ol class="org-ol">
+<li><a id="orgba0dd0e"></a><span class="done DONE">DONE</span> 10-01 catégorie par défaut des nouveaux membres<br /></li>
+<li><a id="org71fc97b"></a><span class="done DONE">DONE</span> 10-02 identité : ajouter adresse courriel au champ Nom &amp; Prénom<br /></li>
+<li><a id="org64389a1"></a><span class="done DONE">DONE</span> 10-03 identité : remplacer le champ Nom &amp; Prénom par le champ courriel<br /></li>
+<li><a id="orgec6c7aa"></a><span class="done DONE">DONE</span> 10-04 connexion par numéro de membre<br /></li>
+<li><a id="org91526ac"></a><span class="done DONE">DONE</span> 10-05 durée de conservation journal : aucun<br />
+<div class="outline-text-5" id="text-1-3-8-5">
+<ul class="org-ul">
+<li>créer un membre</li>
+<li>lui attribuer un mot de passe</li>
+<li>mettre la durée de conservatin à 0</li>
+<li>déconnexion admin</li>
+<li>connexion du membre</li>
+<li>vérifier journal connexion vide</li>
+<li>déconnexion</li>
+<li>connexion admin</li>
+<li>vérification absence membre dans journal</li>
+</ul>
+</div>
+</li>
+<li><a id="org4c0041e"></a><span class="done DONE">DONE</span> 10-06 connexion par numéro de téléphone<br /></li>
+<li><a id="org1568d83"></a>¿ déconnexion automatique ?<br /></li>
+</ol>
+</div>
+<div id="outline-container-org4774dfa" class="outline-4">
+<h4 id="org4774dfa"><span class="section-number-4">1.3.9.</span> <span class="done DONE">DONE</span> 11 ajouter un champ à la fiche membre</h4>
+<div class="outline-text-4" id="text-1-3-9">
+<ul class="org-ul">
+<li>vérifier ensuite que les champs membre ajoutés fonctionnent bien dans
+la fiche du membre (et ce pour chaque type de champ ?) et apparaissent
+dans la liste des membres</li>
+<li>les champs prédéfinis s'ajoutent avant les champs personnalisés et
+semble-t-il de temps en temps, le nouveau champ (perso) est ajouté en
+avant-dernière position !</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orge45aa27"></a><span class="done DONE">DONE</span> 11-01 ajout champ perso email<br /></li>
+<li><a id="orgcc773b0"></a><span class="done DONE">DONE</span> 11-02 ajout champ perso url<br /></li>
+<li><a id="org870aa29"></a><span class="done DONE">DONE</span> 11-03 ajout champ perso case à cocher<br /></li>
+<li><a id="org59fc8e4"></a><span class="done DONE">DONE</span> 11-04 ajout champ perso date<br /></li>
+<li><a id="org6b1d693"></a><span class="done DONE">DONE</span> 11-05 ajout champ perso date et heure<br /></li>
+<li><a id="org52342f6"></a><span class="done DONE">DONE</span> 11-06 ajout champ perso mois et année<br />
+<div class="outline-text-6" id="text-1-3-9-0-6">
+<ul class="org-ul">
+<li>avec le driver de chrome :
+<ul class="org-ul">
+<li>saisir le mois</li>
+<li>envoyer le code de la touche de tabulation</li>
+<li>saisir l'année</li>
+</ul></li>
+</ul>
+<p>
+fonctionne avec runner et le driver de chrome mais probablement pas avec celui de firefox
+</p>
+</div>
+</li>
+<li><a id="orgeb48f85"></a><span class="done DONE">DONE</span> 11-07 ajout champ perso année<br /></li>
+<li><a id="orgf579e68"></a><span class="done DONE">DONE</span> 11-08 ajout champ perso fichier<br />
+<div class="outline-text-6" id="text-1-3-9-0-8">
+<ul class="org-ul">
+<li>utilise le fichier /tmp/cv.pdf</li>
+<li>PB : dans la fiche membre, le nom du fichier comporte un « &amp;shy; » avant le point</li>
+</ul>
+</div>
+</li>
+<li><a id="org9798647"></a><span class="done DONE">DONE</span> 11-08a ajout champ perso fichier avec modification<br />
+<div class="outline-text-6" id="text-1-3-9-0-9">
+<ul class="org-ul">
+<li>utilise les fichiers /tmp/cv.pdf et /tmp/cv2.pdf</li>
+<li>PB : dans la fiche membre, le nom du fichier comporte un « &amp;shy; » avant le point</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb9bd0b8"></a><span class="done DONE">DONE</span> 11-09 ajout champ perso mot de passe<br />
+<div class="outline-text-6" id="text-1-3-9-0-10">
+<ul class="org-ul">
+<li>question :  ce mot de passe ne sert pas à se connecter, donc à quoi sert-il ?</li>
+<li>pour vérifier le mot de passe, il faut :
+<ul class="org-ul">
+<li>connecter le membre</li>
+<li>modifier les infos personnelles</li>
+<li>afficher le mot de passe :
+<ul class="org-ul">
+<li>NB : le mdp qui s'affiche (en fonctionnement interactif) est
+celui enregistré par le navigateur pour l'admin !!</li>
+<li>NB : en mode runner, le champ est vide =&gt;impossible de vérifier le mdp</li>
+</ul></li>
+<li>Remarque : la modification du mot de passe est prise en compte mais on
+ne peut le voir qu'en exportant les données de la fiche membre</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbcbaf57"></a><span class="done DONE">DONE</span> 11-10 ajout champ perso nombre<br /></li>
+<li><a id="org2fcc78b"></a><span class="done DONE">DONE</span> 11-11 ajout champ perso nombre à virgule<br /></li>
+<li><a id="org5dca29e"></a><span class="done DONE">DONE</span> 11-12 ajout champ perso numéro téléphone<br /></li>
+<li><a id="org4902c4e"></a><span class="done DONE">DONE</span> 11-13 ajout champ perso Sélecteur à choix unique<br /></li>
+<li><a id="orged1af05"></a><span class="done DONE">DONE</span> 11-14 ajout champ perso Sélecteur à choix multiple<br /></li>
+<li><a id="org0d286bc"></a><span class="done DONE">DONE</span> 11-15 ajout champ perso pays<br />
+<div class="outline-text-6" id="text-1-3-9-0-16">
+<ul class="org-ul">
+<li>Pour définir le pays par défaut, il faut indiquer son code à deux
+lettres et non son nom complet =&gt; à documenter ou à changer</li>
+</ul>
+</div>
+</li>
+<li><a id="org95748fe"></a><span class="done DONE">DONE</span> 11-16 ajout champ perso texte libre<br /></li>
+<li><a id="org568643b"></a><span class="done DONE">DONE</span> 11-17 ajout champ perso texte choix multiple<br /></li>
+<li><a id="org89555c2"></a><span class="done DONE">DONE</span> 11-18 ajout champ perso texte multilignes<br /></li>
+<li><a id="orge672925"></a><span class="done DONE">DONE</span> 11-19 ajout champ perso calculé<br /></li>
+<li><a id="orgb87912a"></a><span class="done DONE">DONE</span> 11-30 ajout ancienneté<br />
+<div class="outline-text-6" id="text-1-3-9-0-21">
+<ul class="org-ul">
+<li>c'est un champ calculé à partir de la date d'inscription</li>
+</ul>
+</div>
+</li>
+<li><a id="orgee5e151"></a><span class="done DONE">DONE</span> 11-31 ajout année naissance<br /></li>
+<li><a id="org967faef"></a><span class="done DONE">DONE</span> 11-32 ajout date naissance<br /></li>
+<li><a id="orga99ef2e"></a><span class="done DONE">DONE</span> 11-33 ajout pays<br /></li>
+<li><a id="org956d5a9"></a><span class="done DONE">DONE</span> 11-34 ajout photo<br />
+<div class="outline-text-6" id="text-1-3-9-0-25">
+<ul class="org-ul">
+<li>utilise le fichier /tmp/photo.jpg</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdb014b8"></a><span class="done DONE">DONE</span> 11-35 ajout pronom<br /></li>
+<li><a id="orgddcc1ac"></a><span class="done DONE">DONE</span> 11-36 ajout âge en fonction année naissance<br />
+<div class="outline-text-6" id="text-1-3-9-0-27">
+<ul class="org-ul">
+<li>ajouter année naissance</li>
+<li>ajouter âge</li>
+<li>tenir compte du cas où il y a déjà un champ âge/date naissance</li>
+</ul>
+</div>
+</li>
+<li><a id="org499bae3"></a><span class="done DONE">DONE</span> 11-37 ajout âge en fonction date naissance<br />
+<div class="outline-text-6" id="text-1-3-9-0-28">
+<ul class="org-ul">
+<li>ajouter date naissance</li>
+<li>ajouter âge</li>
+<li>tenir compte du cas où il y a déjà un champ âge/année naissance</li>
+</ul>
+</div>
+</li>
+<li><a id="orgec9a980"></a><span class="done DONE">DONE</span> 11-90 saisir un champ avec un identifiant déjà existant<br />
+<div class="outline-text-6" id="text-1-3-9-0-29">
+<ul class="org-ul">
+<li>récupérer l'identifiant d'un champ déjà présent</li>
+<li>messages d'erreur différents selon le champ :
+<ul class="org-ul">
+<li>Ce nom de champ est déjà utilisé par un autre champ : adresse, code<sub>postal</sub>,
+ville, telephone, lettre<sub>infos</sub><sub>1</sub>, date<sub>inscription</sub></li>
+<li>numero : Aucun champ de numéro de membre n'existe</li>
+<li>nom    : Aucun champ de nom de membre n'existe</li>
+<li>email  : Aucun champ d'identifiant de connexion n'existe</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbad8847"></a><span class="todo TODO">TODO</span> ¿ saisir une donnée erronée dans chaque champ ?<br />
+<div class="outline-text-6" id="text-1-3-9-0-30">
+<p>
+Pas sûr qu'on puisse : la saisie des champs est contrôlée (partiellement ?)
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgbfe170f" class="outline-4">
+<h4 id="orgbfe170f"><span class="section-number-4">1.3.10.</span> <span class="done DONE">DONE</span> 12 modifier un champ de la fiche membre</h4>
+<div class="outline-text-4" id="text-1-3-10">
+</div>
+<ol class="org-ol">
+<li><a id="orgf621dad"></a><span class="done DONE">DONE</span> 12-01 numéro non affiché liste membres<br /></li>
+<li><a id="org3b3ae75"></a><span class="done DONE">DONE</span> TEST SUPPRIMÉ car devenu inutile 12-02 numéro non obligatoire<br />
+<div class="outline-text-5" id="text-1-3-10-2">
+<p>
+Même si on ne saisit pas un numéro, il sera automatiquement affecté
+</p>
+<ul class="org-ul">
+<li>le test est-il pertinent ?</li>
+<li>faut-il empêcher cette modification ?</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf44c9d1"></a><span class="done DONE">DONE</span> 12-03 numéro non visible fiche membre<br /></li>
+<li><a id="org32a161d"></a><span class="done DONE">DONE</span> TEST SUPPRIMÉ car devenu inutile 12-06 nom, prénom non affiché liste membres<br />
+<div class="outline-text-5" id="text-1-3-10-4">
+<ul class="org-ul">
+<li>la modification n'est plus possible</li>
+</ul>
+</div>
+</li>
+<li><a id="org3bbca3c"></a><span class="done DONE">DONE</span> 12-07 nom, prénom non obligatoire<br /></li>
+<li><a id="org67d466c"></a><span class="done DONE">DONE</span> 12-08 nom, prénom modifiable<br /></li>
+<li><a id="orge5bd1ac"></a><span class="done DONE">DONE</span> 12-09 nom, prénom non visible fiche membre<br /></li>
+<li><a id="org9b8a62b"></a><span class="done DONE">DONE</span> 12-11 e-mail affiché liste membres<br /></li>
+<li><a id="orgf0f2a5b"></a><span class="done DONE">DONE</span> 12-12 e-mail obligatoire<br /></li>
+<li><a id="org7f3ddc3"></a><span class="done DONE">DONE</span> <img src="./images/attention-petit.png" alt="attention-petit.png" /> 12-13 e-mail modifiable<br />
+<div class="outline-text-5" id="text-1-3-10-10">
+<ul class="org-ul">
+<li>après « se connecter à sa place » :
+<ul class="org-ul">
+<li>clic « Mes infos personnelles » échoue</li>
+<li>impossible ensuite de se connecter en tant qu'admin</li>
+<li>réinstallation nécessaire !</li>
+</ul></li>
+<li>avec attribution d'un mot de passe, changement email possible, mais :
+<ul class="org-ul">
+<li>attente trèès longue lors enregistrement</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcad5087"></a><span class="done DONE">DONE</span> 12-14 e-mail non visible fiche membre<br /></li>
+<li><a id="org053c57d"></a><span class="done DONE">DONE</span> 12-16 mot de passe modifiable<br />
+<div class="outline-text-5" id="text-1-3-10-12">
+<ul class="org-ul">
+<li>fonctionne, mais temps d'attente long lors de l'enregistrement du
+nouveau mot de passe</li>
+</ul>
+</div>
+</li>
+<li><a id="org056ae85"></a><span class="done DONE">DONE</span> 12-17 mot de passe non visible<br /></li>
+</ol>
+</div>
+<div id="outline-container-orge14eca9" class="outline-4">
+<h4 id="orge14eca9"><span class="section-number-4">1.3.11.</span> <span class="done DONE">DONE</span> 13 changer l'ordre des champs de la fiche membre</h4>
+<div class="outline-text-4" id="text-1-3-11">
+</div>
+<ol class="org-ol">
+<li><a id="orgf172172"></a><span class="done DONE">DONE</span> 13-01 intervertir numéro et nom<br />
+<div class="outline-text-5" id="text-1-3-11-1">
+<ul class="org-ul">
+<li>est-ce utile de tester d'autres changements d'ordre ?</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge2319fd" class="outline-4">
+<h4 id="orge2319fd"><span class="section-number-4">1.3.12.</span> <span class="done DONE">DONE</span> 14 configuration membres Catégories</h4>
+<div class="outline-text-4" id="text-1-3-12">
+</div>
+<ol class="org-ol">
+<li><a id="orgb0a63f0"></a><span class="done DONE">DONE</span> 14-01 ajouter une catégorie<br /></li>
+<li><a id="org537de15"></a><span class="done DONE">DONE</span> 14-01b ajouter deux catégories de même non<br /></li>
+<li><a id="org315bb83"></a><span class="done DONE">DONE</span> 14-02 supprimer une catégorie non vide<br /></li>
+<li><a id="org5b3597e"></a><span class="done DONE">DONE</span> 14-03 vider et supprimer une catégorie<br /></li>
+<li><a id="org2ac2fd6"></a><span class="done DONE">DONE</span> modifier une catégorie<br />
+<ol class="org-ol">
+<li><a id="org4966303"></a><span class="done DONE">DONE</span> 14-10 inverser la visibilité d'une catégorie<br /></li>
+<li><a id="orgc03b8a8"></a><span class="done DONE">DONE</span> 14-11 interdire connexion<br />
+<div class="outline-text-6" id="text-1-3-12-5-2">
+<ul class="org-ul">
+<li>interdire la connexion d'une catégorie</li>
+<li>ajouter un membre dans cette catégorie</li>
+<li>lui attribuer un mot de passe</li>
+<li>essayer de connecter le membre</li>
+<li>vérifier l'échec</li>
+</ul>
+</div>
+</li>
+<li><a id="orgeadf5a9"></a><span class="done DONE">DONE</span> 14-12 autoriser connexion<br />
+<div class="outline-text-6" id="text-1-3-12-5-3">
+<ul class="org-ul">
+<li>interdire la connexion d'une catégorie</li>
+<li>ajouter un membre dans cette catégorie</li>
+<li>lui attribuer un mot de passe</li>
+<li>essayer de connecter le membre</li>
+<li>vérifier l'échec</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org250313a" class="outline-4">
+<h4 id="org250313a"><span class="section-number-4">1.3.13.</span> <span class="done DONE">DONE</span> Droits</h4>
+<div class="outline-text-4" id="text-1-3-13">
+<ul class="org-ul">
+<li>vérifier que le droit lecture/écriture/administration fonctionne
+bien, notamment via le bouton "connexion à la place du membre"</li>
+<li>Gestion des membres
+<ul class="org-ul">
+<li>Pas d'accès</li>
+<li>Lecture uniquement (peut voir les informations personnelles de
+tous les membres, y compris leurs inscriptions à des activités)</li>
+<li>Lecture &amp; écriture (peut ajouter et modifier des membres, peut
+changer de catégorie un membre d'une catégorie ayant des droits
+égaux ou moindres, ne peut pas supprimer des membres, peut inscrire
+des membres à des activités, peut envoyer des messages collectifs)</li>
+<li>Administration (peut tout faire)</li>
+</ul></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgebbb6c6"></a><span class="done DONE">DONE</span> 14-20 aucun droit : consultation autre membre impossible<br /></li>
+<li><a id="org462f5fc"></a><span class="done DONE">DONE</span> 14-30 droit lecture : consultation autre membre possible<br /></li>
+<li><a id="orgd63c5de"></a><span class="done DONE">DONE</span> 14-31 droit lecture : modification autre membre impossible<br /></li>
+<li><a id="orgc5cfb31"></a><span class="done DONE">DONE</span> 14-32 droit lecture : création membre impossible<br /></li>
+<li><a id="orgbb9fa01"></a><span class="done DONE">DONE</span> 14-40 droit écriture : création membre possible<br /></li>
+<li><a id="org1f7bd36"></a><span class="done DONE">DONE</span> 14-41 droit écriture : suppression autre membre impossible<br /></li>
+<li><a id="orgcf591f7"></a><span class="done DONE">DONE</span> 14-42 droit écriture : changer de catégorie possible<br /></li>
+<li><a id="org4238fdc"></a><span class="done DONE">DONE</span> 14-43 droit écriture : modifier admin impossible<br /></li>
+<li><a id="org0a7afce"></a><span class="done DONE">DONE</span> 14-50 droit administration : suppression autre membre possible<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8a4345f" class="outline-4">
+<h4 id="org8a4345f"><span class="section-number-4">1.3.14.</span> <span class="todo TODO">TODO</span> supprimer un champ dans la fiche membre</h4>
+<div class="outline-text-4" id="text-1-3-14">
+<ul class="org-ul">
+<li>certains champs dépendent d'un autre : âge dépend de l'année de
+naissance =&gt; on ne peut supprimer année si âge est présent !</li>
+<li>PROBLÈME : le clic sur le bouton de confirmation de la suppression est pris en compte par
+l'IDE mais pas toujours par le runner</li>
+<li>même problème en utilisant du code javascript pour ouvrir le
+dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
+ce cas, c'est la case à cocher qui n'est pas cochée !</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org18a62ad"></a><span class="todo TODO">TODO</span> Suppression adresse postale<br />
+<div class="outline-text-5" id="text-1-3-14-1">
+<ul class="org-ul">
+<li>échec =&gt; inutile de perdre davantage de temps !!!</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org008a87a" class="outline-3">
+<h3 id="org008a87a"><span class="section-number-3">1.4.</span> <span class="todo TODO">TODO</span> Démarrer la comptabilité</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>cas normal
+<ul class="org-ul">
+<li>choix du PC</li>
+<li>dates exercice</li>
+</ul></li>
+<li>vérifications
+<ul class="org-ul">
+<li>nombre d'écritures</li>
+<li>PC</li>
+<li>dates exercice</li>
+</ul></li>
+<li>tester erreur saisie dates</li>
+<li>tester modif pays</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc58c955" class="outline-3">
+<h3 id="orgc58c955"><span class="section-number-3">1.5.</span> <span class="todo TODO">TODO</span> test saisie recette</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Un autre test pour la compta :
+</p>
+<ul class="org-ul">
+<li>se rendre à l'adresse <a href="http://testpaheko.local.bzh/admin/">http://testpaheko.local.bzh/admin/</a> (après avoir été
+connecté dans un test précédent, que je ne détaille pas ici)</li>
+<li>cliquer sur le menu "Saisie" dans la compta</li>
+<li>cliquer sur "recette"</li>
+<li>renseigner un libellé, un montant, les comptes, autres champs etc.</li>
+<li>valider le formulaire</li>
+<li>sur la page de détail de l'écriture, vérifier que toutes les
+mentions, comptes et montants correspondent à ce qui a été saisi</li>
+<li>se rendre sur la page compte de résultat</li>
+<li>vérifier que le montant de la recette apparaît bien dans les
+produits, que le nom du compte est bon, etc.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc0403dd" class="outline-3">
+<h3 id="orgc0403dd"><span class="section-number-3">1.6.</span> Notes</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org9aa7340" class="outline-4">
+<h4 id="org9aa7340"><span class="section-number-4">1.6.1.</span> parcours table</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<ul class="org-ul">
+<li>compter le nombre d'éléments de la table =&gt; nb<sub>elem</sub></li>
+<li>itérer avec un compteur (while) =&gt; num</li>
+<li>accéder à l'élément courant grâce au compteur //tr[${num}]</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Target</th>
+<th scope="col" class="org-left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">storeXpathCount</td>
+<td class="org-left">xpath=//table[@class=\"list\"]/tbody/tr/th//span</td>
+<td class="org-left">nb<sub>elem</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">executeScript</td>
+<td class="org-left">return 1</td>
+<td class="org-left">num</td>
+</tr>
+
+<tr>
+<td class="org-left">while</td>
+<td class="org-left">${num} &lt;= ${nb<sub>elem</sub>}</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">storeText</td>
+<td class="org-left">xpath=//table[@class=\"list\"]/tbody/tr[${num}]/th//span</td>
+<td class="org-left">nom</td>
+</tr>
+
+<tr>
+<td class="org-left">echo</td>
+<td class="org-left">${nom}</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">execute script</td>
+<td class="org-left">return ${num} + 1</td>
+<td class="org-left">num</td>
+</tr>
+
+<tr>
+<td class="org-left">end</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org0af4725" class="outline-4">
+<h4 id="org0af4725"><span class="section-number-4">1.6.2.</span> problème avec instruction conditionnelle dans 4-09 et 4-10</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #ffad29; font-weight: bold;">if</span> (${<span style="color: #dbdb95;">nb_parents</span>} &gt;= 2)
+{ ... }
+<span style="color: #ffad29; font-weight: bold;">else if</span> (${<span style="color: #dbdb95;">nb_total_membres</span>} &gt; 2)
+// ce bloc est ex&#233;cut&#233; m&#234;me si nb_parents &gt;= 2
+{ ... }
+</pre>
+</div>
+
+<p>
+<b><b>Contournement</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #ffad29; font-weight: bold;">if</span> (${<span style="color: #dbdb95;">nb_parents</span>} &gt;= 2)
+{ ... }
+<span style="color: #ffad29; font-weight: bold;">else if</span> ${<span style="color: #dbdb95;">nb_parents</span>} &lt; 2 &amp;&amp; ${<span style="color: #dbdb95;">nb_total_membres</span>} &gt; 2
+{ ... }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgadd2fb0" class="outline-4">
+<h4 id="orgadd2fb0"><span class="section-number-4">1.6.3.</span> problème avec apostrophe</h4>
+<div class="outline-text-4" id="text-1-6-3">
+<ul class="org-ul">
+<li>pas d'apostrophe dans les éléments de tableau, sinon problème</li>
+<li>si apostrophe dans une chaîne =&gt; lors de l'appel d'un script :
+problème avec l'IDE mais pas avec le runner</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org92d2ac5" class="outline-4">
+<h4 id="org92d2ac5"><span class="section-number-4">1.6.4.</span> erreur timeout</h4>
+<div class="outline-text-4" id="text-1-6-4">
+<p>
+Il y a un bug, référenceé ici : <a href="https://github.com/SeleniumHQ/selenium-ide/issues/1819">https://github.com/SeleniumHQ/selenium-ide/issues/1819</a>
+qui affiche un message d'erreur après une longue pause :
+</p>
+
+<p>
+l'ajout de « detectOpenHandles » est strictement sans effet&#x2026;
+D'où la tentative de contournement dans runtest
+</p>
+</div>
+</div>
+<div id="outline-container-org57b3b9e" class="outline-4">
+<h4 id="org57b3b9e"><span class="section-number-4">1.6.5.</span> comparer des nombres</h4>
+<div class="outline-text-4" id="text-1-6-5">
+<p>
+Les valeurs récupérées sur une page sont des chaînes =&gt; à convertir en
+nombre avec Number pour faire une comparaison numérique (ex : numéro
+de membre)
+</p>
+</div>
+</div>
+<div id="outline-container-org5948b9d" class="outline-4">
+<h4 id="org5948b9d"><span class="section-number-4">1.6.6.</span> display:none</h4>
+<div class="outline-text-4" id="text-1-6-6">
+<p>
+Impossible de sélectionner un élément avec l'attribut <b><b>display:none</b></b>
+; il faut préalablement lui mettre l'attribut <b><b>display:block</b></b>
+</p>
+</div>
+</div>
+<div id="outline-container-orgea2e915" class="outline-4">
+<h4 id="orgea2e915"><span class="section-number-4">1.6.7.</span> numéro de téléphone</h4>
+<div class="outline-text-4" id="text-1-6-7">
+<ul class="org-ul">
+<li><b><b>Attention</b></b>, un numéro qui commence par 0 est formatté avec un
+espace entre les paires de chiffres !!</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc23203" class="outline-4">
+<h4 id="orgbc23203"><span class="section-number-4">1.6.8.</span> accès élément tableau javascript</h4>
+<div class="outline-text-4" id="text-1-6-8">
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #76eec6;">// </span><span style="color: #76eec6;">refus&#233; par IDE mais accept&#233; par runner</span>
+<span style="color: #ffad29; font-weight: bold;">return</span> ${t}[${i}]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9dc1d20" class="outline-4">
+<h4 id="org9dc1d20"><span class="section-number-4">1.6.9.</span> objet javascript</h4>
+<div class="outline-text-4" id="text-1-6-9">
+<p>
+voir <a href="https://github.com/SeleniumHQ/selenium-ide/issues/1603">https://github.com/SeleniumHQ/selenium-ide/issues/1603</a>
+</p>
+<ul class="org-ul">
+<li>Syntaxe accès aux objets : ${objet}.attribut ou ${objet}.methode</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="color: #76eec6;">// </span><span style="color: #76eec6;">refus&#233; par le runner</span>
+<span style="color: #ffad29; font-weight: bold;">return</span> ${membre.nom}
+
+<span style="color: #76eec6;">// </span><span style="color: #76eec6;">accept&#233;</span>
+<span style="color: #ffad29; font-weight: bold;">return</span> ${membre}.nom;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbde6d70" class="outline-4">
+<h4 id="orgbde6d70"><span class="section-number-4">1.6.10.</span> input type="checkbox</h4>
+<div class="outline-text-4" id="text-1-6-10">
+<p>
+Pour (dés)activer un <i>&lt;input type="checkbox"</i>, il faut utiliser
+<b><b>(un)check</b></b> car le runner (de chrome ?) n'aime pas <b><b>click</b></b>
+</p>
+</div>
+</div>
+<div id="outline-container-orga273db5" class="outline-4">
+<h4 id="orga273db5"><span class="section-number-4">1.6.11.</span> Appel de fonction</h4>
+<div class="outline-text-4" id="text-1-6-11">
+<p>
+L'<i>appel de fonction</i> définie dans le script avec une variable de
+l'IDE en param ne fonction qu'avec Chrome.  NB : vérifier exactement
+ce qui ne fonctionne pas avec firefox ?
+</p>
+</div>
+</div>
+<div id="outline-container-org229da58" class="outline-4">
+<h4 id="org229da58"><span class="section-number-4">1.6.12.</span> Envoi de fichier</h4>
+<div class="outline-text-4" id="text-1-6-12">
+<ul class="org-ul">
+<li>Ne fonctionne qu'avec chrome</li>
+<li>insérer (type) le chemin du fichier dans le champ de saisie du nom</li>
+<li>cliquer le bouton d'envoi</li>
+<li><b>Important</b> : Ne pas cliquer sur le bouton d'ouverture du sélecteur
+de fichier : il ne se refermera pas et masquera les éléments de la
+fenêtre précédente qui ne pourront plus être activés</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org02f17a5" class="outline-4">
+<h4 id="org02f17a5"><span class="section-number-4">1.6.13.</span> Sélectionner un onglet/une fenêtre après ouverture</h4>
+<div class="outline-text-4" id="text-1-6-13">
+<ul class="org-ul">
+<li><p>
+dans la commande qui ouvre une nouvelle fenêtre ou un nouvel onglet,
+cliquer l'icône « Add new window configuration » tout à droite de la
+commance ; saisir un nom de fenre qu'on pourra utiliser plus loin
+pour sélectionner la fenêtre quand elle sera ouverte avec la
+commande :
+</p>
+<pre class="example">
+select window | handle=${nom_fenêtre}
+</pre></li>
+<li>voir 13-01 suppression adresse</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3c7a7ce" class="outline-4">
+<h4 id="org3c7a7ce"><span class="section-number-4">1.6.14.</span> Version mobile</h4>
+<div class="outline-text-4" id="text-1-6-14">
+<ul class="org-ul">
+<li>les libellés des boutons du menu principal n'apparaissent pas et ne
+sont donc pas trouvés, ni par un chemin xpath, ni par un chemin css
+; il faut donc utiliser un chemin qui s'arrête à l'url du lien
+correspondant.</li>
+<li>les sous-menus n'apparaissent pas =&gt; pas d'accès direct =&gt; il faut
+procéder par étape : menu puis sous-menu</li>
+<li>lors de l'ajout d'un membre, le bouton Enregistrer n'est pas visible
+et ne peut être cliqué ; pour le rendre visible, il faut passer
+d'une rubrique à l'autre avec la touche Tab ou avec PageDown, par
+exemple après avoir saisi la date&#x2026;. <b><b>mais</b></b> :
+<ul class="org-ul">
+<li>avec navigateur chrome : pas de sélecteur de date ! =&gt; il faut ruser :(</li>
+<li>même ainsi, il se peut que le bouton ne puisse recevoir le clic
+(voir ci-dessous) ; apparemment le webdriver firefox ne réagit pas
+à PageDown et celui de chrome réagit à Tab, mais ça ne suffit pas
+à rendre cliquable le bouton Enregistrer</li>
+</ul></li>
+</ul>
+
+<p>
+Bref, ce qui marche pour le driver chrome ne marche pas pour celui de firefox et vice-versa..
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">&gt; selenium-side-runner -c <span style="color: #e67128;">"browserName=firefox"</span> -f <span style="color: #e67128;">"mobile"</span> paheko_v4.side
+
+    Element &lt;button <span style="color: #dbdb95;">class</span>=<span style="color: #e67128;">"main icn-btn"</span> <span style="color: #dbdb95;">name</span>=<span style="color: #e67128;">"save"</span> <span style="color: #dbdb95;">type</span>=<span style="color: #e67128;">"submit"</span>&gt; is not clickable
+    at point (125,633) because another element &lt;ul&gt; obscures it
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6048e3" class="outline-4">
+<h4 id="orgd6048e3"><span class="section-number-4">1.6.15.</span> Exception javascript (CORRIGÉ)</h4>
+<div class="outline-text-4" id="text-1-6-15">
+<p>
+quand l'inspecteur est ouvert, le clic sur le sélecteur d'identité des
+membres (Configuration/Membres/Préférences) déclenche une exception
+javascript (TypeError: document.querySelector(&#x2026;) is null) sur l'instruction :
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript">document.querySelector(<span style="color: #e67128;">'input'</span>).focus();
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6487cc6" class="outline-4">
+<h4 id="org6487cc6"><span class="section-number-4">1.6.16.</span> PB : Se connecter à la place d'un membre</h4>
+<div class="outline-text-4" id="text-1-6-16">
+<ul class="org-ul">
+<li>OK avec l'IDE</li>
+<li>échec systématique avec le runner =&gt; c'est l'admin qui est connecté,
+pas le membre choisi</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org50dd0d5" class="outline-4">
+<h4 id="org50dd0d5"><span class="section-number-4">1.6.17.</span> PB : suppression champ dans la fiche membre</h4>
+<div class="outline-text-4" id="text-1-6-17">
+<ul class="org-ul">
+<li>OK avec l'IDE</li>
+<li>échecs aléatoires avec le runner
+<ul class="org-ul">
+<li>le clic sur le bouton de confirmation de la suppression n'est pas
+pris en compte</li>
+<li>même problème en utilisant du code javascript pour ouvrir le
+dialogue de confirmation dans un onglet plutôt qu'une popup ; dans
+ce cas, c'est la case à cocher qui n'est pas cochée !</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Auteur: Jean-Christophe Engel</p>
+<p class="date">Created: 2024-11-14 jeu. 14:34</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
