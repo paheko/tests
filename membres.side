@@ -17050,7 +17050,7 @@
       "id": "f992fa8d-d20a-4cf2-8a16-4cb414a37cd8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -17675,7 +17675,7 @@
       "id": "1461e661-9886-4c48-9893-53ea9710238f",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -18227,7 +18227,7 @@
       "id": "57edae49-007a-437d-9fe9-b1952bc6b1d8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -18988,7 +18988,7 @@
       "id": "9731707a-e2d4-44ba-b369-bfe4376e008a",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -19561,7 +19561,7 @@
       "id": "f84b3700-3470-4dda-8c5a-1aa8a73f85f8",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -20148,7 +20148,7 @@
       "id": "c120fc06-cdea-4819-b56d-fc54526273f9",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "titre_page"
     }, {
@@ -20857,7 +20857,7 @@
       "id": "f792d5d5-5e7a-4d9d-8e37-7c8aaeb7d1e8",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//header/h1",
+      "target": "xpath=//h1",
       "targets": [],
       "value": "Recherche de membre"
     }, {
