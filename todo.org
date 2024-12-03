@@ -5,8 +5,8 @@
 #+STARTUP: inlineimages
 #+STARTUP: indent
 #+OPTIONS: toc:2
-* Test paheko
-** DONE 01 Installation
+* Test paheko [2/5]
+** DONE 01 Installation [3/3]
  - Exemple de test (après avoir installé un Paheko sur sa machine, sur
    le vhost "paheko.localhost", sans base de données) :
   - se rendre à l'adresse http://testpaheko.local.bzh
@@ -25,11 +25,11 @@
 *** DONE 01-01 installation initiale
 *** DONE 01-01a installation sur base existante
 *** DONE 01-02 vérification premier membre
-** DONE 02 Connexion
+** DONE 02 Connexion [3/3]
 *** DONE 02-01 connexion correcte
 *** DONE 02-02 connexion échec identifiant
 *** DONE 02-03 connexion échec mdp
-** TODO Membres
+** TODO Membres [13/14]
 *** DONE 03 créer un membre
 **** données de la fiche membre
 - Catégorie : choisir parmi les possibilités
