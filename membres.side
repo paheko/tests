@@ -31884,13 +31884,6 @@
       "targets": [],
       "value": "id_champ"
     }, {
-      "id": "75ec753b-25cd-41c1-9190-296e66c7fe38",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_help",
-      "targets": [],
-      "value": "Parle-nous de toi :)"
-    }, {
       "id": "1d552ca0-edbd-425b-a56a-b10266e7ac5a",
       "comment": "",
       "command": "check",
@@ -32446,13 +32439,6 @@
       "target": "return 'f_' + ${nom_champ}",
       "targets": [],
       "value": "id_champ"
-    }, {
-      "id": "8ad63566-7ed2-44dc-b01b-5f8f6edfa8fa",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_help",
-      "targets": [],
-      "value": "Parle-nous de toi :)"
     }, {
       "id": "57a268dd-5252-4da3-acfa-518e7a4a3898",
       "comment": "",
