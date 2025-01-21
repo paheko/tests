@@ -5624,11 +5624,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "896f9c90-40e4-4231-900b-e20cc8e192b8",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "25c2bc8d-cfc0-49fa-b069-8029714caf3a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "c9d5467e-a15a-4d3f-a8da-63f385d004e4",
@@ -5948,11 +5951,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "718197ad-70af-40f8-ac1e-158bb70e727d",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "26851ac0-8af2-4a4f-98cf-500b4b4db142",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "398dca38-f886-49cd-ab22-5619680a73ee",
@@ -6386,11 +6392,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "b0d7dd5d-43ea-4cc6-9411-408fca036655",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "29fa5e92-6515-4584-a4dd-ca4114aa7ee2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "e269bead-588c-44f0-8c28-8bd4f6203a4f",
@@ -6857,11 +6866,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "35c7f1ee-c6d4-4c68-8105-52f683ed4a42",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "d5eee178-286b-4fb7-9f47-207bc98d4ed3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "f9f322c8-0de9-48e9-8990-2f021c278f01",
@@ -7323,11 +7335,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "7d222cb4-c94e-4627-a8d5-0226a4f1eba7",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "4235c6f7-b2d0-441e-a3d9-bddfc81ae0eb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "d3905ed9-1492-4301-a1f3-eb2b132239b5",
@@ -7834,11 +7849,14 @@
       "targets": [],
       "value": "num_categorie"
     }, {
-      "id": "4bb4fbe1-a230-4780-aa3d-e5c30420a551",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "947e80d5-8bc4-4494-88c3-296e1f148739",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "e84e5bf6-d95e-42e5-9431-be271a3cc160",
@@ -8188,11 +8206,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "08ca6a60-d1a8-42b7-a342-d82982cc03a0",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "9268c3f2-4e43-4dfc-a4c8-a433a2012027",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "239f4280-e9ee-40ad-98c3-3655bdb00a6a",
@@ -8533,11 +8554,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5918f687-f08f-4a1b-b62d-5331dc89b22c",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "169cd5fd-fccf-4690-9c12-7b2588a15f07",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "41551d04-8449-4477-b917-23f09e714661",
@@ -8859,11 +8883,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2bce7631-90fe-46d1-98d2-8b19f18fb118",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "3dae7ecc-a95f-4916-820f-c2a6b5b9d3d2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "fae3c40b-b060-4268-9f4a-c60bfdd7e255",
@@ -9204,11 +9231,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0c9ed58a-e141-4adb-884f-00319dfb8a3b",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "195a0652-5dd9-496b-8177-746584793a39",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "e5c39212-6dae-48a0-b8e6-385287a40159",
@@ -9530,11 +9560,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6dcaeda4-deb4-4704-a585-34e16dd66a52",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "f2d6fbb2-ffa1-4f3d-9223-49b89aa0397a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "af84032d-fac6-40b5-ab6e-a23b9557a3c3",
@@ -9875,11 +9908,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e66db7bb-e08f-429b-aa4d-0b358f631bd2",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "1e9b4c1e-5d71-497e-b0b6-22105fce35d6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "d698beb2-6ff5-4084-ae93-3824595c27a4",
@@ -10222,11 +10258,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "59e01e2c-b55c-4115-968d-3043c50470e2",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "b77a1488-74d2-4c22-b0b8-8a7406988f66",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "bbc5e470-2ea0-4daa-b707-11738ea49375",
@@ -10588,11 +10627,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1dc6e933-c9dd-4226-b82c-c9209ca515b5",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "5d6165bf-4a6f-4ac9-b46a-69c31c8b16fb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "c1dc27b6-41b6-43b7-88de-fbf00af977ab",
@@ -11012,11 +11054,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1ad17670-aecc-4cad-80d2-d7455e84b282",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "e7efbeab-6a32-4476-afed-4b195dc5b8f5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "1d8a6143-d7b1-4acb-89a4-28f03bed8bc8",
@@ -11378,11 +11423,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2cc72bd8-97dc-4a12-bdbb-a2e84eb35d52",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "c5ed9571-556d-433d-a335-1e4a0acf44bc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "ec030de1-caa1-4e5e-8c16-eb0a168b288b",
@@ -11802,11 +11850,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ff0e3d75-177e-4d38-bd99-dd5bd8c53381",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "271b3bb7-95d1-4c80-967c-0b75c0f3792e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "203ce549-b2cf-45b2-bbcc-67534533ea0b",
@@ -12309,11 +12360,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d86ceeb4-71a1-416e-bff7-6862d92099cb",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "18b26bf1-0a17-48e9-bb62-c83bd5a92a7a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "22f4e2c0-cfc9-43a5-84ef-fae5f8af4463",
@@ -12761,11 +12815,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "50e5c98a-0a2a-41cc-b72f-f5c6b2da5453",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "71f29f16-8091-4620-8faf-5208c02d426a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "951c9c99-3f40-4bc6-b4cd-ab8c81167975",
@@ -13268,11 +13325,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "7af6a69d-b977-4ba1-a116-81dab3433509",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "258a63f9-8e99-4a99-acc7-32ea387a3aac",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "a93bb09f-5e8b-48ce-b32a-a882ad65e4c7",
@@ -13727,11 +13787,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "88b73d78-8d65-4e7c-afac-7ecd3f0a1eee",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "489fa074-f419-436b-8924-5bb8c8086841",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "62378d96-da55-4c22-ab1a-3eb2091d2e10",
@@ -14392,11 +14455,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "707f9554-5ac2-4141-ba79-7f7ca0734e0b",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "019c1408-e717-4f51-a84a-b7a4f9922683",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "35df3e99-f034-4506-b82d-2f4bd624b60f",
@@ -14837,11 +14903,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "fc99581f-ed53-478b-b325-86effeaa2f6a",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "df2d2aa7-2757-4c18-884f-778604047dd1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "6fbde4df-7354-49f9-8ee9-049135cf6ab1",
@@ -15502,11 +15571,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "bd3e69d1-397d-4df4-9fb4-72156bba23c2",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "a503c34b-c120-4a45-abaa-ec4a621bb588",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "08af8389-7cbb-4093-824a-cd7cbed14bbd",
@@ -15933,11 +16005,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0c1d2e63-90bd-475c-b726-0fe1c9cbadcd",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "66568465-0a41-4d55-aa18-1a3747b6b1cd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "865ff171-767f-41bf-9867-8bda00465648",
@@ -16348,11 +16423,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6739f069-d0ae-4347-9d14-b6b5ba1f75af",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "6c3966c5-84e1-40cc-a8e9-c017d58db484",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "b6315ef7-8655-4285-993e-6d858e00255c",
@@ -16667,11 +16745,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d30d317a-dc7e-47d6-a16c-58c90c0654b7",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "e0c4198c-8936-4eb6-ac66-618849ff90b6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "6ebd16d3-7c4e-4cdb-b496-bb33ea6ad778",
@@ -17163,11 +17244,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c2d55c39-90b9-4a9a-bbff-b9fc3f7b9f0c",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "9912061e-7d58-4a7c-9383-5b34cd6b4865",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "76f7138b-df11-4f37-94a2-195485223a5f",
@@ -17858,11 +17942,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "8be34c7b-a75f-4ac7-9960-21bfd1979523",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "7504cfa4-de31-4652-b405-8c0a256d510e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "a250f5cb-6c10-4a75-9b66-7fc7b9728fa6",
@@ -18319,11 +18406,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "710f2e7e-332d-4770-9171-b25b126e2dfa",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "3a584cea-bd61-4479-8539-76cfd79f2739",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "84ec243f-8e6a-424f-8697-f52e1d8f565c",
@@ -18745,11 +18835,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "49dade6a-3dc4-4ad6-9162-f3bac73dde62",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "aa11e3a0-0ba4-4211-b828-7f9e5f1071a1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "2425e2c5-a6a9-4fcb-bd04-82c478ef53c5",
@@ -19080,11 +19173,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1520cb9f-f1d4-4369-8271-1ccc3f86dc91",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "0615ef90-3324-4996-9770-91532686dfc9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "dd420bf3-dea8-4f39-964f-44d68dafb1c1",
@@ -19688,11 +19784,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a7263269-271e-4110-a769-2a729909ffae",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "c02fd2f3-a8ec-47d9-bfac-49bb0c444329",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "b137c64d-f2c7-4012-8b72-577b1767e63d",
@@ -20240,17 +20339,20 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "29de96f0-b669-47a4-b8d4-109adbb7ce49",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "4db4ff17-8233-4676-9bff-bca4c8cf691c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "891f2379-8018-407e-a655-8a2bef31e65e",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "target": "xpath=//a[contains(., \"Toutes, sauf cachées\")]//small",
       "targets": [],
       "value": "membres"
     }, {
@@ -20262,9 +20364,9 @@
       "value": "nb_total_membres"
     }, {
       "id": "8784c411-a100-4275-915d-fad72de4e043",
-      "comment": "Filtrer : toutes même cachées",
+      "comment": "Filtrer : toutes sauf cachées",
       "command": "click",
-      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "target": "xpath=//a[contains(., \"Toutes, sauf cachées\")]",
       "targets": [],
       "value": ""
     }, {
@@ -21138,11 +21240,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "8297e0b5-a68e-472a-b09c-6dedd0d79c69",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "8be5fd0c-179d-401d-8bf6-545830800e19",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "6b81cc1f-3dd0-426c-a9e3-fe7192d8e389",
@@ -21283,11 +21388,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "60331a57-2fab-4056-a2e4-4814d55d2e71",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "ddf10f2c-f438-4018-88e0-6bde75bcc9ee",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "493a86b0-6932-4528-8bea-9ba15a72f79d",
@@ -21499,11 +21607,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "9134a9df-c731-4a24-bf72-37f281c95903",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "e85dce84-d2dc-4c6e-823f-2c23b8bb42e1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "cac06737-1754-4ac4-9f30-477e9a2fd5a2",
@@ -21720,11 +21831,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "8200f4bf-5659-4c07-80b5-d5ceb774c535",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "",
+      "comment": "52282830-2679-4dbf-b3a2-8a972b0ae018",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "8741f9d2-8e30-4a88-a4d9-42fedee9b32e",
@@ -21833,11 +21947,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5c9793d6-751b-4e17-9151-09fb0b737a0d",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "88100266-4ba0-4a3c-9b25-db5136c81644",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "f2dd9118-10f0-4570-9163-dd0662018d59",
@@ -21935,11 +22052,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "cc7903e2-0432-42f6-878f-2b87bc5fa120",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "e404925f-3d71-4584-806b-c3be5dcd881b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "73a108aa-4752-4d3e-9176-1df9277a30a7",
@@ -22188,11 +22308,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "377e34ca-e626-426b-ac64-4f91af70075a",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "bcdd4ace-7628-45db-846d-83d506cf169c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "49bd5431-6f58-4df8-b100-50d318ffa6e1",
@@ -22785,11 +22908,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "36bdb72f-d96f-45e4-9c2e-7b7b5ecfe0a4",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "9f629835-72a2-4827-b35b-5b6849d866c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "51acf95b-dd8e-4783-8dbd-bd835dac71af",
@@ -23024,11 +23150,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "3908d816-d769-4a8e-91bf-7c478df4a996",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "80ee16cd-ebc3-4cb3-887c-715aacbb71f0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "81b0457f-e6f0-4ece-b7b5-cbd122f43583",
@@ -23786,11 +23915,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a25908a7-4639-442e-b29b-59e2b165717a",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "9a23f00f-1968-4a9a-b913-34d3ba58c709",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "5bc10380-7d32-4a72-818e-576c2f13bf3d",
@@ -23883,11 +24015,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a2207983-e296-4cc7-8e60-87e3f3890e4f",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "649bed59-fce4-4bc5-b1a0-bb4163b16f80",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "2e986055-1da6-463d-a630-d143ad8475f4",
@@ -24072,11 +24207,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ad8f65b6-72cc-4d9d-ae24-737080a52b8a",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "5634d215-1b0d-405c-9ced-a0514298cea5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "c9785f61-a589-4f89-9c5d-64dc8fc48465",
@@ -24181,11 +24319,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6e925dcc-94a3-48f4-bd75-be0f99e2b421",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "498c062b-c7a6-4805-80dc-4a54dc09dbf2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "05d4d45f-dda5-4d7f-a456-a7de5e2b2c36",
@@ -24322,11 +24463,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6f2ef47f-ce6f-42ae-a770-5fcd8357f4f4",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "03f563f4-0dc3-4bee-9273-38e7cf2634e2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "a9f5b8fb-bc06-4641-ae4b-4d35395c0ece",
@@ -24424,11 +24568,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "7ed7eb14-77b1-4bb0-b85c-b0c10d2cd327",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "d557365a-a04b-4d25-94dc-09e7b81c8d1d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "96206b6d-320c-43cb-8425-87fa917978fb",
@@ -24516,11 +24663,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "762812ed-59d4-4c3c-a37e-d9fff25cdd77",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "6c00c538-f6ee-48bc-b4eb-1b7d461b393e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "2f66a439-83cb-4bf2-93e2-668adf91bcb3",
@@ -24782,11 +24932,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "af1c727c-2dcb-4751-b759-bd63f1274bbb",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "58947ee4-e13f-4d47-902d-05515d41f130",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "e3aee174-4549-4968-809f-2ae6e25b76da",
@@ -24891,11 +25044,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "80bcd96f-1c74-43a3-990f-e70204fc24a8",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "868c3652-6156-492d-a9d4-25f99d0bc23d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "166cf0e7-1615-45e1-8bfa-e4fdcfa9cb9f",
@@ -25087,11 +25243,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c685b576-b86d-4392-8285-1369f727bd36",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "49fe3df3-9f8b-4ccf-aa17-94410664d859",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "1def7c71-b44a-4b69-9e93-5a3bfdcfff78",
@@ -25196,11 +25355,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "109b7306-6cbc-4401-9b49-1758a3ba542b",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "3d70f497-45bf-4b1b-aa49-f294d7af9fe9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "dee3d5c8-6779-43a5-8d16-414027b6899e",
@@ -25330,11 +25492,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e77ee141-550b-4289-8054-c77447f76842",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "87e5a15f-d2b2-49a1-b4fd-0b7eef0611d6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "3e737a61-0604-47ac-98db-04a421a1d492",
@@ -25432,11 +25597,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "7db65aac-6bbd-4efd-bad5-4f1c2501ae66",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "b657a4fe-052b-4231-bede-be593bcee387",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "826579a2-3394-4610-ac2c-ec4c39009a4e",
@@ -25607,11 +25775,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "08cf31e2-a0fd-4032-9ee6-da99031ca65b",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "3337b2b1-bd58-433e-8e40-741e80eb2ecf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "9ebc125c-9b33-4732-a041-b47b627c1378",
@@ -25810,11 +25981,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "372a58e8-1c17-46d4-ba32-feaffb163136",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "adabcc2c-711c-4d86-8043-57d0d05596bd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "0cc206a7-def5-4a3f-83be-c69bd05d6205",
@@ -25918,11 +26092,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2eacf0c1-8d1f-4bdf-8cc2-820289dda1c8",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "dbb00220-0b98-422d-b5c6-e71ab71d3115",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "dc0fd695-9536-44df-9944-cd166cc6ce33",
@@ -26026,11 +26203,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "161fb507-bca1-4338-a312-eb06945dccbe",
-      "comment": "rendre visibles les catégories",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "f4973b32-9845-430d-9da7-1e386dbb4e87",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "2775e082-6b20-48d9-ab0d-66076cfe9b2c",
@@ -50399,11 +50579,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "17582a28-7b8e-493d-b004-5e77bfc28ade",
-      "comment": "Rendre visibles les options du menu Filtrer",
-      "command": "executeScript",
-      "target": "var nav = document.querySelector(\".dropdown\"); var li = nav.querySelectorAll(\"li\"); var nb = li.length; for (const l of li) { l.style.display=\"block\"; } return;",
-      "targets": [],
+      "id": "10f0d159-6d92-48cd-944e-b58032dcc5c8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav[@class=\"dropdown\"]//li[@class=\"selected\"]",
+      "targets": [
+        ["css=.selected", "css:finder"],
+        ["xpath=//fieldset/nav/ul/li[2]", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "01e3ff2c-8e1c-4da7-8d99-878738ad38c9",
