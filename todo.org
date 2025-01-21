@@ -3,7 +3,6 @@
 #+LANGUAGE: fr
 #+STARTUP: show3levels
 #+STARTUP: inlineimages
-#+STARTUP: indent
 #+OPTIONS: toc:2
 * Test paheko [2/5]
 ** DONE 01 Installation [3/3]
@@ -29,8 +28,8 @@
 *** DONE 02-01 connexion correcte
 *** DONE 02-02 connexion échec identifiant
 *** DONE 02-03 connexion échec mdp
-** TODO Membres [13/14]
-*** DONE 03 créer un membre
+** TODO Membres [12/14]
+*** DONE 03 créer un membre [12/12]
 **** données de la fiche membre
 - Catégorie : choisir parmi les possibilités
 - Rattacher à un membre : non / choisir un membre
@@ -57,13 +56,13 @@
 **** DONE 03-92b date postérieure max
 **** DONE 03-93a nom en double refusé
 **** DONE 03-93b nom en double accepté
-*** DONE 04 lister les membres
+*** TODO 04 lister les membres [4/5]
 **** DONE 04-01 toutes les catégories
 - gérer le cas où les membres occupent plus d'une page
 - ¿ vérifier si on peut supprimer un tri inutile ?
 **** DONE 04-02 toutes catégories sauf cachées
 **** DONE 04-03 une seule catégorie
-**** DONE tri par différents critères
+**** TODO tri par différents critères [5/6]
 ***** DONE 04-04, 04-05 tri par nom croissant et décroissant
 Le nouveau tri est comme ceci :
 colonne IS NULL DESC, colonne DESC, numero DESC
@@ -75,7 +74,8 @@ pour un tri croissant, en premier pour un tri décroissant.
 Tri par ville
 - ville (dé)croissant, numéro membre (dé)croissant
 - ville vide en fin(début), numéro membre (dé)croissant
-***** DONE 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant
+***** TODO 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant
+- le test pour savoir s'il y a plus d'un parent qui correspond à la recherche (lignes 64+) ne fonctionne plus
 - pour la colonne "rattaché à" : on met un tri sur la qualité de
   parent, puis le nom du parent en premier, puis le nom du membre,
   puis son numéro :
@@ -86,7 +86,7 @@ Tri par ville
 - is_parent ASC, nom_membre DESC, numero DESC
 ***** DONE 04-90 lister membres sur plusieurs pages
 **** DONE consulter fiche
-*** DONE 05 rechercher des membres
+*** DONE 05 rechercher des membres [3/3]
 **** Remarques :
 - si la recherche trouve un seul résultat, elle affiche directement la
   fiche du membre
@@ -102,16 +102,18 @@ Tri par ville
 **** DONE chercher par numéro
 ***** DONE 05-11 un résultat
 ***** DONE 05-12 aucun résultat
-**** DONE par courriel
+**** DONE par courriel [3/3]
 ***** DONE 05-21 un seul résultat
 - => fiche membre
 ***** DONE 05-22 0 résultat
 - => onglet « Recherche avancée »
-***** DONE 05-23 plusieurs résultats
+***** DONE 05-23 plusieurs résultast
+La recherche rapide ne se fait plus que dans les catégories non cachées !!!
 - => onglet « Recherche avancée »
 *** DONE 06 supprimer un membre
 - NB : le tri des membres ne change pas après suppression
-**** DONE 06-01 plusieurs membres sélectionnés
+**** TODO 06-01 plusieurs membres sélectionnés
+- le runner ne trouve pas le bouton suppriùmer du dialogue de confirmation de suppression
 **** DONE 06-02 sélectionné = admin
 **** aucun membre sélectionné => action interdite
 *** DONE 07 modifier un membre
@@ -303,7 +305,7 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
 *** DONE 13 changer l'ordre des champs de la fiche membre
 **** DONE 13-01 intervertir numéro et nom
 - est-ce utile de tester d'autres changements d'ordre ?
-*** DONE 14 configuration membres Catégories
+*** DONE 14 configuration membres Catégories [5/5]
 **** DONE 14-01 ajouter une catégorie
 **** DONE 14-01b ajouter deux catégories de même non
 **** DONE 14-02 supprimer une catégorie non vide
@@ -322,7 +324,7 @@ Même si on ne saisit pas un numéro, il sera automatiquement affecté
 - lui attribuer un mot de passe
 - essayer de connecter le membre
 - vérifier l'échec
-*** DONE Droits
+*** DONE Droits [9/9]
 - vérifier que le droit lecture/écriture/administration fonctionne
   bien, notamment via le bouton "connexion à la place du membre"
 - Gestion des membres
@@ -379,6 +381,8 @@ Un autre test pour la compta :
    produits, que le nom du compte est bon, etc.
 
 ** Notes
+*** sélecteur dropdown
+- il faut absolument fermer le dropdown avant de cliquer ailleurs
 *** parcours table
 - compter le nombre d'éléments de la table => nb_elem
 - itérer avec un compteur (while) => num

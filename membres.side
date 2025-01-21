@@ -21264,6 +21264,13 @@
       "targets": [],
       "value": "nb_total_membres"
     }, {
+      "id": "b2e2d7f2-4855-45de-b0c3-f4e96ec5a09d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": "membres"
+    }, {
       "id": "137549b6-1daa-44f3-b2a1-10025c5bd579",
       "comment": "",
       "command": "if",
@@ -21293,9 +21300,9 @@
       "value": ""
     }, {
       "id": "ebc07853-53c9-4d87-9404-018e1b55198c",
-      "comment": "Menu ajouter",
+      "comment": "",
       "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/users/new.php')]",
+      "target": "xpath=//a[@href='/admin/users/new.php']",
       "targets": [],
       "value": ""
     }, {
@@ -21413,7 +21420,7 @@
       "value": "nb_total_membres"
     }, {
       "id": "1d54e3d9-e9ac-431a-9dc4-cacd45ce7efc",
-      "comment": "Filtrer : toutes même cachées",
+      "comment": "",
       "command": "click",
       "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
       "targets": [],
@@ -21499,7 +21506,7 @@
       "id": "86e7be66-23f6-424a-baba-8fc96e68fff7",
       "comment": "",
       "command": "if",
-      "target": "${num} % 3 == 0",
+      "target": "${num} % 3 == 0 && ${numeroAffiche} != 1",
       "targets": [],
       "value": ""
     }, {
@@ -21617,13 +21624,6 @@
       ],
       "value": ""
     }, {
-      "id": "cac06737-1754-4ac4-9f30-477e9a2fd5a2",
-      "comment": "",
-      "command": "//waitforelementvisible",
-      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
-      "targets": [],
-      "value": "1000"
-    }, {
       "id": "36e6ebf2-46bb-486c-a024-da720132d872",
       "comment": "",
       "command": "storeText",
@@ -21644,6 +21644,13 @@
       "target": "return ${nb_total_membres} - ${nb_suppr}",
       "targets": [],
       "value": "membres_restants_oracle"
+    }, {
+      "id": "5b658fb8-1a65-4003-a7bf-a0d90744385e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "targets": [],
+      "value": "membres"
     }, {
       "id": "511506e2-6636-4233-9197-8f9fb85e45b5",
       "comment": "Vérifier les membres restants",

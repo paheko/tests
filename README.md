@@ -16,7 +16,7 @@ npx @seleniumhq/side-migrate
 (voir Makefile)
 
 ## Config serveur
-- définir un hôte virtuel : test.paheko.localhost
+- définir un hôte virtuel : `test.paheko.localhost`
 
 ## Exécuter les tests
 Le script `runtest.sh` permet d'exécuter un, plusieurs ou tous les tests
