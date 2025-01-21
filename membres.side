@@ -20352,7 +20352,7 @@
       "id": "891f2379-8018-407e-a655-8a2bef31e65e",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]//small",
+      "target": "xpath=//a[contains(., \"Toutes, sauf cachées\")]//small",
       "targets": [],
       "value": "membres"
     }, {
@@ -20364,9 +20364,9 @@
       "value": "nb_total_membres"
     }, {
       "id": "8784c411-a100-4275-915d-fad72de4e043",
-      "comment": "Filtrer : toutes même cachées",
+      "comment": "Filtrer : toutes sauf cachées",
       "command": "click",
-      "target": "xpath=//a[contains(., \"Toutes, même cachées\")]",
+      "target": "xpath=//a[contains(., \"Toutes, sauf cachées\")]",
       "targets": [],
       "value": ""
     }, {
