@@ -820,49 +820,7 @@
       "id": "b14ce7cc-11db-4a3b-bfbf-12ec4765eeeb",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "74f82a04-3947-4f4a-9990-924324a08f6e",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c52c2703-b6f7-4988-9903-9e7f5eae7ccd",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3f9393ee-6b4f-4b3d-a846-770cf3a2043f",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "d4cca7c7-3bab-4099-8f0c-5a0447e6ace8",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "fb388499-5851-4b7e-b22d-8e7256159d62",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e5e6b042-3da1-462b-a315-2ec15973bc67",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -1201,49 +1159,7 @@
       "id": "a8bc6b39-fd0c-4bd0-ac5c-5c6de1e7973b",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9a2b2d5f-8aa4-46f6-98af-11f060699459",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5b205564-f777-4ad1-abfd-a8492d906f45",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a66e1002-12f4-4f65-a21a-1af67f0ce8f0",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "eb7cbe6a-128b-463f-a2e0-18d36fe1c0e2",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "21765375-4b9a-49ab-81f1-5dfa33434ceb",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5ba9ea26-6ced-4595-831d-869e11ab2cf6",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -1602,49 +1518,7 @@
       "id": "65ccf874-7ebe-4aa7-be36-d2361e2f041c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "965f8db1-1ccc-49dc-8077-ca3f8288f472",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "661aed0a-884e-4eef-be1f-9a5a89cc29f3",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "873a1b1b-26cc-4313-b38f-e79e4a44f608",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "71b05198-73ab-44aa-a97f-49992ba43368",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ef68cf00-5d1a-41df-8b10-2c48d63fa1a4",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0ad26f7f-f3a5-447a-ac2d-6a0c11af16b6",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -1989,49 +1863,7 @@
       "id": "32553fb9-6558-466f-90c0-31471c43187e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4a190edd-637a-4f52-94cc-25ae3f84b8b9",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "54e94108-5ead-496d-9607-c44adb4f272a",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "409faadb-00e7-4a63-bf4c-a215d21c66ed",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "874a6349-1535-4a98-9db2-bd7b31649af4",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "fc48899a-134c-4874-b53c-2e2dcce9d339",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f9616679-abfb-4ea1-aa19-f91fb7d7aea9",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -2390,49 +2222,7 @@
       "id": "fadb5d39-1907-417b-9d02-79547c3dc04a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3cf5a905-7576-4cd1-97a5-a6d532691208",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "a30539dd-0977-463a-b842-cb10e7349fc0",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2def971c-6153-4e19-9c7e-f99232413cae",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c8a19e64-7093-4477-ad3b-bf290d6faf72",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "7369fff8-a63c-4b59-aa2b-bc1e13782c5f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ccef399a-525f-4b3e-910c-a861db874cfd",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -2963,49 +2753,7 @@
       "id": "f2ae936e-54ea-4773-82b2-581ded63ce85",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "97b81218-28eb-46a8-905f-692459d24c28",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "babda5cf-a571-42b3-b3b5-7a668153cade",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d964a6e7-eaca-4008-879b-ae56fd2e8fe5",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "f8c8d715-ecd7-4417-a26e-181520963dec",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "60703fc4-811b-41de-90d5-3334475e50d1",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a21ed2e8-9e3f-4687-9d02-17bcb53a0a90",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -3568,49 +3316,7 @@
       "id": "a6972706-0c56-46c5-9a2f-5f9ca9e7a52b",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "018973f7-b11d-484d-aa28-c6a4f285ae02",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "22dc193e-b428-4fbb-8b56-bd18df5953cf",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "febc4e85-ef86-4e24-a3dc-59d93a851213",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6a85ce0e-3646-481f-bb6b-1289ea0263c9",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "b9ef151b-b129-4875-87cc-a1c5abe41daa",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1ecc6344-fe94-4259-b248-66196528f5da",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -3975,49 +3681,7 @@
       "id": "0a919074-cafe-4f35-97d0-dff060157b5b",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3483834a-3c7e-4772-a30d-111072c1cafe",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ec977d32-e903-44ff-9ee9-acbc1b7bcbd0",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "568faaec-d3f4-4bea-956e-63d35ff385b4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "981d273d-be9b-4c6f-b8c6-d10f6d7eaa9d",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "af5c1fd7-4e8a-4aa6-a541-622d6f37a56a",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "685c60ca-ca5d-4b9e-b468-7f686ea3bff4",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -4270,49 +3934,7 @@
       "id": "828addae-4a29-465c-bc17-6f6aa011a333",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "40413eb6-afdd-40fb-9081-f224a7563d19",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "1454b0b4-bf39-461e-8c34-444c7e81e143",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8c04dc93-a051-4cf8-b13e-dc4e4f40f49d",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "8ac76b9d-cb28-4d38-92c5-38373f6e35e3",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ec699551-382c-4405-9321-5f1cb3a877ca",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "77f14997-3795-4b97-bc6d-a8e2c15c1068",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -4559,49 +4181,7 @@
       "id": "bae01400-5545-48b2-a212-5d4cd5c50797",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ebda2a39-b8ae-449c-9899-aea0296c87e2",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5e29b334-2db5-4bb8-8e23-f0e2f532eceb",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1d983797-f698-44f0-8946-f3986c665f6f",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "3ff4319b-7f86-4412-95d3-cd13fe6cff48",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "6b9c54a7-18ac-4c39-a343-f58abfd6ec1f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9c0a1f61-0f78-45be-b114-d5f8eafc5696",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -4848,49 +4428,7 @@
       "id": "de0c9cad-cb05-4f20-ada8-fe2924b92d08",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "357dd2d2-0d7f-4f4e-9ab1-77ca73ee134b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "9f6d9ec7-eab1-4eb8-9046-e15e479a918e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a45246d5-44a2-4e0d-9675-23cda2db2f3f",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "a80535d7-5cb4-413b-b809-69d990ce5ffa",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "26ef5b09-1393-4579-9c78-bb55ed484463",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2e57f89b-eb5c-406b-98f6-68f2d9ec0e21",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -5137,49 +4675,7 @@
       "id": "d4554ace-88d7-4d2e-83d4-7cce4097aa75",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bf1bfa0b-e029-4893-a2a5-7be8f1f65966",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "b93fb8f7-746b-4a39-b170-63bffa038554",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6d18f281-9ed6-4d72-8408-cb237c41e733",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "2dc71349-30ab-4301-a143-d062efe8f95b",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9bdb0cf1-8b9d-4b3c-beea-ec07e1fc40f8",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d5ee3b2f-ef10-41f7-82f4-3f0a74312fd5",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -5550,7 +5046,7 @@
       "id": "708582fe-d4a5-4bb6-b8c4-c10e56734680",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -5558,48 +5054,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cb14dd46-fef5-413c-9ef1-8078d3da5a41",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "267125ae-2ae2-4c1b-8ce6-5eacb6ae3e7d",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5779bed8-7db3-44d1-90fa-8111c1249d4a",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "759c56a5-1756-4f94-88a1-b44b491f3eae",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9e2ecd6c-9b85-47e0-93cc-79798c612693",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "15df9ac0-ede3-4938-9b89-08a5d61c2e26",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -6199,7 +5653,7 @@
       "id": "44094def-5892-4f3f-a645-1170d72de5b4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -6207,48 +5661,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a508b0ea-759a-4c9f-a806-e5aff4164e23",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "e29fff9a-d6a2-404d-a2f7-e2fcb3b05bc4",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3e2dd02a-1a68-4327-ae00-6ae88ccb86ed",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "423ce3d8-c9e4-4ad2-abba-6c20a76659c1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "777b3fbc-4d2a-4823-b41f-cd3e56a88849",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b36a32c3-ece0-4338-a300-895c14d4d965",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -7142,7 +6554,7 @@
       "id": "d56e4c68-de82-463b-89e7-7ad64f95f9b2",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -7150,48 +6562,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f858b24e-6a6c-4293-a030-457b09457441",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "7781354f-dd6c-4745-86c5-ea49a4fee814",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "99ad8fd2-6491-4e56-9aed-f652ab312e9d",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "36203ae6-1ab9-4595-804e-48e0e579e350",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "0f6329ff-2446-4915-8254-c926951597c1",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "917499e6-fbea-4bca-9daa-8a36b1ebc514",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -8125,7 +7495,7 @@
       "id": "e64962e4-bae9-440d-9189-76cd2fa7f16d",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -8133,48 +7503,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "93227c14-1dd9-4720-a53d-fee9e3dfeb9f",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "a2d7b0c4-336a-412b-acf4-fd1d2711c847",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6a19498f-fc5e-4917-a70e-ad8632a8aad6",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "8aa29ec9-ae3d-4eb4-84f6-0a741ed0028e",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9f1f0ced-486d-40a6-b00b-2f52d4d826d5",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f4da4637-660c-4afc-917b-d426c9b11119",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -8802,7 +8130,7 @@
       "id": "712e0c2b-764d-42e9-bb69-e699da88caa7",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -8810,48 +8138,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dd6eeb58-0ee1-4252-bce8-084075728d91",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "7b0cb08b-088a-49aa-9356-fdf4c7776205",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "472e262a-51a3-431a-aaf4-9dbd8aa826fb",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "e28dbbae-a40e-4c1c-90ee-32e24d1d565c",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "76262a25-e86a-4aa4-bf37-905bb3311ee0",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e899ee60-32ca-4d20-ad72-8935fff00932",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -9479,7 +8765,7 @@
       "id": "b4719c43-2476-4782-bcdb-d6afeaf420a4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -9487,48 +8773,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "db0014ea-5955-401b-9d2c-b29752b4257c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "22cb6c6d-6cd9-4948-8825-77893d53dc13",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "948195d2-7a07-4b46-8e05-5dd73fbc608c",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "5df8034e-fab7-4ff3-a890-008c21d46077",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "8f71fc40-ee00-47d7-8740-c0e711127123",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "24f254c1-a73a-4f1b-84a0-406c1656dbf8",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -10170,7 +9414,7 @@
       "id": "eea36b83-460a-488a-8a45-f45fbd2673e6",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -10178,48 +9422,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d3ec06dd-ca48-4d28-ae54-d114ea8795c4",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "fced87b7-e6b5-4692-b012-ab1421486419",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c8045ff3-a7d8-4408-aae8-573bc6da3cd8",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "f54204e9-258d-428f-8fca-ce6866d16fd9",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "89fb031f-c593-4d52-9cb9-91eddd0dfa83",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "00d3438f-db75-48ea-9ac1-3620f46765ca",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -10966,7 +10168,7 @@
       "id": "2adca38d-1ea3-4cd0-bfec-fc628e607950",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -10974,48 +10176,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "73c8eb2b-40d4-473a-8626-07a741311e8f",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "212ee57f-6630-4187-a1c4-5f9d735936bf",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "65f044d2-17bc-4876-b845-433d2cb7b685",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "23bbde8d-4f4c-494c-9c83-6eb2353bf1af",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "5921b0e0-5d51-4625-9060-e8dbd1045940",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7b851ff1-736d-46c6-a44b-45af16777640",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -11762,7 +10922,7 @@
       "id": "42e4d3f0-c60f-48c4-82bd-9864f1517cd4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -11770,48 +10930,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f49ba62b-e727-4c50-817d-7c6dec743115",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "4e1c5898-3da7-4f99-8d8a-b19b0066b97e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c5e73a48-7269-41d7-8953-1fc26f05334d",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "3018e22d-9d87-49b5-a13f-b0650fb6de74",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9b3b0a7c-50c4-4dad-b4ad-f7bb6bf80234",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b0ee6a00-9ed6-4ba3-acb9-b2d62e83e304",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -12225,7 +11343,7 @@
       "id": "c41862a6-7e97-4bd5-a01a-ec450bec40aa",
       "comment": "",
       "command": "click",
-      "target": "xpath=//input[@type=\"submit\"]",
+      "target": "xpath=//input[starts-with(@value,'Chercher')]",
       "targets": [
         ["css=input:nth-child(2)", "css:finder"],
         ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
@@ -12727,7 +11845,7 @@
       "id": "d1468ab8-2d2c-4d46-9d9e-f2a7e6136fc3",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -12735,48 +11853,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "058e33c3-6334-45ee-a815-3e7f06b4a0de",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "f1560637-e554-436e-aa23-c0503c2e7e6e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a894d80c-66df-47b9-883e-d991c1226b2b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "319f7121-66d0-4ca9-9d56-e2c994f4f0d7",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "493f9bdb-9fcc-449f-bd3f-803e96e61a90",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "527a684d-2367-425f-a8e9-502d1866de49",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -13190,7 +12266,7 @@
       "id": "3e7099fc-fc0d-4e59-a7e8-0500473ff294",
       "comment": "",
       "command": "click",
-      "target": "xpath=//input[@type=\"submit\"]",
+      "target": "xpath=//input[starts-with(@value,'Chercher')]",
       "targets": [
         ["css=input:nth-child(2)", "css:finder"],
         ["xpath=//input[@value='Chercher →']", "xpath:attributes"],
@@ -13692,7 +12768,7 @@
       "id": "f7411ca5-97f5-4725-9b7c-6623cc1c38c9",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -13700,48 +12776,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ec7463a3-6c21-4584-ab52-a7c3081ea809",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "9762ab4b-3af6-4212-bbf5-bb5c7dd28e76",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cd763f26-537b-4401-85b9-e8f33f2748cb",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "7f831eb3-42b7-471b-92e6-bbf92f23bff7",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9a785339-9074-4653-9b17-632ddcb9a700",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "318458d8-75c1-43ae-9d4b-0277d1e23350",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -14808,7 +13842,7 @@
       "id": "095dec70-5f5d-4aa4-9346-814b70e632da",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -14816,48 +13850,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5e9640bc-7a61-49f1-ae0b-8fb117c81a5c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c7049858-0a74-46be-937b-22ac2de0aa2d",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1f903bae-5cef-40ef-8e38-0c2c7ef90d62",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ed1cac99-e8f9-406e-9d85-425768b4afda",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "3491f37b-557c-40bb-b7c2-94f7e682a13b",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "15287fcc-d24d-47c7-a3a0-c36c1bfadf48",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -15924,7 +14916,7 @@
       "id": "5f9c60ae-6864-4bc4-b51d-dc19cd9e7866",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -15932,48 +14924,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "690a17dc-9419-41c7-a111-6df27be8f641",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "30bfade9-b8a8-440a-afa0-b23f48cdaa3b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "044ab6fe-0b3f-4b23-8e1a-4c856acec3ce",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "17295ad3-f1ae-4065-8f82-49bda8bd052a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "edc3fcfe-859d-4694-8ec8-26ea83165645",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "68cefb5c-341a-4a31-a8b0-85b9caa64bf6",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -16685,7 +15635,7 @@
       "id": "1c022081-41a7-4846-8a4e-ece269c35b7a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -16693,48 +15643,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f8808100-2093-453a-b012-09c56cdb973b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "f96548e8-db2a-4d80-8bb7-ce00bdd795ca",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a938a3cb-c92e-41de-8ae6-465ac28eb3d4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6ed9570d-a46b-4e68-ae8c-bd21014d76ec",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "641fa2c1-c419-4899-a89b-89d28cff0e53",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c276cae0-4975-49bb-aa93-e7d130df3c05",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -17184,7 +16092,7 @@
       "id": "f0cf2e2e-90d0-457d-89ef-bb9699f169ed",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -17192,48 +16100,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c41e68b9-10f8-4904-be3a-ba974a5b130d",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "505d334b-525d-45da-8451-8258ba70c1c2",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8bd3701e-af23-4cb9-a371-25e41a818282",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ad507785-778c-49dc-983d-41338f3239fc",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "51014808-3f81-411c-a7fe-3d3179ed64ca",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0fa5f107-05fe-4937-b360-7d5b567fa77b",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -17882,7 +16748,7 @@
       "id": "55fcb139-ec03-4ff2-ac8a-4fb73f55cc7e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -17890,48 +16756,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "abd91ef9-ff3e-4524-8fff-983501ee6608",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "b4c4a65d-eeef-459c-8144-225933a7dcfa",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0876382f-9fbf-455f-b5ac-0e6c0a004969",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "63329a04-29bb-4041-8106-001451e24d6e",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "c3560fa6-a5b9-48ae-b921-c26d08ca8836",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3a73d7ea-044e-4a60-b875-519495826aa3",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -18346,7 +17170,7 @@
       "id": "d722c0fc-6785-4aa6-8f56-d302788cc759",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -18354,48 +17178,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e9957f8e-3e80-416d-8525-b80568b24d09",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "1bd79bfb-072c-490d-9e30-90457ca72f83",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7c67bbe3-adb3-401c-9ade-332404d9a9d9",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "3edd8384-f584-45f2-a98c-081f395e6f2d",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "08f5a8f9-0f4f-4715-83e6-70e8dcc773cc",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ed33c325-c2f6-4986-95c3-f6912e31b313",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -18775,7 +17557,7 @@
       "id": "3ecc1451-817f-4247-8fc3-353f0c6abe8c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -18783,48 +17565,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "35438995-68c1-4a1b-9c7a-9f21736bef54",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "65d72cae-5f2b-45fd-ae37-c8d61d13de89",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "84496d7b-0b94-41af-8dec-b5e9d853b9b7",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ff4f5a7f-c5c1-48ca-be52-820eedfee3b0",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "f47a920e-bbea-4e2b-82da-40468b08e3ec",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "37a23154-d44d-4dcb-b694-6300cd94553f",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -19113,7 +17853,7 @@
       "id": "8836521a-243c-423e-bfef-d8fe9677661f",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -19121,48 +17861,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "162c98f1-83a5-4cc1-a04c-af9cb5861fec",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "a7c573e2-04f6-4798-93d2-0508d638103d",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fe4e01a5-0b38-4bef-8a1f-37c098ee3721",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "f4c2dfbd-c7ae-4143-b543-92e11c5cc712",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "38795aed-e526-40f7-91c6-a178ac02e90e",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b6a62e3e-c67c-407e-83b4-6f2d5bc7b1f8",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -19724,7 +18422,7 @@
       "id": "e02d52e7-a754-4192-a0fa-878904428cc6",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -19732,48 +18430,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c7feecd9-3853-44b4-8857-a33ed2edada4",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "514c3838-255e-4ea4-9b64-6b963439c14b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b71669da-f541-4a9f-8aeb-c0caef6a9b90",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "5bfe1b57-bbab-41ac-83ce-844b96f3c4a7",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "83913c37-9a30-4bc0-8bbf-31366b30e7c4",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3d90c1ed-6911-4707-8589-5a8a0cb650d7",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -20279,7 +18935,7 @@
       "id": "3cd64e62-4488-4ab8-8745-0844e28ab95a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -20287,48 +18943,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f753440b-da17-4c79-9dcf-ce7712f7f903",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "a53adafe-21a3-475b-8c7c-3edf39d549d0",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "767fb783-a48f-4f51-a56e-0b9f012a07e6",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "8689f891-229d-4455-ba2f-063715257e0a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "7a02d62d-c635-4ee1-ab32-eb656784de5b",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "44ae26eb-c250-4bd6-9987-92b1443cfdac",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -21180,7 +19794,7 @@
       "id": "7b7f03ce-df0a-4b93-a99c-abefe98071c3",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -21188,48 +19802,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "750500be-d0f0-4642-99dc-5269f59f8f67",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ad59e5a0-88bd-4139-acac-0f9bd8d03495",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2cbc64e5-65a4-4f10-be1e-d2425fee25e8",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ac03d879-3520-43a4-8c02-9aa91c87bdec",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "663dacfd-daaf-458b-9dd9-6c2dbe1cc0fb",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e43b3fc6-007f-4f6e-a887-1dc78ca91163",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -21778,7 +20350,7 @@
       "id": "1f97c921-613d-47e5-bdac-46f191995147",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -21786,48 +20358,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "168739d7-f0e5-440f-a564-2cc14a993d71",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "6cd5f45b-2fe6-4a25-805e-e2a50a066110",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0958c5ff-7c36-43a5-8bbc-e672aae10dcb",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "235cfae5-9598-467a-8143-bd9b9f6c7b43",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "aaa9ed86-55b1-4ec6-a809-b92a2477ebe5",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bbff11be-b9d2-4379-a093-66e3ed36cb23",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -21999,49 +20529,7 @@
       "id": "b35ae151-79f6-45f9-a3cb-82e2c2fc0c86",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "58cde292-0197-4c8c-85e2-8ba1e9cab413",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "53d86b7d-c442-4ab4-a6fe-e410a18fb6b8",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d0a16bbb-5731-48aa-b81e-3c0731bbc503",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "f03c7d38-d087-4a99-8822-7befd511a558",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "cdf1b33b-f7dc-4342-abe4-67afa1b7f226",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "caef19cb-dd4e-438e-9d80-bee10a7e3bd5",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -22855,53 +21343,11 @@
       "id": "ada19c6d-e29f-4af7-8d35-3308903dedd1",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
       "id": "46633303-64b7-4238-9ec5-8e5051508286",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "cb248d6a-e6c1-4b7a-96c8-f257b8de4cee",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "52784bce-0325-4372-8ee8-2814e55efee8",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "307dcc97-1d3e-4306-abe0-f8da12825726",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e93f8fd8-c725-439d-8127-2f5d7d229d10",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d7d6c518-66f2-4d70-a1bf-6ff16218f026",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1f3610fc-ac3e-43f4-bc58-e20fa2b65b21",
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
@@ -23428,7 +21874,7 @@
       "id": "f065074a-a0fd-488d-bde0-b10b1253d20c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -23436,48 +21882,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f647559e-cfb9-423f-9623-33938e717c7c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5ccecbc3-0dc8-4250-ab8b-1e9c7010ece4",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "49b70306-2421-4a7b-87b0-812ed03443db",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6d7aaddc-db1e-421d-88fe-b27da0f88954",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "c306cec9-c455-49c9-9650-0120206cc69d",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7f762e5a-9ed4-4fb7-9ad2-f9d3c5044afb",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -23862,7 +22266,7 @@
       "id": "ec5645db-b300-4ade-a4b9-2e898cac8bfb",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -23870,48 +22274,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6c07a47d-e19d-47e2-b881-16a519a6d12e",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "aa2606e6-da2d-43b1-90da-4058befe2a16",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "759138e0-fac0-49bf-94ff-63fd477fb3de",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "9d5fcf0f-f3c6-42de-9be6-4722e62de94b",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "124b364f-82bc-4385-82b0-712c88dcef3c",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "daccaa43-242a-4e49-919e-3f11befb5d04",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -24002,7 +22364,7 @@
       ],
       "value": ""
     }, {
-      "id": "58fba882-70b7-494f-9d37-3c1303483a8a",
+      "id": "002b3f18-4b65-4abc-b293-e1faf5468df4",
       "comment": "",
       "command": "click",
       "target": "name=delete",
@@ -24266,7 +22628,7 @@
       "id": "68df0c74-6f89-4d6a-9db5-ccd822500da1",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -24274,48 +22636,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e782f760-d14d-4013-aec0-6b48f91d65f4",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "9ffa3a29-bacc-4413-8d7f-50515d8c0fbb",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "da10bca3-4a78-4f0d-9b07-52eda8c13f21",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "1972b763-11a6-438d-8e7b-3a4b4dca4a49",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "f5a9caee-b829-428c-9ad4-2a840eaf5b8e",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cfe60c22-aeb4-41e4-bb8d-768c74efd3b2",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -24515,7 +22835,7 @@
       "id": "74f1331e-1fa4-4496-9436-41078207ca94",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -24523,48 +22843,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "53d8ae9a-d4b7-479f-96e7-283a1aaf79b9",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "6fdbcec6-3c18-490a-8925-577c1dba40d1",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4d5d70f4-0e60-4e58-a2ca-7c79eb305f00",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "fe0ec38a-d6fc-479b-9a6b-824990dec50a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "3e835f1b-5164-4e05-b3ea-c7906ae0b511",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "40354cf3-2cb8-4ec2-91a6-b3e9683f12ed",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -24991,7 +23269,7 @@
       "id": "4097b15f-d59e-4638-a303-4a644896239e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -24999,48 +23277,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "97bf4427-39c7-4814-bbad-717447b66009",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "7523deb5-41fc-4358-9822-fa0692da504c",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "47326e43-a6d2-4801-850b-0aca57f7f93c",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "05c22e28-64dc-49f4-a0ae-cdc1d02b7243",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "55f6d295-1e6e-449e-8c71-4b1f977f5af8",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3af45110-aad8-475d-8225-a322b83028ad",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -25302,7 +23538,7 @@
       "id": "edb7f9ad-a566-4795-91fd-154f585dd58a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -25310,48 +23546,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f3bc489a-acb2-4887-9669-bb577db19a6f",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5e48f0d5-8e93-4ac9-9465-5b9e54007f94",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "109166fc-04fc-46cd-b28e-4f9aef9e8831",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "08b16321-5026-4736-8d80-864115dcbe88",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "3cc3fb5d-3f36-4424-87b4-fefe18969628",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "383c3364-7887-4033-9dcd-74a54a0fdd8c",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -25544,7 +23738,7 @@
       "id": "49a8613d-b062-4ce5-af7f-276ba86d36c6",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -25552,48 +23746,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0165cfdd-5350-4bf4-8635-35f1d9f52911",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "89f4d188-73a6-4f84-8958-a8c59103d665",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "115cdc8f-3161-4723-8dcf-8d63a26270f0",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "3bdcfd56-5eaa-4ee9-a89f-0dc8f252adde",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "35dd4b00-401b-4069-95d1-e7151db35189",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "12a19648-619a-445e-8257-d008fecff5c5",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -25834,7 +23986,7 @@
       "id": "77f9620e-225b-403c-a520-2c754fac5e3e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -25842,48 +23994,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "57a563bd-f40a-482d-b41e-077481772428",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "d628bf4b-528f-4086-b4ba-550dda42090e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aa94ec1b-a51b-4560-a7c0-140166727d5e",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ff14c157-bab7-4f3d-b8c8-2e5a6f415f39",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9ae75855-99d4-4b08-9621-b085cb7c9fa3",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1bbf4550-80ef-40a1-a210-32bee3ff717e",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -25928,7 +24038,7 @@
       "id": "a948f13f-2b24-46a6-bf8c-6fa976d2945c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -25936,48 +24046,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4c5a62c8-9de4-4191-bdee-ce3bd31068af",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "04598277-8e2a-4a6c-aa45-43b342c7d96f",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7b119335-a1df-4c4d-9adf-82374415c430",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c49320f2-7e40-401f-b036-4c0576031c1c",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "07da5407-edc5-4a5b-b731-b277c971645e",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "40731622-77b9-4776-9d94-e7ddc0c3dfe0",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -26039,7 +24107,7 @@
       "id": "4c1bb790-731a-4023-800f-772f12fb944d",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -26047,48 +24115,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6553a104-3d4a-4bce-8038-cadb2cf27a0c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "57920041-2bf7-4257-b046-dab22f80032c",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "92d7ad8c-bf2a-4a81-8c41-1e3f0b274d12",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "98d5c718-bf50-479c-a420-267f3e76184e",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "540c4f41-2e8a-47f5-9071-03e8a0b1f113",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "51fe9174-2835-4481-bb97-cb946cde0b95",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -26150,7 +24176,7 @@
       "id": "ebe80a8f-cacf-47e2-86cc-5c6d2a827000",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -26158,48 +24184,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a774d26e-9c72-4445-941b-5ad4388254f5",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "145d6069-ef78-4fcf-9b56-2c01ae3e2242",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d01065b6-f774-45ae-aff7-3c18744c0132",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "d5f38398-5b79-4fa8-b68e-6b1de38a74d7",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "89f93cd8-bbe5-4f71-9fe6-52535b8ba24a",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b8c15077-58f4-45d8-ba64-6c99c0d96833",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -26261,7 +24245,7 @@
       "id": "477a0419-e943-4b3b-9c66-aa8ab50a5688",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -26269,48 +24253,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "99707091-e6bf-4085-aa03-052dbb38140b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5026af08-a95d-4e1c-81de-e524a4fb1684",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ad45155f-00e0-4cf9-99bc-15f7d5d50b85",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "4be02d4e-ecd4-43e8-98cc-2374a392e582",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "4cac2959-b2ad-44e6-a56a-13ef8f15ccc6",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2e2bceb4-66a5-4d08-9006-c567d62d5147",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -26569,7 +24511,7 @@
       "id": "da11bd03-e800-4f5f-96ae-48644bffe009",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -26577,48 +24519,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ab651992-0372-472e-9ebf-fb31d8367f35",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "3fd75479-56d3-43fa-8c43-76e450fabf32",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8ad17f2f-c80f-4b27-a135-2fc2dc17c65b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "dbcf74f6-e8ef-476f-bc5b-f65dcf4a07d6",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "690ad7bd-9251-4510-8a71-7c746fb750a5",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4e83ab65-cf5a-42b0-b4df-be148d800701",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -26897,7 +24797,7 @@
       "id": "39c4c2c1-1320-405e-8150-84a752f4b92e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -26905,48 +24805,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a703dbff-c8cc-4895-a688-cdaf5fe10836",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "97ea75fa-464e-4137-994a-9ddbe96c5f7c",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "956057e2-acef-4ee4-aea3-7dcdef07a1b6",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "2619380c-1188-4e50-a9e6-392f4ae61b19",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e261e05c-3a83-445e-a72a-e3f95ebed97c",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a7114593-e6d6-41c2-8d33-d61bfa4ee4eb",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -27267,7 +25125,7 @@
       "id": "98d43914-6d3e-4f1a-b87c-b6c769ac92b7",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -27275,48 +25133,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1c882d0b-f2fb-49ae-afac-93dcd92547b4",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "f3f2454a-a5d6-476e-ac7c-ba8becd812c0",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bf969b75-7031-4d7c-a8d9-c650d68ae11b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ac4bb4f2-d63d-4e7f-8648-a087117d0661",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "19f02050-978e-42c6-bfa8-c7f5e5f6addc",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "30d1400e-7d83-4e44-b66a-65cc49cf6b82",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -27577,7 +25393,7 @@
       "id": "6ac5f26b-5eae-409b-96c8-96b9be04cee9",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -27585,48 +25401,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3924fd6b-08c2-4dfb-b0a7-e9986943c5d3",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "4103b45b-3ae3-4557-951a-4b791ed9a2cd",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e261179b-f242-4e38-a6f0-063d7f2a6215",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "60724ba2-c2ed-4640-a8e5-6be695aaa2fd",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "22399273-b4a2-40f6-b285-c84a3eeaf158",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a6c065b3-55a3-462a-b8d4-e2a0302c1c45",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -28061,7 +25835,7 @@
       "id": "230e4d4a-4a7d-42ed-b760-9dec2051ad88",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -28069,48 +25843,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "586dccc5-32f2-4fcd-b2c6-ca29e7835060",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "e55cff9d-d0b5-4673-b91b-22d62140ee60",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aa217152-622f-4bb2-8185-219d4f9d55aa",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "0bd4bd7b-2e8a-4cab-be8c-3f0a139a865a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e0f5c8d8-6a60-451c-892c-2b9b5e7a3def",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6796b9e6-0fbb-412e-8c32-38587301e5cb",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -28378,7 +26110,7 @@
       "id": "3a088280-2c8d-4d70-a9e3-8bb7196c8941",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -28386,48 +26118,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a8fdc389-3e7d-47b7-8a1f-4c84acccf223",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "62981b4a-6aef-4d43-96c6-7b272763dd27",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8e63ba91-0ac3-4781-b339-72adb6677673",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "1654bc45-3b49-408c-8e09-7d133c180b24",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "51157e9b-281a-4d04-ae3e-c4b3c877d6c5",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7385f94f-94f4-4985-bd20-87fde6a72a32",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -28873,7 +26563,7 @@
       "id": "e6d3ffc5-2dd3-47c6-8864-da7d06ca3afc",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -28881,48 +26571,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "56b2517f-2bca-4679-bc33-95c35ac04feb",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "40791654-43e7-4ba5-a352-0486309d0e1d",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "31fc886c-6c4f-4f85-96fc-ea42ffb3f46b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "451ea528-fcd7-401b-b0de-ef9939cf9a5a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "d9e5d701-c17c-4a47-a99c-5c0db1b283b7",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7f27251d-f021-4080-988d-5f63f7f62a7e",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -29368,7 +27016,7 @@
       "id": "22856df5-01fd-4e81-a258-fb96b5272f81",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -29376,48 +27024,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a3d96526-e680-4cff-8d3b-575dba9c2b2e",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5f72462c-8091-4ddf-9324-8b8a2b882428",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e1ed87fa-ba9a-4566-b7e2-af665f3e6208",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "fe3cdbae-215c-4612-9e80-e84e94db7bf4",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "c6023f8c-86e3-4d74-98be-537a28c8000c",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ca8548ea-e365-4c70-8927-53d1072313e9",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -29864,7 +27470,7 @@
       "id": "d559ea98-b01e-4a2a-9ad7-f06f0fa13281",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -29872,48 +27478,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e46b1614-d1a7-46b7-8cda-65e91f992f4a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ed5a47a8-52de-4e09-ab79-5ab1e0c61b4f",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c4461f19-8291-47d6-847f-997f336d0ff4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "5b045d20-d931-4dd4-b964-7ca04d8097cf",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "17d7f533-fa44-4b8f-84cd-7b3b3e6c6994",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e5a9924f-367d-4785-b682-ab19d539eadc",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -30359,7 +27923,7 @@
       "id": "de48dbd8-43c0-4e8b-b3b0-855cf374de6c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -30367,48 +27931,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ed1c2c8f-5336-42e8-9518-c8f808796d86",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "7a7f83ba-35ae-4d2a-92df-ecab730844b5",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fa31f4f8-a42a-4a80-9f61-e3a1bf892f4b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "218f4d83-a1a4-4fbd-9f17-4c35d440c0f1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "7f023b1b-54a6-433e-8420-3417147b124f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a0755331-7d4d-4224-b388-42614bfd5a44",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -30888,7 +28410,7 @@
       "id": "5ba13851-3d65-47af-9dd7-77dfc63a3708",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -30896,48 +28418,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9d62b7ae-3c2a-43a2-8007-c23a35bfc46d",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "487aad09-3eb2-47f5-9bc7-47551fdf4960",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c564be48-89ad-4c19-ad0d-095182dcbbb1",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "50780cc6-c0ad-4d45-b5de-3ad38cb00b5d",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e9da05ec-ba8f-43bf-991f-337135b754c4",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c696d27a-f356-4204-b7c9-0794ec946b68",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -31405,7 +28885,7 @@
       "id": "67fe774e-b1d5-4193-9771-d68d4b4ae9dd",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -31413,48 +28893,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0cf2f523-9833-4e21-9859-8b8790b32aed",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "3b53a16d-ddab-4d16-8d25-315dd3e94f8b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "30439d2a-f2c6-4f86-83bb-9850a96c189a",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "8ab4ffbe-806e-47b8-b67e-fa5b8a694c64",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "794ae355-cde3-46e6-b826-09077d736e8d",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ef1c0564-cd32-40cd-966e-6fbeaaba9deb",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -31900,7 +29338,7 @@
       "id": "e5eac55d-c8b9-47eb-ade5-09a378ebb856",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -31908,48 +29346,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c3c89195-3d5c-4c17-a174-699ee33061f1",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5513f6db-92a3-46b5-89c9-60e9b25dd550",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ca1794bd-89eb-4f80-9be6-aa9463d79550",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "d20ee97d-7718-42cf-a927-b3ba81389e11",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "3bc67ec9-bd5e-4c8e-94ea-d1013fa40c1b",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c611fbb7-050c-4985-b710-a2028dd2e11a",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -32456,7 +29852,7 @@
       "id": "f4f0beb6-5fb1-4cd8-906d-ad2162d3c1e5",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -32464,48 +29860,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1b91a401-7686-41b8-bad8-e97faceb0d14",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "0e056c0b-4b27-4b7e-a539-ec72e7a34f5b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9f361afb-cfd5-4c84-905e-933ee104b713",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "3d50b006-4df4-48c3-8950-1cf5615d73e3",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "4bc999c3-7ac4-4625-8be8-0126675bc7a7",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "28b8ca55-8850-46cb-9f6d-f79851958343",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -33148,7 +30502,7 @@
       "id": "d356f1f9-f330-4fd6-acfc-bb8f16c54f40",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -33156,48 +30510,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8faf559e-ab9a-4348-bb4d-26f2fc97eb2c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "31f96837-73e1-4167-82f1-f9b35c91ad4c",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f4f51b98-6a66-4402-aa9f-27a4ffb6d1e9",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "41a2e22d-2a19-4ecf-843c-e768c0574457",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "aaea17df-8e1e-4b7e-88a7-f7c888169420",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "56d56f8e-a51c-4d93-b5f6-064009664474",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -33657,7 +30969,7 @@
       "id": "9f8dcc01-b6b1-4c05-bd36-6ce7dbe13b64",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -33665,48 +30977,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4eb2af40-120e-4350-a85a-169cd8bdffd5",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "cda1f16b-10c3-4594-a64d-96d1ad74505b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "22a413cf-6f8b-4d0c-b88b-5c1c5e86021d",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "a99cd245-c4a6-49d0-a5d4-e13fbbd7ac3f",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "28e3a933-bf2e-46ca-8cb5-6bff127eae4f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f3e236ad-7cde-43cf-a1f6-88dd4d047b21",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -34152,7 +31422,7 @@
       "id": "49aaf1a9-3b8f-4464-8ec0-4161dad10988",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -34160,48 +31430,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ccb13241-6031-4fe7-a256-c3f86393b2ed",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "b1549fd0-3f33-4368-8647-d816626eeadd",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a6d706bd-d812-414b-bc3e-e50eba3570a3",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "27e77e24-8ecc-47d2-8f77-f97cd7313ffd",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "5ac378c7-9cad-4a40-b16d-8f19c0aef678",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "136bc2fc-153c-4f72-818b-0c8d54cd9639",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -34654,7 +31882,7 @@
       "id": "157afc84-494b-4e4c-a3fe-797e53df14d4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -34662,48 +31890,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9f94a2b8-e7a0-40f6-a8d6-4041a493148c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "bc3ba9e3-1d89-480c-b3d6-f95f6ca07afc",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4e65e8c1-921f-4498-a05a-71dadd896150",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "398e8b02-8edd-4aa6-9e3d-b617224a536a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "8e5aa939-227a-4979-a979-6012bd4273c8",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "737dc21c-f9ca-4bed-aef7-dfc95588d21c",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -35177,7 +32363,7 @@
       "id": "58e25be1-e13c-48c4-ab29-60185c46b6ba",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -35185,48 +32371,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8875bc9e-91d1-4606-ac8c-7174f109ad1f",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "33cd7e23-a82f-4e22-ae19-c8f2285863c0",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6b0db4e5-d830-4b10-8880-68fecd4952b0",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6de2f54c-ed8d-47f6-b46e-e72b0c4d8297",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ba3365ac-640c-45f8-8fc7-eb75d3ff4d74",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f052b675-4a56-4826-a4ec-c89e03b86914",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -35729,7 +32873,7 @@
       "id": "188b55e6-56dd-4182-bdca-7a252e725374",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -35737,48 +32881,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "91beb1d4-aa80-4f32-842f-ff3288d88380",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ec00f733-d69c-4ef6-ba12-583d23a0a457",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8a00d057-f0fb-410b-9c55-12c60a5d2fc1",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "480deebe-39fb-4538-a913-d9ef17a1606d",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e27a3ac1-0883-4f21-b951-66a5a5b3f670",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e199828a-71bf-4ded-b335-4184018f3209",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -36337,7 +33439,7 @@
       "id": "30b1d386-9340-4777-8b60-e58a80906b3c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -36345,48 +33447,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "30b21a8f-6ab8-402a-8bac-7d1225f9cf15",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c974c841-5b65-41e8-81c7-50ec535571a2",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d7a93dad-cb11-4eae-ac48-362131f5d0f4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "d9430614-c531-4712-b380-65f6b6199303",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "3c9e1034-9a83-4b98-a165-ac421712e9df",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e1e06b4e-10ff-4973-ba9a-9d2727f3abb7",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -36861,7 +33921,7 @@
       "id": "c3fd3819-d125-49a9-9c12-66133228fd6d",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -36869,48 +33929,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cf6ec825-87da-4e2d-bfdd-fbb9f5691e5a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "4cca2064-e10f-48fc-8118-763fd4827bc7",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cd4b2740-bb0f-47c8-804a-0049783519f3",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "60fbc949-f45c-4812-9ac2-fb1e46de104d",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "6620db5d-0952-4220-a4ee-36b7b1d3fbb7",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "623cb795-c9c2-4f58-b1f7-826202e46491",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -37343,7 +34361,7 @@
       "id": "b650089f-b23b-4f7d-bf7a-0d0278240389",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -37351,48 +34369,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ae935a8f-6a23-4a3c-9b9f-ffaa50703a5b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "cc096276-4beb-4fd9-96e2-835dd6231b26",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "860746fd-2a29-4a2f-877d-8a7b58615f03",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "5510e465-e7b9-4f82-bb92-61ea038212b8",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e6a3d61b-62b6-40b7-a359-52064eb0377f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d899dfe1-63f4-4397-bd2d-f91c1d03efe9",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -37892,7 +34868,7 @@
       "id": "8592d352-6761-405d-8b97-0c542c3831e4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -37900,48 +34876,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dce026b0-1dba-4002-8cd7-ea3385670548",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "7c21f555-78a6-4e46-b9a0-76b104157b05",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4b3f6757-70b8-424f-8b93-f17bae8d18a7",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "e82856c0-de89-4ac8-a1d7-7bde81bdfc9f",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "fbc0f175-d7b8-48b0-92ca-9e3429c7e54d",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "449b7f5f-06bb-4568-8cf8-de664890bca1",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -38380,7 +35314,7 @@
       "id": "43132073-c6e7-4c99-b7da-0658b46446c4",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -38388,48 +35322,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "894f55ad-540c-4bfb-9f34-03c588633ece",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "9562f6ec-639a-4b9e-a1e7-1451da275ff8",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8d9e6045-92d1-42c8-a00c-96242921eb6e",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "160c6189-35e4-44bb-afe5-26ce5a485eb1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "d23d2c34-5c61-4ea7-8d00-e12a6012e7e1",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "06d2a221-5f6a-459f-af9e-2684286c72e5",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -38722,7 +35614,7 @@
       "id": "8cd98572-fab8-4a80-bd5d-03a414b63cef",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -38730,48 +35622,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ba9ba248-b8d7-4592-8fc9-69609403d084",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "e28dbf37-fb05-4db8-9722-d3969f7434fd",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "eaca945e-7dc3-4719-888e-f0873146a4b4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "976a2012-bb92-48bd-8e96-5f01adc7a6a9",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "318cb42b-65c0-424d-97dd-a0f68b40e1e1",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "705384e6-9756-4f3e-b4fd-87ed5f575573",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -39197,7 +36047,7 @@
       "id": "fad4e699-eb78-4fc8-8e60-a24dd2fe416a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -39205,48 +36055,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d82172c5-99a1-4e09-be44-a82fbb2cc2f6",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c67b55f1-11b2-42b2-9519-483ea34f0ef9",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ea2ab020-7afc-4a22-a4f0-8ae3310e1a94",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c7eacfec-63f7-4270-b872-6b1ca50f7d97",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "f86048c5-728a-40db-8702-ae6626f974a4",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f1c9dacc-5b09-42bb-b18f-97e4c813504d",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -39665,7 +36473,7 @@
       "id": "9008f58e-d008-4863-84d1-ec80437acc57",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -39673,48 +36481,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d4c343d6-053b-4084-8c05-321b4b155c71",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "0672ab68-2883-46d5-8734-a3158c9673f5",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4da1722c-c44d-4b0f-bef4-ed284e2653c2",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "dd9f5a1c-67b1-43ea-9f2c-a83c409ad2e1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "f57bf62d-9f5f-4e51-9ef1-4a8b29f6ba93",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aaabc1e3-c3fa-46c3-885a-e0d298b9aac1",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -40133,7 +36899,7 @@
       "id": "9c879e70-9231-4331-975d-50c55f647f8a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -40141,48 +36907,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a3f3453b-9078-450f-951b-63a13abe6b96",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "d6e2a9b4-e533-47ee-8fc7-8f9e19658b49",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "60694ebe-f686-4b1e-9482-b94dcccf5458",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "4ab85295-e917-4490-994c-6f95ee861eee",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "b3901bae-cecf-41d1-894c-a2814eb866e9",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "50b74db5-33f9-4cdc-9178-2d3eeb1357d9",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -40629,7 +37353,7 @@
       "id": "b88cb1dc-ef59-4503-9d4d-92e222b71df2",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -40637,48 +37361,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7b220fed-3fa7-42bf-8b3e-bf06e32b1b8a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "e7e5cfcf-a224-4c1e-8a63-80b40fa83a2f",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8aa7aa59-7651-4b52-ad2f-f02ab9d085cd",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "1ffb2d76-81ef-4219-bbe4-4f0f1e4dbc6c",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "91c6e526-06f7-45b0-a7fa-fbec8d1cb447",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "adc0e8dc-027e-443e-a936-bfaa1db43e9a",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -41157,7 +37839,7 @@
       "id": "b7fe99e0-164e-4761-a15b-c0bf9dae9170",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -41165,48 +37847,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a10a7f73-60c6-4466-b343-38edbc0764b0",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "8c2ed054-fae3-4e40-a631-caf3ee869338",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "efbc488c-60d2-4f26-95bc-805e9e166eb4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "fb5648e9-6d58-4808-88aa-88f0718053a1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e3130c42-c782-47ce-9b4d-0a115523c7a3",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cf6ba774-3087-421a-8c3e-f1a8e49c9b57",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -41632,7 +38272,7 @@
       "id": "ce1cac19-f8c9-44da-9313-350275f19f48",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -41640,48 +38280,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4ddcdd7c-4fe2-4919-b2bc-ff4582378a7d",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "0e5a793a-26f3-4b10-9856-d3d893e67a73",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e683277f-3c71-47ba-be25-4cdb26cb0c4c",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "a2a50a5b-2e82-44d2-90ee-ad791fbddb77",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "706df1aa-584f-4b88-91f1-0cda3518d29a",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b2dbe428-2af7-4d95-b2f0-45386b898efd",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -42379,7 +38977,7 @@
       "id": "dd5e6c38-5348-4bbe-be42-3a824b62c581",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -42387,48 +38985,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3421262a-98fe-460e-919d-58ddee2d7724",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ff11a8a4-075d-4410-83fd-2e6514c1417c",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fba1d288-9eb0-44d3-ad38-ed39fa5dd3c7",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "0b5b47f1-a654-4743-a8fc-8de9c59e1b46",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "940ebea0-15d0-4bb6-80fc-97df31f2bf8f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "525f6f68-4eb4-41ca-a6aa-b2a61bb2111e",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -43126,7 +39682,7 @@
       "id": "e4949e8e-2366-4a46-92f3-412267e47018",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -43134,48 +39690,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6d881d18-94b4-49cf-bc83-d3591a3e8b2a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "06dee00a-d5af-41fa-a0a0-f269798bee0b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bdcfc166-23e4-4f45-ba66-5430e1821378",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "4f3c14c2-c9e2-4627-b2d2-a2f3675a6cb5",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "315d6070-4ea7-42c8-ba78-db30009d874f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "17a57e71-6db4-4d32-940a-164d8b3c24a8",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -43354,7 +39868,7 @@
       "id": "b33defc6-18d9-4f37-b918-7173112865b5",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -43362,48 +39876,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9f4f3091-19a5-43f4-aa72-fdffaf289ae9",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "1061ca9d-dbf8-4cf7-966b-45060decf4e1",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "65232b54-96a1-4d69-a9b9-cf3ac375b355",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c97536fe-cd44-42e9-a731-393579a8726a",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "be8195f7-434e-4a84-acf0-c23e2ab3646f",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3072c289-44b8-4040-a2d8-0f6e7153ccba",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -43637,7 +40109,7 @@
       "id": "3fbee3ad-a823-4bd6-b96f-e3989ec010a2",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -43645,48 +40117,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "64858406-881c-414d-9d19-e1544e3031dd",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ce6c1a60-36e3-4f22-bebb-d43b6beef382",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7e9b8b07-7099-4044-8b5c-20af92309e74",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "96e4c752-5dc0-4c1b-be38-d5778a902245",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "c94e7fbb-51ba-457a-8ccd-0aad5e9c26f3",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ba357087-ee22-46a2-899e-91a223f15d77",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -44169,7 +40599,7 @@
       "id": "bf8639bf-2f15-4812-b1b8-0c72d89ac2dd",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -44177,48 +40607,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "82494c2d-60fa-4b36-8bff-ccc5cca44ace",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "887bb2e8-4775-4ea0-8a1e-773b3b700d96",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "de2f67d3-9731-4f63-a6dc-751d6c876a79",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c635e983-335e-4256-a275-5ca70ad75b7b",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "1fb2dd4d-0a39-4757-a051-57032882f89d",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1c2a2d70-3685-47df-beec-5e552d86761c",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -44549,7 +40937,7 @@
       "id": "a150a42f-f4f6-42ad-ab47-59fc7eebfa1c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -44557,48 +40945,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0f2fd5fa-e784-45b9-8fbf-4c27a2aece30",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "dc379e67-40cc-4b44-86a8-111f917b19b7",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "269a563b-453b-47ae-922b-5b5826e900b4",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "e13eea17-3581-438f-b402-65fc505894a3",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "5b5db42c-70ca-4252-9052-d2f30bec534a",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5a409153-0018-4582-b51e-610f240b8459",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -45124,7 +41470,7 @@
       "id": "72908e3c-9535-4fb0-97ac-b39b5057a926",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -45132,48 +41478,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d660f6eb-61e2-4911-a413-21305918e27a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "202c3926-4be2-43af-8dcf-c3d94e0511a1",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ccdf6fd9-5187-4942-9719-3e75ec0a5448",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "c1999554-095a-465f-b59f-ac1a6fc21c77",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "1b527956-8cce-463b-8fa8-feb16fc62fc4",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c0fd4219-59ae-4fa4-9836-d8422b868ada",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -45679,7 +41983,7 @@
       "id": "1c5de00c-b3ba-471f-9a10-f99aa804643a",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -45687,48 +41991,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "144cc134-409c-4fbd-beac-d5c02b3c28af",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "029ee639-4cb6-432a-8a79-1e7b0b48b29b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "69b89e9a-ea41-4132-9838-2e7bec42cf39",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "a8c17914-2518-4853-86ac-98cb2398cd55",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "181f5e78-9d1a-4943-96ca-12e829e8e530",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b380e527-6d03-4844-8247-4e842d8410dc",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -46056,7 +42318,7 @@
       "id": "a0a54661-2b03-434e-b065-00bcc92cf1c8",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -46064,48 +42326,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "78c40f79-3bbb-4d98-b5c0-827e11ced20d",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "fb9707a1-308f-4657-bc23-161c06ce18de",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "18dbc499-80a1-4910-b46d-f698acd6976b",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6e02b8de-2d50-43ac-85ea-5e6ef4898bc1",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "e54dc6a5-8b24-49af-93bc-184f98693c71",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "98876705-66d5-4cfc-8d1e-0ef3681eee31",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -46462,7 +42682,7 @@
       "id": "b08e2bbe-389c-42ac-8253-480bc0e9f753",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -46470,48 +42690,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "37cda3d9-9ac4-4e12-a416-d2a85deb8c9f",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ee615321-804c-45d4-99df-1c74181c0b7e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b3b285b7-5a05-4cdb-a93e-800387a02316",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "6f1e8a51-497c-49a0-ae6d-88ceb0d6ada8",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "a701ec73-dfee-48c4-90a1-b562da474aef",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "14e13d98-6cf3-4eb7-8b72-91c5ee7321c2",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -47043,7 +43221,7 @@
       "id": "ba133d57-5e42-4ca0-b2b2-d0af8be2a1df",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -47051,48 +43229,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3156b7d0-2c0e-47f4-903e-91bf5e536775",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "f6cf2e5c-857f-4171-acc1-156f23172ef3",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "51ec0f25-23ea-48a3-afd8-41fcef6506cc",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "01c5c2be-5bc7-4f0b-bc37-149fbc793939",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "a91a25ac-fd54-47e0-a36a-540cc24b84fc",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3256443d-75aa-4b9a-a7c8-1fbcdede6161",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -47598,7 +43734,7 @@
       "id": "72abc6e4-a359-4fb9-84b5-1c57e9c0d5fb",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -47606,48 +43742,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6c952b8c-d7cc-4171-932d-fd068e07682b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "acd471b7-7c10-4d16-9a07-0ad9b1b9ff0e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1a4d6a0f-c256-4353-917b-19bafe4258b5",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "15f8f041-e3bf-4836-9795-ad68289b5720",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "d1a35c47-95cf-4d37-83a5-283804b3820b",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5ca15573-d3aa-43fb-9289-b9e378f53b34",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -48271,7 +44365,7 @@
       "id": "07687789-50cd-4a1b-99a3-3c1d57beef51",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -48279,48 +44373,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fbfb59b9-1be6-418f-87ad-04dc77981aee",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ddd7af8d-8653-415f-899e-4d80d766bd4b",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2c6c0966-4284-464c-8543-d8d17cf354d7",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "2a0b5184-2a8e-4095-9e10-3fceb157ea19",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9563f113-490f-449c-a403-1471b3f07b76",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3fd55651-7a31-4dbd-a2cf-5e24170cfe47",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -48832,7 +44884,7 @@
       "id": "062ff4b8-7b85-4168-aa64-31728a466465",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -48840,48 +44892,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bca40701-7b9f-4fd9-b643-89ad9b7bf92b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "018a177c-19e0-471c-a5f5-aeadc7f8087a",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "90db8b3d-42cb-4535-80ce-fac91fcf4d3f",
-      "comment": "identifiant",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "82e3003b-b3af-4d92-b596-6a86083a7e32",
-      "comment": "mot de passe",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "424ab79f-f498-482e-8f9b-cd70ce927f6c",
-      "comment": "Connexion",
-      "command": "click",
-      "target": "name=login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ada6082a-5ee3-4c53-aea8-da5d17150788",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -49493,7 +45503,7 @@
       "id": "b1ed4492-ec0d-4e85-a58b-ef0620a06499",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -49501,66 +45511,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "17d94b28-7e95-4393-b93b-96977a94cbc3",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "76932b7a-252b-4b62-93f4-cfe4e54e5207",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6d3ad8e1-83ee-40bc-b8bf-c19dcbb117ca",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "ee50ddbf-9966-40f3-b67a-346bc7c333fc",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ec8602f6-9245-45ff-9fe3-72bffd5d406a",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "cd2e3608-1f0b-4c8f-9595-76d5c250b215",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -49886,7 +45836,7 @@
       "id": "461eff8a-6d01-42e2-a079-d1622aaacb61",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -49894,66 +45844,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f0b1a8d3-6f6a-4f74-8351-b5b06c9cc883",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "13faeff9-f4a5-4c6c-89f1-0611653dde96",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3f8d2891-3bce-41b5-adbf-6ea9d58d3515",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "46cef050-937d-40c9-b045-6207bfec4027",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "098b0e2f-40d9-4604-860e-a13fc5b5982e",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "594af768-04be-4fd1-82d2-c1d0579000c3",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -50076,7 +45966,7 @@
       "id": "49c37ec5-5d15-42b8-8327-1aa3b0d674da",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -50084,66 +45974,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "826afc76-033a-40d5-877b-25b71883f1da",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "bead96f4-2bfd-4907-b70c-0c4d32070dde",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b23091e2-d920-4264-90d9-5285e080eb42",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "22c56543-eaaa-47dd-aff4-f7005a64d5bd",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "40808b6a-4e3a-4513-9118-0bea50649c4c",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "b9a1ef3f-064f-490f-b743-84eea7428b1c",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -50445,7 +46275,7 @@
       "id": "baff443e-3470-4d8d-9db2-a697ed21663c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -50453,66 +46283,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "38a19c50-07fe-4f41-a0f1-8705ea33b70e",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "56832eed-fc00-469d-8613-445fc7afa7d5",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0ea88685-a873-490e-a5b1-de17518bc1f0",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "a113aeea-fb3f-4ff8-8d68-d0215f08aeec",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "bd0d05e0-a2a4-4760-9e7b-4daf27e2d19e",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a14d0015-a0e2-4b4a-90ee-29045e81b460",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -50788,7 +46558,7 @@
       "id": "94ff44fe-1fbd-4a15-b3ee-3cd949be535d",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -50796,66 +46566,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "df30eebc-dfd4-4e35-831a-0de3f136c0d1",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "38511bf9-23ec-47a0-8544-c830c5811f51",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7d36559e-6db4-4f44-8bbd-281cbf08a154",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "dd63d0a1-f0f4-4c9d-9191-8dce6b2b0433",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "96909abd-67db-48da-8702-fbc21dfc9913",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c8583d1f-695d-4c92-a597-9668a0d08e44",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -51406,7 +47116,7 @@
       "id": "606f2d0c-e2dc-4bf3-89b0-247301351d89",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -51414,66 +47124,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e123b69f-6144-4308-b4f6-15b95312a299",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "79294f93-f3cf-4ce8-a959-a02cbaefb493",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e537311b-e458-4802-b0fc-9b1aeac9ef2f",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "04753624-0ce8-42cc-b0da-eb1f39d4a1d4",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "07ad79b1-62ca-437c-a9ce-9218e1df4eaa",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5d26e6d7-d207-4468-824d-30200c66e78e",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -51806,7 +47456,7 @@
       "id": "3cfd5b1e-a85c-4db2-aa52-37a095e3de4c",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -51814,66 +47464,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5d9c78e5-6e3e-4f4f-bd4c-9de610439237",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "5c3715a0-d740-4dd1-8392-4adcb79f33bc",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dd5ec22f-c5cd-4ddf-930d-4cb2d56223ef",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "1f3d9f83-1ea3-4ecc-b067-836ce1a607db",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "9a2c4b54-1c15-46e3-a8b6-3f9e5c28c8b7",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "466ffdd8-cda0-4750-9e9c-f588c9cc731b",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -52220,7 +47810,7 @@
       "id": "0f182bd4-b52f-4bc0-8948-b040ee0f915e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -52228,66 +47818,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2a158b3c-6bcf-415a-b30c-599585026794",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "ed625ff0-077e-4d59-a166-014e11f99f53",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "529cc411-f4fe-4edd-8b60-9631b4ba5858",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "2c1ddf6e-2d13-4119-be20-9ec12de7945e",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "6fd924b7-f1fe-476e-9aab-5fcb72629a2a",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a74ef1ef-7220-470f-a31e-f34810b5e8a8",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -52726,7 +48256,7 @@
       "id": "c4a46159-4ab0-4d7d-831d-87e5fbfacba3",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -52734,66 +48264,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9492bdac-92e8-44f8-968f-f928c531cf4c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "0ba5250a-3985-4d7a-919a-954eefecc530",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9a83f5b5-ba65-4c90-b2fa-c19d323e306e",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "81dd4ea0-fd4b-41d1-99e2-502a77b1e6cf",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ec8662d3-93fb-4848-908c-c8d0b735fcbc",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0e0bfcb4-b4f5-4496-a5ef-6aaccbeae26f",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -53401,7 +48871,7 @@
       "id": "8e3148ed-44a6-45f6-97b6-451d93087236",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -53409,66 +48879,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "23821e44-058b-4019-9eaa-2627df7407ac",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "4834131a-a279-4762-ba31-c663ed3118e8",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "10cd4568-24d9-4a1d-98d0-47c52496d029",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "db1f7bf8-8ef6-4306-b543-13d7e086a454",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "8609a695-03e2-4eab-8a0e-73cb1405eb49",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "37f5a3be-3608-484e-a749-c2a9c0cb9a76",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -54048,7 +49458,7 @@
       "id": "df7c95ff-1452-4b37-aed2-894d3472870e",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -54056,66 +49466,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b7557a20-d720-4ddd-8be8-bdb3a466557a",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "35b62b9a-668b-491d-90ad-fd9dc8257ba1",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "74521ed2-c1f4-492f-8994-de5aaa0cf4e7",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "5d8d249e-1725-4df4-9bcf-bc91449011dd",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "dfed02c3-f219-49d4-8b6a-3d7514b12897",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "9a431e6f-eb29-4677-82f4-709c3a40cac2",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -54547,7 +49897,7 @@
       "id": "825887f7-22fc-43c2-ae07-82f5d15bf7eb",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -54555,66 +49905,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "76d6be03-54f8-4fd5-ad91-efc54839963b",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "0a19a1da-b00c-4fb3-81c6-1986d3043e3e",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a7a3a888-1d50-4add-8d3d-c2a1ffd19de5",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "819ac834-9127-4f4f-9fc4-c425c9bbe724",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "41e5957b-469a-44d1-ac31-6bb1dc599e95",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "282846c1-1104-4fba-bda6-8f96a997522d",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -55194,7 +50484,7 @@
       "id": "5f19f36a-5564-4e07-922e-8e6641afbb63",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -55202,66 +50492,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0784b3bc-423a-4243-8f54-55e28c7de46c",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "b2847c91-9767-47d0-821d-4e0eff926a16",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4a0563ee-6c75-4431-91a0-3b7490a3ef88",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "30abe6c1-a5c5-476d-b132-776965ff28c8",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "ea4106cc-d73b-4d08-b189-b03edd06e746",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "7c22cbc1-2ba9-4ff6-9fcd-a609d73d8ce2",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -55855,7 +51085,7 @@
       "id": "f2d125b7-339a-4b64-83b7-557997673f42",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -55863,66 +51093,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fcaa7746-6bf9-42bc-aa77-a8a40c4d1996",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c62b9be6-979a-48e2-bcd3-db8d03658fbb",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2589b932-6234-4411-b00a-9c72ef742a56",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "1ba45836-57fc-42b4-b214-6f0fc3535c46",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "b913b04a-89a3-42cc-b779-17223b3fa53b",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "9ad19325-af42-4d5d-a69c-13d0f785c710",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -56558,7 +51728,7 @@
       "id": "b89a502e-c195-4988-acce-52bfa7b7ca45",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -56566,66 +51736,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2bacc2d2-be77-442a-a3e5-a2e80eec78e3",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "2ed480e7-c2e6-4dcc-9e10-538999d76839",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9252e5d6-8b95-4b98-b6ca-b15d876a583d",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "e3658dca-5d8c-4f99-b75c-cd6aeb7cd8da",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "27647361-bc04-432c-b267-ddeca6d739a5",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "858bfc5f-a0aa-4786-9ff5-38443d6a78cd",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -57099,7 +52209,7 @@
       "id": "3f95c13c-4da1-49c4-a9e8-e0cb5cce0f99",
       "comment": "",
       "command": "open",
-      "target": "http://test.paheko.localhost/admin/login.php",
+      "target": "http://test.paheko.localhost/admin/?__login_user=1",
       "targets": [],
       "value": ""
     }, {
@@ -57107,66 +52217,6 @@
       "comment": "",
       "command": "setWindowSize",
       "target": "1280x1020",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b9a73ad1-83a4-4bcd-952f-a7d5d4d1cd82",
-      "comment": "Vérifier si déjà connecté",
-      "command": "storeXpathCount",
-      "target": "xpath=//button[@name='login']",
-      "targets": [],
-      "value": "connecte"
-    }, {
-      "id": "c402688a-4d59-404f-ba67-19e4edfcc1cc",
-      "comment": "",
-      "command": "if",
-      "target": "${connecte} > 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "51e343eb-cc47-45e1-8c31-af8de3861c78",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_id",
-      "targets": [
-        ["id=f_id", "id"],
-        ["name=id", "name"],
-        ["css=#f_id", "css:finder"],
-        ["xpath=//input[@id='f_id']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "jckix@free.fr"
-    }, {
-      "id": "55632802-6e57-423a-85fd-8a7f505afe73",
-      "comment": "",
-      "command": "type",
-      "target": "id=f_password",
-      "targets": [
-        ["id=f_password", "id"],
-        ["name=password", "name"],
-        ["css=#f_password", "css:finder"],
-        ["xpath=//input[@id='f_password']", "xpath:attributes"],
-        ["xpath=//dd[2]/input", "xpath:position"]
-      ],
-      "value": "interpeller noircir colis allumer"
-    }, {
-      "id": "5b0c99ea-6fd3-49dc-9518-4a554fa76c2e",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//button[@name='login']",
-      "targets": [
-        ["name=login", "name"],
-        ["css=.main", "css:finder"],
-        ["xpath=//button[@name='login']", "xpath:attributes"],
-        ["xpath=//p/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c9b8b52f-9eba-448b-8164-d5d1b82f5e5d",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
