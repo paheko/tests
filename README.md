@@ -14,12 +14,37 @@ Suite de tests du [logiciel de gestion d'association Paheko](https://fossil.kd2.
 
 ## Config serveur
 - définir un hôte virtuel : `test.paheko.localhost`
+- directives à placer dans le fichier `config.local.php`
+
+```php
+	if ('test.paheko.localhost' === ($_SERVER['SERVER_NAME'] ?? null)) {
+		$path = '/tmp/test_paheko_selenium';
+
+		if (isset($_GET['__reset_test'])) {
+			shell_exec('rm -rf ' . escapeshellarg($path));
+		}
+
+		define('Paheko\DATA_ROOT', $path);
+		define('Paheko\DB_FILE', $path . '/association.sqlite');
+
+		// simplifier la connexion de l'admin pour les tests
+		if (!empty($_GET['__login_user'])) {
+			define('Paheko\LOCAL_LOGIN', (int)$_GET['__login_user']);
+		}
+	}
+	else {
+		// Ici configurer le Paheko en utilisation "hors tests"
+	}
+```
+
+- connexion simplifiée (sans saisie du mot de passe) de l'admin pour
+  les tests : ajouter `?__login_user=1` à la fin de l'URL à tester
 
 ## Exécuter les tests
 - Avant d'exécuter les tests, il faut désactiver le profiler
 - Le script `runtest.sh` permet d'exécuter un, plusieurs ou tous les
 tests d'un fichier de test *Selenium* ; il positionne quelques
-constantes, convertit le fichier produit par l'IDE si nécessaier et
+constantes, convertit le fichier produit par l'IDE si nécessaire et
 copie dans /tmp les fichiers requis par les tests.
 - Il y a un bug en fin d'exécution (voir commentaire dans le script) ;
 pour le contourner, le script *tue* le processus quand le message de
