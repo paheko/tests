@@ -37,7 +37,7 @@
       "id": "1616fb13-8f21-42df-85a1-02c9438654cd",
       "comment": "France",
       "command": "click",
-      "target": "css=option:nth-child(2)",
+      "target": "xpath=//select[@id=\"f_country\"]/option[text()=\"France\"]",
       "targets": [
         ["css=option:nth-child(2)", "css:finder"],
         ["xpath=//option[@value='FR']", "xpath:attributes"],
@@ -143,7 +143,7 @@
       "id": "0bb8f2ed-f15d-45f8-bfa7-545612b85893",
       "comment": "",
       "command": "click",
-      "target": "css=input:nth-child(2)",
+      "target": "xpath=//input[@value='Copier']",
       "targets": [
         ["css=input:nth-child(2)", "css:finder"],
         ["xpath=//input[@value='Copier']", "xpath:attributes"],
@@ -301,7 +301,7 @@
       "id": "ebe4d09d-1988-40ca-950c-7100fbf289f7",
       "comment": "",
       "command": "click",
-      "target": "//a[starts-with(@href, \"edit.php\")]",
+      "target": "xpath=//a[starts-with(@href, \"edit.php\")]",
       "targets": [],
       "value": ""
     }, {

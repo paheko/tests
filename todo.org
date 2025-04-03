@@ -28,7 +28,11 @@
 *** DONE 02-01 connexion correcte
 *** DONE 02-02 connexion échec identifiant
 *** DONE 02-03 connexion échec mdp
-** TODO Membres [12/14]
+** TODO Membres [13/15]
+*** TODO remplacer
+- //a[contains(@href, '/admin/users')]
+  par
+- //a[@href='/admin/users/']
 *** DONE 03 créer un membre [12/12]
 **** données de la fiche membre
 - Catégorie : choisir parmi les possibilités
@@ -56,13 +60,13 @@
 **** DONE 03-92b date postérieure max
 **** DONE 03-93a nom en double refusé
 **** DONE 03-93b nom en double accepté
-*** TODO 04 lister les membres [4/5]
+*** DONE 04 lister les membres [5/5]
 **** DONE 04-01 toutes les catégories
 - gérer le cas où les membres occupent plus d'une page
 - ¿ vérifier si on peut supprimer un tri inutile ?
 **** DONE 04-02 toutes catégories sauf cachées
 **** DONE 04-03 une seule catégorie
-**** TODO tri par différents critères [5/6]
+**** DONE tri par différents critères [6/6]
 ***** DONE 04-04, 04-05 tri par nom croissant et décroissant
 Le nouveau tri est comme ceci :
 colonne IS NULL DESC, colonne DESC, numero DESC
@@ -74,8 +78,7 @@ pour un tri croissant, en premier pour un tri décroissant.
 Tri par ville
 - ville (dé)croissant, numéro membre (dé)croissant
 - ville vide en fin(début), numéro membre (dé)croissant
-***** TODO 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant
-- le test pour savoir s'il y a plus d'un parent qui correspond à la recherche (lignes 64+) ne fonctionne plus
+***** DONE 04-09, 04-10 tri par membre « rattaché à » croissant et décroissant
 - pour la colonne "rattaché à" : on met un tri sur la qualité de
   parent, puis le nom du parent en premier, puis le nom du membre,
   puis son numéro :
