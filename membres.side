@@ -16019,26 +16019,12 @@
       ],
       "value": ""
     }, {
-      "id": "f992fa8d-d20a-4cf2-8a16-4cb414a37cd8",
+      "id": "5f0d514c-a5b5-49eb-89ef-483aa8e69b98",
       "comment": "",
-      "command": "storeText",
-      "target": "xpath=//h1",
+      "command": "assertElementPresent",
+      "target": "xpath=//h1[starts-with(text(), \"${nom_cherche}\")]",
       "targets": [],
-      "value": "titre_page"
-    }, {
-      "id": "0beb5586-3e78-4491-a885-60be13ce6330",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${titre_page}.startsWith(${nom_cherche})",
-      "targets": [],
-      "value": "ok"
-    }, {
-      "id": "e2776ae7-9284-4cef-a318-447fb3328759",
-      "comment": "",
-      "command": "assert",
-      "target": "ok",
-      "targets": [],
-      "value": "true"
+      "value": ""
     }, {
       "id": "da0f9574-1f5b-4b99-87d3-2ffc73bbaf2b",
       "comment": "",
@@ -24414,7 +24400,7 @@
       "id": "b2a902ca-a4d5-4c19-9fbd-d000583df7ba",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/config/users']",
+      "target": "xpath=//a[contains(@href, '/admin/config/users')]",
       "targets": [
         ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
         ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
@@ -24686,7 +24672,7 @@
       "id": "cf80caad-0119-41b1-a04e-ad222019db0f",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[contains(@href, '/admin/config/users']",
+      "target": "xpath=//a[contains(@href, '/admin/config/users')]",
       "targets": [
         ["css=ul:nth-child(1) > li:nth-child(3) > a", "css:finder"],
         ["xpath=//a[contains(text(),'Membres')]", "xpath:link"],
@@ -25534,14 +25520,14 @@
       "id": "26e9c4ab-9425-487d-9d48-82779e158aa6",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@href='/admin/me/security.php']",
+      "target": "xpath=//a[contains(@href, '/admin/me/security.php')]",
       "targets": [],
       "value": ""
     }, {
       "id": "b306a569-c36f-4a66-90cd-0757d639bff3",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@href='/admin/users/log.php']",
+      "target": "xpath=//a[contains(@href,'/admin/users/log.php')]",
       "targets": [],
       "value": ""
     }, {
@@ -25622,7 +25608,7 @@
       "id": "7fc6405d-6f22-4b9f-9aef-7ccf5b787144",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@href='/admin/config/advanced/audit.php']",
+      "target": "xpath=//a[contains(@href,'/admin/config/advanced/audit.php')]",
       "targets": [],
       "value": ""
     }, {
